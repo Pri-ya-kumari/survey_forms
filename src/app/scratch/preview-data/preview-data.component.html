@@ -1,0 +1,23 @@
+<h4>{{formtitle}}</h4>>
+<!--<h2>Preview of Form Data</h2> 
+    <div *ngFor="let item in formData">
+        <h4>{{item.question}}</h4>
+        <h4>{{item.choice}}</h4>
+    </div>-->
+<div>
+    <table>
+        <thead>
+            <tr>
+                <td>question</td>
+                <td>option</td>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of formData|keyvalue">
+                <td>{{item}}</td>
+                <!--<td>{{item.option}}</td>-->
+            </tr>
+        </tbody>
+    </table>
+</div>

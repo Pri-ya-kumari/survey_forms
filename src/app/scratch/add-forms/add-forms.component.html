@@ -1,0 +1,119 @@
+<!--Make an header first-->
+<p>
+    <mat-toolbar class="shade1">
+        <mat-icon>insert_drive_file</mat-icon>
+        <span class="wd-1">SurveyForms</span>
+        <!--wd-1 = word1 it is the titile of the forms-->
+        <span class="wd-2" routerLink="/homepage">Home</span>
+        <!--wd-1 = word1 its is the link page tothe first page home page -->
+        <span class="example-spacer"></span>
+        <mat-icon class="preview" (click)="saveform()">remove_red_eye</mat-icon>
+        <p class="preview1">Preview</p>
+    </mat-toolbar>
+</p>
+<!--design a form titile here -->
+<div class="hd-b"><!--hd-b=headblock-->
+    <h2 class="input1" (click)="toggle()">{{displayTitle}}</h2>
+</div>
+<!--creating the form title block where we can write the titile of the form -->
+<div class="fm-b"><!--fm-b = form block-->
+    <div>
+        <button class="btn3" [hidden]="display" (click)="toggle()">Edit</button>
+        <h2 class="input-1" (mouseover)="display = false"
+            (mouseleave)="display = true">{{displayTitle}}</h2>
+    </div>
+    <div class="ti-1" *ngIf="isclicked"><!--ti-1= title part *ngIf="isclicked"-->
+        <form [formGroup]="formTitle">
+            <div formArrayName="titlelist">
+                <label class="wd-3">Survey title</label><br>
+                <input type="text" #nameBox placeholder="Enter title"
+                    class="input2"
+                    formControlName="title"><br>
+                <button class="btn1" (click)="disable()">Cancel</button><!---->
+                <button class="btn2" value="click"
+                    type="submit" (click)="getTitle(nameBox.value)">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!--creating a from for taking input-->
+<div class="fm-b2"><!--fm-b2= formblock 2-->
+    <form #save="ngForm" [formGroup]="studentForm">
+        <div formArrayName="studentlist">
+            <div
+                *ngFor="let student of studentListArray().controls; let i = index;"
+                class="fm-b3">
+                <div [formGroupName]="i">
+                    <input type="text" placeholder="Enter question"
+                        class="input3"
+                        formControlName="Question">
+                    <select class="ch-1" name="option{{i}}"
+                        formControlName="option"
+                        #choice [(ngModel)]="selectedOptions[i]">
+                        <!--(change)="check(this)" ch-1=chooice 1  (change)="onOptionSelected($event)" (click)="chooseme(choice.value)"-->
+                        <option value="multi">Multiple choice</option>
+                        <option value="check">Check Box</option>
+                        <option value="comment">Comment Box</option>
+                        <option value="single">Single Text</option>
+                    </select>
+                    <button class="btn5" (click)="removeStudent(i)">Cancel</button>
+                    <button class="btn6" value="click" (click)="getformData()">Save</button>
+                </div>
+                <div [ngSwitch]="selectedOptions[i]">
+                    <!--[ngSwitch]="choice"Multiple choice-->
+                    <div class="option" name="option "
+                        *ngSwitchCase="'multi'" ngDefaultControl>
+                        <section class="example-section"
+                            *ngFor="let check of checkb; let n = index"
+                            #optionbox>
+                            <p><mat-radio-button name="check{{n}}">
+                                    <input type="text"
+                                        placeholder="enter your name ">
+                                </mat-radio-button></p>
+                            <mat-icon class="minusi" (click)="remove(n)">remove</mat-icon>
+                        </section>
+                        <mat-icon class="btn7" (click)="addcheck()">add</mat-icon>
+                    </div>
+                    <!--check box option here -->
+                    <div class="option" name="option "
+                        *ngSwitchCase="'check'">
+                        <section class="example-section"
+                            *ngFor="let check of checkc; let n = index"
+                            #optionbox>
+                            <p><mat-checkbox name="check{{n}}">
+                                    <input type="text"
+                                        placeholder="enter your name ">
+                                </mat-checkbox></p>
+                            <mat-icon class="minusi" (click)="removech(n)">remove</mat-icon>
+                        </section>
+                        <mat-icon class="btn7" (click)="addch()">add</mat-icon>
+                    </div>
+                    <!--comment box-->
+                    <div class="option" name="option "
+                        *ngSwitchCase="'comment'">
+                        <p>
+                            <textarea ng-model="myTextarea"
+                                placeholder="enter comment"
+                                class="option1"></textarea>
+                        </p>
+                    </div>
+                    <!--single text-->
+                    <div class="option" name="option "
+                        *ngSwitchCase="'single'">
+                        <p>
+                            <input ng-model="myTextarea"
+                                placeholder="enter text"
+                                class="option1">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button class="btn4" (click)="addStudent()">Add Questions</button>
+        </div>
+        <div>
+            <button class="btnn4" (click)="saveform()">Save Questions</button>
+        </div>
+    </form>
+</div>

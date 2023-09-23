@@ -1,0 +1,149 @@
+<p>
+    <mat-toolbar class="shade1">
+        <mat-icon>insert_drive_file</mat-icon>
+        <span class="wd-1">SurveyForms</span>
+        <!--wd-1 = word1 it is the titile of the forms-->
+        <span class="wd-2" routerLink="/homepage">Home</span>
+        <!--wd-1 = word1 its is the link page tothe first page home page -->
+        <span class="wd-2" routerLink="/template-form">Back</span>
+        <span class="example-spacer"></span>
+    </mat-toolbar>
+</p>
+<div class="top">
+    <img src="assets/images/survey.jpg" class="img-1">
+    <h3 class="hd1">Angular</h3>
+    <h5 class="hd2">Survey Form</h5>
+</div>
+<div class="b1">
+    <div class="inside">
+        <form [formGroup]="forms" novalidate (ngSubmit)="onSubmit()">
+            <span class="text-1">Enter Your First Name : </span>
+            <input type="text" class="input-1" formControlName="fname"><br>
+            <div *ngIf="forms.controls['fname'].invalid && forms.controls['fname'].touched" class="alert">
+                <div *ngIf="forms.controls['fname'].errors" class="alerts">
+                    <span >*First Name is required</span>
+                </div>
+            </div>
+            <span class="text-1">Enter Your  Last Name: </span>
+            <input type="text" class="input-1" formControlName="lname"><br>
+            <div *ngIf="forms.controls['lname'].invalid && forms.controls['lname'].touched" class="alert">
+                <div *ngIf="forms.controls['lname'].errors" class="alerts">
+                    <span >*last Name is required</span>
+                </div>
+            </div>
+            <span class="text-1">Enter Your Email Id: </span>
+            <input type="text" class="input-1" formControlName="email"><br>
+            <div *ngIf="forms.controls['email'].invalid && forms.controls['email'].touched" class="alert">
+                <div *ngIf="forms.controls['email'].errors" class="alerts">
+                    <span >*email is required</span>
+                </div>
+            </div>
+            <span class="text-1">Enter Your  Phone Number: </span>
+            <input type="text" class="input-1" formControlName="phone"><br>
+            <div *ngIf="forms.controls['phone'].invalid && forms.controls['phone'].touched" class="alert">
+                <div *ngIf="forms.controls['phone'].errors" class="alerts">
+                    <span >*10 digit phone number required</span>
+                </div>
+            </div>
+            <div class="b2" >
+                    <div class="container">
+                        <span class="rb1">1. Do AngularJS provide reusable components? </span><br>
+                        <div class="radiop" >
+                        <label for="op1" class="option1" >Yes</label>
+                        <input id="op1" type="radio" value="yes" formControlName="op1"
+                            name="q1" />
+                        <label for="op1" class="option1">No</label>
+                        <input id="op1" type="radio" value="no" formControlName="op1"
+                            name="q1" />
+                            </div>
+                    </div>
+                    <div class="container">
+                        <span class="rb1">2. Is AngularJS completely based on HTML and JavaScript? </span><br>
+                        <div class="radiop" >
+                        <label for="op2" class="option1">Yes</label>
+                        <input id="op2" type="radio" value="yes" formControlName="op2"
+                            name="q2" />
+                        <label for="op2" class="option1">No</label>
+                        <input id="op2" type="radio" value="no" formControlName="op2"
+                            name="q2" />
+                            </div>
+                    </div>
+                    <div class="container">
+                        <span class="rb1">3. In AngularJS, the $http service is used to make an Ajax
+                            call to the server.</span><br>
+                        <div class="radiop">
+                        <label for="op3" class="option1">Yes</label>
+                        <input id="op3" type="radio" value="yes" formControlName="op3"
+                            name="q3" />
+                        <label for="op3" class="option1">No</label>
+                        <input id="op3" type="radio" value="no" formControlName="op3"
+                            name="q3" />
+                            </div>
+                    </div>
+                    <div class="container">
+                        <span class="rb1">4. AngularJS application expressions are pure JavaScript
+                            expressions.  </span><br>
+                        <div class="radiop">
+                        <label for="op4" class="option1">Yes</label>
+                        <input id="op4" type="radio" value="yes" formControlName="op4"
+                            name="q4" />
+                        <label for="op4" class="option1">No</label>
+                        <input id="op4" type="radio" value="no" formControlName="op4"
+                            name="q4" />
+                            </div>
+                    </div>
+                    <div class="container">
+                        <span class="rb1">5. AngularJS support two-way data binding.</span><br>
+                        <div class="radiop">
+                        <label for="op5" class="option1">Yes</label>
+                        <input id="op5" type="radio" value="yes" formControlName="op5"
+                            name="q5" />
+                        <label for="op5" class="option1">No</label>
+                        <input id="op5" type="radio" value="no" formControlName="op5"
+                            name="q5" />
+                            </div>
+                    </div>
+                    <div class="container">
+                        <span class="rb1">6. Is AngularJS and Angular is Same</span><br>
+                        <div class="radiop">
+                        <label for="op6" class="option1">Yes</label>
+                        <input id="op6" type="radio" value="yes" formControlName="op6"
+                            name="q6" />
+                        <label for="op6" class="option1">No</label>
+                        <input id="op6" type="radio" value="no" formControlName="op6"
+                            name="q6" />
+                            </div>
+                    </div>
+                    <div class="container">
+                        <span class="rb1">7. Is typeScript is a SuperSet of JavaScript?</span><br>
+                        <div class="radiop">
+                        <label for="op7" class="option1">Yes</label>
+                        <input id="op7" type="radio" value="yes" formControlName="op7"
+                            name="q7" />
+                        <label for="op7" class="option1">No</label>
+                        <input id="op7" type="radio" value="no" formControlName="op7"
+                            name="q7" />
+                            </div>
+                    </div>
+                    <div class="container">
+                        <span class="rb1">8. Your Feedback about Angular</span><br>
+                        <div class="t1" >
+                            <textarea formControlName="text1"></textarea>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <span class="rb1">9. Your rate about Angular .</span><br>
+                        <input type="text" class="t2" formControlName="text2">
+                     </div>
+                    <div class="container">
+                        <span class="rb1">10. What You know about Angular</span><br>
+                        <div class="t1">
+                            <textarea formControlName="text3"></textarea>
+                        </div>
+                    </div>
+            </div>
+            <button type="submit" class="btn-1" [disabled]="!forms.valid" (click)="onSubmit()">Next</button>
+        </form>
+    </div>
+</div>
+<router-outlet></router-outlet>

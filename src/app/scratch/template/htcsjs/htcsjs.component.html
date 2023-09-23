@@ -1,0 +1,147 @@
+
+    <div class="shade1">
+        <mat-icon>insert_drive_file</mat-icon>
+        <span class="wd-1">SurveyForms</span>
+        <!--wd-1 = word1 it is the titile of the forms-->
+        <span class="wd-2" routerLink="/homepage">Home</span>
+        <!--wd-1 = word1 its is the link page tothe first page home page -->
+        <span class="wd-2" routerLink="/template-form">Back</span>
+        <span class="example-spacer"></span>
+    </div>>
+<div class="top">
+    <img src="assets/images/survey.jpg" class="img-1">
+    <h3 class="hd1">HTML/CSS/JS</h3>
+    <h5 class="hd2">Survey Form</h5>
+</div>
+<div class="b1">
+    <div class="inside">
+        <form [formGroup]="forms" novalidate (ngSubmit)="onSubmit()">
+            <span class="text-1">Enter Your First Name : </span>
+            <input type="text" class="input-1" formControlName="fname"><br>
+            <div *ngIf="forms.controls['fname'].invalid && forms.controls['fname'].touched" class="alert">
+                <div *ngIf="forms.controls['fname'].errors" class="alerts">
+                    <span >*First Name is required</span>
+                </div>
+            </div>
+            <span class="text-1">Enter Your  Last Name: </span>
+            <input type="text" class="input-1" formControlName="lname"><br>
+            <div *ngIf="forms.controls['lname'].invalid && forms.controls['lname'].touched" class="alert">
+                <div *ngIf="forms.controls['lname'].errors" class="alerts">
+                    <span >*last Name is required</span>
+                </div>
+            </div>
+            <span class="text-1">Enter Your Email Id: </span>
+            <input type="text" class="input-1" formControlName="email"><br>
+            <div *ngIf="forms.controls['email'].invalid && forms.controls['email'].touched" class="alert">
+                <div *ngIf="forms.controls['email'].errors" class="alerts">
+                    <span >*email is required</span>
+                </div>
+            </div>
+            <span class="text-1">Enter Your  Phone Number: </span>
+            <input type="text" class="input-1" formControlName="phone"><br>
+            <div *ngIf="forms.controls['phone'].invalid && forms.controls['phone'].touched" class="alert">
+                <div *ngIf="forms.controls['phone'].errors" class="alerts">
+                    <span >*10 digit phone number required</span>
+                </div>
+            </div>
+            <div class="b2">
+                    <div class="container">
+                        <span class="rb1">1. Which element is used to get highlighted text in HTML5? </span><br>
+                        <div class="radiop">
+                        <label for="op1" class="option1">u</label>
+                        <input id="op1" type="radio" value="op1" formControlName="op1"
+                            name="q1" />
+                        <label for="op2" class="option1">Mark</label>
+                        <input id="op2" type="radio" value="op2" formControlName="op2"
+                            name="q1" />
+                            </div>
+                    </div>
+                    <div class="container">
+                        <span class="rb1">2.  Which element is used for or styling HTML5 layout?</span><br>
+                        <div class="radiop">
+                        <label for="op1" class="option1">css</label>
+                        <input id="op1" type="radio" value="op1" formControlName="op1"
+                            name="q2" />
+                        <label for="op2" class="option1">PHP</label>
+                        <input id="op2" type="radio" value="op2" formControlName="op2"
+                            name="q2" />
+                            </div>
+                    </div>
+                    <div class="container">
+                        <span class="rb1">3.  HTML is a subset of ___________</span><br>
+                        <div class="radiop">
+                        <label for="op1" class="option1">XGML</label>
+                        <input id="op1" type="radio" value="op1" formControlName="op1"
+                            name="q3" />
+                        <label for="op2" class="option1">XHTML</label>
+                        <input id="op2" type="radio" value="op2" formControlName="op2"
+                            name="q3" />
+                            </div>
+                    </div>
+                    <div class="container">
+                        <span class="rb1">4. Which character is used to represent when a tag is closed in HTML?  </span><br>
+                        <div class="radiop">
+                        <label for="op1" class="option1">#</label>
+                        <input id="op1" type="radio" value="op1" formControlName="op1"
+                            name="q4" />
+                        <label for="op2" class="option1">/</label>
+                        <input id="op2" type="radio" value="op2" formControlName="op2"
+                            name="q4" />
+                            </div>
+                    </div>
+                    <div class="container">
+                        <span class="rb1">5. Which attribute specifies a unique alphanumeric identifier to be associated with an element?</span><br>
+                        <div class="radiop">
+                        <label for="op1" class="option1">Class</label>
+                        <input id="op1" type="radio" value="op1" formControlName="op1"
+                            name="q5" />
+                        <label for="op2" class="option1">Id</label>
+                        <input id="op2" type="radio" value="op2" formControlName="op2"
+                            name="q5" />
+                            </div>
+                    </div>
+                    <div class="container">
+                        <span class="rb1">6. you use CSs</span><br>
+                        <div class="radiop">
+                        <label for="op1" class="option1">Yes</label>
+                        <input id="op1" type="radio" value="op1" formControlName="op1"
+                            name="q6" />
+                        <label for="op2" class="option1">No</label>
+                        <input id="op2" type="radio" value="op2" formControlName="op2"
+                            name="q6" />
+                            </div>
+                    </div>
+                    <div class="container">
+                        <span class="rb1">7. Is JavaScript hard?</span><br>
+                        <div class="radiop">
+                        <label for="op1" class="option1">Yes</label>
+                        <input id="op1" type="radio" value="op1" formControlName="op1"
+                            name="q7" />
+                        <label for="op2" class="option1">No</label>
+                        <input id="op2" type="radio" value="op2" formControlName="op2"
+                            name="q7" />
+                            </div>
+                    </div>
+                    <div class="container">
+                        <span class="rb1">8. Your Feedback about Html CSS Js</span><br>
+                        <div class="t1">
+                            <textarea></textarea>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <span class="rb1">9. Your rate on HTML/CSS/Js .</span><br>
+                        <input type="text" class="t2">
+                     </div>
+                    <div class="container">
+                        <span class="rb1">10. What You know about HTML/CSS/Js</span><br>
+                        <div class="t1">
+                            <textarea></textarea>
+                        </div>
+                    </div>
+            </div>
+            
+            <button type="submit" class="btn-1" [disabled]="!forms.valid" (click)="onSubmit()">Next</button>
+        </form>
+    </div>
+</div>
+<router-outlet></router-outlet>

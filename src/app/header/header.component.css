@@ -1,0 +1,26 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+.shade1{
+    background-color: #404040;
+    color: white;
+}
+.wd-1{
+    margin-left: 12px;
+    font-weight: 100px;
+    font-size: 25px;
+}
+.btn-1{
+    width: 140px;
+    height: 38px;
+    font-size: 21px;
+    margin-right:20px;
+    background-color: /*#00FF40*/#4CBB17;
+    color: white;
+}
+.wd-2{
+    margin-left: 19px;
+    font-weight: lighter;
+    font-size: 20px;
+    margin-top: 8px
+}

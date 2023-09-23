@@ -1,0 +1,148 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.shade1 {
+    background-color: #404040;
+    color: white;
+}
+
+.wd-1 {
+    margin-left: 12px;
+    font-weight: 100px;
+    font-size: 25px;
+}
+
+.wd-2 {
+    margin-left: 19px;
+    font-weight: lighter;
+    font-size: 20px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+.top{
+    position: absolute;
+    border: 1px solid black;
+    width: 1070px;
+    height: 250px;
+    margin-left: 175px;
+    border-radius: 60px;
+}
+.b1 {
+    border: 1px solid white;
+    width: 1000px;
+    height:600px auto;
+    margin-top: 262px;
+    margin-left: 175px;
+    padding-top: 60px;
+    padding-left: 70px;
+}
+.text-1 {
+    margin-top: 22px;
+    font-size: 20px;
+}
+.input-1 {
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+.alerts{
+    color: red;
+    margin-top: -10px;
+    font-size: 19px;
+}
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.shade1 {
+    background-color: #404040;
+    color: white;
+}
+
+.wd-1 {
+    margin-left: 12px;
+    font-weight: 100px;
+    font-size: 25px;
+}
+
+.wd-2 {
+    margin-left: 19px;
+    font-weight: lighter;
+    font-size: 20px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.b2 {
+    border: 1px solid white;
+    width: 1000px;
+    height:1020px ;
+    margin-left: -70px;
+    padding-left: 60px;
+}
+.rb1{
+    margin-left: -50px;
+    font-size: 20px;
+}
+.option1{
+    margin-left: 10px;
+    font-size: 20px;
+}
+.option1 input{
+    width: 20px;
+}
+.container{
+    border: 1px solid white;
+    width: 800px;
+    height: 60px auto;
+    margin-top: 12px;
+    margin-left: 60px;
+    padding-top: 12px;
+}
+.radiop{
+    margin-top: 12px;
+}
+.t1{
+    margin-left: 6px;
+    margin-top: 10px;
+}
+.t2{
+    margin-top: 12px;
+    margin-left: 6px;
+    height: 22px;
+}
+.btn-1{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 40px;
+    margin-top: -92px;
+    margin-left: 400px;
+    cursor: pointer;
+}
+.img-1{
+    width: 200px;
+    opacity: 0.4;
+    margin-top: 17px;
+    margin-left: 120px;
+}
+.hd1{
+    margin-top: -190px;
+    margin-left: 380px;
+    font-size: 76px;
+}
+.hd2{
+    margin-top: 36px;
+    margin-left: 380px;
+    font-size: 46px;
+}

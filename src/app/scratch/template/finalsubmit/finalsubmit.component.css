@@ -1,0 +1,31 @@
+.img-1{
+    width: 320px;
+    margin-left: 530px;
+}
+.img-2{
+    width: 120px;
+    margin-left: 645px;
+}
+.t1{
+    font-size: 45px;
+    font-family: "Dank Mono", ui-monospace, monospace;
+    text-align: center;
+}
+.t2{
+    font-size: 5vw;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+}
+.t3{
+    font-size: 30px;
+    font-family: "Dank Mono", ui-monospace, monospace;
+    text-align: center;
+}
+.link{
+    font-size: 20px;
+    margin-left: -90px;
+    text-decoration:underline;
+    color: blue;
+    cursor: pointer;
+}
