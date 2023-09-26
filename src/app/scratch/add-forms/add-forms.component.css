@@ -4,23 +4,26 @@
 .shade1 {
     background-color: #404040;
     color: white;
+    height: 50px;
 }
 .wd-1 {
     margin-left: 12px;
     font-weight: 100px;
-    font-size: 25px;
+    font-size: 22px;
 }
 .wd-2 {
-    margin-left: 19px;
+    margin-left: 39px;
     font-weight: lighter;
-    font-size: 20px;
-    margin-top: 8px;
+    font-size: 19px;
+    margin-top: 2px;
     cursor: pointer;
+    font-family: 'Nunito Sans', sans-serif;
 }
+
 .hd-b {
     border: 1px solid black;
-    width: 1364px;
-    height: 90px;
+    width: 1347px;
+    height: 70px;
     margin-top: -14px;
 }
 .input1 {
@@ -33,6 +36,7 @@
     padding-left: 28px;
     outline: none;
     cursor: pointer;
+    font-family: 'Nunito', sans-serif; 
 }
 .input1::placeholder {
     font-size: 28px;
@@ -45,8 +49,7 @@
     border: 1px solid white;
     width: 1014px;
     height: 400px auto;
-    margin-top: 0px;
-    margin-left: 165px;
+    margin-left: 125px;
 }
 .ti-1 {
     border: 1px solid white;
@@ -57,19 +60,22 @@
     background-color: whitesmoke;
     padding-top: 29px;
     border-radius: 34px;
+   
 }
 .wd-3 {
     font-size: 22px;
     margin-top: 30px;
     margin-left: 29px;
     color: #404040;
+    font-family: 'Nunito', sans-serif;
 }
 .input2 {
     border: 1px solid white;
-    width: 600px;
-    height: 30px;
-    margin-top: 4px;
+    width: 800px;
+    height: 45px;
+    margin-top: 10px;
     margin-left: 29px;
+    font-family: 'Nunito', sans-serif;
 }
 .input2:focus {
     border: 4px solid green;
@@ -78,7 +84,7 @@
     border: 1px solid white;
     background-color: white;
     color: black;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-left: 600px;
     width: 90px;
     height: 35px;
@@ -125,25 +131,25 @@
     border: 1px solid white;
     width: 880px;
     height: 110px auto;
-    margin-left: 190px;
-    margin-top: 22px;
-    background-color: whitesmoke;
+    margin-left: 165px;
+    margin-top: 2px;
+    background-color: #F8F8FF;
     padding-top: 29px;
-    border-radius: 34px;
+    border-radius: 24px;
 }
 .input3{
     position: absolute;
-    border: 1px solid grey;
-    width: 380px;
-    height: 30px;
+    border: 1px solid  #E3DAC9;
+    width: 370px;
+    height: 40px;
     margin-top: 20px;
     margin-left: 27px;
 }
 .ch-1{
     position: absolute;
-    border: 1px solid gray;
-    width: 320px;
-    height: 34px;
+    border: 1px solid  #E3DAC9;
+    width: 340px;
+    height: 44px;
     margin-top: 20px;
     margin-left: 419px;
     font-size: 18px;
@@ -152,23 +158,25 @@
     border: 1px solid lightgray;
     position: relative;
     width: 90px;
-    height: 30px;
+    height: 40px;
     font-size: 21px;
     margin-left: 530px;
     margin-top: 100px;
     margin-bottom: 10px;
+    font-family: 'Nunito', sans-serif;
 }
 .btn6{
     border: 1px solid white;
     position: absolute;
     width: 90px;
-    height: 30px;
+    height: 40px;
     font-size: 21px;
     margin-left: 20px;
     margin-top: 100px ;
     background-color: #64CE7A;
     color: white;
     margin-bottom: 10px;
+    font-family: 'Nunito', sans-serif;
 }
 .btn4 {
     border: 1px solid white;
@@ -178,7 +186,7 @@
     margin-left: 250px;
     font-size: 20px;
     background-color: #64CE7A;
-    color: wheat;
+    color: white;
 }
 .btnn4 {
     position: absolute;
@@ -189,17 +197,17 @@
     margin-left: 400px;
     font-size: 20px;
     background-color: #64CE7A;
-    color: wheat;
+    color: white;
 }
 .fm-b3 {
-    border: 1px solid black;
+    border: 1px solid white;
     width: 780px;
     height: 110px auto;
     margin-left: 40px;
     margin-top: 22px;
-    background-color: whitesmoke;
+    background-color: #FEFEFA ;
     padding-top: 9px;
-    border-radius: 34px;
+    border-radius: 4px;
 }
 .option{
     margin-left: 60px;

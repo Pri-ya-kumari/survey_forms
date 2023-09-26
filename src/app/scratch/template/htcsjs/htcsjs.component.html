@@ -1,5 +1,5 @@
-
-    <div class="shade1">
+<p>
+    <mat-toolbar class="shade1">
         <mat-icon>insert_drive_file</mat-icon>
         <span class="wd-1">SurveyForms</span>
         <!--wd-1 = word1 it is the titile of the forms-->
@@ -9,7 +9,8 @@
         <span class="example-spacer"></span>
         <span class="wd-3" (click)="sheet()" target="_blank">GoogleSheet Response</span>
         <span class="example-spacer"></span>
-    </div>>
+    </mat-toolbar>
+</p>
 <div class="top">
     <img src="assets/images/survey.jpg" class="img-1">
     <h3 class="hd1">HTML/CSS/JS</h3>
@@ -40,7 +41,7 @@
                 </div>
             </div>
             <span class="text-1">Enter Your  Phone Number: </span>
-            <input type="text" class="input-1" formControlName="phone"><br>
+            <input type="text" class="input-1" formControlName="phone" maxlength="10"><br>
             <div *ngIf="forms.controls['phone'].invalid && forms.controls['phone'].touched" class="alert">
                 <div *ngIf="forms.controls['phone'].errors" class="alerts">
                     <span >*10 digit phone number required</span>
