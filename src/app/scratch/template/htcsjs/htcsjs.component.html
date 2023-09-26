@@ -7,6 +7,8 @@
         <!--wd-1 = word1 its is the link page tothe first page home page -->
         <span class="wd-2" routerLink="/template-form">Back</span>
         <span class="example-spacer"></span>
+        <span class="wd-3" (click)="sheet()" target="_blank">GoogleSheet Response</span>
+        <span class="example-spacer"></span>
     </div>>
 <div class="top">
     <img src="assets/images/survey.jpg" class="img-1">
@@ -44,98 +46,105 @@
                     <span >*10 digit phone number required</span>
                 </div>
             </div>
+            <span class="text-1">Enter The Name of the Text you are giving: </span>
+            <input type="text" class="input-1" formControlName="test"><br>
+            <div *ngIf="forms.controls['test'].invalid && forms.controls['test'].touched" class="alert">
+                <div *ngIf="forms.controls['test'].errors" class="alerts">
+                    <span >*test Name is required</span>
+                </div>
+            </div>
             <div class="b2">
                     <div class="container">
                         <span class="rb1">1. Which element is used to get highlighted text in HTML5? </span><br>
                         <div class="radiop">
                         <label for="op1" class="option1">u</label>
-                        <input id="op1" type="radio" value="op1" formControlName="op1"
+                        <input id="op1" type="radio" value="u" formControlName="op1"
                             name="q1" />
-                        <label for="op2" class="option1">Mark</label>
-                        <input id="op2" type="radio" value="op2" formControlName="op2"
+                        <label for="op1" class="option1">Mark</label>
+                        <input id="op1" type="radio" value="Mark" formControlName="op1"
                             name="q1" />
                             </div>
                     </div>
                     <div class="container">
                         <span class="rb1">2.  Which element is used for or styling HTML5 layout?</span><br>
                         <div class="radiop">
-                        <label for="op1" class="option1">css</label>
-                        <input id="op1" type="radio" value="op1" formControlName="op1"
+                        <label for="op2" class="option1">css</label>
+                        <input id="op2" type="radio" value="css" formControlName="op2"
                             name="q2" />
                         <label for="op2" class="option1">PHP</label>
-                        <input id="op2" type="radio" value="op2" formControlName="op2"
+                        <input id="op2" type="radio" value="PHP" formControlName="op2"
                             name="q2" />
                             </div>
                     </div>
                     <div class="container">
                         <span class="rb1">3.  HTML is a subset of ___________</span><br>
                         <div class="radiop">
-                        <label for="op1" class="option1">XGML</label>
-                        <input id="op1" type="radio" value="op1" formControlName="op1"
+                        <label for="op3" class="option1">XGML</label>
+                        <input id="op3" type="radio" value="XGML" formControlName="op3"
                             name="q3" />
-                        <label for="op2" class="option1">XHTML</label>
-                        <input id="op2" type="radio" value="op2" formControlName="op2"
+                        <label for="op3" class="option1">XHTML</label>
+                        <input id="op3" type="radio" value="XHTML" formControlName="op3"
                             name="q3" />
                             </div>
                     </div>
                     <div class="container">
                         <span class="rb1">4. Which character is used to represent when a tag is closed in HTML?  </span><br>
                         <div class="radiop">
-                        <label for="op1" class="option1">#</label>
-                        <input id="op1" type="radio" value="op1" formControlName="op1"
+                        <label for="op4" class="option1">#</label>
+                        <input id="op4" type="radio" value="#(hash)" formControlName="op4"
                             name="q4" />
-                        <label for="op2" class="option1">/</label>
-                        <input id="op2" type="radio" value="op2" formControlName="op2"
+                        <label for="op4" class="option1">/</label>
+                        <input id="op4" type="radio" value="/(backslash)" formControlName="op4"
                             name="q4" />
                             </div>
                     </div>
                     <div class="container">
                         <span class="rb1">5. Which attribute specifies a unique alphanumeric identifier to be associated with an element?</span><br>
                         <div class="radiop">
-                        <label for="op1" class="option1">Class</label>
-                        <input id="op1" type="radio" value="op1" formControlName="op1"
+                        <label for="op5" class="option1">Class</label>
+                        <input id="op5" type="radio" value="class" formControlName="op5"
                             name="q5" />
-                        <label for="op2" class="option1">Id</label>
-                        <input id="op2" type="radio" value="op2" formControlName="op2"
+                        <label for="op5" class="option1">Id</label>
+                        <input id="op5" type="radio" value="id" formControlName="op5"
                             name="q5" />
                             </div>
                     </div>
                     <div class="container">
                         <span class="rb1">6. you use CSs</span><br>
                         <div class="radiop">
-                        <label for="op1" class="option1">Yes</label>
-                        <input id="op1" type="radio" value="op1" formControlName="op1"
+                        <label for="op6" class="option1">Yes</label>
+                        <input id="op6" type="radio" value="yes" formControlName="op6"
                             name="q6" />
-                        <label for="op2" class="option1">No</label>
-                        <input id="op2" type="radio" value="op2" formControlName="op2"
+                        <label for="op6" class="option1">No</label>
+                        <input id="op6" type="radio" value="no" formControlName="op6"
                             name="q6" />
                             </div>
                     </div>
                     <div class="container">
                         <span class="rb1">7. Is JavaScript hard?</span><br>
                         <div class="radiop">
-                        <label for="op1" class="option1">Yes</label>
-                        <input id="op1" type="radio" value="op1" formControlName="op1"
+                        <label for="op7" class="option1">Yes</label>
+                        <input id="op7" type="radio" value="yes" formControlName="op7"
                             name="q7" />
-                        <label for="op2" class="option1">No</label>
-                        <input id="op2" type="radio" value="op2" formControlName="op2"
+                        <label for="op7" class="option1">No</label>
+                        <input id="op7" type="radio" value="no" formControlName="op7"
                             name="q7" />
                             </div>
                     </div>
                     <div class="container">
                         <span class="rb1">8. Your Feedback about Html CSS Js</span><br>
                         <div class="t1">
-                            <textarea></textarea>
+                            <textarea formControlName="text1"></textarea>
                         </div>
                     </div>
                     <div class="container">
                         <span class="rb1">9. Your rate on HTML/CSS/Js .</span><br>
-                        <input type="text" class="t2">
+                        <input type="text" class="t2" formControlName="text2">
                      </div>
                     <div class="container">
                         <span class="rb1">10. What You know about HTML/CSS/Js</span><br>
                         <div class="t1">
-                            <textarea></textarea>
+                            <textarea formControlName="text3"></textarea>
                         </div>
                     </div>
             </div>

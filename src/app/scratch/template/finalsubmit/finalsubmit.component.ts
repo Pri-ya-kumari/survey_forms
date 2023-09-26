@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class FinalsubmitComponent {
 
+
+  sheet(){
+    document.location = "https://docs.google.com/spreadsheets/d/1F5_TtESFPl0bDorDx4KaVKzVZFtCNVz_c3SMJBUCNqY/edit?usp=sharing"
+  }
 }

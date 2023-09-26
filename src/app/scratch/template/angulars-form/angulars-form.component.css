@@ -17,6 +17,13 @@
     margin-top: 8px;
     cursor: pointer;
 }
+.wd-3 {
+    margin-left: 689px;
+    font-weight: lighter;
+    font-size: 20px;
+    margin-top: 8px;
+    cursor: pointer;
+}
 .top{
     position: absolute;
     border: 1px solid black;

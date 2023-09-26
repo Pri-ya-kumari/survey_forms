@@ -1,0 +1,30 @@
+{
+    "spreadsheetId": "18FTYWT5dd8zTffc1AFC90ydTmstCfwD32VgSw1bNBk4",
+    "tableRange": "Sheet1!A1:D1",
+    "updates": {
+      "spreadsheetId": "18FTYWT5dd8zTffc1AFC90ydTmstCfwD32VgSw1bNBk4",
+      "updatedRange": "Sheet1!A2:A5",
+      "updatedRows": 4,
+      "updatedColumns": 1,
+      "updatedCells": 4,
+      "updatedData": {
+        "range": "Sheet1!A2:A5",
+        "majorDimension": "ROWS",
+        "values": [
+          [
+            "fname"
+          ],
+          [
+            "lname"
+          ],
+          [
+            "email"
+          ],
+          [
+            "phone"
+          ]
+        ]
+      }
+    }
+  }
+  

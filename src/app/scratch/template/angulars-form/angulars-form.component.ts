@@ -8,6 +8,7 @@ import { GoogleSheetsDbService } from 'ng-google-sheets-db';
 //import { environment } from '../environments/environment';
 //import { Character, characterA } from './character.model';
 import { Observable } from 'rxjs';
+import {GooglesheetService} from "../../../service/googlesheet.service";
 @Component({
   selector: 'app-angulars-form',
   templateUrl: './angulars-form.component.html',
@@ -19,6 +20,7 @@ export class AngularsFormComponent {
     lname: new FormControl('',[Validators.required]),
     email: new FormControl('',[Validators.required]),
     phone: new FormControl('',[Validators.required]),
+    test: new FormControl('',[Validators.required]),
     op1: new FormControl(''),
     op2: new FormControl(''),
     op3: new FormControl(''),
@@ -33,7 +35,7 @@ export class AngularsFormComponent {
 //private googlesheet : GooglesheetService
   //characte$: Observable<Character[]>;
   constructor(private fb: FormBuilder, private router: Router,
-    private googleSheetsDbService: GoogleSheetsDbService) {
+    private googleSheetsDbService: GoogleSheetsDbService, private googlesheet: GooglesheetService) {
     this.form();
   }
   ngOnInit(): void {}
@@ -41,9 +43,10 @@ export class AngularsFormComponent {
     this.forms = this.fb.group({
       fname:['',Validators.required],
       lname:['',Validators.required],
-      email: ['', [Validators.required, 
+      email: ['', [Validators.required,
         Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")] ],
-      phone: ['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]] , 
+      phone: ['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]] ,
+      test:['',Validators.required],
       op1:[''],
       op2:[''],
       op3:[''],
@@ -57,15 +60,17 @@ export class AngularsFormComponent {
     });
   }
   onSubmit():void {
-    if (this.forms.valid) {
-      // Navigate to the next page using Angular Router
-      this.router.navigate(['/complete']);
-      console.log(this.forms.value);
-    }
-    /*this.googlesheet.saveFormData(this.forms)
-      .then(() => {
-        // Clear form on success
-        this.forms.reset();
-      });*/
+    //console.log(this.forms.value)
+     if (this.forms.valid) {
+    //   // Navigate to the next page using Angular Router
+      // this.router.navigate(['/complete']);
+    //   console.log(this.forms.value);
+     }
+    this.googlesheet.saveFormData(this.forms.value).subscribe(console.log)
+    //alert("your form has been submitted");
+
+  }
+  sheet(){
+    document.location = "https://docs.google.com/spreadsheets/d/1F5_TtESFPl0bDorDx4KaVKzVZFtCNVz_c3SMJBUCNqY/edit?usp=sharing"
   }
 }

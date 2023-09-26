@@ -25,4 +25,5 @@ export class AddDataService {
   getformtitle(){
     return this.formTitle;
   }
+  
 }

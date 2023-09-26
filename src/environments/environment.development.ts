@@ -1,8 +1,8 @@
 export const environment = {
     production: true,
-    googleSheetsApiKey: 'AIzaSyB6Zc99KXd885wbypbg8uVsg8Hetbpc4Bo',
+    googleSheetsApiKey: 'AIzaSyB6mBf2ssBec7eqI3BjUZe70ZevSyMLjZE',
     characters: {
-        spreadsheetId: '18FTYWT5dd8zTffc1AFC90ydTmstCfwD32VgSw1bNBk4',
-        worksheetName: 'sheet1',
+        spreadsheetId: '15ktJDvipaImmiDWakU1xMeEXGVTeAmXqIqTozMfToCE',
+        worksheetName: 'Sheet1',
     },
 };

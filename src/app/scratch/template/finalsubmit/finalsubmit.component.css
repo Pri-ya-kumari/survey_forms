@@ -22,9 +22,21 @@
     font-family: "Dank Mono", ui-monospace, monospace;
     text-align: center;
 }
+.t4{
+    font-size: 18px;
+    font-family: "Dank Mono", ui-monospace, monospace;
+    text-decoration: underline;
+}
 .link{
     font-size: 20px;
-    margin-left: -90px;
+    margin-left: -120px;
+    text-decoration:underline;
+    color: blue;
+    cursor: pointer;
+}
+.link1{
+    font-size: 20px;
+    margin-left: 10px;
     text-decoration:underline;
     color: blue;
     cursor: pointer;

@@ -7,6 +7,8 @@
         <!--wd-1 = word1 its is the link page tothe first page home page -->
         <span class="wd-2" routerLink="/template-form">Back</span>
         <span class="example-spacer"></span>
+        <span class="wd-3" (click)="sheet()" target="_blank">GoogleSheet Response</span>
+        <span class="example-spacer"></span>
     </mat-toolbar>
 </p>
 <div class="top">
@@ -39,10 +41,17 @@
                 </div>
             </div>
             <span class="text-1">Enter Your  Phone Number: </span>
-            <input type="text" class="input-1" formControlName="phone"><br>
+            <input type="text" class="input-1" formControlName="phone" maxlength="10"><br>
             <div *ngIf="forms.controls['phone'].invalid && forms.controls['phone'].touched" class="alert">
                 <div *ngIf="forms.controls['phone'].errors" class="alerts">
                     <span >*10 digit phone number required</span>
+                </div>
+            </div>
+            <span class="text-1">Enter The Name of the Text you are giving: </span>
+            <input type="text" class="input-1" formControlName="test"><br>
+            <div *ngIf="forms.controls['test'].invalid && forms.controls['test'].touched" class="alert">
+                <div *ngIf="forms.controls['test'].errors" class="alerts">
+                    <span >*test Name is required</span>
                 </div>
             </div>
             <div class="b2" >
@@ -51,10 +60,10 @@
                         <div class="radiop" >
                         <label for="op1" class="option1" >Yes</label>
                         <input id="op1" type="radio" value="yes" formControlName="op1"
-                            name="q1" />
+                            name="op1" />
                         <label for="op1" class="option1">No</label>
                         <input id="op1" type="radio" value="no" formControlName="op1"
-                            name="q1" />
+                            name="op1" />
                             </div>
                     </div>
                     <div class="container">
@@ -62,10 +71,10 @@
                         <div class="radiop" >
                         <label for="op2" class="option1">Yes</label>
                         <input id="op2" type="radio" value="yes" formControlName="op2"
-                            name="q2" />
+                            name="op2" />
                         <label for="op2" class="option1">No</label>
                         <input id="op2" type="radio" value="no" formControlName="op2"
-                            name="q2" />
+                            name="op2" />
                             </div>
                     </div>
                     <div class="container">
@@ -74,10 +83,10 @@
                         <div class="radiop">
                         <label for="op3" class="option1">Yes</label>
                         <input id="op3" type="radio" value="yes" formControlName="op3"
-                            name="q3" />
+                            name="op3" />
                         <label for="op3" class="option1">No</label>
                         <input id="op3" type="radio" value="no" formControlName="op3"
-                            name="q3" />
+                            name="op3" />
                             </div>
                     </div>
                     <div class="container">
@@ -86,10 +95,10 @@
                         <div class="radiop">
                         <label for="op4" class="option1">Yes</label>
                         <input id="op4" type="radio" value="yes" formControlName="op4"
-                            name="q4" />
+                            name="op4" />
                         <label for="op4" class="option1">No</label>
                         <input id="op4" type="radio" value="no" formControlName="op4"
-                            name="q4" />
+                            name="op4" />
                             </div>
                     </div>
                     <div class="container">
@@ -97,10 +106,10 @@
                         <div class="radiop">
                         <label for="op5" class="option1">Yes</label>
                         <input id="op5" type="radio" value="yes" formControlName="op5"
-                            name="q5" />
+                            name="op5" />
                         <label for="op5" class="option1">No</label>
                         <input id="op5" type="radio" value="no" formControlName="op5"
-                            name="q5" />
+                            name="op5" />
                             </div>
                     </div>
                     <div class="container">
@@ -108,10 +117,10 @@
                         <div class="radiop">
                         <label for="op6" class="option1">Yes</label>
                         <input id="op6" type="radio" value="yes" formControlName="op6"
-                            name="q6" />
+                            name="op6" />
                         <label for="op6" class="option1">No</label>
                         <input id="op6" type="radio" value="no" formControlName="op6"
-                            name="q6" />
+                            name="op6" />
                             </div>
                     </div>
                     <div class="container">
@@ -119,10 +128,10 @@
                         <div class="radiop">
                         <label for="op7" class="option1">Yes</label>
                         <input id="op7" type="radio" value="yes" formControlName="op7"
-                            name="q7" />
+                            name="op7" />
                         <label for="op7" class="option1">No</label>
                         <input id="op7" type="radio" value="no" formControlName="op7"
-                            name="q7" />
+                            name="op7" />
                             </div>
                     </div>
                     <div class="container">
