@@ -3,11 +3,25 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { GoogleSheetsDbService } from 'ng-google-sheets-db';
 import {GooglesheetService} from "../../../service/googlesheet.service";
+import { animate, query, stagger, state, style, transition, trigger } from '@angular/animations';
 @Component({
   selector: 'app-angulars-form',
   templateUrl: './angulars-form.component.html',
-  styleUrls: ['./angulars-form.component.css']
-})
+  styleUrls: ['./angulars-form.component.css'],
+  animations:[
+    trigger('fade',[
+      transition('void => *',[
+        style({ opacity:0 }),
+        animate(2000)
+      ])
+    ]),
+    trigger('fade1',[
+      transition('void => *',[
+        style({ opacity:0 }),
+        animate(3000)
+      ])
+    ])
+]})
 export class AngularsFormComponent {
   forms= new FormGroup({
     fname: new FormControl('',[Validators.required]),
@@ -61,8 +75,6 @@ export class AngularsFormComponent {
        this.router.navigate(['/complete']);
      }
     this.googlesheet.saveFormData(this.forms.value).subscribe(console.log)
-    //alert("your form has been submitted");
-
   }
   sheet(){
     document.location = "https://docs.google.com/spreadsheets/d/1F5_TtESFPl0bDorDx4KaVKzVZFtCNVz_c3SMJBUCNqY/edit?usp=sharing"

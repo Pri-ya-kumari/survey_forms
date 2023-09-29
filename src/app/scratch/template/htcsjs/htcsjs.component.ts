@@ -3,11 +3,25 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { GoogleSheetsDbService } from 'ng-google-sheets-db';
 import { Googlesheetf2Service } from 'src/app/service/googlesheetf2.service';
+import { animate, query, stagger, state, style, transition, trigger } from '@angular/animations';
 @Component({
   selector: 'app-htcsjs',
   templateUrl: './htcsjs.component.html',
-  styleUrls: ['./htcsjs.component.css']
-})
+  styleUrls: ['./htcsjs.component.css'],
+  animations:[
+    trigger('fade',[
+      transition('void => *',[
+        style({ opacity:0 }),
+        animate(2000)
+      ])
+    ]),
+    trigger('fade1',[
+      transition('void => *',[
+        style({ opacity:0 }),
+        animate(3000)
+      ])
+    ]),
+]})
 export class HtcsjsComponent {
 
   forms = new FormGroup({

@@ -7,7 +7,12 @@ import { TemplateComponent } from './scratch/template/template.component';
 import { AngularsFormComponent } from './scratch/template/angulars-form/angulars-form.component';
 import { HtcsjsComponent } from './scratch/template/htcsjs/htcsjs.component';
 import { FinalsubmitComponent } from './scratch/template/finalsubmit/finalsubmit.component';
+import { MainpageComponent } from './mainpage/mainpage.component';
 const routes: Routes = [
+  {
+    path:'mainpage',
+    component:MainpageComponent
+  },
   {
     path:'homepage',
     component:HeaderComponent
@@ -38,7 +43,7 @@ const routes: Routes = [
   },
   {
     path:'',
-    redirectTo:'/homepage',
+    redirectTo:'/mainpage',
     pathMatch:'full'
   },
 ];

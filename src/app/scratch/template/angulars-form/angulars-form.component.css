@@ -34,7 +34,35 @@
     background-color: #4CAF50;
     color: white;
 }
+/*.img-m{
+    border-radius: 200px;
+}
+.box {
+    position: absolute;
+    border-radius: 50%;
+    margin-top:400px ;
+    margin-left: 120px;
+    animation: GFG 5s infinite linear;
+}
 
+@keyframes GFG {
+    0% {
+        transform: rotate(0deg) 
+              translateY(100px) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) 
+              translateY(100px) rotate(-360deg);
+    }
+}*/
+.img-3{
+    position: absolute;
+    opacity: 0.6;
+    width: 130%;
+    height: 92%;
+    margin-top: 290px;
+}
 .bg {
     position: absolute;
     margin-top: -13px;
