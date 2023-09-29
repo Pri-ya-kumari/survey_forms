@@ -8,10 +8,15 @@ import { AngularsFormComponent } from './scratch/template/angulars-form/angulars
 import { HtcsjsComponent } from './scratch/template/htcsjs/htcsjs.component';
 import { FinalsubmitComponent } from './scratch/template/finalsubmit/finalsubmit.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
+import { LoginComponent } from './login/login.component';
 const routes: Routes = [
   {
     path:'mainpage',
     component:MainpageComponent
+  },
+  {
+    path:'login',
+    component:LoginComponent
   },
   {
     path:'homepage',

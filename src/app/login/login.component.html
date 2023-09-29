@@ -1,1 +1,44 @@
-<p>login works!</p>
+
+<div class="bg">
+    <div class="container">
+        <form [formGroup]="froms" novalidate (ngSubmit)="homepage()">
+            <span class="lab">Sign Up </span>
+            <label class="lab1">Name</label>
+            <input type="text" class="t1" formControlName="name"><br>
+            <div *ngIf="f['name'].invalid && f['name'].touched "
+                class="alert">
+                <div
+                    *ngIf="f['name'].errors && f['name'].errors['required']"
+                    class="alerts">
+                    <span>*First Name is required</span>
+                </div>
+                <div
+                    *ngIf="f['name'].errors && f['name'].errors['pattern']"
+                    class="alert1">
+                    <span>*only alphabet pattern </span>
+                </div>
+            </div>
+            <label class="lab2">Email Id</label>
+            <input type="text" class="t2" formControlName="email"><br>
+            <div *ngIf="f['email'].invalid && f['email'].touched"
+                        class="alert2">
+                        <div
+                            *ngIf="f['email'].errors && f['email'].errors['required']"
+                            class="alerts2">
+                            <span>*email is required</span>
+                        </div>
+                    </div>
+            <label class="lab3">Password</label>
+            <input type="password" class="t3" formControlName="password"> <br>
+            <div *ngIf="f['password'].invalid && f['password'].touched"
+                        class="alert3">
+                        <div
+                            *ngIf="f['password'].errors && f['password'].errors['required']"
+                            class="alerts3">
+                            <span>*password is required</span>
+                        </div>
+                    </div>
+            <button class="btn-1" (click)="homepage()">Sign Up</button>
+        </form>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mainpage',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./mainpage.component.css']
 })
 export class MainpageComponent {
-
+  constructor(
+    private router: Router) { }
+  loginpage(){
+    this.router.navigate(['/login']);
+  }
 }
