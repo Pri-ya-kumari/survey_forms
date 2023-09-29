@@ -2,6 +2,7 @@
     width: 50%;
     height: 70%;
     border-radius: 50%;
+    opacity: 0.5;
     border: 1px solid white;
     margin-top: -190px;
     margin-left: 920px;
@@ -11,7 +12,6 @@
 }
 .bg{
     position: absolute;
-    opacity: 0.6;
     width: 100%;
     height: 100%;
     background-color:#EDEBF2;
@@ -24,7 +24,7 @@
 
     100% {
         transform: rotate(360deg) 
-              translateY(100px) rotate(-160deg);
+              translateY(-20px) rotate(-160deg);
     }
 }
 .semi-circle1{
@@ -32,10 +32,138 @@
     height: 80%;
     border-radius: 70%;
     border: 1px solid white;
-    margin-top: 320px;
-    margin-left: -280px;
+    margin-top: 350px;
+    margin-left: -320px;
     opacity: 0.5;
     position: fixed;
     background-color: #54B069;
     transform: rotate(140deg);
+}
+.header{
+
+    width: 1299px;
+    height: 60px;
+    margin-left: 30px;
+    margin-top: 33px;
+}
+.line{
+    position: relative;
+    margin-top: 49px;
+}
+.t1{
+    margin-top: 39px;
+    margin-left: 30px;
+    font-size: 28px;
+    color:green;
+}
+.t2{
+    margin-top: -29px;
+    margin-left: 850px;
+    font-size: 20px;
+    color: #000;
+}
+.t3{
+    margin-top: -31px;
+    margin-left: 928px;
+    font-size: 20px;
+    color: #000;
+}
+.t4{
+    position: absolute;
+    margin-top: -381px;
+    margin-left: 298px;
+    font-size: 112px;
+    color: #000;
+}
+.t6{
+    position: absolute;
+    margin-top: -311px;
+    margin-left: 308px;
+    font-size: 48px;
+    color: #000;
+}
+.icon-1{
+    position: absolute;
+    margin-top: -1px;
+}
+.btn1{
+    border: 1px solid #54B069;
+    position: absolute;
+    width: 130px;
+    height: 40px;
+    margin-top: -43px;
+    margin-left: 1008px;
+    font-size: 20px;
+    color: white;
+    font-size: 25px;
+    background-color: #54B069;
+    cursor: pointer;
+    border-radius: 33px;
+}
+.btn1:hover{
+    opacity: 0.8;
+}
+.img-1{
+    width: 400px;
+    margin-left: 900px;
+    margin-top: 120px;
+    background-color:#EDEBF2;
+    border-radius: 140px;
+}
+.line1{
+    border: 1px solid #54B069;
+    width: 400px;
+    height: 2px;
+    background-color: #54B069;
+    margin-top: -250px;
+    margin-left: 310px;
+    box-shadow: 8px 1px 2px darkcyan;
+}
+.t7{
+    position: absolute;
+    margin-top: 19px;
+    margin-left: 308px;
+    width: 490px;
+    height: 100px;
+    text-align: left;
+    line-height: 26px;
+    text-align: justify;
+    font-weight: lighter;
+    font-size: 28px;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    animation: typing 2s steps(80),
+    cursor .4s step-start  infinite alternate ;
+}
+@keyframes cursor{
+    100%{
+        border-color: transparent;
+        opacity: .7;
+        color: #54B069;
+    }
+}
+@keyframes typing{
+    from{
+        animation-timing-function: linear;
+        width: 10px;
+        opacity: 1;
+        color: black;
+    }
+}
+.btn2{
+    border: 1px solid #54B069;
+    position: absolute;
+    width: 180px;
+    height: 50px;
+    margin-top: 203px;
+    margin-left: 328px;
+    font-size: 20px;
+    color: white;
+    font-size: 25px;
+    background-color: darkgreen;
+    cursor: pointer;
+    border-radius: 33px;
+}
+.btn2:hover{
+    opacity: 0.8;
 }

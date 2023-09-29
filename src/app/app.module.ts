@@ -22,6 +22,7 @@ import { FinalsubmitComponent } from './scratch/template/finalsubmit/finalsubmit
 import { API_KEY, GoogleSheetsDbService } from 'ng-google-sheets-db';
 import { environment } from '../environments/environment';
 import { MainpageComponent } from './mainpage/mainpage.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { MainpageComponent } from './mainpage/mainpage.component';
     HtcsjsComponent,
     FinalsubmitComponent,
     MainpageComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
