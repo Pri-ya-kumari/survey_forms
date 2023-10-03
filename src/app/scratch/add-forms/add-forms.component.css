@@ -4,7 +4,7 @@
 .shade1 {
     background-color: #404040;
     color: white;
-    width: 100%;
+    width: 100%  auto;
     height: 70px;
 }
 .wd-1 {
@@ -23,8 +23,8 @@
 .bg {
     position: absolute;
     margin-top: -13px;
-    width: 100%;
-    height: 100% ;
+    width: 100% ;
+    height: 100% auto;
     background-color: #EDEBF2;
 }
 .hd-b {
@@ -172,6 +172,7 @@
     margin-top: 100px;
     margin-bottom: 10px;
     font-family: 'Nunito', sans-serif;
+    cursor: pointer;
 }
 .btn6{
     border: 1px solid white;
@@ -185,27 +186,33 @@
     color: white;
     margin-bottom: 10px;
     font-family: 'Nunito', sans-serif;
+    cursor: pointer;
 }
 .btn4 {
+    position:relative;
     border: 1px solid white;
     width: 150px;
     height: 45px;
-    margin-top: 100px;
+    bottom: 52px;
+    margin-top: 150px;
     margin-left: 250px;
     font-size: 20px;
     background-color: #64CE7A;
     color: white;
+    cursor: pointer;
 }
 .btnn4 {
     position: absolute;
     border: 1px solid white;
     width: 160px;
     height: 45px;
-    margin-top: -45px;
+    bottom: 53px;
+    margin-top: 5px;
     margin-left: 400px;
     font-size: 20px;
     background-color: #64CE7A;
     color: white;
+    cursor: pointer;
 }
 .fm-b3 {
     border: 1px solid white;
