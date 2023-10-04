@@ -21,23 +21,23 @@
             <label class="lab2">Email Id</label>
             <input type="text" class="t2" formControlName="email"><br>
             <div *ngIf="f['email'].invalid && f['email'].touched"
-                        class="alert2">
-                        <div
-                            *ngIf="f['email'].errors && f['email'].errors['required']"
-                            class="alerts2">
-                            <span>*email is required</span>
-                        </div>
-                    </div>
+                class="alert2">
+                <div
+                    *ngIf="f['email'].errors && f['email'].errors['required']"
+                    class="alerts2">
+                    <span>*email is required</span>
+                </div>
+            </div>
             <label class="lab3">Password</label>
             <input type="password" class="t3" formControlName="password"> <br>
             <div *ngIf="f['password'].invalid && f['password'].touched"
-                        class="alert3">
-                        <div
-                            *ngIf="f['password'].errors && f['password'].errors['required']"
-                             class="alerts3">
-                            <span>*password is required</span>
-                        </div>
-                    </div>
+                class="alert3">
+                <div
+                    *ngIf="f['password'].errors && f['password'].errors['required']"
+                    class="alerts3">
+                    <span>*password is required</span>
+                </div>
+            </div>
             <button class="btn-1" (click)="homepage()">Sign Up</button>
         </form>
     </div>
