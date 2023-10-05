@@ -23,7 +23,7 @@ import { API_KEY, GoogleSheetsDbService } from 'ng-google-sheets-db';
 import { environment } from '../environments/environment';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { LoginComponent } from './login/login.component';
-
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,6 +50,7 @@ import { LoginComponent } from './login/login.component';
     ReactiveFormsModule,
     HttpClientModule,
     MatRadioModule,
+    MatProgressSpinnerModule,
   ],
   providers: [ 
     {
