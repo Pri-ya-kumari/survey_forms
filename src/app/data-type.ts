@@ -1,3 +1,5 @@
+import { Time } from "@angular/common";
+
 export interface question{
     Question:string,
     option:any
@@ -20,7 +22,8 @@ export interface character{
     op7:string,
     text1:string,
     text2:string,
-    text3:string,
+    text3:string;
+    time:Time;
 }
 export const charactera = {
     fname: 'first name',
@@ -38,4 +41,5 @@ export const charactera = {
     text1:'write',
     text2:'write',
     text3:'write',
+    time:'12:00 AM',
 }
