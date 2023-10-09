@@ -1,4 +1,4 @@
-<p class="nav">
+<p class="nav" ng-init="init()">
     <mat-toolbar class="shade1">
         <mat-icon>insert_drive_file</mat-icon>
         <span class="wd-1">SurveyForms</span>
@@ -14,12 +14,13 @@
 </p>
 <div class="bg">
     <div class="container1">
-        <mat-spinner mode="determinate" value="70" class="spinner"></mat-spinner>
+        <mat-spinner mode="indeterminate" value="" class="spinner"></mat-spinner>
         <span class="t3">Timmer</span>
         <br>
         <span class="t4">Your Assisment End in </span>
         <br>
-        <b>mm:ss</b>
+        <b>{{getformatedtime()}}</b><br>
+        <span class="t5">Form auto submitted after that</span>
     </div>
     <div class="top">
         <img src="assets/images/frame1.jpg" class="img-1">
