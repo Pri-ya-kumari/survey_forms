@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import { character } from '../data-type';
+//import { character } from '../data-type';
 
 @Injectable({
   providedIn: 'root'

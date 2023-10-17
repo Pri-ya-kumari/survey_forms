@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { RegisterContactService } from 'src/app/service/register-contact.service';
+import { RegisterService } from 'src/app/service/register.service';
+
 @Component({
   selector: 'app-demo-register',
   templateUrl: './demo-register.component.html',
@@ -15,7 +16,7 @@ export class DemoRegisterComponent {
     phone: new FormControl('', [Validators.required]),    
   })
 
-  constructor(private route :Router,private fb: FormBuilder,private register:RegisterContactService){
+  constructor(private route :Router,private fb: FormBuilder,private register:RegisterService){
     this.setupForm();
   }
   ngOnInit(): void {}
@@ -40,11 +41,12 @@ export class DemoRegisterComponent {
       }
     });*/
     if (this.froms.invalid) {
-      this.register.saveFormData(this.froms.value).subscribe(console.log)
+      //this.register.saveFormData(this.froms.value).subscribe(console.log)
       alert("please enter the vaid formate")
     }
     else{
       this.route.navigate(['/previewcontact']);
+      this.register.save(this.froms.value).subscribe(console.log)
     }
   }
   get f(){

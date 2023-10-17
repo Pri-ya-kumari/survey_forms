@@ -3,11 +3,26 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import {MatDialog} from '@angular/material/dialog';
 import { MainpageComponent } from 'src/app/mainpage/mainpage.component';
+import { animate, query, stagger, state, style, transition, trigger } from '@angular/animations';
 import { DialogBoxComponent } from '../dialog-box/dialog-box.component';
 @Component({
   selector: 'app-conact-form',
   templateUrl: './conact-form.component.html',
   styleUrls: ['./conact-form.component.css'],
+  animations: [
+    trigger('fade', [
+      transition('void => *', [
+        style({ opacity: 0 }),
+        animate(2000)
+      ])
+    ]),
+    trigger('fade1', [
+      transition('void => *', [
+        style({ opacity: 0 }),
+        animate(3000)
+      ])
+    ])
+  ]
 })
 export class ConactFormComponent {
   forms = new FormGroup({

@@ -1,10 +1,27 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { animate, query, stagger, state, style, transition, trigger } from '@angular/animations';
+import { PreviewContactService } from 'src/app/service/preview-contact.service';
+
 @Component({
   selector: 'app-preview-contact',
   templateUrl: './preview-contact.component.html',
-  styleUrls: ['./preview-contact.component.css']
+  styleUrls: ['./preview-contact.component.css'],
+  animations: [
+    trigger('fade', [
+      transition('void => *', [
+        style({ opacity: 0 }),
+        animate(2000)
+      ])
+    ]),
+    trigger('fade1', [
+      transition('void => *', [
+        style({ opacity: 0 }),
+        animate(3000)
+      ])
+    ])
+  ]
 })
 export class PreviewContactComponent {
 
@@ -17,7 +34,7 @@ export class PreviewContactComponent {
     op1: new FormControl(''),
     op2: new FormControl(''),
   })
-   constructor(private fb:FormBuilder,private router: Router){
+   constructor(private fb:FormBuilder,private router: Router,private preview:PreviewContactService){
     this.form();
    }
    
@@ -39,8 +56,8 @@ export class PreviewContactComponent {
   onSubmit(): void {
    // this.router.navigate(['/complete']);
     //console.log(this.today);
-   // this.googlesheet.saveFormData(this.today).subscribe(console.log)
-    //this.googlesheet.saveFormData(this.forms.value).subscribe(console.log)
+    //this..saveFormData(this.today).subscribe(console.log)
+    this.preview.save(this.forms.value).subscribe(console.log)
   }
 
 }

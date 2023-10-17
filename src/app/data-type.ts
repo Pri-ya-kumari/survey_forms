@@ -46,9 +46,3 @@ export const charactera = {
     text3:'write',
     time:'12:00 AM',
 }
-export interface register{
-    name:string,
-    email:string,
-    password:string,
-    phone:number,
-}
