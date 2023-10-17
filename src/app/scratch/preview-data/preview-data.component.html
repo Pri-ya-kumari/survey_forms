@@ -1,0 +1,8 @@
+<div *ngIf="characters$ | async as characters">
+    <div *ngFor="let character of characters">
+      <div class="name">
+        {{ character.fname }}
+      </div>
+   </div>
+</div>
+<h1>component</h1>

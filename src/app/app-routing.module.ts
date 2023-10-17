@@ -9,6 +9,10 @@ import { HtcsjsComponent } from './scratch/template/htcsjs/htcsjs.component';
 import { FinalsubmitComponent } from './scratch/template/finalsubmit/finalsubmit.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { LoginComponent } from './login/login.component';
+import { AdminpageComponent } from './adminpage/adminpage.component';
+import { ConactFormComponent } from './demo/conact-form/conact-form.component';
+import { DemoRegisterComponent } from './demo/demo-register/demo-register.component';
+import { PreviewContactComponent } from './demo/preview-contact/preview-contact.component';
 const routes: Routes = [
   {
     path:'mainpage',
@@ -27,7 +31,7 @@ const routes: Routes = [
     component:AddFormsComponent
   },
   {
-    path:'saved-form',
+    path:'pd',
     component:PreviewDataComponent
   },
   {
@@ -47,10 +51,27 @@ const routes: Routes = [
     component:HtcsjsComponent
   },
   {
+    path:'admin',
+    component:AdminpageComponent,
+    //canActivate:[authGuard]
+  },
+  {
     path:'',
     redirectTo:'/mainpage',
     pathMatch:'full'
   },
+  {
+    path:'demof1',
+    component:ConactFormComponent,
+  },
+  {
+    path:'demoregister',
+    component:DemoRegisterComponent,
+  },
+  {
+    path:'previewcontact',
+    component:PreviewContactComponent,
+  }
 ];
 
 @NgModule({

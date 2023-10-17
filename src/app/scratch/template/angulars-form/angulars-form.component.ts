@@ -43,8 +43,8 @@ export class AngularsFormComponent {
     text3: new FormControl(''),
     time: new FormControl(''),
   })
-  //private googlesheet : GooglesheetService
-  //characte$: Observable<Character[]>;
+  today: string = Date();
+
   constructor(private fb: FormBuilder, private router: Router,
     private googleSheetsDbService: GoogleSheetsDbService, private googlesheet: GooglesheetService) {
     this.form();
@@ -73,7 +73,6 @@ export class AngularsFormComponent {
     this.interval$.unsubscribe();
     this.counter = 0;
   }
-
   getformatedtime() {
     var mm = Math.floor(this.counter / 60);
     var ss = this.counter - mm * 60;
@@ -105,6 +104,8 @@ export class AngularsFormComponent {
   }
   onSubmit(): void {
     this.router.navigate(['/complete']);
+    //console.log(this.today);
+   // this.googlesheet.saveFormData(this.today).subscribe(console.log)
     this.googlesheet.saveFormData(this.forms.value).subscribe(console.log)
   }
   sheet() {

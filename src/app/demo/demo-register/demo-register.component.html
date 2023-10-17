@@ -1,8 +1,8 @@
 
 <div class="bg">
     <div class="container">
-        <form [formGroup]="froms" novalidate>
-            <span class="lab">Sign Up </span>
+        <form [formGroup]="froms" novalidate (ngSubmit)="onSubmit()">
+            <span class="lab">Registration Form </span>
             <label class="lab1">Name</label>
             <input type="text" class="t1" formControlName="name"><br>
             <div *ngIf="f['name'].invalid && f['name'].touched "
@@ -33,17 +33,30 @@
                     <span>*enter the valid formate ex:-abc@gmail.com</span>
                 </div>
             </div>
-            <label class="lab3">Password</label>
-            <input type="password" class="t3" formControlName="password"> <br>
-            <div *ngIf="f['password'].invalid && f['password'].touched"
-                class="alert3">
-                <div
-                    *ngIf="f['password'].errors && f['password'].errors['required']"
-                    class="alerts3">
-                    <span>*password is required</span>
+            <label class="lab3">Date-of-Birth</label>
+            <input type="text" class="t3" formControlName="password"> <br>
+            <div class="box1">
+                <span class="lab4">Phone Number: </span>
+                <input type="text" class="t4" formControlName="phone"
+                    maxlength="10"><br>
+                <div *ngIf="f['phone'].invalid && f['phone'].touched"
+                    class="alert5">
+                    <div
+                        *ngIf="f['phone'].errors && f['phone'].errors['required']"
+                        class="alerts5">
+                        <span>*10 digit phone number required</span>
+                    </div>
+                    <div
+                        *ngIf="f['phone'].errors && f['phone'].errors['pattern']"
+                        class="alert6">
+                        <span>*only number pattern </span>
+                    </div>
                 </div>
             </div>
-            <button class="btn-1" [disabled]="!froms.valid" (click)="homepage()">Sign Up</button>
+            <button class="btn-1" [disabled]="!froms.valid" (click)="onSubmit()">Register</button>
         </form>
+    </div>
+    <div>
+        <img src="assets/images/register.jpg" class="img-1">
     </div>
 </div>

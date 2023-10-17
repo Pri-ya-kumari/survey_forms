@@ -1,0 +1,111 @@
+<p class="nav" ng-init="init()">
+    <mat-toolbar class="shade1">
+        <mat-icon>insert_drive_file</mat-icon>
+        <span class="wd-1">SurveyForms</span>
+        <!--wd-1 = word1 it is the titile of the forms-->
+        <span class="wd-2" routerLink="/homepage">Home</span>
+        <span class="example-spacer"></span>
+       <!-- <button class="wd-3" (click)="sheet()" target="_blank">GoogleSheet
+            Response</button>-->
+        <span class="example-spacer"></span>
+    </mat-toolbar>
+</p>
+<div class="bg">
+    <div class="top">
+        <img src="assets/images/contact-bg.jpg" class="img-1">
+    </div>
+    <div class="line"></div>
+    <div class="fp1" @fade>
+        <h3 class="hd1">contact</h3>
+        <h5 class="hd2">Survey Form</h5>
+    </div>
+    <div class="b1" @fade>
+        <div class="inside">
+            <form [formGroup]="forms" novalidate (ngSubmit)="onSubmit()">
+                <div class="box1">
+                    <span class="text-1">Enter Your First Name : </span>
+                    <input type="text" class="input-1" formControlName="fname"><br>
+                    <div *ngIf="f['fname'].invalid && f['fname'].touched "
+                        class="alert">
+                        <div
+                            *ngIf="f['fname'].errors && f['fname'].errors['required']"
+                            class="alerts">
+                            <span>*First Name is required</span>
+                        </div>
+                        <div
+                            *ngIf="f['fname'].errors && f['fname'].errors['pattern']"
+                            class="alert1">
+                            <span>*only alphabet pattern </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box1">
+                    <span class="text-1">Enter Your Last Name: </span>
+                    <input type="text" class="input-1" formControlName="lname"><br>
+                    <div *ngIf="f['lname'].invalid && f['lname'].touched"
+                        class="alert">
+                        <div
+                            *ngIf="f['lname'].errors && f['lname'].errors['required']"
+                            class="alerts">
+                            <span>*last Name is required</span>
+                        </div>
+                        <div
+                            *ngIf="f['lname'].errors && f['lname'].errors['pattern']"
+                            class="alert1">
+                            <span>*only alphabet pattern </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box1">
+                    <span class="text-1">Enter Your Email Id: </span>
+                    <input type="text" class="input-1" formControlName="email"><br>
+                    <div *ngIf="f['email'].invalid && f['email'].touched"
+                        class="alert">
+                        <div
+                            *ngIf="f['email'].errors && f['email'].errors['required']"
+                            class="alerts">
+                            <span>*email is required</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box1">
+                    <span class="text-1">Enter Your Phone Number: </span>
+                    <input type="text" class="input-1" formControlName="phone"
+                        maxlength="10"><br>
+                    <div *ngIf="f['phone'].invalid && f['phone'].touched"
+                        class="alert">
+                        <div
+                            *ngIf="f['phone'].errors && f['phone'].errors['required']"
+                            class="alerts">
+                            <span>*10 digit phone number required</span>
+                        </div>
+                        <div
+                            *ngIf="f['phone'].errors && f['phone'].errors['pattern']"
+                            class="alert1">
+                            <span>*only number pattern </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="b2">
+                    <div class="container">
+                        <div class="box2">
+                            <span class="rb1">Gender</span><br>
+                            <div class="radiop">
+                                <input id="op1" type="radio" value="Male"
+                                    formControlName="op1" class="rdesign1"
+                                    name="op1" />
+                                <label for="op1" class="option1">Male</label>
+                                <input id="op1" type="radio" value="Female"
+                                    formControlName="op1" class="rdesign2"
+                                    name="op1" />
+                                <label for="op1" class="option2">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <button mat-button (click)="openDialog()" class="btn-1">Next</button>
+            </form>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

@@ -24,6 +24,12 @@ import { environment } from '../environments/environment';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { LoginComponent } from './login/login.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { AdminpageComponent } from './adminpage/adminpage.component';
+import { ConactFormComponent } from './demo/conact-form/conact-form.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogBoxComponent } from './demo/dialog-box/dialog-box.component';
+import { DemoRegisterComponent } from './demo/demo-register/demo-register.component';
+import { PreviewContactComponent } from './demo/preview-contact/preview-contact.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +43,11 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     FinalsubmitComponent,
     MainpageComponent,
     LoginComponent,
+    AdminpageComponent,
+    ConactFormComponent,
+    DialogBoxComponent,
+    DemoRegisterComponent,
+    PreviewContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +62,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     HttpClientModule,
     MatRadioModule,
     MatProgressSpinnerModule,
+    MatDialogModule,
   ],
   providers: [ 
     {
