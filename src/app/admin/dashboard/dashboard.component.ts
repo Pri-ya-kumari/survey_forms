@@ -18,4 +18,7 @@ export class DashboardComponent {
   aquestion(){
     this.route.navigate(['/admindashboard', 'aquestion']);
   }
+  logout(){
+    this.route.navigate(['/mainpage']);
+  }
 }

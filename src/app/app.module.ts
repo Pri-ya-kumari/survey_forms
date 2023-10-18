@@ -36,6 +36,7 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { AhomepageComponent } from './admin/ahomepage/ahomepage.component';
 import { AAddquestionComponent } from './admin/a-addquestion/a-addquestion.component';
 import { AAddTestComponent } from './admin/a-add-test/a-add-test.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,6 +62,7 @@ import { AAddTestComponent } from './admin/a-add-test/a-add-test.component';
     AhomepageComponent,
     AAddquestionComponent,
     AAddTestComponent,
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,
