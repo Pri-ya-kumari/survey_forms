@@ -30,6 +30,10 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { DialogBoxComponent } from './demo/dialog-box/dialog-box.component';
 import { DemoRegisterComponent } from './demo/demo-register/demo-register.component';
 import { PreviewContactComponent } from './demo/preview-contact/preview-contact.component';
+import { EventFormComponent } from './demo/event-form/event-form.component';
+import { EventRegComponent } from './demo/event-reg/event-reg.component';
+import { EventdialogboxComponent } from './demo/eventdialogbox/eventdialogbox.component';
+import { EventpreviewComponent } from './demo/eventpreview/eventpreview.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +52,10 @@ import { PreviewContactComponent } from './demo/preview-contact/preview-contact.
     DialogBoxComponent,
     DemoRegisterComponent,
     PreviewContactComponent,
+    EventFormComponent,
+    EventRegComponent,
+    EventdialogboxComponent,
+    EventpreviewComponent,
   ],
   imports: [
     BrowserModule,

@@ -13,6 +13,9 @@ import { AdminpageComponent } from './adminpage/adminpage.component';
 import { ConactFormComponent } from './demo/conact-form/conact-form.component';
 import { DemoRegisterComponent } from './demo/demo-register/demo-register.component';
 import { PreviewContactComponent } from './demo/preview-contact/preview-contact.component';
+import { EventFormComponent } from './demo/event-form/event-form.component';
+import { EventRegComponent } from './demo/event-reg/event-reg.component';
+import { EventpreviewComponent } from './demo/eventpreview/eventpreview.component';
 const routes: Routes = [
   {
     path:'mainpage',
@@ -51,6 +54,10 @@ const routes: Routes = [
     component:HtcsjsComponent
   },
   {
+    path:'event',
+    component:EventFormComponent
+  },
+  {
     path:'admin',
     component:AdminpageComponent,
     //canActivate:[authGuard]
@@ -69,8 +76,16 @@ const routes: Routes = [
     component:DemoRegisterComponent,
   },
   {
+    path:'eventregister',
+    component:EventRegComponent,
+  },
+  {
     path:'previewcontact',
     component:PreviewContactComponent,
+  },
+  {
+    path:'previewevent',
+    component:EventpreviewComponent,
   }
 ];
 

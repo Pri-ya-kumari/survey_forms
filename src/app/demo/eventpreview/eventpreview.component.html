@@ -1,0 +1,97 @@
+<div class="bg">
+    <div class="top">
+        <img src="assets/images/frame1.jpg" class="img-1">
+    </div>
+    <div class="line"></div>
+    <div class="fp1" @fade>
+        <h3 class="hd1">Event</h3>
+        <h5 class="hd2">Survey Form</h5>
+    </div>
+    <div class="b1" @fade>
+        <div class="inside">
+            <form [formGroup]="forms" novalidate (ngSubmit)="onSubmit()">
+                <div class="box1">
+                    <span class="text-1">Enter Your First Name : </span>
+                    <input type="text" class="input-1" formControlName="fname"><br>
+                    <div *ngIf="f['fname'].invalid && f['fname'].touched "
+                        class="alert">
+                        <div
+                            *ngIf="f['fname'].errors && f['fname'].errors['required']"
+                            class="alerts">
+                            <span>*First Name is required</span>
+                        </div>
+                        <div
+                            *ngIf="f['fname'].errors && f['fname'].errors['pattern']"
+                            class="alert1">
+                            <span>*only alphabet pattern </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box1">
+                    <span class="text-1">Enter Your Email Id: </span>
+                    <input type="text" class="input-1" formControlName="email"><br>
+                    <div *ngIf="f['email'].invalid && f['email'].touched"
+                        class="alert">
+                        <div
+                            *ngIf="f['email'].errors && f['email'].errors['required']"
+                            class="alerts">
+                            <span>*email is required</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box1">
+                    <span class="text-1">Enter Your Phone Number: </span>
+                    <input type="text" class="input-1" formControlName="phone"
+                        maxlength="10"><br>
+                    <div *ngIf="f['phone'].invalid && f['phone'].touched"
+                        class="alert">
+                        <div
+                            *ngIf="f['phone'].errors && f['phone'].errors['required']"
+                            class="alerts">
+                            <span>*10 digit phone number required</span>
+                        </div>
+                        <div
+                            *ngIf="f['phone'].errors && f['phone'].errors['pattern']"
+                            class="alert1">
+                            <span>*only number pattern </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="b2">
+                    <div class="container">
+                        <div class="box2">
+                            <span class="rb1">What day you will attend ? </span><br>
+                            <div class="radiop">
+                                <input id="op1" type="radio" value="Day 1"
+                                    formControlName="op1" class="rdesign1"
+                                    name="op1" />
+                                <label for="op1" class="option1">Day 1</label>
+                                <input id="op1" type="radio" value="Day 2"
+                                    formControlName="op1" class="rdesign2"
+                                    name="op1" />
+                                <label for="op1" class="option2">Day 2</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="box2">
+                            <span class="rb1">Dietary restrictions </span><br>
+                            <div class="radiop">
+                                <input id="op2" type="radio" value="None"
+                                    formControlName="op2" class="rdesign1"
+                                    name="op2" />
+                                <label for="op2" class="option1">None</label>
+                                <input id="op2" type="radio" value="Vegetarian"
+                                    formControlName="op2" class="rdesign2"
+                                    name="op2" />
+                                <label for="op2" class="option1">Vegetarian</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button mat-button  class="btn-1">Next</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
