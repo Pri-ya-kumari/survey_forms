@@ -1,0 +1,54 @@
+<div class="bg">
+    <!--signup-->
+    <div class="container" *ngIf="signup==true" >
+        <form [formGroup]="froms" novalidate (ngSubmit)="homepage(froms.value)">
+            <span class="lab">Sign Up </span>
+            <label class="lab1">Name</label>
+            <input type="text" class="t1" formControlName="name"><br>
+            <div *ngIf="f['name'].invalid && f['name'].touched " class="alert">
+                <div *ngIf="f['name'].errors && f['name'].errors['required']" class="alerts">
+                    <span>*First Name is required</span>
+                </div>
+                <div *ngIf="f['name'].errors && f['name'].errors['pattern']" class="alert1">
+                    <span>*only alphabet pattern </span>
+                </div>
+            </div>
+            <label class="lab2">Email Id</label>
+            <input type="text" class="t2" formControlName="email"><br>
+            <div *ngIf="f['email'].invalid && f['email'].touched" class="alert2">
+                <div *ngIf="f['email'].errors && f['email'].errors['required']" class="alerts2">
+                    <span>*email is required</span>
+                </div>
+                <div *ngIf="f['email'].errors && f['email'].errors['pattern']" class="alerts4">
+                    <span>*enter the valid formate ex:-abc@gmail.com</span>
+                </div>
+            </div>
+            <label class="lab3">Password</label>
+            <input type="password" class="t3" formControlName="password"> <br>
+            <div *ngIf="f['password'].invalid && f['password'].touched" class="alert3">
+                <div *ngIf="f['password'].errors && f['password'].errors['required']" class="alerts3">
+                    <span>*password is required</span>
+                </div>
+            </div>
+            <button class="btn-1" [disabled]="!froms.valid">Sign Up</button>
+        </form>
+        <span (click)="Signup()" class="signup">Create account click here</span>
+        <span (click)="loginf()" class="login">Already have account</span>
+
+    </div>
+    <!--login form-->
+    <div>
+        <div class="container1" *ngIf="login==true">
+            <form [formGroup]="Login" novalidate >
+                <span class="lab">Login In </span>
+                <label class="lab2">Email Id</label>
+                <input type="text" class="t2" formControlName="loginemail"><br>
+                <label class="lab3">Password</label>
+                <input type="password" class="t3" formControlName="loginpassword"> <br>
+                <button class="btn-2"  (click)="loginsubmit()">Login In</button>
+            </form>
+            <span (click)="Signup()" class="signup">Create account click here</span>
+            <span (click)="loginf()" class="login">Already have account</span>
+        </div>
+    </div>
+</div>

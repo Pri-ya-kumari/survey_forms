@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -22,9 +21,7 @@ import { FinalsubmitComponent } from './scratch/template/finalsubmit/finalsubmit
 import { API_KEY, GoogleSheetsDbService } from 'ng-google-sheets-db';
 import { environment } from '../environments/environment';
 import { MainpageComponent } from './mainpage/mainpage.component';
-import { LoginComponent } from './login/login.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import { AdminpageComponent } from './adminpage/adminpage.component';
 import { ConactFormComponent } from './demo/conact-form/conact-form.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DialogBoxComponent } from './demo/dialog-box/dialog-box.component';
@@ -34,6 +31,11 @@ import { EventFormComponent } from './demo/event-form/event-form.component';
 import { EventRegComponent } from './demo/event-reg/event-reg.component';
 import { EventdialogboxComponent } from './demo/eventdialogbox/eventdialogbox.component';
 import { EventpreviewComponent } from './demo/eventpreview/eventpreview.component';
+import { SignUpComponent } from './signup/signup.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { AhomepageComponent } from './admin/ahomepage/ahomepage.component';
+import { AAddquestionComponent } from './admin/a-addquestion/a-addquestion.component';
+import { AAddTestComponent } from './admin/a-add-test/a-add-test.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,8 +48,7 @@ import { EventpreviewComponent } from './demo/eventpreview/eventpreview.componen
     HtcsjsComponent,
     FinalsubmitComponent,
     MainpageComponent,
-    LoginComponent,
-    AdminpageComponent,
+    SignUpComponent,
     ConactFormComponent,
     DialogBoxComponent,
     DemoRegisterComponent,
@@ -56,6 +57,10 @@ import { EventpreviewComponent } from './demo/eventpreview/eventpreview.componen
     EventRegComponent,
     EventdialogboxComponent,
     EventpreviewComponent,
+    DashboardComponent,
+    AhomepageComponent,
+    AAddquestionComponent,
+    AAddTestComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,84 +8,100 @@ import { AngularsFormComponent } from './scratch/template/angulars-form/angulars
 import { HtcsjsComponent } from './scratch/template/htcsjs/htcsjs.component';
 import { FinalsubmitComponent } from './scratch/template/finalsubmit/finalsubmit.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
-import { LoginComponent } from './login/login.component';
-import { AdminpageComponent } from './adminpage/adminpage.component';
+import { SignUpComponent } from './signup/signup.component';
 import { ConactFormComponent } from './demo/conact-form/conact-form.component';
 import { DemoRegisterComponent } from './demo/demo-register/demo-register.component';
 import { PreviewContactComponent } from './demo/preview-contact/preview-contact.component';
 import { EventFormComponent } from './demo/event-form/event-form.component';
 import { EventRegComponent } from './demo/event-reg/event-reg.component';
 import { EventpreviewComponent } from './demo/eventpreview/eventpreview.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { AhomepageComponent } from './admin/ahomepage/ahomepage.component';
+import { AAddTestComponent } from './admin/a-add-test/a-add-test.component';
+import { AAddquestionComponent } from './admin/a-addquestion/a-addquestion.component';
 const routes: Routes = [
   {
-    path:'mainpage',
-    component:MainpageComponent
+    path: 'mainpage',
+    component: MainpageComponent
   },
   {
-    path:'login',
-    component:LoginComponent
+    path: 'login',
+    component: SignUpComponent
   },
   {
-    path:'homepage',
-    component:HeaderComponent
+    path: 'homepage',
+    component: HeaderComponent
   },
   {
-    path:'add-forms',
-    component:AddFormsComponent
+    path: 'add-forms',
+    component: AddFormsComponent
   },
   {
-    path:'pd',
-    component:PreviewDataComponent
+    path: 'pd',
+    component: PreviewDataComponent
   },
   {
-    path:'template-form',
-    component:TemplateComponent
+    path: 'template-form',
+    component: TemplateComponent
   },
   {
-    path:'angular-s-form',
-    component:AngularsFormComponent
+    path: 'angular-s-form',
+    component: AngularsFormComponent
   },
   {
-    path:'complete',
-    component:FinalsubmitComponent
+    path: 'complete',
+    component: FinalsubmitComponent
   },
   {
-    path:'htcsjs-form',
-    component:HtcsjsComponent
+    path: 'htcsjs-form',
+    component: HtcsjsComponent
   },
   {
-    path:'event',
-    component:EventFormComponent
+    path: 'admindashboard',
+    component: DashboardComponent,
+    children: [
+      {
+        path: 'adminhome',
+        component: AhomepageComponent,
+      },
+      {
+        path: 'atest',
+        component: AAddTestComponent,
+      },
+      {
+        path: 'aquestion',
+        component: AAddquestionComponent,
+      }
+    ]
   },
   {
-    path:'admin',
-    component:AdminpageComponent,
-    //canActivate:[authGuard]
+    path: 'event',
+    component: EventFormComponent
   },
   {
-    path:'',
-    redirectTo:'/mainpage',
-    pathMatch:'full'
+    path: '',
+    redirectTo: '/mainpage',
+    pathMatch: 'full'
   },
   {
-    path:'demof1',
-    component:ConactFormComponent,
+    path: 'demof1',
+    component: ConactFormComponent,
   },
   {
-    path:'demoregister',
-    component:DemoRegisterComponent,
+    path: 'demoregister',
+    component: DemoRegisterComponent,
   },
   {
-    path:'eventregister',
-    component:EventRegComponent,
+    path: 'eventregister',
+    component: EventRegComponent,
   },
   {
-    path:'previewcontact',
-    component:PreviewContactComponent,
+    path: 'previewcontact',
+    component: PreviewContactComponent,
   },
   {
-    path:'previewevent',
-    component:EventpreviewComponent,
+    path: 'previewevent',
+    component: EventpreviewComponent,
   }
 ];
 

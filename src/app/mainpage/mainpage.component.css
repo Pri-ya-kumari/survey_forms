@@ -58,14 +58,18 @@
     color:green;
 }
 .t2{
+    cursor: pointer;
+    position: relative;
     margin-top: -29px;
-    margin-left: 850px;
+    margin-left: 1050px;
     font-size: 20px;
     color: #000;
 }
 .t3{
+    position: relative;
+    cursor: pointer;
     margin-top: -31px;
-    margin-left: 928px;
+    margin-left: 1120px;
     font-size: 20px;
     color: #000;
 }
@@ -86,23 +90,6 @@
 .icon-1{
     position: absolute;
     margin-top: -1px;
-}
-.btn1{
-    border: 1px solid #54B069;
-    position: absolute;
-    width: 130px;
-    height: 40px;
-    margin-top: -43px;
-    margin-left: 1008px;
-    font-size: 20px;
-    color: white;
-    font-size: 25px;
-    background-color: #54B069;
-    cursor: pointer;
-    border-radius: 33px;
-}
-.btn1:hover{
-    opacity: 0.8;
 }
 .img-1{
     width: 400px;
