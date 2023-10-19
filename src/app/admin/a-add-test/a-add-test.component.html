@@ -1,1 +1,14 @@
-<p>a-add-test works!</p>
+<div class="bg">
+    <div class="b1">
+        <span class="t1">New Survey Form</span>
+        <form [formGroup]="addes" novalidate (ngSubmit)="formSubmit(addes.value)">
+        <div class="b2">
+            <label class="t2">Title</label>
+            <input type="text" class="inp1" placeholder="enter title here" formControlName="title">
+            <label class="t3">Description</label>
+            <textarea class="ta" placeholder="Enter test Description" formControlName="description"></textarea>
+        </div>
+        <button class="btn">Add Test</button>
+        </form>
+    </div>
+</div>

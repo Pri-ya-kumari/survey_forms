@@ -21,4 +21,7 @@ export class DashboardComponent {
   logout(){
     this.route.navigate(['/mainpage']);
   }
+  aallt(){
+    this.route.navigate(['/admindashboard', 'alltest']);
+  }
 }

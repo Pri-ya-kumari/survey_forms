@@ -37,6 +37,10 @@ import { AhomepageComponent } from './admin/ahomepage/ahomepage.component';
 import { AAddquestionComponent } from './admin/a-addquestion/a-addquestion.component';
 import { AAddTestComponent } from './admin/a-add-test/a-add-test.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import {MatListModule} from '@angular/material/list';
+import { AlltestComponent } from './admin/alltest/alltest.component';
+import { AddquestionsComponent } from './admin/addquestions/addquestions.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,6 +67,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     AAddquestionComponent,
     AAddTestComponent,
     NavBarComponent,
+    AlltestComponent,
+    AddquestionsComponent,
   ],
   imports: [
     BrowserModule,
@@ -78,6 +84,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     MatRadioModule,
     MatProgressSpinnerModule,
     MatDialogModule,
+    MatListModule,
   ],
   providers: [ 
     {

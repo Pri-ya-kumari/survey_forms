@@ -19,6 +19,8 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { AhomepageComponent } from './admin/ahomepage/ahomepage.component';
 import { AAddTestComponent } from './admin/a-add-test/a-add-test.component';
 import { AAddquestionComponent } from './admin/a-addquestion/a-addquestion.component';
+import { AlltestComponent } from './admin/alltest/alltest.component';
+import { AddquestionsComponent } from './admin/addquestions/addquestions.component';
 const routes: Routes = [
   {
     path: 'mainpage',
@@ -69,8 +71,16 @@ const routes: Routes = [
         component: AAddTestComponent,
       },
       {
-        path: 'aquestion',
+        path: 'aquestion/:id/:title',
         component: AAddquestionComponent,
+      },
+      {
+        path: 'addquestion/:id/:title',
+        component: AddquestionsComponent,
+      },
+      {
+        path: 'alltest',
+        component: AlltestComponent,
       }
     ]
   },

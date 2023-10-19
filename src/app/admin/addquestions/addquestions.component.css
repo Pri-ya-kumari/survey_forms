@@ -1,0 +1,104 @@
+.t1{
+    position: relative;
+    margin-top: 12px;
+    margin-left: 30px;
+    text-decoration: underline;
+}
+.bg2{
+    border: 1px solid #EDEBF2;
+    width: 890px;
+    margin-left: 30px;
+    height: 70%;
+    background-color: white;
+}
+.bg{
+    border: 1px solid black;
+    width: 77.5%;
+    height: 88%;
+    background-color: #EDEBF2;
+    position: relative;
+    margin-top: -12px;
+    margin-left: 302px;
+}
+.l1{
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+.inp1{
+    position: absolute;
+    margin-top: 102px;
+    margin-left: 20px;
+    width: 800px;
+    height: 30px;
+}
+.l2{
+    position: absolute;
+    margin-top: 160px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+.inp2{
+    position: absolute;
+    margin-top: 187px;
+    margin-left: 20px;
+    width: 400px;
+    height: 30px;
+}
+.l3{
+    position: absolute;
+    margin-top: 160px;
+    margin-left: 450px;
+    font-size: 20px;
+}
+.inp3{
+    position: absolute;
+    margin-top: 187px;
+    margin-left: 450px;
+    width: 370px;
+    height: 30px;
+}
+.l4{
+    position: absolute;
+    margin-top: 245px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+.inp4{
+    position: absolute;
+    margin-top: 270px;
+    margin-left: 20px;
+    width: 400px;
+    height: 30px;
+}
+.l5{
+    position: absolute;
+    margin-top: 245px;
+    margin-left: 450px;
+    font-size: 20px;
+}
+.inp5{
+    position: absolute;
+    margin-top: 270px;
+    margin-left: 450px;
+    width: 370px;
+    height: 30px;
+}
+
+.btn{
+    border: 1px solid #EDEBF2;
+    width: 120px;
+    background-color: green;
+    color: white;
+    font-size: 16px;
+    height: 40px;
+    position: absolute;
+    margin-top: 329px ;
+    margin-bottom: auto;
+    margin-left: 390px;
+    cursor: pointer;
+}
+.btn:hover{
+    opacity: 0.6;
+}

@@ -1,0 +1,25 @@
+<div class="bg">
+    <h1 class="t1">Add Questions to {{qtitle}}</h1>
+    <div class="bg2">
+        <form (ngSubmit)="Submit()">
+            <label class="l1">Enter the questions</label>
+            <input type="text" class="inp1" placeholder="Enter the question" [(ngModel)]="questions.test" name="questiontest">
+            <!--options here-->
+            
+            <label class="l2">option 1</label>
+            <input type="text" class="inp2" placeholder="Enter the question" [(ngModel)]="questions.option1" name="option1">
+            
+            <label class="l3">option 2</label>
+            <input type="text" class="inp3" placeholder="Enter the question" [(ngModel)]="questions.option2" name="option2">
+            
+            <label class="l4">option 3</label>
+            <input type="text" class="inp4" placeholder="Enter the question" [(ngModel)]="questions.option3" name="option3">
+            
+            <label class="l5">option 4</label>
+            <input type="text" class="inp5" placeholder="Enter the question" [(ngModel)]="questions.option4" name="option4">
+
+            <button class="btn">Add Question</button>
+        </form>
+
+    </div>
+</div>

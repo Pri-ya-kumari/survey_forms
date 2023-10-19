@@ -1,0 +1,11 @@
+<div class="bg">
+    <div class="b1">
+        <span class="t1">All tests</span>
+        <mat-list *ngFor="let c of test" class="list">
+            <mat-list-item class="tit">{{c.title}}</mat-list-item>
+            <mat-list-item class="desc">{{c.description}}</mat-list-item>
+            <button class="btn1" [routerLink]="'/admindashboard/aquestion/'+c.id+'/'+c.title">Add Questions</button>
+        </mat-list>
+    </div>
+    <button class="btn" (click)="addt()">Add Test</button>
+    </div>

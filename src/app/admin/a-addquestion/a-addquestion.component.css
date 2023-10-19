@@ -1,0 +1,27 @@
+.title1{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 330px;
+    text-decoration: underline;
+    font-size: 29px;
+}
+.btn1{
+    position: relative;
+    border: 1px solid #EDEBF2;
+    width: 160px;
+    background-color: green;
+    color: white;
+    font-size: 16px;
+    height: 40px;
+    margin-top: -30px ;
+    margin-bottom: auto;
+    margin-left: 40px;
+    cursor: pointer;
+}
+.b1{
+    position: absolute;
+    border: 1px solid black;
+    width: 70%;
+    height: 88.7% auto;
+    margin-left: 320px;
+}

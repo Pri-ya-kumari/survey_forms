@@ -1,1 +1,10 @@
-<p>a-addquestion works!</p>
+<h1 class="title1">Questions of {{title}}</h1>
+<button class="btn1" [routerLink]="'/admindashboard/addquestion/'+id+'/'+title">Add Questions Here</button>
+
+<div class="b1" *ngFor="let q of questions; let i=index">
+    <div class="">
+        <p>Q{{i+1}}
+            <span></span>
+        </p>
+    </div>
+</div>
