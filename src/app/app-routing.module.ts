@@ -22,6 +22,7 @@ import { AAddquestionComponent } from './admin/a-addquestion/a-addquestion.compo
 import { AlltestComponent } from './admin/alltest/alltest.component';
 import { AddquestionsComponent } from './admin/addquestions/addquestions.component';
 import { AdminLoginPageComponent } from './admin/admin-login-page/admin-login-page.component';
+import { UsersDetailsComponent } from './admin/dashboard/users-details/users-details.component';
 const routes: Routes = [
   {
     path: 'mainpage',
@@ -62,6 +63,10 @@ const routes: Routes = [
   {
     path: 'adminlogin',
     component: AdminLoginPageComponent,
+  },
+  {
+    path: 'users',
+    component: UsersDetailsComponent,
   },
   {
     path: 'admindashboard',

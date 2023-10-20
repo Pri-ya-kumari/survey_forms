@@ -41,6 +41,7 @@ import {MatListModule} from '@angular/material/list';
 import { AlltestComponent } from './admin/alltest/alltest.component';
 import { AddquestionsComponent } from './admin/addquestions/addquestions.component';
 import { AdminLoginPageComponent } from './admin/admin-login-page/admin-login-page.component';
+import { UsersDetailsComponent } from './admin/dashboard/users-details/users-details.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +72,7 @@ import { AdminLoginPageComponent } from './admin/admin-login-page/admin-login-pa
     AlltestComponent,
     AddquestionsComponent,
     AdminLoginPageComponent,
+    UsersDetailsComponent,
   ],
   imports: [
     BrowserModule,
