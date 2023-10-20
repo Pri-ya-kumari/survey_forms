@@ -33,95 +33,48 @@
   ],
   "addtest": [
     {
-      "title": "angular form",
-      "description": "click to see the froms",
+      "title": "forms survey",
+      "description": "hello form here click here to see the form ",
+      "fid": "12",
+      "id": 1
+    },
+    {
+      "title": "angular from",
+      "description": "hello form",
+      "fid": "s1",
       "id": 2
-    },
-    {
-      "title": "contact survey",
-      "description": "click to see the survey",
-      "id": 3
-    },
-    {
-      "title": "google survey",
-      "description": "click to see the survey",
-      "id": 4
-    },
-    {
-      "title": "html survey",
-      "description": "click to see test ",
-      "id": 5
-    },
-    {
-      "title": "ml survey form",
-      "description": "click to see froms",
-      "id": 6
     }
   ],
   "questions": [
     {
-      "test": "what is your occupations ?",
-      "option1": "doctor",
+      "test": "what is angular your know ?",
+      "option1": "yes",
       "option2": "nurse",
-      "option3": "baby girl",
-      "option4": "baby boy",
+      "option3": "12",
+      "option4": "raj",
       "id": 1
     },
     {
-      "test": "what is angular your know ?",
+      "test": "enter your name",
       "option1": "yes",
       "option2": "no",
-      "option3": "nope",
-      "option4": "yes sure",
+      "option3": "yes",
+      "option4": "no",
       "id": 2
     },
     {
-      "test": "what is angular your know ?",
-      "option1": "yes",
-      "option2": "yes",
-      "option3": "no",
-      "option4": "no",
+      "test": "what is your occupations ?",
+      "option1": "doctor",
+      "option2": "nurse",
+      "option3": "teacher",
+      "option4": "house care",
       "id": 3
-    },
-    {
-      "test": "what is angular your know ?",
-      "option1": "yes",
-      "option2": "amit",
-      "option3": "baby girl",
-      "option4": "yes sure",
-      "id": 4
-    },
-    {
-      "test": "what is angular your know ?",
-      "option1": "yes",
-      "option2": "amit",
-      "option3": "baby girl",
-      "option4": "yes sure",
-      "id": 5
-    },
-    {
-      "test": "what is python your know ?",
-      "option1": "12",
-      "option2": "34",
-      "option3": "12",
-      "option4": "456",
-      "id": 6
-    },
-    {
-      "test": "what is python your know ?",
-      "option1": "12",
-      "option2": "34",
-      "option3": "12",
-      "option4": "456",
-      "id": 7
-    },
-    {
-      "test": [],
-      "option1": "",
-      "option2": "",
-      "option3": "",
-      "option4": "",
-      "id": 8
     }
+  ],
+  "admin":[
+    {
+      "email": "p@gmail.com",
+      "password": "1212"
+    } 
   ]
 }

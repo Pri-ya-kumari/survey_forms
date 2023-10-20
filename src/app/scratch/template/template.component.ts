@@ -1,5 +1,7 @@
 import { animate, query, stagger, state, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AddtestService } from 'src/app/adminservice/addtest.service';
 
 @Component({
   selector: 'app-template',
@@ -21,4 +23,12 @@ import { Component } from '@angular/core';
 ]})
 export class TemplateComponent {
   
+
+  surveys :any;
+  constructor(private route:Router,private showtest:AddtestService){
+    this.surveys=this.showtest.gettest().subscribe((res) => {
+     this.surveys=res;
+     //console.log('res', res)
+   })
+   }
 }

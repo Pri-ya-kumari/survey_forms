@@ -18,10 +18,62 @@
     margin-left: 40px;
     cursor: pointer;
 }
-.b1{
+.btn{
     position: absolute;
-    border: 1px solid black;
-    width: 70%;
-    height: 88.7% auto;
-    margin-left: 320px;
+    border: 1px solid #EDEBF2;
+    width: 60px;
+    background-color: green;
+    color: white;
+    font-size: 16px;
+    height: 30px;
+    margin-top: 55px ;
+    margin-bottom: auto;
+    margin-left: 40px;
+    cursor: pointer;
+    display: block;
+}
+.b1{
+    position: relative;
+    background-color:white;
+    position: relative;
+    border: 1px solid #EDEBF2;
+    width: 77%;
+    height: 18%;
+    margin-left: 40px;
+    display: block;
+    margin-top: 12px;
+}
+.bg{
+    margin-top: -12px;
+    position: relative;
+    background-color: #EDEBF2;
+    margin-left: 300px;
+    height: 100% ;
+}
+.op1{
+    position: absolute;
+    margin-top: 2px;
+    display: block;
+    margin-left: 42px;
+}
+
+.op2{
+    position: absolute;
+    margin-top: 4px;
+    display: block;
+    margin-left: 342px;
+}
+
+.op3{
+    position: absolute;
+    margin-top: 32px;
+    display: block;
+    margin-left: 42px;
+}
+
+.op4{
+    position: absolute;
+    margin-top: 34px;
+    display: block;
+    margin-left: 342px;
 }

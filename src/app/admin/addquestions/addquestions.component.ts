@@ -30,14 +30,14 @@ export class AddquestionsComponent implements OnInit{
   qId:any;
   qtitle:any;
   questions ={
-    test :[],
+    test :'',
     option1:'',
     option2:'',
     option3:'',
     option4:'',
   }
   Submit(){
-    alert("button wordk");
+    //alert("button wordk");
     this.addquestion.sendquestion(this.questions).subscribe((data:any)=>{
       alert("question addes");
     })

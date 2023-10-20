@@ -14,6 +14,6 @@ export class AddtestService {
     return this.http.post(this.url,res);
   }
   gettest(){
-    return this.http.get(this.url);
+    return this.http.get(this.url); 
   }
 }

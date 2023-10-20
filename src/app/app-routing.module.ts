@@ -21,6 +21,7 @@ import { AAddTestComponent } from './admin/a-add-test/a-add-test.component';
 import { AAddquestionComponent } from './admin/a-addquestion/a-addquestion.component';
 import { AlltestComponent } from './admin/alltest/alltest.component';
 import { AddquestionsComponent } from './admin/addquestions/addquestions.component';
+import { AdminLoginPageComponent } from './admin/admin-login-page/admin-login-page.component';
 const routes: Routes = [
   {
     path: 'mainpage',
@@ -59,6 +60,10 @@ const routes: Routes = [
     component: HtcsjsComponent
   },
   {
+    path: 'adminlogin',
+    component: AdminLoginPageComponent,
+  },
+  {
     path: 'admindashboard',
     component: DashboardComponent,
     children: [
@@ -71,11 +76,11 @@ const routes: Routes = [
         component: AAddTestComponent,
       },
       {
-        path: 'aquestion/:id/:title',
+        path: 'aquestion/:fid/:title',
         component: AAddquestionComponent,
       },
       {
-        path: 'addquestion/:id/:title',
+        path: 'addquestion/:fid/:title',
         component: AddquestionsComponent,
       },
       {

@@ -1,0 +1,12 @@
+<div class="bg">
+    <div class="container1">
+        <form [formGroup]="Login" novalidate >
+            <span class="lab">Login In </span>
+            <label class="lab2">Email Id</label>
+            <input type="text" class="t2" formControlName="loginemail"><br>
+            <label class="lab3">Password</label>
+            <input type="password" class="t3" formControlName="loginpassword"> <br>
+            <button class="btn-2"  (click)="loginsubmit()">Login In</button>
+        </form>
+    </div>
+</div>

@@ -40,6 +40,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import {MatListModule} from '@angular/material/list';
 import { AlltestComponent } from './admin/alltest/alltest.component';
 import { AddquestionsComponent } from './admin/addquestions/addquestions.component';
+import { AdminLoginPageComponent } from './admin/admin-login-page/admin-login-page.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import { AddquestionsComponent } from './admin/addquestions/addquestions.compone
     NavBarComponent,
     AlltestComponent,
     AddquestionsComponent,
+    AdminLoginPageComponent,
   ],
   imports: [
     BrowserModule,

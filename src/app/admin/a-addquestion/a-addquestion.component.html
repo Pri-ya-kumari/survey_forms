@@ -1,10 +1,14 @@
-<h1 class="title1">Questions of {{title}}</h1>
-<button class="btn1" [routerLink]="'/admindashboard/addquestion/'+id+'/'+title">Add Questions Here</button>
+<div class="bg"><h1 class="title1">Questions of {{title}}</h1>
+<button class="btn1" [routerLink]="'/admindashboard/addquestion/'+qId+'/'+title">Add Questions Here</button>
 
 <div class="b1" *ngFor="let q of questions; let i=index">
-    <div class="">
-        <p>Q{{i+1}}
-            <span></span>
+    <div>
+        <p>&nbsp;Q{{i+1}}&nbsp;&nbsp;<span class="q1">{{q.test}}</span>
+            <span class="op1">1)&nbsp;&nbsp;{{q.option1}}</span>
+            <span class="op2">2)&nbsp;&nbsp;{{q.option2}}</span>
+            <span class="op3">3)&nbsp;&nbsp;{{q.option3}}</span>
+            <span class="op4">4)&nbsp;&nbsp;{{q.option4}}</span>
         </p>
     </div>
+</div>
 </div>

@@ -15,6 +15,7 @@ export class AAddTestComponent {
   addes = new FormGroup({
     title : new FormControl('',[Validators.required]),
     description : new FormControl('',[Validators.required]),
+    fid : new FormControl('',[Validators.required]),
   })
   formSubmit(data:any){
     console.log("button works")

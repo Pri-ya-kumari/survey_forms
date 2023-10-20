@@ -21,14 +21,16 @@
     font-family: 'Nunito Sans', sans-serif;
 }
 .side-nav{
+    position: absolute;
     float: left;
-    border: 1px solid black;
-    width: 300px;
-    height: 88.9%;
-    margin-top: -15px;
+    border: 1px solid white;
+    width: 260px;
+    height: 66.9%;
+    margin-top: -11px;
+    background-color: white;
+    border-radius: 19px;
 }
 .bg{
-    position: absolute;
     float: left;
     border: 1px solid black;
     width: 77.6%;

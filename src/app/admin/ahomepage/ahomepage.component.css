@@ -1,7 +1,97 @@
 .home{
     background-color: #EDEBF2;
-    width: 77.6%;
+    width: 77%;
     height: 87%;
     margin-top: -12px;
     margin-left: 300px;
+}
+
+.b1{
+    position: absolute;
+    border: 1px solid #EDEBF2;
+    width: 26%;
+    height: 44%;
+    margin-left: 320px;
+    border-radius: 29px;
+    margin-top: 12px;
+    background-color: white;
+    cursor: pointer;
+}
+.b2{
+    position: absolute;
+    border: 1px solid #EDEBF2;
+    width: 26%;
+    height: 44%;
+    margin-left: 800px;
+    border-radius: 29px;
+    margin-top: 12px;
+    background-color: white;
+    cursor: pointer;
+}
+.b3{
+    position: absolute;
+    border: 1px solid #EDEBF2;
+    width: 26%;
+    height: 44%;
+    margin-left: 320px;
+    border-radius: 29px;
+    margin-top: 310px;
+    background-color: white;
+}
+.b4{
+    position: absolute;
+    border: 1px solid #EDEBF2;
+    width: 26%;
+    height: 44%;
+    margin-left: 800px;
+    border-radius: 29px;
+    margin-top: 310px;
+    background-color: white;
+}
+.img-2{
+    width: 220px;
+    border-radius: 120px;
+    margin-top: 12px;
+    margin-left: 60px;
+}
+.t1{
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    margin-top: 230px;
+    margin-left: -150px;
+}
+.t1:hover{
+    color: green;
+}
+.t2{
+    font-size: 30px;
+    width: 260px;
+    text-align: justify;
+    font-weight: bold;
+    position: absolute;
+    margin-top: 230px;
+    margin-left: -200px;
+}
+.t2:hover{
+    color: green;
+}
+
+.t3{
+    font-size: 30px;
+    width: 200px;
+    text-align: justify;
+    font-weight: bold;
+    position: absolute;
+    margin-top: 230px;
+    margin-left: -200px;
+}
+.t3:hover{
+    color: green;
+}
+.body{
+    width: 99.9%;
+    height: 100%;
+    margin-top: -12px;
+    background-color: #EDEBF2;
 }

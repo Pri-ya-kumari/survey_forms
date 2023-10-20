@@ -9,20 +9,21 @@ import { QuestionsService } from 'src/app/adminservice/questions.service';
 })
 export class AAddquestionComponent implements OnInit {
 
-  id: any;
+  qId: any;
   title: any;
-  questions = [];
+  questions:any = [];
   constructor(private active:ActivatedRoute,private qservice:QuestionsService){
     
-  }
+ }
 
- 
   ngOnInit(): void {
-    this.id = this.active.snapshot.params['(this.id)'];
+    this.qId = this.active.snapshot.params['fid'];
     this.title = this.active.snapshot.params['title'];  
-   this.qservice.getquestion(this.id).subscribe((data:any)=>{
+   this.qservice.getquestion(this.qId).subscribe((data:any)=>{
+    this.questions=data;
     console.log(data);
    }) 
   }
+  
 
 }

@@ -24,8 +24,12 @@
         <span class="wd-4">click to see the form </span>
     </div>
 </div>
+<div>
+    <mat-list *ngFor="let c of surveys" class="b3" @fade1>
+        <img src="assets/images/htcsjs.png" class="img-2">
+        <span class="wd-6">{{c.title}}</span>
+        <span class="wd-7">{{c.description}}</span>
+    </mat-list>
 </div>
-<div class="bg2">
-
 </div>
 <router-outlet></router-outlet>
