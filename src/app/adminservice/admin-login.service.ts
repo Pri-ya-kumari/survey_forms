@@ -12,4 +12,7 @@ export class AdminLoginService {
   checkadmin(){
     return this.http.get(this.url);
   }
+  getadmind(){
+    return this.http.get(this.url); 
+  }
 }

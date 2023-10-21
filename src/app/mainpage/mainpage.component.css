@@ -202,6 +202,7 @@
     cursor: pointer;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     transition: 1s;
+    background-color: white;
 }
 .b1:hover{
     box-shadow: 2px 2px 2px green;
@@ -210,6 +211,7 @@
     z-index: 1;
 }
 .b2{
+    background-color: white;
     position:absolute;
     border: 1px solid lightgray;
     width: 230px;

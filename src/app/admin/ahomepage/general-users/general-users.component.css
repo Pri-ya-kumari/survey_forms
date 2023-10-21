@@ -47,7 +47,7 @@
 }
 .t1{
     margin-top: -30px;
-    margin-left: 480px;
+    margin-left: 360px;
     font-size: 30px;
 }
 .list{
@@ -73,21 +73,35 @@
     position: absolute;
     width: 100px;
     margin-top: 20px;
-    margin-left: 160px;
+    margin-left: 140px;
     font-size: 25px;
 }
 .t4{
     position: absolute;
     width: 160px;
     margin-top: 20px;
-    margin-left: 420px;
+    margin-left: 370px;
     font-size: 25px;
 }
 .t5{
     position: absolute;
     width: 170px;
     margin-top: 20px;
-    margin-left: 710px;
+    margin-left: 600px;
+    font-size: 25px;
+}
+.t6{
+    position: absolute;
+    width: 170px;
+    margin-top: 20px;
+    margin-left: 800px;
+    font-size: 25px;
+}
+.t7{
+    position: absolute;
+    width: 170px;
+    margin-top: 20px;
+    margin-left:990px;
     font-size: 25px;
 }
 .boxes1{

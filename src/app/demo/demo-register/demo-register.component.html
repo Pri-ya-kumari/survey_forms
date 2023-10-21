@@ -1,9 +1,10 @@
 
 <div class="bg">
     <div class="container">
-        <form [formGroup]="froms" novalidate (ngSubmit)="onSubmit()">
+        <form [formGroup]="froms" novalidate (ngSubmit)="onSubmit(froms.value)">
             <span class="lab">Registration Form </span>
             <label class="lab1">Name</label>
+            <h6 formControlName="formname"></h6>
             <input type="text" class="t1" formControlName="name"><br>
             <div *ngIf="f['name'].invalid && f['name'].touched "
                 class="alert">
@@ -53,7 +54,7 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-1" [disabled]="!froms.valid" (click)="onSubmit()">Register</button>
+            <button class="btn-1" [disabled]="!froms.valid">Register</button>
         </form>
     </div>
     <div>

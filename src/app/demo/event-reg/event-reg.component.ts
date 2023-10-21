@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { EventserviceService } from 'src/app/service/eventservice.service';
+import { RegisterService } from 'src/app/service/register.service';
 @Component({
   selector: 'app-event-reg',
   templateUrl: './event-reg.component.html',
@@ -15,9 +16,10 @@ export class EventRegComponent {
     email : new FormControl('',[Validators.required]),
     password : new FormControl('',[Validators.required]),
     phone: new FormControl('', [Validators.required]),    
+    formname:new FormControl(''),
   })
 
-  constructor(private route :Router,private fb: FormBuilder,private eventregister:EventserviceService){
+  constructor(private route :Router,private fb: FormBuilder,private register:RegisterService){
     this.setupForm();
   }
   ngOnInit(): void {}
@@ -31,11 +33,12 @@ export class EventRegComponent {
         password:['',[Validators.required/*,
       Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$")*/] ],
       phone: ['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
+      formname:['event form'],
     });
   }
 
  
-  onSubmit():void{
+  onSubmit(data:any):void{
     /*this.admin.adminlogin(data).subscribe((result)=>{
       if(result){
         this.route.navigate(['admin']);
@@ -47,7 +50,17 @@ export class EventRegComponent {
     }
     else{
       this.route.navigate(['/previewevent']);
-      this.eventregister.save(this.froms.value).subscribe(console.log)
+      //this.eventregister.save(this.froms.value).subscribe(console.log)
+      this.register.Createuser(data).subscribe((res) => {
+        if (res != "") {
+          alert("record added");
+          this.froms.reset();
+        }
+        else {
+          alert("error");
+        }
+      })
+      //this.route.navigate(['/homepage']);
     }
   }
   get f(){

@@ -7,7 +7,9 @@ export class RegisterService {
   private range = 'sheet1!A:z';
   constructor(private httpclient:HttpClient) { }
 
-  save(register :any){
+  url='http://localhost:3000/contactreg';
+  //contact form register
+  /*save(register :any){
     const requestUrl = `https://sheets.googleapis.com/v4/spreadsheets/1w5nWBCERgMVSwsskCxLHFO2SXyIj3bxOI6kZJXKs2mA/values/${this.range}:append?valueInputOption=USER_ENTERED&alt=json&key=AIzaSyDlHv9_tb53PDAWZvGUzmTtv348JC-kRw0`;
 
     const requestBody ={
@@ -19,6 +21,14 @@ export class RegisterService {
     return this.httpclient.post<any>(requestUrl,requestBody,{
       headers :headers
     })
+  }*/
+
+  Createuser(res:any){
+    return this.httpclient.post(this.url,res);
+  }
+
+  usersreg(){
+    return this.httpclient.get(this.url);
   }
 
 }

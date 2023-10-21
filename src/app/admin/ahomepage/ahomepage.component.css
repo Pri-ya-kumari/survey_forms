@@ -37,6 +37,7 @@
     border-radius: 29px;
     margin-top: 310px;
     background-color: white;
+    cursor: pointer;
 }
 .b4{
     position: absolute;
@@ -47,6 +48,7 @@
     border-radius: 29px;
     margin-top: 310px;
     background-color: white;
+    cursor: pointer;
 }
 .img-2{
     width: 220px;
@@ -72,6 +74,7 @@
     position: absolute;
     margin-top: 230px;
     margin-left: -200px;
+    cursor: pointer;
 }
 .t2:hover{
     color: green;
@@ -84,6 +87,7 @@
     font-weight: bold;
     position: absolute;
     margin-top: 230px;
+    cursor: pointer;
     margin-left: -200px;
 }
 .t3:hover{

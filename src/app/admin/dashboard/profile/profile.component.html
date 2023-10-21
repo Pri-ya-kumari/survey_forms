@@ -1,0 +1,36 @@
+
+<div>
+    <p>
+        <mat-toolbar class="shade1">
+            <mat-icon>insert_drive_file</mat-icon>
+            <span class="wd-1">SurveyForms</span>
+            <!--wd-1 = word1 it is the titile of the forms-->
+            <span class="wd-2" routerLink="/homepage">Admin</span>
+            <!--wd-1 = word1 its is the link page tothe first page home page -->
+            <span class="wd-3" routerLink="/admindashboard/adminhome">Back</span>
+            <span class="example-spacer"></span>
+        </mat-toolbar>
+    </p>
+</div>
+<div class="bg">
+    <div class="container">
+        <div class="circle">
+            <img src="assets/images/admin.png" class="img-2">
+        </div>
+        <div class="box" *ngFor="let c of test" >
+            <span class="header">Admin Details </span>
+            <span class="lb1">Your Name: </span>
+            <span class="lb2">Priya</span>
+            <span class="line"></span>
+            <span class="lb3">Your Email Id: </span>
+            <span class="lb4">{{c.email}}</span>
+            <span class="line3"></span>
+            <span class="lb5">Your Password: </span>
+            <span class="lb6">{{c.password}}</span>
+            <span class="line2"></span>
+            <span class="lb7">Your Role: </span>
+            <span class="lb8">Admin</span>
+            <span class="line1"></span>
+        </div>
+    </div>
+</div>

@@ -21,8 +21,9 @@ import { AAddTestComponent } from './admin/a-add-test/a-add-test.component';
 import { AAddquestionComponent } from './admin/a-addquestion/a-addquestion.component';
 import { AlltestComponent } from './admin/alltest/alltest.component';
 import { AddquestionsComponent } from './admin/addquestions/addquestions.component';
-import { AdminLoginPageComponent } from './admin/admin-login-page/admin-login-page.component';
 import { UsersDetailsComponent } from './admin/dashboard/users-details/users-details.component';
+import { ProfileComponent } from './admin/dashboard/profile/profile.component';
+import { GeneralUsersComponent } from './admin/ahomepage/general-users/general-users.component';
 const routes: Routes = [
   {
     path: 'mainpage',
@@ -61,12 +62,16 @@ const routes: Routes = [
     component: HtcsjsComponent
   },
   {
-    path: 'adminlogin',
-    component: AdminLoginPageComponent,
-  },
-  {
     path: 'users',
     component: UsersDetailsComponent,
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent,
+  },
+  {
+    path: 'guser',
+    component: GeneralUsersComponent,
   },
   {
     path: 'admindashboard',

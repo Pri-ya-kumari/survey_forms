@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SignuserService } from '../service/signuser.service';
+import { AdminLoginService } from '../adminservice/admin-login.service';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -9,78 +10,88 @@ import { SignuserService } from '../service/signuser.service';
 })
 export class SignUpComponent {
   froms = new FormGroup({
-    name : new FormControl('',[Validators.required]),
-    email : new FormControl('',[Validators.required]),
-    password : new FormControl('',[Validators.required]),
+    name: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required]),
+    password: new FormControl('', [Validators.required]),
   })
 
   Login = new FormGroup({
-    loginemail : new FormControl(''),
-    loginpassword : new FormControl(''),
+    loginemail: new FormControl(''),
+    loginpassword: new FormControl(''),
   })
 
-  constructor(private route :Router,private fb: FormBuilder,private sign:SignuserService){
+  constructor(private route: Router, private fb: FormBuilder, private sign: SignuserService, private adminservice: AdminLoginService) {
     this.setupForm();
   }
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   login = true;
   signup = false;
 
-  loginf(){
+  loginf() {
     this.login = true;
     this.signup = false;
   }
-  Signup(){
-    this.signup= true;
-    this.login= false;
+  Signup() {
+    this.signup = true;
+    this.login = false;
   }
-  setupForm(){
+  setupForm() {
     this.froms = this.fb.group({
-      name:['',[Validators.required, Validators.pattern("^[a-zA-Z]*")]],
+      name: ['', [Validators.required, Validators.pattern("^[a-zA-Z]*")]],
       email: ['', [Validators.required,
-        Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
-        password:['',[Validators.required/*,
-      Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$")*/] ]
+      Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
+      password: ['', [Validators.required/*,
+      Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$")*/]]
     });
   }
 
-  loginsubmit(){
+  loginsubmit() {
     console.log("button works")
-    this.sign.loginuser().subscribe((res:any)=>{
-      const user = res.find((a:any)=>{
-        return a.email == this.Login.value.loginemail &&  a.password ==  this.Login.value.loginpassword
+    this.adminservice.checkadmin().subscribe((che: any) => {
+      const adminl = che.find((b: any) => {
+        return b.email == this.Login.value.loginemail && b.password == this.Login.value.loginpassword
       })
-      if(user){
-        alert("login successfully")
-        this.Login.reset()
-        this.route.navigate(['/homepage'])
-      }
-      else{
-        alert("user not found");
-      }
-    })
-  }
-  homepage(data:any):void{
-    if (this.froms.invalid) {
+        if (adminl) {
+          alert("login successfully")
+          this.Login.reset()
+          this.route.navigate(['/admindashboard'])
+        }
+      })
+    this.sign.loginuser().subscribe((res: any) => {
+      const user = res.find((a: any) => {
+        return a.email == this.Login.value.loginemail && a.password == this.Login.value.loginpassword
+      })
+        if (user) {
+          alert("login successfully")
+          this.Login.reset()
+          this.route.navigate(['/homepage'])
+        }
+        else {
+          alert("user not found");
+        }
+      })
+    }
+  homepage(data: any): void {
+      if(this.froms.invalid) {
       alert("please enter the vaid formate")
     }
-    else{
-      this.sign.Createuser(data).subscribe((res)=>{
-        if(res!=""){
+    else {
+      this.sign.Createuser(data).subscribe((res) => {
+        if (res != "") {
           alert("record added");
           this.froms.reset();
-          this.login= true;
+          this.login = true;
           this.signup = false;
         }
-        else{
+        else {
           alert("error");
         }
       })
       //this.route.navigate(['/homepage']);
     }
   }
-  get f(){
+  get f() {
     return this.froms.controls;
   }
 }

@@ -40,8 +40,10 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import {MatListModule} from '@angular/material/list';
 import { AlltestComponent } from './admin/alltest/alltest.component';
 import { AddquestionsComponent } from './admin/addquestions/addquestions.component';
-import { AdminLoginPageComponent } from './admin/admin-login-page/admin-login-page.component';
 import { UsersDetailsComponent } from './admin/dashboard/users-details/users-details.component';
+import { ProfileComponent } from './admin/dashboard/profile/profile.component';
+import { GeneralUsersComponent } from './admin/ahomepage/general-users/general-users.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -71,8 +73,9 @@ import { UsersDetailsComponent } from './admin/dashboard/users-details/users-det
     NavBarComponent,
     AlltestComponent,
     AddquestionsComponent,
-    AdminLoginPageComponent,
     UsersDetailsComponent,
+    ProfileComponent,
+    GeneralUsersComponent,
   ],
   imports: [
     BrowserModule,
@@ -89,6 +92,7 @@ import { UsersDetailsComponent } from './admin/dashboard/users-details/users-det
     MatProgressSpinnerModule,
     MatDialogModule,
     MatListModule,
+    MatSnackBarModule,
   ],
   providers: [ 
     {
