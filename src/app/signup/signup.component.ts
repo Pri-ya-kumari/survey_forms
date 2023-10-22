@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { SignuserService } from '../service/signuser.service';
 import { AdminLoginService } from '../adminservice/admin-login.service';
+import Swal from 'sweetalert2'
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -52,40 +53,65 @@ export class SignUpComponent {
       const adminl = che.find((b: any) => {
         return b.email == this.Login.value.loginemail && b.password == this.Login.value.loginpassword
       })
-        if (adminl) {
-          alert("login successfully")
-          this.Login.reset()
-          this.route.navigate(['/admindashboard'])
-        }
-      })
+      if (adminl) {
+        //alert("login successfully")
+        Swal.fire('success', 'user is login successfully', 'success');
+        this.Login.reset()
+        this.route.navigate(['/admindashboard'])
+      }
+    })
     this.sign.loginuser().subscribe((res: any) => {
       const user = res.find((a: any) => {
         return a.email == this.Login.value.loginemail && a.password == this.Login.value.loginpassword
       })
-        if (user) {
-          alert("login successfully")
-          this.Login.reset()
-          this.route.navigate(['/homepage'])
-        }
-        else {
-          alert("user not found");
-        }
-      })
-    }
+      if (user) {
+        //alert("login successfully")
+        Swal.fire({
+          icon: 'success',
+          title: 'SuccessFully',
+          text: 'Login Successfully',
+        })
+        this.route.navigate(['/homepage'])
+        this.Login.reset()
+      }
+      else {
+        //alert("error")
+        /*Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Something went wrong!',
+
+        });*/
+      }
+    })
+  }
   homepage(data: any): void {
-      if(this.froms.invalid) {
-      alert("please enter the vaid formate")
+    if (this.froms.invalid) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Please enter the valid formate'})
+      //alert("please enter the vaid formate")
     }
     else {
       this.sign.Createuser(data).subscribe((res) => {
         if (res != "") {
-          alert("record added");
+          Swal.fire({
+            icon: 'success',
+            title: 'Successfully',
+            text: 'Your Record is added successfully'})    
+          //alert("record added");
           this.froms.reset();
           this.login = true;
           this.signup = false;
         }
         else {
-          alert("error");
+          //alert("error");
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Please enter the valid formate'})
+          
         }
       })
       //this.route.navigate(['/homepage']);

@@ -24,6 +24,7 @@ import { AddquestionsComponent } from './admin/addquestions/addquestions.compone
 import { UsersDetailsComponent } from './admin/dashboard/users-details/users-details.component';
 import { ProfileComponent } from './admin/dashboard/profile/profile.component';
 import { GeneralUsersComponent } from './admin/ahomepage/general-users/general-users.component';
+import { UpdateComponentComponent } from './admin/dashboard/update-component/update-component.component';
 const routes: Routes = [
   {
     path: 'mainpage',
@@ -64,6 +65,10 @@ const routes: Routes = [
   {
     path: 'users',
     component: UsersDetailsComponent,
+  },
+  {
+    path:'update/:id',
+    component:UpdateComponentComponent
   },
   {
     path: 'profile',

@@ -8,7 +8,7 @@ export class SignuserService {
 
   constructor(private http :HttpClient) { }
 
-  signup="http://localhost:3000/signup";
+  public signup='http://localhost:3000/signup';
   
 
   Createuser(res:any){
@@ -17,5 +17,9 @@ export class SignuserService {
 
   loginuser(){
     return this.http.get(this.signup);
+  }
+
+  deletedata(id:any){
+    return this.http.delete(this.signup,id);
   }
 }

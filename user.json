@@ -7,40 +7,34 @@
       "id": 1
     },
     {
-      "name": "gaurav",
-      "email": "g@gmail.com",
-      "password": "12122",
+      "name": "priya",
+      "email": "p@gmail.com",
+      "password": "1212",
       "id": 2
     },
     {
-      "name": "priya",
-      "email": "priya@gmail.com",
+      "name": "rohit",
+      "email": "r@gmail.com",
       "password": "1212",
       "id": 3
     },
     {
-      "name": "amit",
-      "email": "amit@gmail.com",
+      "name": "rohit",
+      "email": "rohit@gmail.com",
       "password": "1212",
       "id": 4
     },
     {
-      "name": "farahan",
-      "email": "farahan@gmail.com",
-      "password": "1212",
+      "name": "harsh",
+      "email": "h@gmail.com",
+      "password": "harsh",
       "id": 5
     },
     {
-      "name": "rohit",
-      "email": "rohit@gmail.com",
-      "password": "rohiysingh",
+      "name": "priya",
+      "email": "p@gmail.com",
+      "password": "1212",
       "id": 6
-    },
-    {
-      "name": "rahul",
-      "email": "rahul@gmail.com",
-      "password": "12345",
-      "id": 7
     }
   ],
   "addtest": [

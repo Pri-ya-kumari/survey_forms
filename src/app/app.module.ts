@@ -44,6 +44,7 @@ import { UsersDetailsComponent } from './admin/dashboard/users-details/users-det
 import { ProfileComponent } from './admin/dashboard/profile/profile.component';
 import { GeneralUsersComponent } from './admin/ahomepage/general-users/general-users.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { UpdateComponentComponent } from './admin/dashboard/update-component/update-component.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +77,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     UsersDetailsComponent,
     ProfileComponent,
     GeneralUsersComponent,
+    UpdateComponentComponent,
   ],
   imports: [
     BrowserModule,
