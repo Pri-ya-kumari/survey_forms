@@ -1,40 +1,16 @@
 {
   "signup": [
     {
-      "name": "priya",
-      "email": "p@gmail.com",
-      "password": "1212",
-      "id": 1
-    },
-    {
-      "name": "priya",
-      "email": "p@gmail.com",
-      "password": "1212",
-      "id": 2
-    },
-    {
-      "name": "rohit",
-      "email": "r@gmail.com",
-      "password": "1212",
-      "id": 3
-    },
-    {
       "name": "rohit",
       "email": "rohit@gmail.com",
       "password": "1212",
       "id": 4
     },
     {
-      "name": "harsh",
-      "email": "h@gmail.com",
-      "password": "harsh",
-      "id": 5
-    },
-    {
-      "name": "priya",
-      "email": "p@gmail.com",
-      "password": "1212",
-      "id": 6
+      "name": "harish",
+      "email": "harish@gmail.com",
+      "password": "harish",
+      "id": 7
     }
   ],
   "addtest": [
@@ -99,6 +75,22 @@
       "phone": "1212312312",
       "formname": "event form",
       "id": 2
+    },
+    {
+      "name": "jhon",
+      "email": "jhon@gmail.com",
+      "password": "12-2-22",
+      "phone": "1212131232",
+      "formname": "contact for",
+      "id": 3
+    },
+    {
+      "name": "harsh",
+      "email": "harsh@gmail.com",
+      "password": "12-2-22",
+      "phone": "9304788565",
+      "formname": "event form",
+      "id": 4
     }
   ]
 }

@@ -45,6 +45,7 @@ import { ProfileComponent } from './admin/dashboard/profile/profile.component';
 import { GeneralUsersComponent } from './admin/ahomepage/general-users/general-users.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { UpdateComponentComponent } from './admin/dashboard/update-component/update-component.component';
+import { AnalysisDataComponent } from './admin/dashboard/analysis-data/analysis-data.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +79,7 @@ import { UpdateComponentComponent } from './admin/dashboard/update-component/upd
     ProfileComponent,
     GeneralUsersComponent,
     UpdateComponentComponent,
+    AnalysisDataComponent,
   ],
   imports: [
     BrowserModule,

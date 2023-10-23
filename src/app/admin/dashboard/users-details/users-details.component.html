@@ -28,7 +28,7 @@
                 <span class="t3">{{c.name}}</span>
                 <span class="t4">{{c.email}}</span>
                 <span class="t5">{{c.password}}</span>
-                <button [routerLink]="'/update/:id'" class="btn3" (click)="update(c.id)">Update</button>
+                <button routerLink="/update/{{c.id}}" class="btn3" (click)="update(c.id)">Update</button>
                 <button class="btn2"(click)="deleted(c.id)">Delete</button>
             </mat-list>    
         </div>

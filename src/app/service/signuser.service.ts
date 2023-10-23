@@ -15,11 +15,11 @@ export class SignuserService {
     return this.http.post(this.signup,res);
   }
 
-  loginuser(){
-    return this.http.get(this.signup);
+  loginuser(id:any){
+    return this.http.get(this.signup,id);
   }
 
   deletedata(id:any){
-    return this.http.delete(this.signup,id);
+    return this.http.delete(`${this.signup}/${id}`);
   }
 }

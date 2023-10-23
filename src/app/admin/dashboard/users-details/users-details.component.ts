@@ -11,21 +11,22 @@ import Swal from 'sweetalert2';
 export class UsersDetailsComponent {
 
   test:any=[];
-
+  id:any;
   constructor(private route: Router, private userd: SignuserService) {
-    this.test = this.userd.loginuser().subscribe((res) => {
+    this.test = this.userd.loginuser(this.id).subscribe((res) => {
       this.test = res;
     })
   }
   deleted(data:any){
-    alert(data);
-    this.test.splice(data.id-1,1);
-    this.userd.deletedata(data.id).subscribe((a:any)=>{
+    //alert(data);
+    //this.test.splice(data.id-1,1);
+    this.userd.deletedata(data).subscribe((a:any)=>{
     Swal.fire('success','Data deleted successfully')
     this.test;
     })
   }
   update(data1:any){
-
+    //alert(data1);
+    //this.route.navigate(['/update/'+'id'])
   }
 }

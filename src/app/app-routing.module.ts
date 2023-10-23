@@ -25,6 +25,7 @@ import { UsersDetailsComponent } from './admin/dashboard/users-details/users-det
 import { ProfileComponent } from './admin/dashboard/profile/profile.component';
 import { GeneralUsersComponent } from './admin/ahomepage/general-users/general-users.component';
 import { UpdateComponentComponent } from './admin/dashboard/update-component/update-component.component';
+import { AnalysisDataComponent } from './admin/dashboard/analysis-data/analysis-data.component';
 const routes: Routes = [
   {
     path: 'mainpage',
@@ -71,6 +72,10 @@ const routes: Routes = [
     component:UpdateComponentComponent
   },
   {
+    path:'analysis',
+    component:AnalysisDataComponent
+  },
+  {
     path: 'profile',
     component: ProfileComponent,
   },
@@ -82,6 +87,11 @@ const routes: Routes = [
     path: 'admindashboard',
     component: DashboardComponent,
     children: [
+      {
+        path:'',
+        redirectTo:'adminhome',
+        pathMatch:'full'
+      },
       {
         path: 'adminhome',
         component: AhomepageComponent,

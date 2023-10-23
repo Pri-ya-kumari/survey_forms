@@ -46,8 +46,8 @@ export class SignUpComponent {
       Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$")*/]]
     });
   }
-
-  loginsubmit() {
+  id:any;
+  loginsubmit(id:any) {
     console.log("button works")
     this.adminservice.checkadmin().subscribe((che: any) => {
       const adminl = che.find((b: any) => {
@@ -60,7 +60,8 @@ export class SignUpComponent {
         this.route.navigate(['/admindashboard'])
       }
     })
-    this.sign.loginuser().subscribe((res: any) => {
+    
+    this.sign.loginuser(id).subscribe((res: any) => {
       const user = res.find((a: any) => {
         return a.email == this.Login.value.loginemail && a.password == this.Login.value.loginpassword
       })
