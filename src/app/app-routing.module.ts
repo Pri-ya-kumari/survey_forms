@@ -85,7 +85,7 @@ const routes: Routes = [
     component: GeneralUsersComponent,
   },
   {
-    path:'update-pass/:cid',
+    path:'updatepass/:cid',
     component:UpdatePasswordComponent
   },
   {

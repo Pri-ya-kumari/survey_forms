@@ -47,6 +47,12 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { UpdateComponentComponent } from './admin/dashboard/update-component/update-component.component';
 import { AnalysisDataComponent } from './admin/dashboard/analysis-data/analysis-data.component';
 import { UpdatePasswordComponent } from './admin/dashboard/update-password/update-password.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+//    imports: [MatFormFieldModule, MatInputModule, MatNativeDateModule, MatDatepickerModule],
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatNativeDateModule} from '@angular/material/core';
+
 
 @NgModule({
   declarations: [
@@ -99,6 +105,10 @@ import { UpdatePasswordComponent } from './admin/dashboard/update-password/updat
     MatDialogModule,
     MatListModule,
     MatSnackBarModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatNativeDateModule,
   ],
   providers: [ 
     {

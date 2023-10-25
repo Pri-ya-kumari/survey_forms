@@ -128,8 +128,9 @@
     border: 1px solid #54B069;
     width: 140px;
     height: 40px;
-    margin-top: 280px;
-    margin-left: 330px;
+    bottom: 30px;
+    margin-top: -100px;
+    margin-left:30px;
     background-color: #54B069;
     color: #EDEBF2;
     font-size: 28px;
@@ -137,5 +138,20 @@
     cursor: pointer;
 }
 .btn-1:hover{
+    opacity: 0.8;
+}
+.btn-2{
+    border: 1px solid #54B069;
+    width: 140px;
+    height: 40px;
+    margin-top: 280px;
+    margin-left: 250px;
+    background-color: red;
+    color: #EDEBF2;
+    font-size: 28px;
+    border-radius: 120px;
+    cursor: pointer;
+}
+.btn-2:hover{
     opacity: 0.8;
 }

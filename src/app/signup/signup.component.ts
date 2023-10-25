@@ -58,6 +58,8 @@ export class SignUpComponent {
         Swal.fire('success', 'user is login successfully', 'success');
         this.Login.reset()
         this.route.navigate(['/admindashboard'])
+      }else{
+        Swal.fire('error', 'user not found', 'error');
       }
     })
     

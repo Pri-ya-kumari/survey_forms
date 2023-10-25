@@ -1,28 +1,22 @@
 {
   "signup": [
     {
-      "name": "rohit",
-      "email": "rohit@gmail.com",
-      "password": "1212",
-      "id": 4
-    },
-    {
-      "name": "harish",
-      "email": "harish@gmail.com",
-      "password": "harish",
-      "id": 7
+      "name": "yash",
+      "email": "h@gmail.com",
+      "password": "harsh",
+      "id": 1
     },
     {
       "name": "priya",
       "email": "priya@gmail.com",
-      "password": "1212",
-      "id": 8
+      "password": "jhon",
+      "id": 3
     },
     {
-      "name": "amit",
-      "email": "amit@gmail.com",
-      "password": "amit",
-      "id": 9
+      "name": "pooja",
+      "email": "pooja@gmail.com",
+      "password": "pooja",
+      "id": 4
     }
   ],
   "addtest": [
@@ -67,9 +61,9 @@
   ],
   "admin": [
     {
-      "id":1,
-      "email": "admin@gmail.com",
-      "password": "admin"
+      "loginemail": "admin@gmail.com",
+      "loginpassword": "admin",
+      "id": 1
     }
   ],
   "contactreg": [
@@ -104,6 +98,22 @@
       "phone": "9304788565",
       "formname": "event form",
       "id": 4
+    },
+    {
+      "name": "jhon",
+      "email": "jhon@gmail.com",
+      "password": "12-2-22",
+      "phone": "8787862213",
+      "formname": "contact for",
+      "id": 5
+    },
+    {
+      "name": "harsh",
+      "email": "h@gmail.com",
+      "password": "2023-10-04",
+      "phone": "3333333333",
+      "formname": "contact for",
+      "id": 6
     }
   ]
 }

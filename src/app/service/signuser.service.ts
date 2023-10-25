@@ -18,8 +18,18 @@ export class SignuserService {
   loginuser(id:any){
     return this.http.get(this.signup,id);
   }
-
+  getdata(id:any){
+    return this.http.get(`${this.signup}/${id}`);
+  }
   deletedata(id:any){
     return this.http.delete(`${this.signup}/${id}`);
   }
+  updateItem(id: number, updatedData: any) {
+    const url = `${this.signup}/${id}`;
+    return this.http.put(url, updatedData);
+  }
+/*
+  update(Id:any){
+    return this.http.put(`${this.signup}/${Id}`);
+  }*/
 }

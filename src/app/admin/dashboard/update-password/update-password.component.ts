@@ -19,8 +19,21 @@ export class UpdatePasswordComponent implements OnInit {
   constructor(private route :Router,private service:AdminLoginService,private active:ActivatedRoute){}
   ngOnInit(): void {
     console.log(this.active.snapshot.params['cid']);
-    this.service.updatedata(this.active.snapshot.params['cid']).subscribe((res)=>{
+    this.service.getdata(this.active.snapshot.params['cid']).subscribe((res:any)=>{
       console.log(res);
+      this.Login = new FormGroup({
+        loginemail: new FormControl(res['loginemail']),
+        loginpassword: new FormControl(res['loginpassword']),
+      })    
     })
   }
+
+  savedata(data:any){
+    console.log(this.Login.value);
+    this.service.updateItem(this.active.snapshot.params['cid'],this.Login.value).subscribe((data1:any)=>{
+      console.warn(data1);
+      this.route.navigate(['/profile']);
+    })
+  }
+
 }

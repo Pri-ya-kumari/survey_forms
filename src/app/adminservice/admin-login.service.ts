@@ -15,7 +15,11 @@ export class AdminLoginService {
   getadmind(){
     return this.http.get(this.url); 
   }
-  updatedata(id:any){
-    return this.http.get(this.url,id);
+  getdata(id:any){
+    return this.http.get(`${this.url}/${id}`);
+  }
+  updateItem(id: number, updatedData: any) {
+    const uurl = `${this.url}/${id}`;
+    return this.http.put(uurl, updatedData);
   }
 }

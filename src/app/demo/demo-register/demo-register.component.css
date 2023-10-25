@@ -70,7 +70,7 @@
 }
 .t3{
     position: absolute;
-    margin-top: 269px;
+    margin-top: 259px;
     margin-left: 32px;
     width: 320px;
     height: 36px;
@@ -86,13 +86,13 @@
 
 .lab4{
     position: absolute;
-    margin-top: 310px;
+    margin-top: 330px;
     font-size: 25px;
     margin-left: 32px;
 }
 .t4{
     position: absolute;
-    margin-top: 333px;
+    margin-top: 363px;
     margin-left: 32px;
     width: 320px;
     height: 36px;
@@ -199,4 +199,9 @@
     margin-top: -484px;
     margin-left: 703px;
     border-radius: 22px;
+}
+.icon{
+    position: absolute;
+    margin-top: 260px;
+    margin-left: 190px;
 }

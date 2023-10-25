@@ -23,15 +23,15 @@
             <span class="lb2">Priya</span>
             <span class="line"></span>
             <span class="lb3">Your Email Id: </span>
-            <span class="lb4">{{c.email}}</span>
+            <span class="lb4">{{c.loginemail}}</span>
             <span class="line3"></span>
             <span class="lb5">Your Password: </span>
-            <span class="lb6">{{c.password}}</span>
+            <span class="lb6">{{c.loginpassword}}</span>
             <span class="line2"></span>
             <span class="lb7">Your Role: </span>
             <span class="lb8">Admin</span>
             <span class="line1"></span>
-            <h4 class="change" [routerLink]="'/update-pass/{{c.cid}}'">Change Password? </h4>
+            <button class="change" routerLink="/updatepass/{{c.id}}">Change Password? </button>
         </div>
     </div>
 </div>

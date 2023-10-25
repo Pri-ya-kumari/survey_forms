@@ -2,12 +2,14 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { RegisterService } from 'src/app/service/register.service';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatSnackBarModule } from '@angular/material/snack-bar';
+import { formatDate } from '@angular/common';
+ 
 
 @Component({
   selector: 'app-demo-register',
   templateUrl: './demo-register.component.html',
-  styleUrls: ['./demo-register.component.css']
+  styleUrls: ['./demo-register.component.css'],
 })
 export class DemoRegisterComponent {
   froms = new FormGroup({
@@ -18,13 +20,13 @@ export class DemoRegisterComponent {
     formname:new FormControl(''),
   })
 
+  
   constructor(private route :Router,private fb: FormBuilder,private register:RegisterService
     ,private snak:MatSnackBarModule){
     this.setupForm();
   }
   ngOnInit(): void {}
 
-  
   setupForm(){
     this.froms = this.fb.group({
       name:['',[Validators.required, Validators.pattern("^[a-zA-Z]*")]],
@@ -63,4 +65,6 @@ export class DemoRegisterComponent {
   get f(){
     return this.froms.controls;
   }
+
+
 }
