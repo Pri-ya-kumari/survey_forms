@@ -19,4 +19,8 @@ export class QuestionsService {
   public delete(test:any){
     return this.http.delete(this.url,test);
   }
+  postquestion(id: number, updatedData: any) {
+    const uurl = `${this.url}/${id}`;
+    return this.http.post(uurl, updatedData);
+  }
 }

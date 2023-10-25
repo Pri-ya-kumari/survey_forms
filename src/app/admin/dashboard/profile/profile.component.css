@@ -186,6 +186,8 @@
 .change{
     position: absolute;
     cursor: pointer;
-     margin-left:-20px;
+    color: blue;
+    text-decoration: underline;
+     margin-left:-380px;
      margin-top: 200px;
 }

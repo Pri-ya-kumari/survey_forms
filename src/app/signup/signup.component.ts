@@ -51,7 +51,7 @@ export class SignUpComponent {
     console.log("button works")
     this.adminservice.checkadmin().subscribe((che: any) => {
       const adminl = che.find((b: any) => {
-        return b.email == this.Login.value.loginemail && b.password == this.Login.value.loginpassword
+        return b.loginemail == this.Login.value.loginemail && b.loginpassword == this.Login.value.loginpassword
       })
       if (adminl) {
         //alert("login successfully")

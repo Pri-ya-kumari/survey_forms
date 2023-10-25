@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { QuestionsService } from 'src/app/adminservice/questions.service';
 
 @Component({
@@ -19,27 +19,22 @@ export class AddquestionsComponent implements OnInit{
   })
 
   ngOnInit(): void {
-
-    this.qId = this.route.snapshot.params['id'];
+    console.log(this.route.snapshot.params["fid"])
+    this.qId = this.route.snapshot.params['fid'];
     this.qtitle = this.route.snapshot.params['title'];
   }
   constructor(
-    private route:ActivatedRoute,private addquestion:QuestionsService
+    private route:ActivatedRoute,private addquestion:QuestionsService,private router:Router
   ){}
 
   qId:any;
   qtitle:any;
-  questions ={
-    test :'',
-    option1:'',
-    option2:'',
-    option3:'',
-    option4:'',
-  }
-  Submit(){
-    //alert("button wordk");
-    this.addquestion.sendquestion(this.questions).subscribe((data:any)=>{
-      alert("question addes");
+  
+  Submit(data:any){
+    console.log(this.questionadd.value);
+    this.addquestion.sendquestion(this.route.snapshot.params["fid"]).subscribe((datas:any)=>{
+      console.warn(datas);
+      //this.router.navigate(['/users'])
     })
   }
 }
