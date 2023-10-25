@@ -17,7 +17,6 @@ export class ProfileComponent {
      // this.test=res;
      
   }
-
   test:any;
 
 }

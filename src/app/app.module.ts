@@ -46,6 +46,7 @@ import { GeneralUsersComponent } from './admin/ahomepage/general-users/general-u
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { UpdateComponentComponent } from './admin/dashboard/update-component/update-component.component';
 import { AnalysisDataComponent } from './admin/dashboard/analysis-data/analysis-data.component';
+import { UpdatePasswordComponent } from './admin/dashboard/update-password/update-password.component';
 
 @NgModule({
   declarations: [
@@ -80,6 +81,7 @@ import { AnalysisDataComponent } from './admin/dashboard/analysis-data/analysis-
     GeneralUsersComponent,
     UpdateComponentComponent,
     AnalysisDataComponent,
+    UpdatePasswordComponent,
   ],
   imports: [
     BrowserModule,

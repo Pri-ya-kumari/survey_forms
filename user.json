@@ -11,6 +11,18 @@
       "email": "harish@gmail.com",
       "password": "harish",
       "id": 7
+    },
+    {
+      "name": "priya",
+      "email": "priya@gmail.com",
+      "password": "1212",
+      "id": 8
+    },
+    {
+      "name": "amit",
+      "email": "amit@gmail.com",
+      "password": "amit",
+      "id": 9
     }
   ],
   "addtest": [
@@ -55,6 +67,7 @@
   ],
   "admin": [
     {
+      "id":1,
       "email": "admin@gmail.com",
       "password": "admin"
     }

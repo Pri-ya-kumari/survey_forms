@@ -15,4 +15,7 @@ export class AdminLoginService {
   getadmind(){
     return this.http.get(this.url); 
   }
+  updatedata(id:any){
+    return this.http.get(this.url,id);
+  }
 }
