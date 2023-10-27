@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { QuestionsService } from 'src/app/adminservice/questions.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-addquestions',
@@ -10,31 +11,32 @@ import { QuestionsService } from 'src/app/adminservice/questions.service';
 })
 export class AddquestionsComponent implements OnInit{
 
-  questionadd = new FormGroup({
-    question : new FormControl(''),
-    option1 : new FormControl(''),
-    option2 : new FormControl(''),
-    option3: new FormControl(''),    
-    option4: new FormControl(''),    
-  })
-
   ngOnInit(): void {
-    console.log(this.route.snapshot.params["fid"])
+    console.log(this.route.snapshot.params['fid'])
+    //console.log(this.route.snapshot.params['title'])
     this.qId = this.route.snapshot.params['fid'];
     this.qtitle = this.route.snapshot.params['title'];
+    this.question.tests['fid']=this.qId;
   }
   constructor(
-    private route:ActivatedRoute,private addquestion:QuestionsService,private router:Router
+    private route:ActivatedRoute,private addq:QuestionsService
   ){}
 
   qId:any;
   qtitle:any;
-  
-  Submit(data:any){
-    console.log(this.questionadd.value);
-    this.addquestion.sendquestion(this.route.snapshot.params["fid"]).subscribe((datas:any)=>{
-      console.warn(datas);
-      //this.router.navigate(['/users'])
-    })
+  question:any ={
+      tests:{},
+      content:'',
+      option1:'',
+      option2:'',
+      option3:'',
+      option4:''
+
+  };
+  Submit(){
+  this.addq.sendquestion(this.question).subscribe((res:any)=>{
+    Swal.fire('success','all deta send successfully','success');
+    console.log(res);
+  })
   }
 }

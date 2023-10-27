@@ -24,7 +24,7 @@ export class UsersDetailsComponent implements OnInit{
   deleted(data:any){
     Swal.fire({
       title: 'Are you sure?',
-      text: "You won't be able to revert this!",
+      text: "Are You Sure You Want To Delete this!",
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
@@ -32,7 +32,7 @@ export class UsersDetailsComponent implements OnInit{
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
       if (result.isConfirmed) {
-        this.test.splice(data-1,1)
+        this.test.splice(data-1)
         this.userd.deletedata(data).subscribe((a:any)=>{
               Swal.fire('success','Data deleted successfully')
         })

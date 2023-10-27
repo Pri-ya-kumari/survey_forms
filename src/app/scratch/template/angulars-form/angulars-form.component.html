@@ -32,7 +32,7 @@
     </div>
     <div class="b1" @fade>
         <div class="inside">
-            <form [formGroup]="forms" novalidate (ngSubmit)="onSubmit()">
+            <form [formGroup]="forms" novalidate (ngSubmit)="onSubmit(forms.value)">
                 <div class="box1">
                     <span class="text-1">Enter Your First Name : </span>
                     <input type="text" class="input-1" formControlName="fname"><br>
@@ -276,7 +276,7 @@
                     </div>
                 </div>
                 <button type="submit" class="btn-1" [disabled]="!forms.valid"
-                    (click)="onSubmit()">Next</button>
+                    >Next</button>
             </form>
         </div>
     </div>

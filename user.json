@@ -1,22 +1,22 @@
 {
   "signup": [
     {
-      "name": "yash",
-      "email": "h@gmail.com",
-      "password": "harsh",
+      "name": "priya",
+      "email": "priya12@gmail.com",
+      "password": "priya",
       "id": 1
     },
     {
-      "name": "priya",
-      "email": "priya@gmail.com",
-      "password": "jhon",
-      "id": 3
+      "name": "kiran",
+      "email": "kiran@gmail.com",
+      "password": "kiran",
+      "id": 2
     },
     {
-      "name": "pooja",
-      "email": "pooja@gmail.com",
-      "password": "pooja",
-      "id": 4
+      "name": "disha",
+      "email": "disha@gmail.com",
+      "password": "disha",
+      "id": 3
     }
   ],
   "addtest": [
@@ -31,6 +31,12 @@
       "description": "hello form",
       "fid": "s1",
       "id": 2
+    },
+    {
+      "title": "react survey form",
+      "description": "click to see",
+      "fid": "112",
+      "id": 3
     }
   ],
   "questions": [
@@ -59,25 +65,40 @@
       "id": 3
     },
     {
-      "id": 4
-    },
-    {
+      "question": "yh",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "option4": "",
       "id": 5
     },
     {
+      "tests": {
+        "fid": "s1"
+      },
+      "content": "train",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "option4": "",
       "id": 6
     },
     {
+      "tests": {
+        "fid": "112"
+      },
+      "content": "frfr",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "option4": "",
       "id": 7
-    },
-    {
-      "id": 8
     }
   ],
   "admin": [
     {
       "loginemail": "admin@gmail.com",
-      "loginpassword": "admin",
+      "loginpassword": "admin12",
       "id": 1
     }
   ],
@@ -129,6 +150,152 @@
       "phone": "3333333333",
       "formname": "contact for",
       "id": 6
+    },
+    {
+      "name": "jaya",
+      "email": "jaya@gmail.com",
+      "password": "2023-10-05",
+      "phone": "1222121212",
+      "formname": "contact form",
+      "id": 7
+    },
+    {
+      "name": "honey",
+      "email": "honey@gmail.com",
+      "password": "2023-10-05",
+      "phone": "1212312321",
+      "formname": null,
+      "id": 8
+    },
+    {
+      "name": "gaura",
+      "email": "g@gmail.com",
+      "password": "2023-10-02",
+      "phone": "3422424242",
+      "formname": "contact form",
+      "id": 9
+    }
+  ],
+  "angularformresponses": [
+    {
+      "id": 1
+    },
+    {
+      "fname": "priya",
+      "lname": "k",
+      "email": "p@gmail.com",
+      "phone": "1111111111",
+      "test": "angular",
+      "op1": "1",
+      "op2": "no",
+      "op3": "yes",
+      "op4": "no",
+      "op5": "yes",
+      "op6": "no",
+      "op7": "yes",
+      "text1": "",
+      "text2": 4,
+      "text3": "",
+      "time": "",
+      "id": 2
+    },
+    {
+      "fname": "PRIYA",
+      "lname": "KUMARI",
+      "email": "p@gmail.com",
+      "phone": "9304788565",
+      "test": "angular",
+      "op1": "",
+      "op2": "",
+      "op3": "",
+      "op4": "",
+      "op5": "",
+      "op6": "",
+      "op7": "",
+      "text1": "",
+      "text2": "",
+      "text3": "",
+      "time": "",
+      "id": 3
+    },
+    {
+      "fname": "harsh",
+      "lname": "j",
+      "email": "h@gmail.com",
+      "phone": "1212112121",
+      "test": "angular",
+      "op1": "1",
+      "op2": "no",
+      "op3": "yes",
+      "op4": "no",
+      "op5": "yes",
+      "op6": "yes",
+      "op7": "no",
+      "text1": "uuefyuerif",
+      "text2": 10,
+      "text3": "ded",
+      "time": "",
+      "id": 4
+    },
+    {
+      "fname": "PRIYA",
+      "lname": "KUMARI",
+      "email": "p@gmail.com",
+      "phone": "9304788565",
+      "test": "an",
+      "op1": "2",
+      "op2": "",
+      "op3": "",
+      "op4": "",
+      "op5": "",
+      "op6": "",
+      "op7": "",
+      "text1": "",
+      "text2": "",
+      "text3": "",
+      "time": "",
+      "id": 5
+    },
+    {
+      "fname": "harish",
+      "lname": "h",
+      "email": "h@gmail.com",
+      "phone": "8825177689",
+      "test": "a",
+      "op1": "1",
+      "op2": "",
+      "op3": "",
+      "op4": "",
+      "op5": "",
+      "op6": "",
+      "op7": "",
+      "text1": "",
+      "text2": "",
+      "text3": "",
+      "time": "",
+      "id": 6
+    },
+    {
+      "fname": "xs",
+      "lname": "sx",
+      "email": "sx@gmail.com",
+      "phone": "8825177689",
+      "test": "sd",
+      "op1": "yes",
+      "op2": "",
+      "op3": "",
+      "op4": "",
+      "op5": "",
+      "op6": "",
+      "op7": "",
+      "text1": "",
+      "text2": "",
+      "text3": "",
+      "time": "",
+      "id": 7
+    },
+    {
+      "id": 8
     }
   ]
 }

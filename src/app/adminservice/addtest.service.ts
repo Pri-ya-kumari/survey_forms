@@ -11,9 +11,9 @@ export class AddtestService {
   url= "http://localhost:3000/addtest";
   
   addtest(res:any){
-    return this.http.post(this.url,res);
+    return this.http.post(`{this.url}`,res);
   }
   gettest(){
-    return this.http.get(this.url); 
+    return this.http.get(`${this.url}`); 
   }
 }

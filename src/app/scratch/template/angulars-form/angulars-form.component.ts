@@ -5,6 +5,7 @@ import { GoogleSheetsDbService } from 'ng-google-sheets-db';
 import { GooglesheetService } from "../../../service/googlesheet.service";
 import { animate, query, stagger, state, style, transition, trigger } from '@angular/animations';
 import { interval } from 'rxjs';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-angulars-form',
   templateUrl: './angulars-form.component.html',
@@ -55,13 +56,13 @@ export class AngularsFormComponent {
   ngOnInit(): void {
     this.startcounter();
   }
-
+  sata:any
   startcounter() {
     this.interval$ = interval(1000).subscribe(val => {
       this.counter--;
       if (this.counter === 0) {
         this.counter = 150;
-        this.onSubmit();
+        this.onSubmit(this.sata);
         this.startcounter();
       }
     });
@@ -102,11 +103,30 @@ export class AngularsFormComponent {
   get f() {
     return this.forms.controls;
   }
-  onSubmit(): void {
-    this.router.navigate(['/complete']);
+  onSubmit(data:any): void {
+    //this.router.navigate(['/complete']);
     //console.log(this.today);
    // this.googlesheet.saveFormData(this.today).subscribe(console.log)
     this.googlesheet.saveFormData(this.forms.value).subscribe(console.log)
+
+    this.googlesheet.postdata(data).subscribe((res:any)=>{
+      if(res!=""){
+        this.router.navigate(['/complete']);
+        Swal.fire({
+          icon: 'success',
+          title: 'Successfully',
+          text: 'Your Record is added successfully'})    
+        //alert("record added");
+      }
+      else {
+        //alert("error");
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Please enter the valid formate'})
+        
+        }
+    })
   }
   sheet() {
     document.location = "https://docs.google.com/spreadsheets/d/1F5_TtESFPl0bDorDx4KaVKzVZFtCNVz_c3SMJBUCNqY/edit?usp=sharing"

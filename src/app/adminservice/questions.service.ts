@@ -13,14 +13,14 @@ export class QuestionsService {
     return this.http.get(this.url,fid);
   }
 
-  public sendquestion(data:any){
-    return this.http.post(this.url,data);
+  public sendquestion(questionsend:any){
+    return this.http.post(`${this.url}`,questionsend);
   }
   public delete(test:any){
     return this.http.delete(this.url,test);
   }
-  postquestion(id: number, updatedData: any) {
-    const uurl = `${this.url}/${id}`;
+  /*postquestion(fid: number, updatedData: any) {
+    const uurl = `${this.url}/${fid}`;
     return this.http.post(uurl, updatedData);
-  }
+  }*/
 }

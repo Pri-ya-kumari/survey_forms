@@ -52,6 +52,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatNativeDateModule} from '@angular/material/core';
+import { NgChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -109,6 +110,7 @@ import {MatNativeDateModule} from '@angular/material/core';
     MatFormFieldModule,
     MatInputModule,
     MatNativeDateModule,
+    NgChartsModule,
   ],
   providers: [ 
     {

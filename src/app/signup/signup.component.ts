@@ -17,12 +17,13 @@ export class SignUpComponent {
   })
 
   Login = new FormGroup({
-    loginemail: new FormControl(''),
+    loginemail: new FormControl('',[Validators.required]),
     loginpassword: new FormControl(''),
   })
 
   constructor(private route: Router, private fb: FormBuilder, private sign: SignuserService, private adminservice: AdminLoginService) {
     this.setupForm();
+    this.lofinform();
   }
   ngOnInit(): void { }
 
@@ -36,6 +37,15 @@ export class SignUpComponent {
   Signup() {
     this.signup = true;
     this.login = false;
+  }
+  lofinform(){
+    this.Login = this.fb.group({
+      //name: ['', [Validators.required, Validators.pattern("^[a-zA-Z]*")]],
+      loginemail: ['', [Validators.required,
+      Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
+      loginpassword: ['', [Validators.required/*,
+      Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$")*/]]
+    });
   }
   setupForm() {
     this.froms = this.fb.group({
@@ -122,5 +132,8 @@ export class SignUpComponent {
   }
   get f() {
     return this.froms.controls;
+  }
+  get l() {
+    return this.Login.controls;
   }
 }

@@ -43,6 +43,14 @@
                 <span class="lab">Login In </span>
                 <label class="lab2">Email Id</label>
                 <input type="text" class="t2" formControlName="loginemail"><br>
+                <div *ngIf="l['loginemail'].invalid && l['loginemail'].touched" class="alert2">
+                    <div *ngIf="l['loginemail'].errors && l['loginemail'].errors['required']" class="alerts2">
+                        <span>*email is required</span>
+                    </div>
+                    <div *ngIf="l['loginemail'].errors && l['loginemail'].errors['pattern']" class="alerts4">
+                        <span>*enter the valid formate ex:-abc@gmail.com</span>
+                    </div>
+                </div>
                 <label class="lab3">Password</label>
                 <input type="password" class="t3" formControlName="loginpassword"> <br>
                 <button class="btn-2"  (click)="loginsubmit(Login.value)">Login In</button>

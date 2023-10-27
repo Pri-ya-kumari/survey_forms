@@ -3,7 +3,6 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { RegisterService } from 'src/app/service/register.service';
 import {MatSnackBarModule } from '@angular/material/snack-bar';
-import { formatDate } from '@angular/common';
  
 
 @Component({
@@ -20,7 +19,6 @@ export class DemoRegisterComponent {
     formname:new FormControl(''),
   })
 
-  
   constructor(private route :Router,private fb: FormBuilder,private register:RegisterService
     ,private snak:MatSnackBarModule){
     this.setupForm();
@@ -31,14 +29,14 @@ export class DemoRegisterComponent {
     this.froms = this.fb.group({
       name:['',[Validators.required, Validators.pattern("^[a-zA-Z]*")]],
       email: ['', [Validators.required,
-        Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
+        Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
         password:['',[Validators.required/*,
       Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$")*/] ],
       phone: ['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
-      formname:['contact for'],
+      formname:['contact form'],
     });
   }
-
+  count: number = 0;
  
   onSubmit(data:any):void{
     if (this.froms.invalid) {
@@ -49,6 +47,8 @@ export class DemoRegisterComponent {
     
     else{
       this.route.navigate(['/previewcontact']);
+      this.count++;
+      console.log(this.count++);
       //this.register.save(this.froms.value).subscribe(console.log)
       this.register.Createuser(data).subscribe((res) => {
         if (res != "") {
