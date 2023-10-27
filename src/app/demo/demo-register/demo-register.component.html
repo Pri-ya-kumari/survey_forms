@@ -37,7 +37,7 @@
             <label class="lab3">Date-of-Birth</label>
             <input type="date" class="t3"  formControlName="password">
             <div class="box1">
-                <span class="lab4">Phone Number: </span>
+                <span class="lab4">Phone Number:</span>
                 <input type="text" class="t4" formControlName="phone"
                     maxlength="10"><br>
                 <div *ngIf="f['phone'].invalid && f['phone'].touched"
@@ -54,7 +54,7 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-1" [disabled]="!froms.valid">Register</button>
+            <button class="btn-1" [disabled]="!froms.valid">Register </button>
         </form>
     </div>
     <div>

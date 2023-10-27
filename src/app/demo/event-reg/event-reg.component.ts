@@ -12,11 +12,12 @@ export class EventRegComponent {
 
 
   froms = new FormGroup({
-    name : new FormControl('',[Validators.required]),
+    names : new FormControl('',[Validators.required]),
     email : new FormControl('',[Validators.required]),
     password : new FormControl('',[Validators.required]),
     phone: new FormControl('', [Validators.required]),    
     formname:new FormControl(''),
+    count:new FormControl(''),
   })
 
   constructor(private route :Router,private fb: FormBuilder,private register:RegisterService){
@@ -27,13 +28,14 @@ export class EventRegComponent {
   
   setupForm(){
     this.froms = this.fb.group({
-      name:['',[Validators.required, Validators.pattern("^[a-zA-Z]*")]],
+      names:['',[Validators.required, Validators.pattern("^[a-zA-Z]*")]],
       email: ['', [Validators.required,
         Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
         password:['',[Validators.required/*,
       Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$")*/] ],
       phone: ['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
       formname:['event form'],
+      count:['1'],
     });
   }
 

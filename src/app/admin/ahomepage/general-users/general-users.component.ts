@@ -10,10 +10,11 @@ import { RegisterService } from 'src/app/service/register.service';
 export class GeneralUsersComponent {
 
   test:any=[];
-
+  dataCount: number = 1;
   constructor(private route: Router, private userd: RegisterService) {
     this.test = this.userd.usersreg().subscribe((res) => {
       this.test = res;
+      this.dataCount = res.length;
     })
-  }
+  }  
 }

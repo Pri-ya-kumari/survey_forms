@@ -4,16 +4,16 @@
         <form [formGroup]="froms" novalidate (ngSubmit)="onSubmit(froms.value)">
             <span class="lab">Registration Form </span>
             <label class="lab1">Name</label>
-            <input type="text" class="t1" formControlName="name"><br>
-            <div *ngIf="f['name'].invalid && f['name'].touched "
+            <input type="text" class="t1" formControlName="names"><br>
+            <div *ngIf="f['names'].invalid && f['names'].touched "
                 class="alert">
                 <div
-                    *ngIf="f['name'].errors && f['name'].errors['required']"
+                    *ngIf="f['names'].errors && f['names'].errors['required']"
                     class="alerts">
                     <span>*First Name is required</span>
                 </div>
                 <div
-                    *ngIf="f['name'].errors && f['name'].errors['pattern']"
+                    *ngIf="f['names'].errors && f['names'].errors['pattern']"
                     class="alert1">
                     <span>*only alphabet pattern </span>
                 </div>

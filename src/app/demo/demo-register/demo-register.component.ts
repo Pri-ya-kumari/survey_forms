@@ -16,7 +16,8 @@ export class DemoRegisterComponent {
     email : new FormControl('',[Validators.required]),
     password : new FormControl('',[Validators.required]),
     phone: new FormControl('', [Validators.required]), 
-    formname:new FormControl(''),
+    formnames:new FormControl(''),
+    usercounts :new FormControl(''),    
   })
 
   constructor(private route :Router,private fb: FormBuilder,private register:RegisterService
@@ -24,6 +25,8 @@ export class DemoRegisterComponent {
     this.setupForm();
   }
   ngOnInit(): void {}
+
+  dataCount: number = 0;
 
   setupForm(){
     this.froms = this.fb.group({
@@ -33,7 +36,9 @@ export class DemoRegisterComponent {
         password:['',[Validators.required/*,
       Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$")*/] ],
       phone: ['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
-      formname:['contact form'],
+      formnames:['contact form'],
+      usercounts:['1'],
+
     });
   }
   count: number = 0;
@@ -47,10 +52,7 @@ export class DemoRegisterComponent {
     
     else{
       this.route.navigate(['/previewcontact']);
-      this.count++;
-      console.log(this.count++);
-      //this.register.save(this.froms.value).subscribe(console.log)
-      this.register.Createuser(data).subscribe((res) => {
+      this.register.Createuser(data).subscribe((res:any) => {
         if (res != "") {
           alert("record added");
           this.froms.reset();
@@ -59,6 +61,18 @@ export class DemoRegisterComponent {
           alert("error");
         }
       })
+      /*test:any=[];
+  dataCount: number = 1;
+  contactform =0;
+  eventform =0;
+  constructor(private route: Router, private userd: RegisterService) {
+    this.test = this.userd.usersreg().subscribe((res) => {
+      this.test = res;
+      this.dataCount = res.length;
+    })
+  }
+  
+} */
       //this.route.navigate(['/homepage']);
     }
     }
