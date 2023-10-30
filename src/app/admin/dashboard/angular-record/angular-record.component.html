@@ -1,0 +1,83 @@
+<div>
+    <p>
+        <mat-toolbar class="shade1">
+            <mat-icon>insert_drive_file</mat-icon>
+            <span class="wd-1">SurveyForms</span>
+            <!--wd-1 = word1 it is the titile of the forms-->
+            <span class="wd-2" routerLink="/homepage">Admin</span>
+            <!--wd-1 = word1 its is the link page tothe first page home page -->
+            <span class="wd-3" routerLink="/analysis">Back</span>
+            <span class="example-spacer"></span>
+        </mat-toolbar>
+    </p>
+</div>
+<div class="top">
+    <img src="assets/images/frame1.jpg" class="img-1">
+</div>
+<div class="container">
+    <div class="emaillist">
+        <span class="em">email:- </span>
+        <!--<div class="ems" *ngFor="let d of data">
+            <span class="elist">{{d.email}}</span>
+        </div>-->
+        <ul class="gap">
+            <li class="elist" *ngFor="let d of data" >
+                {{d.email}}
+            </li>
+        </ul>
+    </div>
+    <div class="namelist">
+        <span class="em">Names:- </span>
+        <!--<div class="ems" *ngFor="let d of data">
+            <span class="elist">{{d.email}}</span>
+        </div>-->
+        <ul class="gap">
+            <li class="elist" *ngFor="let d of data" >
+                {{d.fname}}
+            </li>
+        </ul>
+    </div>
+    <div class="phonelist">
+        <span class="em">numbers:- </span>
+        <!--<div class="ems" *ngFor="let d of data">
+            <span class="elist">{{d.email}}</span>
+        </div>-->
+        <ul class="gap">
+            <li class="elist" *ngFor="let d of data" >
+                {{d.phone}}
+            </li>
+        </ul>
+    </div>
+    <div class="ratinglist">
+        <span class="em">Rating:- </span>
+        <!--<div class="ems" *ngFor="let d of data">
+            <span class="elist">{{d.email}}</span>
+        </div>-->
+        <ul class="gap">
+            <li class="elist" *ngFor="let d of data" >
+                {{d.text2}}
+            </li>
+        </ul>
+    </div>
+    <div class="revlist">
+        <span class="em1">Angular Review:- </span>
+        <!--<div class="ems" *ngFor="let d of data">
+            <span class="elist">{{d.email}}</span>
+        </div>-->
+        <ul class="gap">
+            <li class="elist" *ngFor="let d of data" >
+                {{d.text1}}
+            </li>
+        </ul>
+    </div><div class="revlist">
+        <span class="em1">Know About angular:- </span>
+        <!--<div class="ems" *ngFor="let d of data">
+            <span class="elist">{{d.email}}</span>
+        </div>-->
+        <ul class="gap">
+            <li class="elist" *ngFor="let d of data" >
+                {{d.text3}}
+            </li>
+        </ul>
+    </div>  
+</div>

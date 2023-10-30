@@ -53,6 +53,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatNativeDateModule} from '@angular/material/core';
 import { NgChartsModule } from 'ng2-charts';
+import { AngularRecordComponent } from './admin/dashboard/angular-record/angular-record.component';
 
 
 @NgModule({
@@ -89,6 +90,7 @@ import { NgChartsModule } from 'ng2-charts';
     UpdateComponentComponent,
     AnalysisDataComponent,
     UpdatePasswordComponent,
+    AngularRecordComponent,
   ],
   imports: [
     BrowserModule,

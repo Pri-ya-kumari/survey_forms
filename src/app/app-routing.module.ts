@@ -27,6 +27,7 @@ import { GeneralUsersComponent } from './admin/ahomepage/general-users/general-u
 import { UpdateComponentComponent } from './admin/dashboard/update-component/update-component.component';
 import { AnalysisDataComponent } from './admin/dashboard/analysis-data/analysis-data.component';
 import { UpdatePasswordComponent } from './admin/dashboard/update-password/update-password.component';
+import { AngularRecordComponent } from './admin/dashboard/angular-record/angular-record.component';
 const routes: Routes = [
   {
     path: 'mainpage',
@@ -87,6 +88,10 @@ const routes: Routes = [
   {
     path:'updatepass/:cid',
     component:UpdatePasswordComponent
+  },
+  {
+    path: 'angularrecord',
+    component: AngularRecordComponent,
   },
   {
     path: 'admindashboard',

@@ -33,4 +33,7 @@ export class GooglesheetService {
   postdata(data:any){
     return this.httpClient.post(this.send,data);
   }
+  getdata(){
+    return this.httpClient.get(this.send);
+  }
 }
