@@ -33,9 +33,9 @@ export class UsersDetailsComponent implements OnInit{
     }).then((result) => {
       if (result.isConfirmed) {
         this.test.splice(data-1)
-        this.userd.deletedata(data).subscribe((a:any)=>{
+        //this.userd.deletedata(data).subscribe((a:any)=>{
               Swal.fire('success','Data deleted successfully')
-        })
+        //})
         Swal.fire(
           'Deleted!',
           'Your file has been deleted.',

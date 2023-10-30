@@ -25,16 +25,17 @@ export class AddquestionsComponent implements OnInit{
   qId:any;
   qtitle:any;
   question:any ={
-      tests:{},
-      content:'',
-      option1:'',
-      option2:'',
-      option3:'',
-      option4:''
-
+    tests: {
+    fid: '', // Initialize with an empty string or the desired value
+  },
+  content: '',
+  option1: '',
+  option2: '',
+  option3: '',
+  option4: '',
   };
   Submit(){
-  this.addq.sendquestion(this.question).subscribe((res:any)=>{
+  this.addq.sendquestion(this.question,this.qId).subscribe((res:any)=>{
     Swal.fire('success','all deta send successfully','success');
     console.log(res);
   })

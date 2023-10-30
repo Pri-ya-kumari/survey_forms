@@ -30,7 +30,6 @@ export class GooglesheetService {
 
   public send='http://localhost:3000/angularformresponses';
 
-  
   postdata(data:any){
     return this.httpClient.post(this.send,data);
   }

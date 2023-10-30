@@ -13,4 +13,9 @@ export class ChartserviceService {
   getData(): Observable<any> {
     return this.https.get(this.url);
   }
+
+  urls='http://localhost:3000/angularformresponses';
+  getangular(): Observable<any>  {
+    return this.https.get(this.url);
+  }
 }

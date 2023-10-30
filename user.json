@@ -2,21 +2,15 @@
   "signup": [
     {
       "name": "priya",
-      "email": "priya12@gmail.com",
-      "password": "priya",
+      "email": "p@gmail.com",
+      "password": "1212",
       "id": 1
     },
     {
-      "name": "kiran",
-      "email": "kiran@gmail.com",
-      "password": "kiran",
+      "name": "mina",
+      "email": "m@gmail.com",
+      "password": "121212",
       "id": 2
-    },
-    {
-      "name": "mishu",
-      "email": "disha@gmail.com",
-      "password": "disha",
-      "id": 3
     }
   ],
   "addtest": [
@@ -37,6 +31,12 @@
       "description": "click to see",
       "fid": "112",
       "id": 3
+    },
+    {
+      "title": "genral question",
+      "description": "jkdjs",
+      "fid": "2",
+      "id": 4
     }
   ],
   "questions": [
@@ -93,12 +93,28 @@
       "option3": "",
       "option4": "",
       "id": 7
+    },
+    {
+      "tests": {
+        "fid": "12"
+      },
+      "content": "what is angular",
+      "option1": "yo know",
+      "option2": "or not",
+      "option3": "",
+      "option4": "",
+      "id": 8
+    },
+    {
+      "content": "hjhg",
+      "option1": "yes",
+      "id": 9
     }
   ],
   "admin": [
     {
       "loginemail": "admin@gmail.com",
-      "loginpassword": "admin12",
+      "loginpassword": "admin",
       "id": 1
     }
   ],
@@ -242,6 +258,24 @@
       "formnames": "contact form",
       "usercounts": "1",
       "id": 21
+    },
+    {
+      "name": "priya",
+      "email": "priya@gmail.com",
+      "password": "2023-10-19",
+      "phone": "2222222222",
+      "formnames": "contact form",
+      "usercounts": "1",
+      "id": 22
+    },
+    {
+      "name": "gaurav",
+      "email": "g@gmail.com",
+      "password": "2023-10-07",
+      "phone": "3242441414",
+      "formnames": "contact form",
+      "usercounts": "1",
+      "id": 23
     }
   ],
   "angularformresponses": [
@@ -254,7 +288,7 @@
       "email": "p@gmail.com",
       "phone": "1111111111",
       "test": "angular",
-      "op1": "1",
+      "op1": "yes",
       "op2": "no",
       "op3": "yes",
       "op4": "no",
@@ -273,7 +307,7 @@
       "email": "p@gmail.com",
       "phone": "9304788565",
       "test": "angular",
-      "op1": "",
+      "op1": "yes",
       "op2": "",
       "op3": "",
       "op4": "",
@@ -292,7 +326,7 @@
       "email": "h@gmail.com",
       "phone": "1212112121",
       "test": "angular",
-      "op1": "1",
+      "op1": "no",
       "op2": "no",
       "op3": "yes",
       "op4": "no",
@@ -311,7 +345,7 @@
       "email": "p@gmail.com",
       "phone": "9304788565",
       "test": "an",
-      "op1": "2",
+      "op1": "no",
       "op2": "",
       "op3": "",
       "op4": "",
@@ -330,7 +364,7 @@
       "email": "h@gmail.com",
       "phone": "8825177689",
       "test": "a",
-      "op1": "1",
+      "op1": "yes",
       "op2": "",
       "op3": "",
       "op4": "",
@@ -364,6 +398,44 @@
     },
     {
       "id": 8
+    },
+    {
+      "fname": "rohan",
+      "lname": "s",
+      "email": "rohan@gmail.com",
+      "phone": "3441232443",
+      "test": "angular",
+      "op1": "yes",
+      "op2": "no",
+      "op3": "yes",
+      "op4": "yes",
+      "op5": "yes",
+      "op6": "yes",
+      "op7": "yes",
+      "text1": "",
+      "text2": 8,
+      "text3": "",
+      "time": "",
+      "id": 9
+    },
+    {
+      "fname": "harish",
+      "lname": "singh",
+      "email": "h@gmail.com",
+      "phone": "2131212313",
+      "test": "angular",
+      "op1": "yes",
+      "op2": "",
+      "op3": "",
+      "op4": "",
+      "op5": "",
+      "op6": "",
+      "op7": "",
+      "text1": "",
+      "text2": "",
+      "text3": "",
+      "time": "",
+      "id": 10
     }
   ]
 }
