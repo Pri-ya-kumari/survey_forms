@@ -4,11 +4,11 @@
         <form [formGroup]="addes" novalidate (ngSubmit)="formSubmit(addes.value)">
         <div class="b2">
             <label class="t2">Title</label>
-            <input type="text" class="inp1" placeholder="enter title here" formControlName="title">
+            <input type="text" class="inp1" placeholder="enter title here" formControlName="title" ngModel>
             <label class="t2">form id</label>
-            <input type="text" class="inp1" placeholder="enter survey form id" formControlName="fid">
+            <input type="text" class="inp1" placeholder="enter survey form id" formControlName="fid" ngModel>
             <label class="t3">Description</label>
-            <textarea class="ta" placeholder="Enter test Description" formControlName="description"></textarea>
+            <textarea class="ta" placeholder="Enter test Description" formControlName="description" ngModel></textarea>
         </div>
         <button class="btn">Add Test</button>
         </form>

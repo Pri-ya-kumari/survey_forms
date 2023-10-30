@@ -10,3 +10,8 @@ export const characterA = {
     email:'email',
     phone:'phone',
 }
+export interface addtest{
+    title:string;
+    fid:number ;
+    description:string;
+}

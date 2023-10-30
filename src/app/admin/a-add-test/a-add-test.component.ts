@@ -19,11 +19,13 @@ export class AAddTestComponent {
   })
   formSubmit(data:any){
     console.log("button works")
-    this.addservice.addtest(data).subscribe((res)=>{
+    //this.addservice.addtest(data).subscribe((res)=>{
+      this.addservice.postdata(data).subscribe((res)=>{
       if(res!=""){
         alert("record added");
         this.addes.reset();
         this.route.navigate(['/admindashboard', 'alltest'])
+        
       }
       else{
         alert("error");

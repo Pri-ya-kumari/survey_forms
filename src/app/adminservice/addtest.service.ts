@@ -16,4 +16,17 @@ export class AddtestService {
   gettest(){
     return this.http.get(`${this.url}`); 
   }
+  urls= 'https://survey-forms-3ecc3-default-rtdb.firebaseio.com/addtest.json';
+
+  postdata(data:any[]){
+    //return this.http.post(this.urls,data);
+    return this.http.post(this.urls,data);
+
+  }
+  getdata(){
+    return this.http.get(this.urls);
+  }
+  gettingdata(id:any){
+    return this.http.get(this.urls,id);
+  }
 }

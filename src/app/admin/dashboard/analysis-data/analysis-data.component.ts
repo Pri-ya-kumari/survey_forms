@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Chart } from 'chart.js';
 import { ChartserviceService } from 'src/app/adminservice/chartservice.service';
-import * as pluginDataLabels from 'chartjs-plugin-datalabels';
 
 @Component({
   selector: 'app-analysis-data',
@@ -10,7 +9,6 @@ import * as pluginDataLabels from 'chartjs-plugin-datalabels';
 })
 export class AnalysisDataComponent {
 
-  public chartPlugins = [pluginDataLabels];
 
   data: any[] = [];
   option: any;
