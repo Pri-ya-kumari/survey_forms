@@ -11,6 +11,12 @@
       "email": "m@gmail.com",
       "password": "121212",
       "id": 2
+    },
+    {
+      "name": "harshita",
+      "email": "harshi@gmail.com",
+      "password": "1212",
+      "id": 3
     }
   ],
   "addtest": [

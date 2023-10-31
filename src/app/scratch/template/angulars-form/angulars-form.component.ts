@@ -107,7 +107,7 @@ export class AngularsFormComponent {
     //this.router.navigate(['/complete']);
     //console.log(this.today);
    // this.googlesheet.saveFormData(this.today).subscribe(console.log)
-    this.googlesheet.saveFormData(this.forms.value).subscribe(console.log)
+    //this.googlesheet.saveFormData(this.forms.value).subscribe(console.log)
 
     this.googlesheet.postdata(data).subscribe((res:any)=>{
       if(res!=""){

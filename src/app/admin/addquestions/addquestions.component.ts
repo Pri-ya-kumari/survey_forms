@@ -12,7 +12,6 @@ export class AddquestionsComponent implements OnInit{
 
   ngOnInit(): void {
     console.log(this.route.snapshot.params['fid'])
-    //console.log(this.route.snapshot.params['title'])
     this.qId = this.route.snapshot.params['fid'];
     this.qtitle = this.route.snapshot.params['title'];
     this.question.tests['fid']=this.qId;
@@ -25,7 +24,7 @@ export class AddquestionsComponent implements OnInit{
   qtitle:any;
   question:any ={
     tests: {
-    fid: '', // Initialize with an empty string or the desired value
+    fid: '', 
   },
   content: '',
   option1: '',
@@ -34,7 +33,7 @@ export class AddquestionsComponent implements OnInit{
   option4: '',
   };
   Submit(){
-  this.addq.sendquestion(this.question,this.qId).subscribe((res:any)=>{
+  this.addq.postquestioon(this.qId,this.question).subscribe((res:any)=>{
     Swal.fire('success','all deta send successfully','success');
     console.log(res);
   })

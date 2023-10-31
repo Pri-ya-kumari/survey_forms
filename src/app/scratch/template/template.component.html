@@ -1,7 +1,7 @@
 <p>
     <mat-toolbar class="shade1">
         <mat-icon>insert_drive_file</mat-icon>
-        <span class="wd-1">SurveyForms</span>
+        <span class="wd-1" >SurveyForms</span>
         <!--wd-1 = word1 it is the titile of the forms-->
         <span class="wd-2" routerLink="/homepage">Home</span>
         <!--wd-1 = word1 its is the link page tothe first page home page -->
@@ -17,7 +17,7 @@
         <span class="wd-4">click to see the form </span>
     </div> 
 </div>
-<div class="b2" routerLink="/htcsjs-form" @fade1>
+<div class="b2" [routerLink]="'/htcsjs-form'" @fade1>
     <div class="logo">
         <img src="assets/images/htcsjs.png" class="img-2">
         <span class="wd-5">Html Css Js Survey Form</span>

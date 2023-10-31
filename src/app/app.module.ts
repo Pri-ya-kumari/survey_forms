@@ -18,6 +18,7 @@ import { TemplateComponent } from './scratch/template/template.component';
 import { AngularsFormComponent } from './scratch/template/angulars-form/angulars-form.component';
 import { HtcsjsComponent } from './scratch/template/htcsjs/htcsjs.component';
 import { FinalsubmitComponent } from './scratch/template/finalsubmit/finalsubmit.component';
+import { API_KEY, GoogleSheetsDbService } from 'ng-google-sheets-db';
 import { environment } from '../environments/environment';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
@@ -53,8 +54,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatNativeDateModule} from '@angular/material/core';
 import { NgChartsModule } from 'ng2-charts';
 import { AngularRecordComponent } from './admin/dashboard/angular-record/angular-record.component';
+import { AngularFireModule } from "@angular/fire/compat";
 import { AddtestService } from './adminservice/addtest.service';
-//import { AngularFireModule } from "@angular/fire/compat";
 
 @NgModule({
   declarations: [
@@ -113,9 +114,14 @@ import { AddtestService } from './adminservice/addtest.service';
     MatInputModule,
     MatNativeDateModule,
     NgChartsModule,
+    AngularFireModule
   ],
   providers: [ 
-    AddtestService
+    {
+      provide: API_KEY,
+      useValue: environment.googleSheetsApiKey,
+    },
+    GoogleSheetsDbService,AddtestService
    ],
   bootstrap: [AppComponent]
 })

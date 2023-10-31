@@ -15,13 +15,13 @@ export class QuestionsService {
     return this.http.post(`${this.urls}/${fid}`,data);
   }
 
+  /*
+  postquestioon(data:any){
+    return this.http.post(this.urls,data);
+  }*/
   public getquestion(fid: any){
     return this.http.get(this.url,fid);
   }
-/*
-  public sendquestion(questionsend:any){
-    return this.http.post(`${this.url}`,questionsend);
-  }*/
   public delete(test:any){
     return this.http.delete(this.url,test);
   }

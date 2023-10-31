@@ -26,7 +26,8 @@
     <div class="ti-1" *ngIf="isclicked"><!--ti-1= title part *ngIf="isclicked"-->
         <form [formGroup]="formTitle">
             <div formArrayName="titlelist">
-                <label class="wd-3">Survey title</label><br>
+                <label class="wd-3" >Survey title</label><br>
+                
                 <input type="text" #nameBox placeholder="Enter title"
                     class="input2"
                     formControlName="title"><br>

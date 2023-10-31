@@ -2,6 +2,8 @@ import { animate, query, stagger, state, style, transition, trigger } from '@ang
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AddtestService } from 'src/app/adminservice/addtest.service';
+import { GoogleSheetsDbService } from 'ng-google-sheets-db';
+import { Injectable } from '@angular/core';
 
 @Component({
   selector: 'app-template',
@@ -28,7 +30,7 @@ export class TemplateComponent {
   constructor(private route:Router,private showtest:AddtestService){
     this.surveys=this.showtest.gettest().subscribe((res) => {
      this.surveys=res;
-     //console.log('res', res)
+     console.log('res', res)
    })
    }
 }
