@@ -1,12 +1,12 @@
 <div class="bg">
     <div class="b1">
         <span class="t1">All tests</span>
-        <mat-list *ngFor="let c of test" class="list">
-            <mat-list-item class="tit1">course id:{{c.fid}}</mat-list-item>
-            <mat-list-item class="tit">{{c.title}}</mat-list-item>
-            <mat-list-item class="desc">{{c.description}}</mat-list-item>
+        <div *ngFor="let c of test" class="list">
+            <span class="tit1">course id:{{c.fid}}</span>
+            <span>{{c.title}}</span>
+            <span class="desc">{{c.description}}</span>
             <button class="btn1" [routerLink]="'/admindashboard/aquestion/'+c.id+'/'+c.title">Add Questions</button>
-        </mat-list>
+        </div>
     </div>
     <button class="btn" (click)="addt()">Add Test</button>
     </div>

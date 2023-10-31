@@ -28,6 +28,8 @@ import { UpdateComponentComponent } from './admin/dashboard/update-component/upd
 import { AnalysisDataComponent } from './admin/dashboard/analysis-data/analysis-data.component';
 import { UpdatePasswordComponent } from './admin/dashboard/update-password/update-password.component';
 import { AngularRecordComponent } from './admin/dashboard/angular-record/angular-record.component';
+import { ViewSurveyComponent } from './scratch/template/view-survey/view-survey.component';
+import { TempHomeComponent } from './scratch/template/temp-home/temp-home.component';
 const routes: Routes = [
   {
     path: 'mainpage',
@@ -50,10 +52,6 @@ const routes: Routes = [
     component: PreviewDataComponent
   },
   {
-    path: 'template-form',
-    component: TemplateComponent
-  },
-  {
     path: 'angular-s-form',
     component: AngularsFormComponent
   },
@@ -70,12 +68,12 @@ const routes: Routes = [
     component: UsersDetailsComponent,
   },
   {
-    path:'update/:id',
-    component:UpdateComponentComponent
+    path: 'update/:id',
+    component: UpdateComponentComponent
   },
   {
-    path:'analysis',
-    component:AnalysisDataComponent
+    path: 'analysis',
+    component: AnalysisDataComponent
   },
   {
     path: 'profile',
@@ -86,21 +84,40 @@ const routes: Routes = [
     component: GeneralUsersComponent,
   },
   {
-    path:'updatepass/:cid',
-    component:UpdatePasswordComponent
+    path: 'updatepass/:cid',
+    component: UpdatePasswordComponent
   },
   {
     path: 'angularrecord',
     component: AngularRecordComponent,
   },
   {
+    path: 'temphome',
+    component: TempHomeComponent,
+    children:[
+      {
+        path: '',
+        redirectTo:'template-form',
+        pathMatch:'full'
+      },
+      {
+        path: 'template-form',
+        component: TemplateComponent,
+      },
+      {
+        path: 'viewsurvey/:fid/:title',
+        component: ViewSurveyComponent,
+      },
+    ]
+  },
+  {
     path: 'admindashboard',
     component: DashboardComponent,
     children: [
       {
-        path:'',
-        redirectTo:'adminhome',
-        pathMatch:'full'
+        path: '',
+        redirectTo: 'adminhome',
+        pathMatch: 'full'
       },
       {
         path: 'adminhome',

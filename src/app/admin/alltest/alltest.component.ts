@@ -9,7 +9,7 @@ import { AddtestService } from 'src/app/adminservice/addtest.service';
   styleUrls: ['./alltest.component.css']
 })
 export class AlltestComponent implements OnInit {
-  test: any; // Declare the 'test' variable with a type
+  test: any; 
 
   constructor(private route: Router, private showtest: AddtestService) {
     this.test = this.showtest.getdata().pipe(

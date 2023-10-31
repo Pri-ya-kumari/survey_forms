@@ -3,11 +3,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { QuestionsService } from 'src/app/adminservice/questions.service';
 
 @Component({
-  selector: 'app-a-addquestion',
-  templateUrl: './a-addquestion.component.html',
-  styleUrls: ['./a-addquestion.component.css']
-})
-export class AAddquestionComponent implements OnInit {
+  selector: 'app-view-survey',
+  templateUrl: './view-survey.component.html',
+  styleUrls: ['./view-survey.component.css'],}
+)
+export class ViewSurveyComponent implements OnInit{
 
   qId: any;
   title: any;

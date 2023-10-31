@@ -26,7 +26,4 @@ export class AddtestService {
   getdata(){
     return this.http.get(this.urls);
   }
-  gettingdata(id:any){
-    return this.http.get(this.urls,id);
-  }
 }

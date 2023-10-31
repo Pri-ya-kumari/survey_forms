@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { AddtestService } from 'src/app/adminservice/addtest.service';
 import { GoogleSheetsDbService } from 'ng-google-sheets-db';
 import { Injectable } from '@angular/core';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-template',
@@ -25,12 +26,27 @@ import { Injectable } from '@angular/core';
 ]})
 export class TemplateComponent {
   
-
-  surveys :any;
-  constructor(private route:Router,private showtest:AddtestService){
-    this.surveys=this.showtest.gettest().subscribe((res) => {
-     this.surveys=res;
-     console.log('res', res)
-   })
-   }
+    qId: any;
+    surveys :any;
+  test: any;
+    constructor(private route: Router, private showtest: AddtestService) {
+      this.test = this.showtest.getdata().pipe(
+        map((resdata: any) => {
+          console.log(resdata);
+          const survey: any[] = [];
+          for (const key in resdata) {
+            console.log(key);
+            if(resdata.hasOwnProperty(key)){
+              survey.push({ id:key, ...resdata[key] });
+            }
+          }
+          return survey;
+        })
+      );
+  
+      this.test.subscribe((res: any) => {
+        console.log(res);
+        this.test = res;
+      });
+    }
 }

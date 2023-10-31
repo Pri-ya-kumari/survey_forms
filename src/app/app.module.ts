@@ -56,6 +56,8 @@ import { NgChartsModule } from 'ng2-charts';
 import { AngularRecordComponent } from './admin/dashboard/angular-record/angular-record.component';
 import { AngularFireModule } from "@angular/fire/compat";
 import { AddtestService } from './adminservice/addtest.service';
+import { ViewSurveyComponent } from './scratch/template/view-survey/view-survey.component';
+import { TempHomeComponent } from './scratch/template/temp-home/temp-home.component';
 
 @NgModule({
   declarations: [
@@ -92,6 +94,8 @@ import { AddtestService } from './adminservice/addtest.service';
     AnalysisDataComponent,
     UpdatePasswordComponent,
     AngularRecordComponent,
+    ViewSurveyComponent,
+    TempHomeComponent,
   ],
   imports: [
     BrowserModule,

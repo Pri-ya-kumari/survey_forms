@@ -1,0 +1,14 @@
+<div class="bg"><h1 class="title1">Questions of {{title}}</h1>  
+    <div class="b1" *ngFor="let q of questions; let i=index">
+        <div>
+            <p class="no">&nbsp;Q{{i+1}}&nbsp;&nbsp;
+                <span class="q1">{{q.content}}</span>
+                <span class="op1">1)&nbsp;&nbsp;{{q.option1}}</span>
+                <span class="op2">2)&nbsp;&nbsp;{{q.option2}}</span>
+                <span class="op3">3)&nbsp;&nbsp;{{q.option3}}</span>
+                <span class="op4">4)&nbsp;&nbsp;{{q.option4}}</span>
+            </p>
+        </div>
+    </div>
+    </div>
+<router-outlet></router-outlet>
