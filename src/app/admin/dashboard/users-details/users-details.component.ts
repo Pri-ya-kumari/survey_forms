@@ -32,13 +32,10 @@ export class UsersDetailsComponent implements OnInit{
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
       if (result.isConfirmed) {
-        this.test.splice(data-1)
-        //this.userd.deletedata(data).subscribe((a:any)=>{
-              Swal.fire('success','Data deleted successfully')
-        //})
+        this.test.splice(data-1,1)
         Swal.fire(
           'Deleted!',
-          'Your file has been deleted.',
+          'Your data has been deleted.',
           'success'
         )
       }
