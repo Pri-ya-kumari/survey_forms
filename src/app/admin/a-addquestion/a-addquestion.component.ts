@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { QuestionsService } from 'src/app/adminservice/questions.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class AAddquestionComponent implements OnInit {
   title: any;
   questions:any = [];
   id: any;
-  constructor(private active:ActivatedRoute,private qservice:QuestionsService){
+  constructor(private active:ActivatedRoute,private qservice:QuestionsService,private route :Router){
     
  }
 
@@ -23,15 +23,12 @@ export class AAddquestionComponent implements OnInit {
     this.qservice.getQuestions(this.qId).subscribe(
       (data: any) => {
         if (data) {
-          // Check if data is not null
-          this.questions = Object.values(data); // Convert object values to an array
+          //here converting the object value in array
+          this.questions = Object.values(data); 
           console.log(this.questions);
         } else {
           console.log('No questions found for this form.');
         }
-      },
-      (error) => {
-        console.error('Error loading questions:', error);
       }
     );
   }

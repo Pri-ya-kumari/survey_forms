@@ -1,7 +1,6 @@
 <div class="bg">
     <h1 class="t1">Add Questions to {{qtitle}}</h1>
     <div class="bg2">
-        {{question|json}}
         <form (ngSubmit)="Submit()" novalidate >
             <label class="l1">Enter the questions</label>
             <input type="text" class="inp1" placeholder="Enter the question" [(ngModel)]="question.content" name="content">

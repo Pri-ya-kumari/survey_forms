@@ -12,9 +12,9 @@
     background-color: white;
 }
 .bg{
-    border: 1px solid black;
+    border: 1px solid #EDEBF2;
     width: 77.5%;
-    height: 88%;
+    height: 80%;
     background-color: #EDEBF2;
     position: relative;
     margin-top: -12px;
@@ -94,7 +94,7 @@
     font-size: 16px;
     height: 40px;
     position: absolute;
-    margin-top: 329px ;
+    margin-top: 359px ;
     margin-bottom: auto;
     margin-left: 390px;
     cursor: pointer;
