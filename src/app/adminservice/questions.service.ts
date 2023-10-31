@@ -1,3 +1,4 @@
+
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -6,26 +7,23 @@ import { Injectable } from '@angular/core';
 })
 export class QuestionsService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  url = `http://localhost:3000/questions`;
-  urls= `https://survey-forms-3ecc3-default-rtdb.firebaseio.com/question.json`;
+  baseUrl = 'https://survey-forms-3ecc3-default-rtdb.firebaseio.com';
 
-  postquestioon(fid:any,data:any){
-    return this.http.post(`${this.urls}/${fid}`,data);
+  getQuestions(fid: any) {
+    const url = `${this.baseUrl}/question/${fid}.json`; // Assuming the 'fid' should be part of the URL
+    return this.http.get(url);
   }
 
-  /*
-  postquestioon(data:any){
-    return this.http.post(this.urls,data);
-  }*/
-  public getquestion(fid: any){
-    return this.http.get(this.url,fid);
+  deleteQuestion(fid: any, questionId: any) {
+    const url = `${this.baseUrl}/question/${fid}/${questionId}.json`; // Assuming the 'fid' and 'questionId' should be part of the URL
+    return this.http.delete(url);
   }
-  public delete(test:any){
-    return this.http.delete(this.url,test);
+
+  sendQuestions(fid: any, questionsToSend: any) {
+    const url = `${this.baseUrl}/question/${fid}.json`; // Assuming the 'fid' should be part of the URL
+    return this.http.post(url, questionsToSend);
   }
-  public sendquestion(questionsend: any, fid: any) {
-  return this.http.post(`${this.url}/${fid}`, questionsend);
 }
-}
+

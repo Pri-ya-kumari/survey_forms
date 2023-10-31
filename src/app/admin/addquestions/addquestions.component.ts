@@ -33,9 +33,10 @@ export class AddquestionsComponent implements OnInit{
   option4: '',
   };
   Submit(){
-  this.addq.postquestioon(this.qId,this.question).subscribe((res:any)=>{
+  this.addq.sendQuestions(this.qId,this.question).subscribe((res:any)=>{
     Swal.fire('success','all deta send successfully','success');
     console.log(res);
+    this.question.reset();
   })
   }
 }

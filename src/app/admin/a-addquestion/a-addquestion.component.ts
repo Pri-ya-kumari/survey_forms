@@ -20,11 +20,19 @@ export class AAddquestionComponent implements OnInit {
   ngOnInit(): void {
     this.qId = this.active.snapshot.params['fid'];
     this.title = this.active.snapshot.params['title']; 
-   this.qservice.getquestion(this.qId).subscribe((data:any)=>{
-    this.questions=data;
-    console.log(data);
-   }) 
+    this.qservice.getQuestions(this.qId).subscribe(
+      (data: any) => {
+        if (data) {
+          // Check if data is not null
+          this.questions = Object.values(data); // Convert object values to an array
+          console.log(this.questions);
+        } else {
+          console.log('No questions found for this form.');
+        }
+      },
+      (error) => {
+        console.error('Error loading questions:', error);
+      }
+    );
   }
-  
-
 }
