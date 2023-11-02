@@ -1,0 +1,116 @@
+.u1{
+    margin-left: 230px;
+    font-size: 32px;
+    margin-top: 10px;
+}.u2{
+    float: left;
+    margin-left: 310px;
+    font-size: 32px;
+    margin-top: -74px;
+    color: green;
+}.u3{
+    float: left;
+    margin-left: 370px;
+    font-size: 32px;
+    margin-top: -74px;
+}
+.bord{
+    position: absolute;
+    border: 1px solid white;
+    width: 797px;
+    height: 10px;
+    margin-top: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.content{
+    position: absolute;
+    margin-left: 240px;
+    margin-top: -10px;
+    font-size: 22px;
+    text-decoration: underline;
+}
+.box{
+    border: 1px solid white;
+    width: 700px;
+    height: 450px;
+    margin-left: 50px;
+    margin-top: 52px;
+}
+.divide{
+    border: 1px solid lightgray;
+    text-align: center;
+    height: 400px;
+    width: 1px;
+    margin-top: 22px;
+    margin-left: 350px;
+    overflow: hidden;
+    background-color: lightgray;
+}
+.leftpart{
+    width: 300px;
+    height: 400px;
+    margin-left: 22px;
+    position: absolute;
+    margin-top: -400px;
+}
+.rightpart{
+    width: 300px;
+    height: 400px;
+    margin-left: 372px;
+    position: absolute;
+    margin-top: -400px;
+}
+.lt1{
+    margin-left: 100px;
+    margin-top: -5px;
+    width: 100px;
+    color: red;
+}
+.rt1{
+    margin-left: 80px;
+    margin-top: -5px;
+    width: 100px;
+    color: green;
+}
+.icon{
+    margin-left: 20px;
+    margin-top: 20px;
+    display: block;
+    color: green;
+}
+.icon1{
+    margin-left: 20px;
+    margin-top: 30px;
+    display: block;
+    color: red;
+}
+.text1{
+    position: absolute;
+    margin-top: -20px;
+    margin-left: 55px;
+    font-size: 22px;
+    font-weight: lighter;
+}
+.text2{
+    position: absolute;
+    margin-top: -20px;
+    margin-left: 55px;
+    font-size: 18px;
+    font-weight: lighter;
+}
+.text3{
+    position: absolute;
+    margin-top: -20px;
+    margin-left: 55px;
+    font-size: 15px;
+    font-weight: lighter;
+}
+.btn1{
+    margin-top: -70px;
+    margin-left: 500px;
+    overflow: hidden;
+}
+.btn2{
+    margin-top: -70px;
+    overflow: hidden;
+}

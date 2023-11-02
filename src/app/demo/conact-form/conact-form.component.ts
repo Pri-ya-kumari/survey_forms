@@ -37,7 +37,11 @@ export class ConactFormComponent {
     this.form();
    }
    openDialog() {
+    /*this.dialog.open(DialogBoxComponent,{
+      width:'400px',height:'200px'
+    });*/
     this.router.navigate(['/previewcontact'])
+
   }
    
   form() {

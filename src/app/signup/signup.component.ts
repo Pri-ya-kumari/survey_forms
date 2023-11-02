@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { SignuserService } from '../service/signuser.service';
 import { AdminLoginService } from '../adminservice/admin-login.service';
 import Swal from 'sweetalert2'
+import { MatDialog } from '@angular/material/dialog';
+import { UseraccesdelogComponent } from '../useraccesdelog/useraccesdelog.component';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -41,7 +43,8 @@ export class SignUpComponent {
     });
   }
 
-  constructor(private route: Router, private fb: FormBuilder, private sign: SignuserService, private adminservice: AdminLoginService) {
+  constructor(private route: Router, private fb: FormBuilder, private sign: SignuserService, private adminservice: AdminLoginService,
+    public dialog :MatDialog) {
     this.setupForm();
     this.lofinform();
   }
@@ -87,6 +90,9 @@ export class SignUpComponent {
           text: 'Login Successfully',
         })
         this.route.navigate(['/guser'])
+        this.dialog.open(UseraccesdelogComponent,{
+          width:'800px',height:'600px'
+        });
         this.Login.reset()
       }
       else {

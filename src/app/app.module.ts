@@ -57,6 +57,8 @@ import { TempHomeComponent } from './scratch/template/temp-home/temp-home.compon
 import { AngularFireAuthModule } from "@angular/fire/compat/auth";
 import { SignuserService } from './service/signuser.service';
 import { GuserComponent } from './guser/guser.component';
+import { UseraccesdelogComponent } from './useraccesdelog/useraccesdelog.component';
+import { UserrequestComponent } from './userrequest/userrequest.component';
 
 @NgModule({
   declarations: [
@@ -92,6 +94,8 @@ import { GuserComponent } from './guser/guser.component';
     ViewSurveyComponent,
     TempHomeComponent,
     GuserComponent,
+    UseraccesdelogComponent,
+    UserrequestComponent,
   ],
   imports: [
     BrowserModule,
@@ -124,7 +128,8 @@ import { GuserComponent } from './guser/guser.component';
         appId: "1:51765124953:web:5307b4bcef53b7d400b648",
         measurementId: "G-6GZY005SP9"
     }),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    MatDialogModule
   ],
   providers: [ 
     {
