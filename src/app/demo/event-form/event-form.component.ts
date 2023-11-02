@@ -2,9 +2,7 @@ import { Component } from '@angular/core';
 import { animate, query, stagger, state, style, transition, trigger } from '@angular/animations';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { DialogBoxComponent } from '../dialog-box/dialog-box.component';
 import { MatDialog } from '@angular/material/dialog';
-import { EventdialogboxComponent } from '../eventdialogbox/eventdialogbox.component';
 
 @Component({
   selector: 'app-event-form',
@@ -38,9 +36,7 @@ export class EventFormComponent {
     this.form();
    }
    openDialog() {
-    this.dialog.open(EventdialogboxComponent,{
-      width:'400px',height:'200px'
-    });
+    this.router.navigate(['/previewevent'])
   }
    form() {
     this.forms = this.fb.group({

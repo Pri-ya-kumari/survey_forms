@@ -6,5 +6,3 @@ export const environment = {
         worksheetName: 'Sheet1',
     },
 };
-/*    GoogleSheetsDbService,AddtestService
- */

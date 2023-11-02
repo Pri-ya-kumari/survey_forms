@@ -17,6 +17,18 @@
       "email": "harshi@gmail.com",
       "password": "1212",
       "id": 3
+    },
+    {
+      "name": "priya",
+      "email": "priya@gmail.com",
+      "password": "12345",
+      "id": 4
+    },
+    {
+      "name": "pooja",
+      "email": "pooja@gmail.com",
+      "password": "pooja",
+      "id": 5
     }
   ],
   "addtest": [
@@ -122,6 +134,11 @@
       "loginemail": "admin@gmail.com",
       "loginpassword": "admin",
       "id": 1
+    },
+    {
+      "loginemail": "admin1@gmail.com",
+      "loginpassword": "admin1",
+      "id": 2
     }
   ],
   "contactreg": [

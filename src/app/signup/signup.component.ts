@@ -21,23 +21,7 @@ export class SignUpComponent {
     loginpassword: new FormControl(''),
   })
 
-  constructor(private route: Router, private fb: FormBuilder, private sign: SignuserService, private adminservice: AdminLoginService) {
-    this.setupForm();
-    this.lofinform();
-  }
-  ngOnInit(): void { }
-
-  login = true;
-  signup = false;
-
-  loginf() {
-    this.login = true;
-    this.signup = false;
-  }
-  Signup() {
-    this.signup = true;
-    this.login = false;
-  }
+  
   lofinform(){
     this.Login = this.fb.group({
       //name: ['', [Validators.required, Validators.pattern("^[a-zA-Z]*")]],
@@ -55,6 +39,24 @@ export class SignUpComponent {
       password: ['', [Validators.required/*,
       Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$")*/]]
     });
+  }
+
+  constructor(private route: Router, private fb: FormBuilder, private sign: SignuserService, private adminservice: AdminLoginService) {
+    this.setupForm();
+    this.lofinform();
+  }
+  ngOnInit(): void { }
+
+  login = true;
+  signup = false;
+
+  loginf() {
+    this.login = true;
+    this.signup = false;
+  }
+  Signup() {
+    this.signup = true;
+    this.login = false;
   }
   id:any;
   loginsubmit(id:any) {
@@ -84,7 +86,7 @@ export class SignUpComponent {
           title: 'SuccessFully',
           text: 'Login Successfully',
         })
-        this.route.navigate(['/homepage'])
+        this.route.navigate(['/guser'])
         this.Login.reset()
       }
       else {

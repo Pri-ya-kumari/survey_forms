@@ -24,12 +24,8 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { ConactFormComponent } from './demo/conact-form/conact-form.component';
 import {MatDialogModule} from '@angular/material/dialog';
-import { DialogBoxComponent } from './demo/dialog-box/dialog-box.component';
-import { DemoRegisterComponent } from './demo/demo-register/demo-register.component';
 import { PreviewContactComponent } from './demo/preview-contact/preview-contact.component';
 import { EventFormComponent } from './demo/event-form/event-form.component';
-import { EventRegComponent } from './demo/event-reg/event-reg.component';
-import { EventdialogboxComponent } from './demo/eventdialogbox/eventdialogbox.component';
 import { EventpreviewComponent } from './demo/eventpreview/eventpreview.component';
 import { SignUpComponent } from './signup/signup.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
@@ -58,6 +54,9 @@ import { AngularFireModule } from "@angular/fire/compat";
 import { AddtestService } from './adminservice/addtest.service';
 import { ViewSurveyComponent } from './scratch/template/view-survey/view-survey.component';
 import { TempHomeComponent } from './scratch/template/temp-home/temp-home.component';
+import { AngularFireAuthModule } from "@angular/fire/compat/auth";
+import { SignuserService } from './service/signuser.service';
+import { GuserComponent } from './guser/guser.component';
 
 @NgModule({
   declarations: [
@@ -73,12 +72,8 @@ import { TempHomeComponent } from './scratch/template/temp-home/temp-home.compon
     MainpageComponent,
     SignUpComponent,
     ConactFormComponent,
-    DialogBoxComponent,
-    DemoRegisterComponent,
     PreviewContactComponent,
     EventFormComponent,
-    EventRegComponent,
-    EventdialogboxComponent,
     EventpreviewComponent,
     DashboardComponent,
     AhomepageComponent,
@@ -96,6 +91,7 @@ import { TempHomeComponent } from './scratch/template/temp-home/temp-home.compon
     AngularRecordComponent,
     ViewSurveyComponent,
     TempHomeComponent,
+    GuserComponent,
   ],
   imports: [
     BrowserModule,
@@ -118,14 +114,25 @@ import { TempHomeComponent } from './scratch/template/temp-home/temp-home.compon
     MatInputModule,
     MatNativeDateModule,
     NgChartsModule,
-    AngularFireModule
+    AngularFireModule.initializeApp({
+        apiKey: "AIzaSyCRRsd8l3dq10gwftPm_OmKxqYChkVqQKU",
+        authDomain: "survey-forms-3ecc3.firebaseapp.com",
+        databaseURL: "https://survey-forms-3ecc3-default-rtdb.firebaseio.com",
+        projectId: "survey-forms-3ecc3",
+        storageBucket: "survey-forms-3ecc3.appspot.com",
+        messagingSenderId: "51765124953",
+        appId: "1:51765124953:web:5307b4bcef53b7d400b648",
+        measurementId: "G-6GZY005SP9"
+    }),
+    AngularFireAuthModule
   ],
   providers: [ 
     {
       provide: API_KEY,
       useValue: environment.googleSheetsApiKey,
     },
-    GoogleSheetsDbService,AddtestService
+    
+    GoogleSheetsDbService,AddtestService,SignuserService
    ],
   bootstrap: [AppComponent]
 })

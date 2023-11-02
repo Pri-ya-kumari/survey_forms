@@ -10,10 +10,8 @@ import { FinalsubmitComponent } from './scratch/template/finalsubmit/finalsubmit
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { SignUpComponent } from './signup/signup.component';
 import { ConactFormComponent } from './demo/conact-form/conact-form.component';
-import { DemoRegisterComponent } from './demo/demo-register/demo-register.component';
 import { PreviewContactComponent } from './demo/preview-contact/preview-contact.component';
 import { EventFormComponent } from './demo/event-form/event-form.component';
-import { EventRegComponent } from './demo/event-reg/event-reg.component';
 import { EventpreviewComponent } from './demo/eventpreview/eventpreview.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { AhomepageComponent } from './admin/ahomepage/ahomepage.component';
@@ -30,6 +28,7 @@ import { UpdatePasswordComponent } from './admin/dashboard/update-password/updat
 import { AngularRecordComponent } from './admin/dashboard/angular-record/angular-record.component';
 import { ViewSurveyComponent } from './scratch/template/view-survey/view-survey.component';
 import { TempHomeComponent } from './scratch/template/temp-home/temp-home.component';
+import { GuserComponent } from './guser/guser.component';
 const routes: Routes = [
   {
     path: 'mainpage',
@@ -78,6 +77,10 @@ const routes: Routes = [
   {
     path: 'profile',
     component: ProfileComponent,
+  },
+  {
+    path: 'guser',
+    component: GuserComponent,
   },
   {
     path: 'guser',
@@ -153,14 +156,6 @@ const routes: Routes = [
   {
     path: 'demof1',
     component: ConactFormComponent,
-  },
-  {
-    path: 'demoregister',
-    component: DemoRegisterComponent,
-  },
-  {
-    path: 'eventregister',
-    component: EventRegComponent,
   },
   {
     path: 'previewcontact',

@@ -10,6 +10,20 @@ export class SignuserService {
 
   public signup='http://localhost:3000/signup';
   
+  /*urls= 'https://survey-forms-3ecc3-default-rtdb.firebaseio.com/users.json';
+
+
+  postuser(data:any){
+    //return this.http.post(this.urls,data);
+    return this.http.post(this.urls,data);
+
+  }
+  getuser(id:any){
+    return this.http.get(this.urls,id);
+  }*/
+
+
+
 
   Createuser(res:any){
     return this.http.post(this.signup,res);
