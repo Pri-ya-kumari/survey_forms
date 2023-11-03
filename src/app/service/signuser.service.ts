@@ -1,16 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+//import { Auth, signInWithEmailAndPassword } from '@angular/fire/auth';
+import { AngularFireAuth ,signInWithEmailAndPassword} from '@angular/fire/auth';
+import { from } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SignuserService {
 
-  constructor(private http :HttpClient) { }
+  constructor(private http :HttpClient,private auth :AngularFireAuth) { }
 
   public signup='http://localhost:3000/signup';
   
-  /*urls= 'https://survey-forms-3ecc3-default-rtdb.firebaseio.com/users.json';
+  urls= 'https://survey-forms-3ecc3-default-rtdb.firebaseio.com/users.json';
 
 
   postuser(data:any){
@@ -18,11 +21,13 @@ export class SignuserService {
     return this.http.post(this.urls,data);
 
   }
-  getuser(id:any){
-    return this.http.get(this.urls,id);
-  }*/
+  getuser(loginemail:any,loginpassword:any){
+    return from(signInWithEmailAndPassword(this.auth,loginemail,loginpassword));
+  }
 
-
+  logout(){
+    return from(this.auth.signOut())
+  }
 
 
   Createuser(res:any){

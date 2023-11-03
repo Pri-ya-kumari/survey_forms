@@ -54,7 +54,7 @@ import { AngularFireModule } from "@angular/fire/compat";
 import { AddtestService } from './adminservice/addtest.service';
 import { ViewSurveyComponent } from './scratch/template/view-survey/view-survey.component';
 import { TempHomeComponent } from './scratch/template/temp-home/temp-home.component';
-import { AngularFireAuthModule } from "@angular/fire/compat/auth";
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { SignuserService } from './service/signuser.service';
 import { GuserComponent } from './guser/guser.component';
 import { UseraccesdelogComponent } from './useraccesdelog/useraccesdelog.component';

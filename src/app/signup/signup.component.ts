@@ -24,6 +24,12 @@ export class SignUpComponent {
   })
 
   
+  getemain(){
+    return this.Login.get('loginemail')
+  }
+  getpassword(){
+    return this.Login.get('loginpassword')
+  }
   lofinform(){
     this.Login = this.fb.group({
       //name: ['', [Validators.required, Validators.pattern("^[a-zA-Z]*")]],
@@ -77,7 +83,20 @@ export class SignUpComponent {
         Swal.fire('error', 'user not found', 'error');
       }
     })
-    
+    const {loginemail,loginpassword} = this.Login.value
+    this.sign.getuser(loginemail,loginpassword).subscribe(()=>{
+      Swal.fire({
+        icon: 'success',
+        title: 'SuccessFully',
+        text: 'Login Successfully',
+      })
+      this.route.navigate(['/guser'])
+      this.dialog.open(UseraccesdelogComponent,{
+        width:'800px',height:'600px'
+      });
+      this.Login.reset()
+    })
+    /*
     this.sign.loginuser(id).subscribe((res: any) => {
       const user = res.find((a: any) => {
         return a.email == this.Login.value.loginemail && a.password == this.Login.value.loginpassword
@@ -95,17 +114,9 @@ export class SignUpComponent {
         });
         this.Login.reset()
       }
-      else {
-        //alert("error")
-        /*Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: 'Something went wrong!',
-
-        });*/
-      }
-    })
+    })*/
   }
+
   homepage(data: any): void {
     if (this.froms.invalid) {
       Swal.fire({
@@ -115,7 +126,7 @@ export class SignUpComponent {
       //alert("please enter the vaid formate")
     }
     else {
-      this.sign.Createuser(data).subscribe((res) => {
+      this.sign.postuser(data).subscribe((res) => {
         if (res != "") {
           Swal.fire({
             icon: 'success',
