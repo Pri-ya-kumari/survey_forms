@@ -30,14 +30,20 @@ import { ViewSurveyComponent } from './scratch/template/view-survey/view-survey.
 import { TempHomeComponent } from './scratch/template/temp-home/temp-home.component';
 import { GuserComponent } from './guser/guser.component';
 import { UserrequestComponent } from './userrequest/userrequest.component';
+import { redirectUnauthorizedTo,redirectLoggedInTo, canActivate } from '@angular/fire/compat/auth-guard';
+const redirectToLoginIn = () => redirectUnauthorizedTo(['/login'])
+const redirectToHome = () => redirectLoggedInTo(['/generalusers'])
+
 const routes: Routes = [
   {
     path: 'mainpage',
-    component: MainpageComponent
+    component: MainpageComponent,
+    ...canActivate(redirectToHome)
   },
   {
     path: 'login',
-    component: SignUpComponent
+    component: SignUpComponent,
+    ...canActivate(redirectToHome)
   },
   {
     path: 'homepage',
@@ -80,8 +86,9 @@ const routes: Routes = [
     component: ProfileComponent,
   },
   {
-    path: 'guser',
+    path: 'generalusers',
     component: GuserComponent,
+    ...canActivate(redirectToLoginIn)
   },
   {
     path: 'guser',

@@ -78,15 +78,29 @@
     display: block;
     color: green;
 }
+.icon2{
+    margin-left: 20px;
+    margin-top: 20px;
+    display: block;
+    margin-top: 12px;
+    color: red;
+}
 .icon1{
     margin-left: 20px;
     margin-top: 30px;
     display: block;
-    color: red;
+    color: green;
+}
+.text3{
+    position: absolute;
+    margin-top: -10px;
+    margin-left: 55px;
+    font-size: 32px;
+    font-weight: lighter;
 }
 .text1{
     position: absolute;
-    margin-top: -20px;
+    margin-top: -15px;
     margin-left: 55px;
     font-size: 22px;
     font-weight: lighter;

@@ -90,7 +90,7 @@ export class SignUpComponent {
         title: 'SuccessFully',
         text: 'Login Successfully',
       })
-      this.route.navigate(['/guser'])
+      this.route.navigate(['/generalusers'])
       this.dialog.open(UseraccesdelogComponent,{
         width:'800px',height:'600px'
       });

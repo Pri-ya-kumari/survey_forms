@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 //import { Auth, signInWithEmailAndPassword } from '@angular/fire/auth';
-import { AngularFireAuth ,signInWithEmailAndPassword} from '@angular/fire/auth';
+import { AngularFireAuth} from '@angular/fire/compat/auth';
+import { authState } from 'rxfire/auth'; // Import authState from rxfire/auth
 import { from } from 'rxjs';
 
 @Injectable({
@@ -10,6 +11,8 @@ import { from } from 'rxjs';
 export class SignuserService {
 
   constructor(private http :HttpClient,private auth :AngularFireAuth) { }
+
+  currentUsser$ = this.auth.authState; // Use this.auth.authState
 
   public signup='http://localhost:3000/signup';
   
@@ -22,13 +25,14 @@ export class SignuserService {
 
   }
   getuser(loginemail:any,loginpassword:any){
-    return from(signInWithEmailAndPassword(this.auth,loginemail,loginpassword));
+    return from(this.auth.signInWithEmailAndPassword(loginemail,loginpassword));
   }
 
   logout(){
     return from(this.auth.signOut())
   }
 
+  
 
   Createuser(res:any){
     return this.http.post(this.signup,res);
@@ -52,3 +56,6 @@ export class SignuserService {
     return this.http.put(`${this.signup}/${Id}`);
   }*/
 }
+function signInWithEmailAndPassword(auth: AngularFireAuth, loginemail: any, loginpassword: any): any {
+}
+

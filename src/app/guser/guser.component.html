@@ -1,9 +1,21 @@
-<div class="nav" ng-init="init()">
+<div class="nav">
     <div class="shade1">
         <mat-icon class="icon">insert_drive_file</mat-icon>
         <span class="wd-1">SurveyForms</span>
         <span class="example-spacer"></span>
         <span class="example-spacer"></span>
+        <div class="dropdown">
+            <input type="checkbox" id="dropdown" />
+            <label for="dropdown" class="dropdown-btn">
+              <span>Profile</span>
+              <span class="arrow"></span>
+            </label>
+            
+            <ul class="dropdown-content" role="menu">
+              <li><span *ngIf="user$ | async as user" class="profile">{{user.email}}</span></li>
+              <li><button (click)="logout()" class="btn">Log out</button></li>
+            </ul>
+          </div>
     </div>
 </div>
 <div class="box2">

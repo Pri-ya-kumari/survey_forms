@@ -44,11 +44,9 @@ import { UpdateComponentComponent } from './admin/dashboard/update-component/upd
 import { AnalysisDataComponent } from './admin/dashboard/analysis-data/analysis-data.component';
 import { UpdatePasswordComponent } from './admin/dashboard/update-password/update-password.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-//    imports: [MatFormFieldModule, MatInputModule, MatNativeDateModule, MatDatepickerModule],
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatNativeDateModule} from '@angular/material/core';
-import { NgChartsModule } from 'ng2-charts';
 import { AngularRecordComponent } from './admin/dashboard/angular-record/angular-record.component';
 import { AngularFireModule } from "@angular/fire/compat";
 import { AddtestService } from './adminservice/addtest.service';
@@ -117,7 +115,6 @@ import { UserrequestComponent } from './userrequest/userrequest.component';
     MatFormFieldModule,
     MatInputModule,
     MatNativeDateModule,
-    NgChartsModule,
     AngularFireModule.initializeApp({
         apiKey: "AIzaSyCRRsd8l3dq10gwftPm_OmKxqYChkVqQKU",
         authDomain: "survey-forms-3ecc3.firebaseapp.com",
@@ -136,7 +133,6 @@ import { UserrequestComponent } from './userrequest/userrequest.component';
       provide: API_KEY,
       useValue: environment.googleSheetsApiKey,
     },
-    
     GoogleSheetsDbService,AddtestService,SignuserService
    ],
   bootstrap: [AppComponent]
