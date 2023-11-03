@@ -1,0 +1,90 @@
+.title{
+    position: absolute;
+    margin-top: 22px;
+    width: 210px;
+    margin-left: 210px;
+    color: green;
+    font-size: 29px;
+}
+.t1{
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 22px;
+    font-size: 17px;
+}
+.inp1{
+    border: 1px solid black;
+    margin-top: 90px;
+    margin-left: 22px;
+    width: 500px;
+    height: 30px;
+    position: absolute;
+}
+.t2{
+    position: absolute;
+    margin-top: 140px;
+    margin-left: 22px;
+    font-size: 17px;
+}
+.inp2{
+    border: 1px solid black;
+    margin-top: 160px;
+    margin-left: 22px;
+    width: 500px;
+    height: 30px;
+    position: absolute;
+}
+.t3{
+    position: absolute;
+    margin-top: 210px;
+    margin-left: 22px;
+    font-size: 17px;
+}
+.inp3{
+    border: 1px solid black;
+    margin-top: 230px;
+    margin-left: 22px;
+    width: 500px;
+    height: 30px;
+    position: absolute;
+}
+.t4{
+    position: absolute;
+    margin-top: 280px;
+    margin-left: 22px;
+    font-size: 17px;
+}
+.inp4{
+    border: 1px solid black;
+    margin-top: 300px;
+    margin-left: 22px;
+    width: 500px;
+    height: 60px;
+    position: absolute;
+}
+.btn1{
+    border: 1px solid white;
+    position: absolute;
+    width: 70px;
+    height: 40px;
+    margin-left: 450px;
+    margin-top: 400px;
+    font-size: 22px;
+    background-color: green;
+    color: white; 
+    cursor: pointer;
+}
+.close{
+    border: 1px solid white;
+    position: absolute;
+    margin-left: 480px;
+    margin-top: 15px;
+    color: red;
+    height: 30px;
+    cursor: pointer;
+    width: 50px;
+    background-color: white;
+}
+.icon{
+    margin-left: 1px;
+}

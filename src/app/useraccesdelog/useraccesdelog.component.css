@@ -63,7 +63,7 @@
 .lt1{
     margin-left: 100px;
     margin-top: -5px;
-    width: 100px;
+    width: 150px;
     color: red;
 }
 .rt1{
@@ -106,6 +106,8 @@
     font-weight: lighter;
 }
 .btn1{
+    height: 40px;
+    width: 100px;
     margin-top: -70px;
     margin-left: 500px;
     overflow: hidden;

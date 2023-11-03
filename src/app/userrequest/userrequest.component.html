@@ -1,1 +1,15 @@
-<p>userrequest works!</p>
+<div>
+    <form [formGroup]="froms" novalidate (ngSubmit)="send(froms.value)">
+        <button class="close" mat-dialog-close><mat-icon class="icon" >close</mat-icon></button>
+        <span class="title">Request Form</span>
+        <span class="t1">Enter Your Name :</span>
+        <input class="inp1" type="text" formControlName="name">
+        <span class="t2">Enter your Email Id :</span>
+        <input class="inp2" type="text" formControlName="email">
+        <Span class="t3">Enter you Phone Number :</Span>
+        <input class="inp3" type="text" formControlName="number">
+        <span class="t4">Enter your Message Here : </span>
+        <textarea class="inp4" formControlName="message"></textarea>
+        <button class="btn1">Send</button>
+    </form>
+</div>

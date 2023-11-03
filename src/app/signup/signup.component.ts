@@ -128,10 +128,10 @@ export class SignUpComponent {
         }
         else {
           //alert("error");
-          Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Please enter the valid formate'})
+          //Swal.fire({
+           // icon: 'error',
+           // title: 'Oops...',
+            //text: 'Please enter the valid formate'})
           
         }
       })

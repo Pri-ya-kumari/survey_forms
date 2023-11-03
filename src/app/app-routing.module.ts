@@ -29,6 +29,7 @@ import { AngularRecordComponent } from './admin/dashboard/angular-record/angular
 import { ViewSurveyComponent } from './scratch/template/view-survey/view-survey.component';
 import { TempHomeComponent } from './scratch/template/temp-home/temp-home.component';
 import { GuserComponent } from './guser/guser.component';
+import { UserrequestComponent } from './userrequest/userrequest.component';
 const routes: Routes = [
   {
     path: 'mainpage',
@@ -93,6 +94,10 @@ const routes: Routes = [
   {
     path: 'angularrecord',
     component: AngularRecordComponent,
+  },
+  {
+    path: 'userrequest',
+    component: UserrequestComponent,
   },
   {
     path: 'temphome',
