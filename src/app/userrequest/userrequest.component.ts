@@ -27,7 +27,7 @@ export class UserrequestComponent {
         Swal.fire({
           icon: 'success',
           title: 'Successfully',
-          text: 'Your Record is added successfully'})    
+          text: 'Your Request has been sent successfully'})    
         //alert("record added");
         this.froms.reset();
       }

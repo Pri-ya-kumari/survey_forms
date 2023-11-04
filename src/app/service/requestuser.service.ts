@@ -16,7 +16,7 @@ export class RequestuserService {
     return this.http.post(this.urls,data);
 
   }
-  getuser(id:any){
-    return this.http.get(this.urls,id);
+  getuser(){
+    return this.http.get(this.urls);
   }
 }

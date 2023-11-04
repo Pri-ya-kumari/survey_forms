@@ -2,8 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 //import { Auth, signInWithEmailAndPassword } from '@angular/fire/auth';
 import { AngularFireAuth} from '@angular/fire/compat/auth';
+import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { authState } from 'rxfire/auth'; // Import authState from rxfire/auth
-import { from } from 'rxjs';
+import { from, switchMap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -19,10 +20,8 @@ export class SignuserService {
   urls= 'https://survey-forms-3ecc3-default-rtdb.firebaseio.com/users.json';
 
 
-  postuser(data:any){
-    //return this.http.post(this.urls,data);
-    return this.http.post(this.urls,data);
-
+  postuser(name:any,loginemail:any,loginpassword:any){
+    return from(this.auth.createUserWithEmailAndPassword(loginemail, loginpassword))
   }
   getuser(loginemail:any,loginpassword:any){
     return from(this.auth.signInWithEmailAndPassword(loginemail,loginpassword));

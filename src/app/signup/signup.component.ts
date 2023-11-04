@@ -96,25 +96,6 @@ export class SignUpComponent {
       });
       this.Login.reset()
     })
-    /*
-    this.sign.loginuser(id).subscribe((res: any) => {
-      const user = res.find((a: any) => {
-        return a.email == this.Login.value.loginemail && a.password == this.Login.value.loginpassword
-      })
-      if (user) {
-        //alert("login successfully")
-        Swal.fire({
-          icon: 'success',
-          title: 'SuccessFully',
-          text: 'Login Successfully',
-        })
-        this.route.navigate(['/guser'])
-        this.dialog.open(UseraccesdelogComponent,{
-          width:'800px',height:'600px'
-        });
-        this.Login.reset()
-      }
-    })*/
   }
 
   homepage(data: any): void {
@@ -126,27 +107,17 @@ export class SignUpComponent {
       //alert("please enter the vaid formate")
     }
     else {
-      this.sign.postuser(data).subscribe((res) => {
-        if (res != "") {
-          Swal.fire({
-            icon: 'success',
-            title: 'Successfully',
-            text: 'Your Record is added successfully'})    
-          //alert("record added");
-          this.froms.reset();
-          this.login = true;
-          this.signup = false;
-        }
-        else {
-          //alert("error");
-          //Swal.fire({
-           // icon: 'error',
-           // title: 'Oops...',
-            //text: 'Please enter the valid formate'})
-          
-        }
-      })
-      //this.route.navigate(['/homepage']);
+      const { name, email, password } = this.froms.value;
+      this.sign.postuser(name, email, password).subscribe(() => {
+        Swal.fire({
+          icon: 'success',
+          title: 'Successfully',
+          text: 'Your Record is added successfully'
+        });
+        this.froms.reset();
+        this.login = true;
+        this.signup = false;
+      });
     }
   }
   get f() {

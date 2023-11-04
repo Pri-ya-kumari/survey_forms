@@ -1,24 +1,39 @@
-
-    <div>
+<div>
     <p>
         <mat-toolbar class="shade1">
             <mat-icon>insert_drive_file</mat-icon>
             <span class="wd-1">SurveyForms</span>
             <!--wd-1 = word1 it is the titile of the forms-->
-            <span class="wd-2" >Admin</span>
+            <span class="wd-2">Admin</span>
             <!--wd-1 = word1 its is the link page tothe first page home page -->
             <span class="example-spacer"></span>
+            <div class="dropdown">
+                <input type="checkbox" id="dropdown" />
+                <label for="dropdown" class="dropdown-btn">
+                    <mat-icon class="icn">notifications</mat-icon>
+                </label>
+                <div class="dropdown-content">
+                    <div *ngFor="let c of request" class="list">
+                        <span class="tit1">Name:{{c.name}}</span>
+                        <span class="email1">Email:{{c.email}}</span>
+                        <span class="desc">Phone:{{c.number}}</span>
+                        <div class="msg"> 
+                            <span class="desc1">Message:{{c.message}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </mat-toolbar>
     </p>
 </div>
 <div class="body">
-<div class="side-nav">
-    <div class="menus">
-        <h3 class="p1"><a (click)="adminhome()"><mat-icon>home</mat-icon>Home</a></h3>
-        <h3 class="p1"><a (click)="aallt()"><mat-icon>horizontal_split</mat-icon>All Survey</a></h3>
-        <h3 class="p1"><a (click)="atest()"><mat-icon>add_circle</mat-icon>Add SurveyForms</a></h3>
-        <h3 class="p1"><a (click)="logout()"><mat-icon>exit_to_app</mat-icon>Log Out</a></h3>
+    <div class="side-nav">
+        <div class="menus">
+            <h3 class="p1"><a (click)="adminhome()"><mat-icon>home</mat-icon>Home</a></h3>
+            <h3 class="p1"><a (click)="aallt()"><mat-icon>horizontal_split</mat-icon>All Survey</a></h3>
+            <h3 class="p1"><a (click)="atest()"><mat-icon>add_circle</mat-icon>Add SurveyForms</a></h3>
+            <h3 class="p1"><a (click)="logout()"><mat-icon>exit_to_app</mat-icon>Log Out</a></h3>
+        </div>
     </div>
-</div>
 </div>
 <router-outlet></router-outlet>
