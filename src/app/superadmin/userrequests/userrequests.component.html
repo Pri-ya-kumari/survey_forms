@@ -1,0 +1,11 @@
+<div class="box">
+    <span class="t1">General User Request List</span>
+    <div class="b1">
+        <div *ngFor="let c of request"  class="list">
+            <span class="tit1">Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{c.name}}</span>
+            <span class="tit2">Email Id:&nbsp;&nbsp;{{c.email}}</span>
+            <span class="desc">Phone:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{c.number}}</span>
+            <span class="tit3">Message:&nbsp;{{c.message}}</span>
+        </div>
+    </div>
+</div>

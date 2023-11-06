@@ -30,20 +30,24 @@ import { ViewSurveyComponent } from './scratch/template/view-survey/view-survey.
 import { TempHomeComponent } from './scratch/template/temp-home/temp-home.component';
 import { GuserComponent } from './guser/guser.component';
 import { UserrequestComponent } from './userrequest/userrequest.component';
-import { redirectUnauthorizedTo,redirectLoggedInTo, canActivate } from '@angular/fire/compat/auth-guard';
+import { redirectUnauthorizedTo, redirectLoggedInTo, canActivate } from '@angular/fire/compat/auth-guard';
+import { SadashboardComponent } from './superadmin/sadashboard/sadashboard.component';
+import { AdmincreationComponent } from './superadmin/admincreation/admincreation.component';
+import { ListadminComponent } from './superadmin/listadmin/listadmin.component';
+import { EditformdialogComponent } from './superadmin/editformdialog/editformdialog.component';
+import { UserrequestsComponent } from './superadmin/userrequests/userrequests.component';
+import { NonauthorizeduserComponent } from './superadmin/nonauthorizeduser/nonauthorizeduser.component';
 const redirectToLoginIn = () => redirectUnauthorizedTo(['/login'])
 const redirectToHome = () => redirectLoggedInTo(['/generalusers'])
-
+//const redirectTosuperadmin = () => redirectUnauthorizedTo(['/superadmin'])
 const routes: Routes = [
   {
     path: 'mainpage',
     component: MainpageComponent,
-    ...canActivate(redirectToHome)
   },
   {
     path: 'login',
     component: SignUpComponent,
-    ...canActivate(redirectToHome)
   },
   {
     path: 'homepage',
@@ -78,6 +82,10 @@ const routes: Routes = [
     component: UpdateComponentComponent
   },
   {
+    path: 'updateadmin/:id',
+    component: EditformdialogComponent
+  },
+  {
     path: 'analysis',
     component: AnalysisDataComponent
   },
@@ -88,7 +96,6 @@ const routes: Routes = [
   {
     path: 'generalusers',
     component: GuserComponent,
-    ...canActivate(redirectToLoginIn)
   },
   {
     path: 'guser',
@@ -109,11 +116,11 @@ const routes: Routes = [
   {
     path: 'temphome',
     component: TempHomeComponent,
-    children:[
+    children: [
       {
         path: '',
-        redirectTo:'template-form',
-        pathMatch:'full'
+        redirectTo: 'template-form',
+        pathMatch: 'full'
       },
       {
         path: 'template-form',
@@ -122,6 +129,33 @@ const routes: Routes = [
       {
         path: 'viewsurvey/:fid/:title',
         component: ViewSurveyComponent,
+      },
+    ]
+  },
+  {
+    path: 'superadmin',
+    component: SadashboardComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'adminhome',
+        pathMatch: 'full'
+      },
+      { 
+        path: 'admincreation',
+        component: AdmincreationComponent,
+      },
+      {
+        path: 'alladminlist',
+        component: ListadminComponent,
+      },
+      {
+        path: 'userresquest',
+        component: UserrequestsComponent,
+      },
+      {
+        path: 'nonauthorized',
+        component: NonauthorizeduserComponent,
       },
     ]
   },

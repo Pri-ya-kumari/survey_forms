@@ -12,7 +12,8 @@
             </label>
             
             <ul class="dropdown-content" role="menu">
-              <li><span *ngIf="user$ | async as user" class="profile">{{user.email}}</span></li>
+              <!--<li><span *ngIf="user$ | async as user" class="profile">{{user.email}}</span></li>-->
+              <li><span class="profile">General User</span></li>
               <li><button (click)="logout()" class="btn">Log out</button></li>
             </ul>
           </div>

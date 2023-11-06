@@ -1,0 +1,35 @@
+<div class="nav">
+    <div class="shade1">
+        <mat-icon class="icon">insert_drive_file</mat-icon>
+        <span class="wd-1">SurveyForms</span>
+        <span class="example-spacer"></span>
+        <span class="example-spacer"></span>
+        <div class="dropdown">
+            <input type="checkbox" id="dropdown" />
+            <label for="dropdown" class="dropdown-btn">
+              <span>Profile</span>
+              <span class="arrow"></span>
+            </label>
+            
+            <ul class="dropdown-content" role="menu">
+              <!--<li><span *ngIf="user$ | async as user" class="profile">{{user.email}}</span></li>-->
+              <li><span class="profile">General User</span></li>
+              <li><button class="btn">Log out</button></li>
+            </ul>
+          </div>
+    </div>
+</div>
+<div class="body">
+    <div class="side-nav">
+        <div class="menus">
+            <h3 class="p1"><a (click)="adminhome()"><mat-icon>home</mat-icon>Home</a></h3>
+            <h3 class="p1"><a (click)="adminlist()"><mat-icon>horizontal_split</mat-icon>List Admin</a></h3>
+            <h3 class="p1"><a ><mat-icon>horizontal_split</mat-icon>List Authorized User</a></h3>
+            <h3 class="p1"><a (click)="nonautho()"><mat-icon>horizontal_split</mat-icon>List Non Authorized User</a></h3>
+            <h3 class="p1"><a (click)="request()"><mat-icon>horizontal_split</mat-icon>Gerneral User Request</a></h3>
+            <h3 class="p1"><a (click)="admincreation()"><mat-icon>add_circle</mat-icon>Create Admin</a></h3>
+            <h3 class="p1"><a (click)="logout()"><mat-icon>exit_to_app</mat-icon>Log Out</a></h3>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

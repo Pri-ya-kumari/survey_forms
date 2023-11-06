@@ -1,0 +1,62 @@
+.box{
+    border: 1px solid white;
+    width: 980px;
+    height: 520px;
+    margin-left: 360px;
+}
+.b1{
+    position: absolute;
+    height: 450px;
+    width: 980px;
+    border: 1px solid white;
+    margin-top: 52px;
+    margin-left: -5px;
+    overflow-y: scroll;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.t1{
+    margin-top: 11px;
+    margin-left: 300px;
+    font-size: 30px;
+    position: absolute;
+}
+.list{
+    border: 1px solid white;
+    width: 700px;
+    height: 170px;
+    border-radius: 18px;
+    margin-top: 30px;
+    margin-left: 50px;
+    display: block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.tit1{
+    position: absolute;
+    border: 1px solid white;
+    margin-top: 40px;
+    margin-left: 22px;
+    font-weight: bold;
+}
+.tit2{
+    position: absolute;
+    border: 1px solid white;
+    margin-top: 70px;
+    margin-left: 22px;
+    font-weight: bold;
+
+}
+.tit3{
+    position: absolute;
+    border: 1px solid white;
+    margin-top: 120px;
+    margin-left: 22px;
+    font-weight: bold;
+
+}
+.desc{
+    position: absolute;
+    background:1px solid white;
+    margin-top: 98px;
+    margin-left: 22px;
+    font-weight: bold;
+}

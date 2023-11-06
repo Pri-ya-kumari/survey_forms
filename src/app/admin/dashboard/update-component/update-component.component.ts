@@ -14,16 +14,16 @@ export class UpdateComponentComponent implements OnInit {
   constructor(private route:ActivatedRoute,private fb: FormBuilder,private updatedeta:SignuserService,private router:Router){
     this.setupForm();
   }
+  user:any=[];
   ngOnInit(): void {
     console.log(this.route.snapshot.params["id"])
-    //this.Id = this.route.snapshot.params["id"];
     this.updatedeta.getdata(this.route.snapshot.params["id"]).subscribe((res:any)=>{
       console.log(res); 
-      this.froms = new FormGroup({
+      /*this.froms = new FormGroup({
         name: new FormControl(res['name']),
         email: new FormControl(res['email']),
         password: new FormControl(res['password']),
-      })  
+      })  */
     })
     //alert(this.Id);
   }
@@ -52,8 +52,5 @@ export class UpdateComponentComponent implements OnInit {
       console.warn(datas);
       this.router.navigate(['/users'])
     })
-  }
-  cancel(){
-    
   }
 }

@@ -1,0 +1,95 @@
+.box{
+    border: 1px solid white;
+    width: 980px;
+    height: 520px;
+    margin-left: 370px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.title{
+    position: absolute;
+    margin-top: 22px;
+    width: 290px;
+    margin-left: 310px;
+    color: green;
+    font-size: 29px;
+}
+.t1{
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 62px;
+    font-size: 17px;
+}
+.inp1{
+    border: 1px solid black;
+    margin-top: 90px;
+    margin-left: 62px;
+    width: 700px;
+    height: 30px;
+    position: absolute;
+}
+.t2{
+    position: absolute;
+    margin-top: 140px;
+    margin-left: 62px;
+    font-size: 17px;
+}
+.inp2{
+    border: 1px solid black;
+    margin-top: 160px;
+    margin-left: 62px;
+    width: 700px;
+    height: 30px;
+    position: absolute;
+}
+.t3{
+    position: absolute;
+    margin-top: 210px;
+    margin-left: 62px;
+    font-size: 17px;
+}
+.inp3{
+    border: 1px solid black;
+    margin-top: 230px;
+    margin-left: 62px;
+    width: 700px;
+    height: 30px;
+    position: absolute;
+}
+.t4{
+    position: absolute;
+    margin-top: 340px;
+    margin-left: 62px;
+    font-size: 17px;
+    font-weight: bold
+}
+.inp4{
+    border: 1px solid black;
+    margin-top: 300px;
+    margin-left: 62px;
+    width: 700px;
+    height: 30px;
+    position: absolute;
+}
+.t5{
+    position: absolute;
+    margin-top: 280px;
+    margin-left: 62px;
+    font-size: 17px;
+}
+.btn1{
+    border: 1px solid white;
+    position: absolute;
+    width: 90px;
+    height: 40px;
+    margin-left: 750px;
+    margin-top: 400px;
+    font-size: 22px;
+    background-color: green;
+    color: white; 
+    cursor: pointer;
+}
+.list{
+    position: absolute;
+    margin-top: 360px;
+    margin-left: 62px;
+}

@@ -6,6 +6,7 @@ import { AdminLoginService } from '../adminservice/admin-login.service';
 import Swal from 'sweetalert2'
 import { MatDialog } from '@angular/material/dialog';
 import { UseraccesdelogComponent } from '../useraccesdelog/useraccesdelog.component';
+import { AdmincreationService } from '../superadmin/superservice/admincreation.service';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -50,6 +51,7 @@ export class SignUpComponent {
   }
 
   constructor(private route: Router, private fb: FormBuilder, private sign: SignuserService, private adminservice: AdminLoginService,
+    private admincreation:AdmincreationService,
     public dialog :MatDialog) {
     this.setupForm();
     this.lofinform();
@@ -70,7 +72,7 @@ export class SignUpComponent {
   id:any;
   loginsubmit(id:any) {
     console.log("button works")
-    this.adminservice.checkadmin().subscribe((che: any) => {
+    this.admincreation.getdata().subscribe((che: any) => {
       const adminl = che.find((b: any) => {
         return b.loginemail == this.Login.value.loginemail && b.loginpassword == this.Login.value.loginpassword
       })
@@ -84,7 +86,7 @@ export class SignUpComponent {
       }
     })
     const {loginemail,loginpassword} = this.Login.value
-    this.sign.getuser(loginemail,loginpassword).subscribe(()=>{
+    this.sign.getlogin(id).subscribe(()=>{
       Swal.fire({
         icon: 'success',
         title: 'SuccessFully',
@@ -108,7 +110,7 @@ export class SignUpComponent {
     }
     else {
       const { name, email, password } = this.froms.value;
-      this.sign.postuser(name, email, password).subscribe(() => {
+      this.sign.post(data).subscribe(() => {
         Swal.fire({
           icon: 'success',
           title: 'Successfully',

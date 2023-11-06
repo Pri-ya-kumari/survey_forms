@@ -57,6 +57,12 @@ import { SignuserService } from './service/signuser.service';
 import { GuserComponent } from './guser/guser.component';
 import { UseraccesdelogComponent } from './useraccesdelog/useraccesdelog.component';
 import { UserrequestComponent } from './userrequest/userrequest.component';
+import { SadashboardComponent } from './superadmin/sadashboard/sadashboard.component';
+import { AdmincreationComponent } from './superadmin/admincreation/admincreation.component';
+import { ListadminComponent } from './superadmin/listadmin/listadmin.component';
+import { EditformdialogComponent } from './superadmin/editformdialog/editformdialog.component';
+import { UserrequestsComponent } from './superadmin/userrequests/userrequests.component';
+import { NonauthorizeduserComponent } from './superadmin/nonauthorizeduser/nonauthorizeduser.component';
 
 @NgModule({
   declarations: [
@@ -94,6 +100,12 @@ import { UserrequestComponent } from './userrequest/userrequest.component';
     GuserComponent,
     UseraccesdelogComponent,
     UserrequestComponent,
+    SadashboardComponent,
+    AdmincreationComponent,
+    ListadminComponent,
+    EditformdialogComponent,
+    UserrequestsComponent,
+    NonauthorizeduserComponent,
   ],
   imports: [
     BrowserModule,

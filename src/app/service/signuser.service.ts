@@ -2,9 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 //import { Auth, signInWithEmailAndPassword } from '@angular/fire/auth';
 import { AngularFireAuth} from '@angular/fire/compat/auth';
-import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
-import { authState } from 'rxfire/auth'; // Import authState from rxfire/auth
-import { from, switchMap } from 'rxjs';
+import { from } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -31,7 +29,13 @@ export class SignuserService {
     return from(this.auth.signOut())
   }
 
-  
+  post(res:any){
+    return this.http.post(this.urls,res);
+  }
+
+  getlogin(res:any){
+    return this.http.get(this.urls,res);
+  }
 
   Createuser(res:any){
     return this.http.post(this.signup,res);
@@ -57,4 +61,3 @@ export class SignuserService {
 }
 function signInWithEmailAndPassword(auth: AngularFireAuth, loginemail: any, loginpassword: any): any {
 }
-
