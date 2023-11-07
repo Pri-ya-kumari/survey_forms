@@ -18,8 +18,7 @@ export class AdmincreationService {
     return this.http.get(this.urls);
   }
   getdatas(id:any){
-    const g = `${this.urls}/${id}`
-    return this.http.get(g);
+    return this.http.get(this.urls,id);
   }
   updateItem(id: number, updatedData: any) {
     const url = `${this.urls}/${id}`;

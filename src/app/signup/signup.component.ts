@@ -20,18 +20,18 @@ export class SignUpComponent {
   })
 
   Login = new FormGroup({
-    loginemail: new FormControl('',[Validators.required]),
+    loginemail: new FormControl('', [Validators.required]),
     loginpassword: new FormControl(''),
   })
 
-  
-  getemain(){
+
+  getemain() {
     return this.Login.get('loginemail')
   }
-  getpassword(){
+  getpassword() {
     return this.Login.get('loginpassword')
   }
-  lofinform(){
+  lofinform() {
     this.Login = this.fb.group({
       //name: ['', [Validators.required, Validators.pattern("^[a-zA-Z]*")]],
       loginemail: ['', [Validators.required,
@@ -51,8 +51,8 @@ export class SignUpComponent {
   }
 
   constructor(private route: Router, private fb: FormBuilder, private sign: SignuserService, private adminservice: AdminLoginService,
-    private admincreation:AdmincreationService,
-    public dialog :MatDialog) {
+    private admincreation: AdmincreationService,
+    public dialog: MatDialog) {
     this.setupForm();
     this.lofinform();
   }
@@ -69,35 +69,49 @@ export class SignUpComponent {
     this.signup = true;
     this.login = false;
   }
-  id:any;
-  loginsubmit(id:any) {
-    console.log("button works")
-    this.admincreation.getdata().subscribe((che: any) => {
-      const adminl = che.find((b: any) => {
-        return b.loginemail == this.Login.value.loginemail && b.loginpassword == this.Login.value.loginpassword
-      })
-      if (adminl) {
-        //alert("login successfully")
-        Swal.fire('success', 'user is login successfully', 'success');
-        this.Login.reset()
-        this.route.navigate(['/admindashboard'])
-      }else{
-        Swal.fire('error', 'user not found', 'error');
-      }
-    })
-    const {loginemail,loginpassword} = this.Login.value
-    this.sign.getlogin(id).subscribe(()=>{
-      Swal.fire({
-        icon: 'success',
-        title: 'SuccessFully',
-        text: 'Login Successfully',
-      })
-      this.route.navigate(['/generalusers'])
-      this.dialog.open(UseraccesdelogComponent,{
-        width:'800px',height:'600px'
+  id: any;
+  loginsubmit() {
+    console.log('Button works');
+    this.admincreation.getdata().subscribe((adminData: any) => {
+      const adminl = adminData.find((admin: any) => {
+        return (
+          admin.loginemail === this.Login.value.loginemail &&
+          admin.loginpassword === this.Login.value.loginpassword
+        );
       });
-      this.Login.reset()
-    })
+
+      if (adminl) {
+        Swal.fire('success', 'Admin is logged in successfully', 'success');
+        this.Login.reset();
+        this.route.navigate(['/superadmin']);
+      } else {
+        this.userLogin();
+      }
+    });
+  }
+
+  userLogin() {
+    this.sign.getUsers().subscribe((userData: any) => {
+      const user = userData.find((user: any) => {
+        console.log("user");
+        return (
+          user.loginemail === this.Login.value.loginemail &&
+          user.loginpassword === this.Login.value.loginpassword
+        );
+      });
+
+      if (user) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Successfully',
+          text: 'Login Successfully',
+        });
+        this.route.navigate(['/generalusers']);
+        this.Login.reset();
+      } else {
+        Swal.fire('error', 'User not found', 'error');
+      }
+    });
   }
 
   homepage(data: any): void {
@@ -105,7 +119,8 @@ export class SignUpComponent {
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: 'Please enter the valid formate'})
+        text: 'Please enter the valid formate'
+      })
       //alert("please enter the vaid formate")
     }
     else {

@@ -18,12 +18,13 @@ export class SignuserService {
   urls= 'https://survey-forms-3ecc3-default-rtdb.firebaseio.com/users.json';
 
 
+  /*authentication logic here
   postuser(name:any,loginemail:any,loginpassword:any){
     return from(this.auth.createUserWithEmailAndPassword(loginemail, loginpassword))
   }
   getuser(loginemail:any,loginpassword:any){
     return from(this.auth.signInWithEmailAndPassword(loginemail,loginpassword));
-  }
+  }*/
 
   logout(){
     return from(this.auth.signOut())
@@ -32,9 +33,13 @@ export class SignuserService {
   post(res:any){
     return this.http.post(this.urls,res);
   }
-
-  getlogin(res:any){
-    return this.http.get(this.urls,res);
+  
+  getlogin(id:any){
+    return this.http.get(this.urls,id);
+  }
+  
+  getUsers(){
+    return this.http.get(this.urls);
   }
 
   Createuser(res:any){
