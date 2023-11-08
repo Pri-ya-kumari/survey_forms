@@ -1,14 +1,16 @@
-import { ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, CanActivate } from '@angular/router';
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { inject } from '@angular/core';
+import { CanActivateFn, Router } from '@angular/router';
 
-//export const authGuard: CanActivateFn = (route, state) => {
-//return true;
-//};
-export class authGuard implements CanActivate {
-  canActivate(route: ActivatedRouteSnapshot, 
-    state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-      return true;
+export const authGuard: CanActivateFn = (route, state) => {
+
+
+  let _router = inject(Router)
+  let IsloggedId = localStorage.getItem('IsloggedIn')
+  if (IsloggedId == 'false') {
+    _router.navigate(['/loginpage'])
+    alert("authenticate user first")
+    return false
   }
-
-}
+  
+    return true;  
+};

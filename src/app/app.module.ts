@@ -27,7 +27,6 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { PreviewContactComponent } from './demo/preview-contact/preview-contact.component';
 import { EventFormComponent } from './demo/event-form/event-form.component';
 import { EventpreviewComponent } from './demo/eventpreview/eventpreview.component';
-import { SignUpComponent } from './signup/signup.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { AhomepageComponent } from './admin/ahomepage/ahomepage.component';
 import { AAddquestionComponent } from './admin/a-addquestion/a-addquestion.component';
@@ -63,6 +62,9 @@ import { ListadminComponent } from './superadmin/listadmin/listadmin.component';
 import { EditformdialogComponent } from './superadmin/editformdialog/editformdialog.component';
 import { UserrequestsComponent } from './superadmin/userrequests/userrequests.component';
 import { NonauthorizeduserComponent } from './superadmin/nonauthorizeduser/nonauthorizeduser.component';
+import { WildcardshowComponent } from './wildcardshow/wildcardshow.component';
+import { LoginpageComponent } from './loginpage/loginpage.component';
+import { SigninpageComponent } from './superadmin/signinpage/signinpage.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +78,6 @@ import { NonauthorizeduserComponent } from './superadmin/nonauthorizeduser/nonau
     HtcsjsComponent,
     FinalsubmitComponent,
     MainpageComponent,
-    SignUpComponent,
     ConactFormComponent,
     PreviewContactComponent,
     EventFormComponent,
@@ -106,6 +107,9 @@ import { NonauthorizeduserComponent } from './superadmin/nonauthorizeduser/nonau
     EditformdialogComponent,
     UserrequestsComponent,
     NonauthorizeduserComponent,
+    WildcardshowComponent,
+    LoginpageComponent,
+    SigninpageComponent,
   ],
   imports: [
     BrowserModule,

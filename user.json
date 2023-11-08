@@ -4,7 +4,9 @@
       "name": "priya",
       "email": "p@gmail.com",
       "password": "1212",
-      "id": 1
+      "id": 1,
+      "isactive": "true",
+      "role": ""
     },
     {
       "name": "mina",
@@ -29,6 +31,12 @@
       "email": "pooja@gmail.com",
       "password": "pooja",
       "id": 5
+    },
+    {
+      "name": "jagriti",
+      "email": "j@gmail.com",
+      "password": "123456",
+      "id": 6
     }
   ],
   "addtest": [
@@ -136,9 +144,16 @@
       "id": 1
     },
     {
-      "loginemail": "admin1@gmail.com",
-      "loginpassword": "admin1",
+      "loginemail": "adminmini@gmail.com",
+      "loginpassword": "adminmini",
       "id": 2
+    }
+  ],
+  "superadmin":[
+    {
+      "loginemail": "superadmin@gmail.com",
+      "loginpassword": "superadmin",
+      "id":1
     }
   ],
   "contactreg": [

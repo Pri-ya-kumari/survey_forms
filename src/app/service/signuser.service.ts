@@ -49,6 +49,9 @@ export class SignuserService {
   loginuser(id:any){
     return this.http.get(this.signup,id);
   }
+  loginuses(){
+    return this.http.get(this.signup);
+  }
   getdata(id:any){
     return this.http.get(`${this.signup}/${id}`);
   }

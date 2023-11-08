@@ -8,7 +8,6 @@ import { AngularsFormComponent } from './scratch/template/angulars-form/angulars
 import { HtcsjsComponent } from './scratch/template/htcsjs/htcsjs.component';
 import { FinalsubmitComponent } from './scratch/template/finalsubmit/finalsubmit.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
-import { SignUpComponent } from './signup/signup.component';
 import { ConactFormComponent } from './demo/conact-form/conact-form.component';
 import { PreviewContactComponent } from './demo/preview-contact/preview-contact.component';
 import { EventFormComponent } from './demo/event-form/event-form.component';
@@ -37,6 +36,10 @@ import { ListadminComponent } from './superadmin/listadmin/listadmin.component';
 import { EditformdialogComponent } from './superadmin/editformdialog/editformdialog.component';
 import { UserrequestsComponent } from './superadmin/userrequests/userrequests.component';
 import { NonauthorizeduserComponent } from './superadmin/nonauthorizeduser/nonauthorizeduser.component';
+import { authGuard } from './guard/auth.guard';
+import { WildcardshowComponent } from './wildcardshow/wildcardshow.component';
+import { LoginpageComponent } from './loginpage/loginpage.component';
+import { SigninpageComponent } from './superadmin/signinpage/signinpage.component';
 const redirectToLoginIn = () => redirectUnauthorizedTo(['/login'])
 const redirectToHome = () => redirectLoggedInTo(['/generalusers'])
 //const redirectTosuperadmin = () => redirectUnauthorizedTo(['/superadmin'])
@@ -46,72 +49,95 @@ const routes: Routes = [
     component: MainpageComponent,
   },
   {
-    path: 'login',
-    component: SignUpComponent,
+    path: 'loginpage',
+    component: LoginpageComponent,
+  },
+  {
+    path: 'signuppage',
+    component: SigninpageComponent,
   },
   {
     path: 'homepage',
-    component: HeaderComponent
+    component: HeaderComponent,
+    canActivate:[authGuard]
   },
   {
     path: 'add-forms',
-    component: AddFormsComponent
+    component: AddFormsComponent,
+    canActivate:[authGuard]
   },
   {
     path: 'pd',
-    component: PreviewDataComponent
+    component: PreviewDataComponent,
+    canActivate:[authGuard]
   },
   {
     path: 'angular-s-form',
-    component: AngularsFormComponent
+    component: AngularsFormComponent,
+    canActivate:[authGuard]
   },
   {
     path: 'complete',
-    component: FinalsubmitComponent
+    component: FinalsubmitComponent,
+    canActivate:[authGuard]
   },
   {
     path: 'htcsjs-form',
-    component: HtcsjsComponent
+    component: HtcsjsComponent,
+    canActivate:[authGuard]
   },
   {
     path: 'users',
     component: UsersDetailsComponent,
+    canActivate:[authGuard]
   },
   {
     path: 'update/:id',
-    component: UpdateComponentComponent
+    component: UpdateComponentComponent,
+    canActivate:[authGuard]
   },
   {
     path: 'updateadmin/:id',
-    component: EditformdialogComponent
+    component: EditformdialogComponent,
+    canActivate:[authGuard]
   },
   {
     path: 'analysis',
-    component: AnalysisDataComponent
+    component: AnalysisDataComponent,
+    canActivate:[authGuard]
   },
   {
     path: 'profile',
     component: ProfileComponent,
+    canActivate:[authGuard]
   },
   {
     path: 'generalusers',
     component: GuserComponent,
+    canActivate:[authGuard]
   },
   {
     path: 'guser',
     component: GeneralUsersComponent,
+    canActivate:[authGuard],
+    //data:{
+      //expectedRole:['Admin']
+    //}
   },
   {
     path: 'updatepass/:cid',
-    component: UpdatePasswordComponent
+    component: UpdatePasswordComponent,
+    canActivate:[authGuard]
   },
   {
     path: 'angularrecord',
     component: AngularRecordComponent,
+    canActivate:[authGuard]
   },
   {
     path: 'userrequest',
     component: UserrequestComponent,
+    canActivate:[authGuard]
   },
   {
     path: 'temphome',
@@ -120,21 +146,24 @@ const routes: Routes = [
       {
         path: '',
         redirectTo: 'template-form',
-        pathMatch: 'full'
+        pathMatch: 'full',
       },
       {
         path: 'template-form',
         component: TemplateComponent,
+        canActivate:[authGuard]
       },
       {
         path: 'viewsurvey/:fid/:title',
         component: ViewSurveyComponent,
+        canActivate:[authGuard]
       },
     ]
   },
   {
     path: 'superadmin',
     component: SadashboardComponent,
+    canActivate:[authGuard],
     children: [
       {
         path: '',
@@ -144,24 +173,29 @@ const routes: Routes = [
       { 
         path: 'admincreation',
         component: AdmincreationComponent,
+        canActivate:[authGuard]
       },
       {
         path: 'alladminlist',
         component: ListadminComponent,
+        canActivate:[authGuard]
       },
       {
         path: 'userresquest',
         component: UserrequestsComponent,
+        canActivate:[authGuard]
       },
       {
         path: 'nonauthorized',
         component: NonauthorizeduserComponent,
+        canActivate:[authGuard]
       },
     ]
   },
   {
     path: 'admindashboard',
     component: DashboardComponent,
+    canActivate:[authGuard],
     children: [
       {
         path: '',
@@ -171,28 +205,34 @@ const routes: Routes = [
       {
         path: 'adminhome',
         component: AhomepageComponent,
+        canActivate:[authGuard]
       },
       {
         path: 'atest',
         component: AAddTestComponent,
+        canActivate:[authGuard]
       },
       {
         path: 'aquestion/:fid/:title',
         component: AAddquestionComponent,
+        canActivate:[authGuard]
       },
       {
         path: 'addquestion/:fid/:title',
         component: AddquestionsComponent,
+        canActivate:[authGuard]
       },
       {
         path: 'alltest',
         component: AlltestComponent,
+        canActivate:[authGuard]
       }
     ]
   },
   {
     path: 'event',
-    component: EventFormComponent
+    component: EventFormComponent,
+    canActivate:[authGuard]
   },
   {
     path: '',
@@ -202,14 +242,22 @@ const routes: Routes = [
   {
     path: 'demof1',
     component: ConactFormComponent,
+    canActivate:[authGuard]
   },
   {
     path: 'previewcontact',
     component: PreviewContactComponent,
+    canActivate:[authGuard]
   },
   {
     path: 'previewevent',
     component: EventpreviewComponent,
+    canActivate:[authGuard]
+  },
+  {
+    path:'**',
+    component:WildcardshowComponent,
+    pathMatch:'full'
   }
 ];
 
