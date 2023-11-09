@@ -21,7 +21,7 @@ export class AdmincreationComponent {
 
 
   send(data:any):void{
-    this.creation.post(data).subscribe((res) => {
+    this.creation.postuser(data).subscribe((res) => {
       if (res != "") {
         Swal.fire({
           icon: 'success',

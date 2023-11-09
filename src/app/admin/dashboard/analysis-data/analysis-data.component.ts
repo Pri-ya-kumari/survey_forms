@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Chart } from 'chart.js';
+import Chart from 'chart.js/auto';
 import { ChartserviceService } from 'src/app/adminservice/chartservice.service';
 
 @Component({

@@ -17,7 +17,7 @@ export class ListadminComponent {
   test: any; 
 
   constructor(private route: Router, private showlist:  AdmincreationService,public dialog :MatDialog) {
-    this.test = this.showlist.getdata().pipe(
+    this.test = this.showlist.getuser().pipe(
       map((resdata: any) => {
         console.log(resdata);
         const survey: any[] = [];

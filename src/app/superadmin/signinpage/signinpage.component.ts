@@ -11,8 +11,8 @@ import { SuperadmingetingService } from '../superservice/superadmingeting.servic
 })
 export class SigninpageComponent {
 
-  
-  constructor(private route: Router, private fb: FormBuilder,private admin:SuperadmingetingService,
+
+  constructor(private route: Router, private fb: FormBuilder, private admin: SuperadmingetingService,
     public dialog: MatDialog) {
     this.lofinform();
     localStorage.setItem("IsloggedIn", "false");
@@ -31,35 +31,36 @@ export class SigninpageComponent {
       loginpassword: ['', [Validators.required]]
     });
   }
-  
+
   loginsubmit(data: any) {
     console.log("button works")
     {
-        this.admin.getuser(data).subscribe((res: any) => {
-          const user = res.find((a: any) => {
-            return a.email == this.Login.value.loginemail && a.password == this.Login.value.loginpassword;
-          });
-          if (user) {
-            localStorage.setItem("IslogedIn", "true");
-            Swal.fire({
-              icon: 'success',
-              title: 'Successfully',
-              text: 'User Loggin successfully'
-            });
-            this.Login.reset();
-            this.route.navigate(['/superadmin']);
-          } else {
-            localStorage.setItem("IslogedIn", "false");
-            Swal.fire({
-              icon: 'error',
-              title: 'Oops...',
-              text: 'user not found'
-            })
-          }
+      this.admin.getuser(data).subscribe((res: any) => {
+        const user = res.find((a: any) => {
+          return a.email == this.Login.value.loginemail && a.password == this.Login.value.loginpassword;
         });
+        if (!user) {
+          localStorage.setItem("IslogedIn", "true");
+          Swal.fire({
+            icon: 'success',
+            title: 'Successfully',
+            text: 'User Loggin successfully'
+          });
+          this.Login.reset();
+          this.route.navigate(['/superadmin']);
+        } else {
+          localStorage.setItem("IslogedIn", "false");
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'user not found'
+          });
+          this.Login.reset();
+        }
+      });
     }
   }
-  
+
   get l() {
     return this.Login.controls;
   }

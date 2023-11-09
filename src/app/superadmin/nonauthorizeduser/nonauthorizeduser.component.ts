@@ -12,7 +12,7 @@ export class NonauthorizeduserComponent {
   test:any;
 
   constructor(private route: Router, private showlist:  GeneralulistService) {
-    this.test = this.showlist.getdata().pipe(
+    this.test = this.showlist.getuser().pipe(
       map((resdata: any) => {
         console.log(resdata);
         const survey: any[] = [];

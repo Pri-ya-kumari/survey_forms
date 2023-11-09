@@ -10,6 +10,15 @@ export class AdmincreationService {
 
   urls= 'https://survey-forms-3ecc3-default-rtdb.firebaseio.com/admin.json';
 
+  url='http://localhost:3000/admin';
+
+  postuser(data:any){
+    return this.http.post(this.url,data);
+  }
+
+  getuser(){
+    return this.http.get(this.url)
+  }
   post(res:any){
     return this.http.post(this.urls,res);
   }

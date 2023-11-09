@@ -65,7 +65,7 @@ import { NonauthorizeduserComponent } from './superadmin/nonauthorizeduser/nonau
 import { WildcardshowComponent } from './wildcardshow/wildcardshow.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { SigninpageComponent } from './superadmin/signinpage/signinpage.component';
-
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 @NgModule({
   declarations: [
     AppComponent,
@@ -142,7 +142,8 @@ import { SigninpageComponent } from './superadmin/signinpage/signinpage.componen
         measurementId: "G-6GZY005SP9"
     }),
     AngularFireAuthModule,
-    MatDialogModule
+    MatDialogModule,
+    CKEditorModule
   ],
   providers: [ 
     {
