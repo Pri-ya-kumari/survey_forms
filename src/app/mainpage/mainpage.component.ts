@@ -22,11 +22,11 @@ import { animate, query, stagger, state, style, transition, trigger } from '@ang
 export class MainpageComponent {
   constructor(
     private router: Router) {
-      localStorage.setItem("IsloggedIn","false");
+      localStorage.setItem("isloggedin","false");
       localStorage.setItem("IslogedIn", "false");
     }
   loginpage(){
-    this.router.navigate(['/loginpage']);
+    this.router.navigate(['/generalusers']);
   }
   see(){
     this.router.navigate(['/signuppage'])

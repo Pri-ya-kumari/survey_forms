@@ -5,12 +5,11 @@ export const authGuard: CanActivateFn = (route, state) => {
 
 
   let _router = inject(Router)
-  let IsloggedId = localStorage.getItem('IsloggedIn')
+  let IsloggedId = localStorage.getItem('isloggedin')
   if (IsloggedId == 'false') {
     _router.navigate(['/loginpage'])
-    alert("authenticate user first")
+    alert("contact Support")
     return false
   }
-  
-    return true;  
+  return true;  
 };

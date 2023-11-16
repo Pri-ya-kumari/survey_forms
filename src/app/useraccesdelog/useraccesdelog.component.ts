@@ -18,5 +18,7 @@ export class UseraccesdelogComponent {
      this.dialog.open(UserrequestComponent,{
        width:'600px',height:'450px'
      });
+
    }
+   
 }

@@ -1,19 +1,18 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-//import { Auth, signInWithEmailAndPassword } from '@angular/fire/auth';
 import { AngularFireAuth} from '@angular/fire/compat/auth';
 import { from } from 'rxjs';
- 
+import { HttpClient } from '@angular/common/http';
+
 @Injectable({
   providedIn: 'root'
 })
-export class SignuserService {
+export class AdminserviceService {
 
   constructor(private http :HttpClient,private auth :AngularFireAuth) { }
 
   currentUsser$ = this.auth.authState; // Use this.auth.authState
 
-  public signup='http://localhost:3000/signup';
+  public signup='http://localhost:3000/admins';
   
   urls= 'https://survey-forms-3ecc3-default-rtdb.firebaseio.com/users.json';
 

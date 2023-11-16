@@ -1,23 +1,22 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { AdmincreationService } from '../superservice/admincreation.service';
 import { map } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
-import { EditformdialogComponent } from '../editformdialog/editformdialog.component';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
+import { SigneduserService } from '../superservice/signeduser.service';
 
 @Component({
-  selector: 'app-listadmin',
-  templateUrl: './listadmin.component.html',
-  styleUrls: ['./listadmin.component.css']
+  selector: 'app-authorizeduserlist',
+  templateUrl: './authorizeduserlist.component.html',
+  styleUrls: ['./authorizeduserlist.component.css']
 })
-export class ListadminComponent {
-
+export class AuthorizeduserlistComponent {
 
   test: any; 
 
-  constructor(private route: Router, private showlist:  AdmincreationService,public dialog :MatDialog) {
-    this.test = this.showlist.listadmin().pipe(
+  constructor(private route: Router, private showlist: SigneduserService,public dialog :MatDialog) {
+    this.test = this.showlist.getUsers().pipe(
       map((resdata: any) => {
         console.log(resdata);
         const survey: any[] = [];
@@ -58,4 +57,5 @@ export class ListadminComponent {
     this.test;
     
   }
+
 }

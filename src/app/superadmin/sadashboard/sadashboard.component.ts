@@ -29,4 +29,7 @@ export class SadashboardComponent {
   nonautho(){
     this.route.navigate(['/superadmin', 'nonauthorized']);
   }
+  authorizeduser(){
+    this.route.navigate(['/superadmin','authorizeduserlist'])
+  }
 }

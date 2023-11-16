@@ -37,6 +37,24 @@
       "email": "j@gmail.com",
       "password": "123456",
       "id": 6
+    },
+    {
+      "name": "sakshi",
+      "email": "sakshi@gmail.com",
+      "password": "121212",
+      "id": 7
+    },
+    {
+      "name": "somya",
+      "email": "somya@gmail.com",
+      "password": "somya",
+      "id": 8
+    },
+    {
+      "name": "yashika",
+      "email": "yashika@surveyform.com",
+      "password": "12345",
+      "id": 9
     }
   ],
   "addtest": [
@@ -137,23 +155,11 @@
       "id": 9
     }
   ],
-  "admin": [
-    {
-      "loginemail": "admin@gmail.com",
-      "loginpassword": "admin",
-      "id": 1
-    },
-    {
-      "loginemail": "adminmini@gmail.com",
-      "loginpassword": "adminmini",
-      "id": 2
-    }
-  ],
-  "superadmin":[
+  "superadmin": [
     {
       "loginemail": "superadmin@gmail.com",
       "loginpassword": "superadmin",
-      "id":1
+      "id": 1
     }
   ],
   "contactreg": [
@@ -474,6 +480,22 @@
       "text3": "",
       "time": "",
       "id": 10
+    }
+  ],
+  "admins": [
+    {
+      "name": "saurav",
+      "email": "sauravadmin@gmail.com",
+      "password": "sauravadmin",
+      "id": 1
+    }
+  ],
+  "superadmins": [
+    {
+      "name": "gaura",
+      "email": "gauraadmin@gmail.com",
+      "password": "gauraadmin",
+      "id": 1
     }
   ]
 }

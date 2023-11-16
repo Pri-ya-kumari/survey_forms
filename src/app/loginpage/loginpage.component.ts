@@ -16,15 +16,11 @@ export class LoginpageComponent {
   constructor(private route: Router, private fb: FormBuilder, private sign: SignuserService,
     private admin: AdminLoginService,
     public dialog: MatDialog) {
-    this.setupForm();
+
+    localStorage.setItem("isloggedin", "false");
+    localStorage.setItem("IslogedIn", "false");
     this.lofinform();
-    localStorage.setItem("IsloggedIn", "false");
   }
-  froms = new FormGroup({
-    name: new FormControl('', [Validators.required]),
-    email: new FormControl('', [Validators.required]),
-    password: new FormControl('', [Validators.required]),
-  })
 
   Login = new FormGroup({
     loginemail: new FormControl('', [Validators.required]),
@@ -39,84 +35,54 @@ export class LoginpageComponent {
       loginpassword: ['', [Validators.required]]
     });
   }
-  setupForm() {
-    this.froms = this.fb.group({
-      name: ['', [Validators.required, Validators.pattern("^[a-zA-Z]*")]],
-      email: ['', [Validators.required,
-      Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
-      password: ['', [Validators.required/*,
-      Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$")*/]]
-    });
-  }
 
-  login = true;
-  signup = false;
-
-  loginf() {
-    this.login = true;
-    this.signup = false;
-  }
-  Signup() {
-    this.signup = true;
-    this.login = false;
-  }
 
   loginsubmit(data: any) {
-    console.log("button works")
-    {
+    console.log("button works");
+    /*this.admin.checkadmin().subscribe((che: any) => {
+      const adminl = che.find((b: any) => {
+        return b.email == this.Login.value.loginemail && b.password == this.Login.value.loginpassword;
+      });
+      if (adminl) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Successfully',
+          text: 'Admin Loggin successfully'
+        });
+        localStorage.setItem("isloggedin", "true");
+        this.Login.reset();
+        this.route.navigate(['/admindashboard']);
+      } */
+      {
         this.sign.loginuser(data).subscribe((res: any) => {
           const user = res.find((a: any) => {
             return a.email == this.Login.value.loginemail && a.password == this.Login.value.loginpassword;
           });
           if (user) {
-            localStorage.setItem("IsloggedIn", "true");
             Swal.fire({
               icon: 'success',
               title: 'Successfully',
               text: 'User Loggin successfully'
             });
+            localStorage.setItem("isloggedin", "true");
             this.Login.reset();
-            this.route.navigate(['/generalusers']);
+            this.route.navigate(['/homepage']);
           } else {
-            localStorage.setItem("IsloggedIn", "false");
             Swal.fire({
               icon: 'error',
               title: 'Oops...',
-              text: 'user not found'
-            })
+              text: 'User not found'
+            });
+            localStorage.setItem("isloggedin", "false");
           }
         });
-    }
-  }
-  homepage(data: any): void {
-
-    if (this.froms.invalid) {
-      Swal.fire({
-        icon: 'error',
-        title: 'Oops',
-        text: 'please enter the valid formate'
-      })
-    }
-    else {
-      this.sign.Createuser(data).subscribe((res) => {
-        if (res != "") {
-          Swal.fire({
-            icon: 'success',
-            title: 'Successfully',
-            text: 'Your Record is added successfully'
-          });
-          this.froms.reset();
-          this.login = true;
-          this.signup = false;
-        }
-      });
-    }
+      }
   }
 
-  get f() {
-    return this.froms.controls;
-  }
   get l() {
     return this.Login.controls;
+  }
+  Signup() {
+    this.route.navigate(['/adminlogin'])
   }
 }

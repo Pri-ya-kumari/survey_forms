@@ -3,7 +3,7 @@
     <div>
         <div class="container1">
             <form [formGroup]="Login" novalidate >
-                <span class="lab">Login In </span>
+                <span class="lab">Employee Login In </span>
                 <label class="lab2">Email Id</label>
                 <input type="text" class="t2" formControlName="loginemail" #emailin><br>
                 <div *ngIf="l['loginemail'].invalid && l['loginemail'].touched" class="alert2">
@@ -18,7 +18,7 @@
                 <input type="password" class="t3" formControlName="loginpassword" #passwordin> <br>
                 <button class="btn-2" (click)="loginsubmit(Login.value)">Login In</button>
             </form>
-            <span class="e1">Are You Employee?</span>
+            <span class="e1">Are You superEmployee?</span>
             <span (click)="Signup()" class="signup">Click Here </span>
             <span class="e2">To Login In</span>
         </div>

@@ -40,11 +40,17 @@
 }
 .t2{
     position: absolute;
-    margin-top: 19px;
-    margin-left: 12px;
+    margin-top: 109px;
+    margin-left: -802px;
     font-size: 20px;
 }
 
+.tt1{
+    position: absolute;
+    margin-top: 19px;
+    margin-left: 9px;
+    font-size: 20px;
+}
 .t3{
     margin-top: 29px;
     margin-left: 12px;

@@ -66,6 +66,9 @@ import { WildcardshowComponent } from './wildcardshow/wildcardshow.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { SigninpageComponent } from './superadmin/signinpage/signinpage.component';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { SignuppageComponent } from './signuppage/signuppage.component';
+import { CreateuserComponent } from './admin/createuser/createuser.component';
+import { AuthorizeduserlistComponent } from './superadmin/authorizeduserlist/authorizeduserlist.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -110,6 +113,9 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
     WildcardshowComponent,
     LoginpageComponent,
     SigninpageComponent,
+    SignuppageComponent,
+    CreateuserComponent,
+    AuthorizeduserlistComponent,
   ],
   imports: [
     BrowserModule,

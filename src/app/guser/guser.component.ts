@@ -34,9 +34,7 @@ export class GuserComponent {
       width:'800px',height:'600px'
     });
   }
-  logout(){
-    this.sign.logout().subscribe(()=>{
-      this.route.navigate(['/mainpage'])
-    })
+  Login(){
+    this.route.navigate(['/loginpage'])
   }
 }

@@ -18,19 +18,23 @@
     font-size: 20px;
     font-weight: lighter;
 }
-.desc{
-    margin-top: -20px;
-}
 .tit{
-    margin-top: -17px;
-    margin-left: -16px;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: -80px;
+}
+.desc{
+    position: absolute;
+    margin-top: 40px;
+    margin-left: -80px;
 }
 .tit1{
-    position: absolute;
-    margin-top: -13px;
-    margin-left: 180px;
+    position: relative;
+    margin-top: -63px;
+    margin-left: 10px;
 }
 .list{
+    position:relative;
     height: 90px;
     margin-top: 7px;
     margin-left: -13px;
@@ -56,14 +60,13 @@
 }
 .btn1{
     border: 1px solid #EDEBF2;
-    width: 200px auto; 
+    width: 120px;
     background-color: orange;
-    opacity: 0.9;
     color: white;
     font-size: 16px;
-    height: 30px;
+    height: 40px;
     position: relative;
-    margin-top: -10px;
-    margin-left: 10px;
+    margin-top: 45px ;
+    margin-left: 500px;
     cursor: pointer;
 }

@@ -2,17 +2,21 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { AdminLoginService } from '../adminservice/admin-login.service';
+import { SignuserService } from '../service/signuser.service';
 import Swal from 'sweetalert2';
-import { SuperadmingetingService } from '../superservice/superadmingeting.service';
-@Component({
-  selector: 'app-signinpage',
-  templateUrl: './signinpage.component.html',
-  styleUrls: ['./signinpage.component.css']
-})
-export class SigninpageComponent {
+import { AdminserviceService } from '../service/adminservice.service';
 
-  constructor(private route: Router, private fb: FormBuilder,
-    private superadmin: SuperadmingetingService,
+@Component({
+  selector: 'app-signuppage',
+  templateUrl: './signuppage.component.html',
+  styleUrls: ['./signuppage.component.css']
+})
+export class SignuppageComponent {
+
+
+  constructor(private route: Router, private fb: FormBuilder, private sign: SignuserService,
+    private admin: AdminserviceService,
     public dialog: MatDialog) {
 
     localStorage.setItem("isloggedin", "false");
@@ -36,9 +40,8 @@ export class SigninpageComponent {
 
 
   loginsubmit(data: any) {
-    console.log("button works");
       {
-        this.superadmin.loginuser(data).subscribe((res: any) => {
+        this.admin.loginuser(data).subscribe((res: any) => {
           const user = res.find((a: any) => {
             return a.email == this.Login.value.loginemail && a.password == this.Login.value.loginpassword;
           });
@@ -50,7 +53,7 @@ export class SigninpageComponent {
             });
             localStorage.setItem("isloggedin", "true");
             this.Login.reset();
-            this.route.navigate(['/superadmin']);
+            this.route.navigate(['/admindashboard']);
           } else {
             Swal.fire({
               icon: 'error',
@@ -67,6 +70,6 @@ export class SigninpageComponent {
     return this.Login.controls;
   }
   Signup() {
-    this.route.navigate(['/adminlogin'])
+    this.route.navigate(['/superadminLogin'])
   }
 }

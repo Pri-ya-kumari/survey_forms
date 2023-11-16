@@ -7,7 +7,9 @@
     color: white;
     height: 70px;
 }
-
+.body1{
+    overflow-y: hidden;
+}
 .wd-1 {
     margin-left: 12px;
     font-weight: 100px;

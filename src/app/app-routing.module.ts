@@ -40,8 +40,11 @@ import { authGuard } from './guard/auth.guard';
 import { WildcardshowComponent } from './wildcardshow/wildcardshow.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { SigninpageComponent } from './superadmin/signinpage/signinpage.component';
+import { SignuppageComponent } from './signuppage/signuppage.component';
+import { CreateuserComponent } from './admin/createuser/createuser.component';
+import { AuthorizeduserlistComponent } from './superadmin/authorizeduserlist/authorizeduserlist.component';
 const redirectToLoginIn = () => redirectUnauthorizedTo(['/login'])
-const redirectToHome = () => redirectLoggedInTo(['/generalusers'])
+const redirectToHome = () => redirectLoggedInTo(['/mainpage'])
 //const redirectTosuperadmin = () => redirectUnauthorizedTo(['/superadmin'])
 const routes: Routes = [
   {
@@ -51,9 +54,14 @@ const routes: Routes = [
   {
     path: 'loginpage',
     component: LoginpageComponent,
+    ...canActivate(redirectToHome)
   },
   {
-    path: 'signuppage',
+    path: 'adminlogin',
+    component:SignuppageComponent,
+  },
+  {
+    path: 'superadminLogin',
     component: SigninpageComponent,
   },
   {
@@ -114,7 +122,7 @@ const routes: Routes = [
   {
     path: 'generalusers',
     component: GuserComponent,
-    canActivate:[authGuard]
+    //canActivate:[authGuard]
   },
   {
     path: 'guser',
@@ -190,6 +198,11 @@ const routes: Routes = [
         component: NonauthorizeduserComponent,
         canActivate:[authGuard]
       },
+      {
+        path: 'authorizeduserlist',
+        component: AuthorizeduserlistComponent,
+        canActivate:[authGuard]
+      },
     ]
   },
   {
@@ -226,13 +239,18 @@ const routes: Routes = [
         path: 'alltest',
         component: AlltestComponent,
         canActivate:[authGuard]
+      },
+      {
+        path: 'cusers',
+        component: CreateuserComponent,
+        canActivate:[authGuard]
       }
     ]
   },
   {
     path: 'event',
     component: EventFormComponent,
-    canActivate:[authGuard]
+    //canActivate:[authGuard]
   },
   {
     path: '',
@@ -242,17 +260,17 @@ const routes: Routes = [
   {
     path: 'demof1',
     component: ConactFormComponent,
-    canActivate:[authGuard]
+    //canActivate:[authGuard]
   },
   {
     path: 'previewcontact',
     component: PreviewContactComponent,
-    canActivate:[authGuard]
+    //canActivate:[authGuard]
   },
   {
     path: 'previewevent',
     component: EventpreviewComponent,
-    canActivate:[authGuard]
+    //canActivate:[authGuard]
   },
   {
     path:'**',

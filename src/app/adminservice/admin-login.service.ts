@@ -7,22 +7,22 @@ import { Injectable } from '@angular/core';
 export class AdminLoginService {
 
   constructor(private http : HttpClient) { }
-  url='http://localhost:3000/admin';
+  public urls='http://localhost:3000/admin';
 
   checkadmin(){
-    return this.http.get(this.url);
+    return this.http.get(this.urls);
   }
-  loginadmin(id:any){
-    return this.http.get(this.url,id);
+  loginuser(id:any){
+    return this.http.get(this.urls,id);
   }
   getadmind(){
-    return this.http.get(this.url); 
+    return this.http.get(this.urls); 
   }
   getdata(id:any){
-    return this.http.get(`${this.url}/${id}`);
+    return this.http.get(`${this.urls}/${id}`);
   }
   updateItem(id: number, updatedData: any) {
-    const uurl = `${this.url}/${id}`;
+    const uurl = `${this.urls}/${id}`;
     return this.http.put(uurl, updatedData);
   }
 }

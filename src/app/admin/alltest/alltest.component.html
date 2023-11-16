@@ -3,7 +3,7 @@
         <span class="t1">All tests</span>
         <div *ngFor="let c of test" class="list">
             <span class="tit1">course id:{{c.fid}}</span>
-            <span>{{c.title}}</span>
+            <span class="tit">{{c.title}}</span>
             <span class="desc">{{c.description}}</span>
             <button class="btn1" [routerLink]="'/admindashboard/aquestion/'+c.id+'/'+c.title">Add Questions</button>
         </div>

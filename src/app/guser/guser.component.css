@@ -241,3 +241,34 @@ input[type="checkbox"]:checked ~ .dropdown-content {
     background: #FFF5EE;
   }
   
+  
+.btn2{
+    border: 1px solid #d7e4da;
+    width: 88px;
+    height: 36px;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 1008px;
+    font-size: 17px;
+    color: black;
+    background-color: rgb(237, 248, 237);
+    cursor: pointer;
+}
+.btn2:hover{
+    opacity: 0.8;
+} 
+.btn3{
+    border: 1px solid #54B069;
+    width: 88px;
+    height: 36px;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 1108px;
+    font-size: 17px;
+    color: white;
+    background-color: darkgreen;
+    cursor: pointer;
+}
+.btn3:hover{
+    opacity: 0.8;
+}

@@ -14,14 +14,14 @@ export class AdmincreationComponent {
 
   froms = new FormGroup({
     name: new FormControl('', [Validators.required]),
-    loginemail: new FormControl('', [Validators.required]),
-    loginpassword: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required]),
+    password: new FormControl('', [Validators.required]),
     number: new FormControl('', [Validators.required,Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]),
   })
 
 
   send(data:any):void{
-    this.creation.postuser(data).subscribe((res) => {
+    this.creation.postadmin(data).subscribe((res) => {
       if (res != "") {
         Swal.fire({
           icon: 'success',

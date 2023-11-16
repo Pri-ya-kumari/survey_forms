@@ -1,4 +1,5 @@
 <div class="bg">
+    <!--login form  *ngIf="!issignin"-->
     <div>
         <div class="container1">
             <form [formGroup]="Login" novalidate >
@@ -10,7 +11,7 @@
                         <span>*email is required</span>
                     </div>
                     <div *ngIf="l['loginemail'].errors && l['loginemail'].errors['pattern']" class="alerts4">
-                        <span>*enter the valid formate ex:-abc@gmail.com</span>
+                        <span>*enter the valid formate ex:-abc&commat;gmail.com</span>
                     </div>
                 </div>
                 <label class="lab3">Password</label><!--loginsubmit(emailin.value,passwordin.value)"-->

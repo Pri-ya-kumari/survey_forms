@@ -50,4 +50,7 @@ export class DashboardComponent {
   aallt(){
     this.route.navigate(['/admindashboard', 'alltest']);
   }
+  cuser(){
+    this.route.navigate(['/admindashboard', 'cusers']);
+  }
 }

@@ -10,12 +10,19 @@ export class AdmincreationService {
 
   urls= 'https://survey-forms-3ecc3-default-rtdb.firebaseio.com/admin.json';
 
-  url='http://localhost:3000/admin';
+  url='http://localhost:3000/superadmins';
+
+  admin='http://localhost:3000/admins';
 
   postuser(data:any){
     return this.http.post(this.url,data);
   }
-
+  postadmin(data:any){
+    return this.http.post(this.admin,data);
+  }
+  listadmin(){
+    return this.http.get(this.admin);
+  }
   getuser(){
     return this.http.get(this.url)
   }
