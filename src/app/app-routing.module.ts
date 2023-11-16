@@ -43,6 +43,8 @@ import { SigninpageComponent } from './superadmin/signinpage/signinpage.componen
 import { SignuppageComponent } from './signuppage/signuppage.component';
 import { CreateuserComponent } from './admin/createuser/createuser.component';
 import { AuthorizeduserlistComponent } from './superadmin/authorizeduserlist/authorizeduserlist.component';
+import { adminguardGuard } from './guard/adminguard.guard';
+import { superguardGuard } from './guard/superguard.guard';
 const redirectToLoginIn = () => redirectUnauthorizedTo(['/login'])
 const redirectToHome = () => redirectLoggedInTo(['/mainpage'])
 //const redirectTosuperadmin = () => redirectUnauthorizedTo(['/superadmin'])
@@ -150,6 +152,7 @@ const routes: Routes = [
   {
     path: 'temphome',
     component: TempHomeComponent,
+    canActivate:[authGuard],
     children: [
       {
         path: '',
@@ -171,7 +174,6 @@ const routes: Routes = [
   {
     path: 'superadmin',
     component: SadashboardComponent,
-    canActivate:[authGuard],
     children: [
       {
         path: '',
@@ -181,34 +183,34 @@ const routes: Routes = [
       { 
         path: 'admincreation',
         component: AdmincreationComponent,
-        canActivate:[authGuard]
+        canActivate:[superguardGuard],
       },
       {
         path: 'alladminlist',
         component: ListadminComponent,
-        canActivate:[authGuard]
+        canActivate:[superguardGuard],
       },
       {
         path: 'userresquest',
         component: UserrequestsComponent,
-        canActivate:[authGuard]
+        canActivate:[superguardGuard],
       },
       {
         path: 'nonauthorized',
         component: NonauthorizeduserComponent,
-        canActivate:[authGuard]
+        canActivate:[superguardGuard],
       },
       {
         path: 'authorizeduserlist',
         component: AuthorizeduserlistComponent,
-        canActivate:[authGuard]
+        canActivate:[superguardGuard],
       },
     ]
   },
   {
     path: 'admindashboard',
     component: DashboardComponent,
-    canActivate:[authGuard],
+    canActivate:[adminguardGuard],
     children: [
       {
         path: '',
@@ -218,32 +220,32 @@ const routes: Routes = [
       {
         path: 'adminhome',
         component: AhomepageComponent,
-        canActivate:[authGuard]
+        canActivate:[adminguardGuard],
       },
       {
         path: 'atest',
         component: AAddTestComponent,
-        canActivate:[authGuard]
+        canActivate:[adminguardGuard],
       },
       {
         path: 'aquestion/:fid/:title',
         component: AAddquestionComponent,
-        canActivate:[authGuard]
+        canActivate:[adminguardGuard],
       },
       {
         path: 'addquestion/:fid/:title',
         component: AddquestionsComponent,
-        canActivate:[authGuard]
+        canActivate:[adminguardGuard],
       },
       {
         path: 'alltest',
         component: AlltestComponent,
-        canActivate:[authGuard]
+        canActivate:[adminguardGuard],
       },
       {
         path: 'cusers',
         component: CreateuserComponent,
-        canActivate:[authGuard]
+        canActivate:[adminguardGuard],
       }
     ]
   },

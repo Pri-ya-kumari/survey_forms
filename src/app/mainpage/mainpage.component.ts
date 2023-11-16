@@ -24,6 +24,8 @@ export class MainpageComponent {
     private router: Router) {
       localStorage.setItem("isloggedin","false");
       localStorage.setItem("IslogedIn", "false");
+      localStorage.setItem("isadminin", "false");
+      localStorage.setItem("issuperadminin", "false");
     }
   loginpage(){
     this.router.navigate(['/generalusers']);

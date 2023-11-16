@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { LocationStrategy } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,13 +7,21 @@ import { Router } from '@angular/router';
   templateUrl: './sadashboard.component.html',
   styleUrls: ['./sadashboard.component.css']
 })
-export class SadashboardComponent {
+export class SadashboardComponent implements OnInit{
 
 
-  constructor(private route:Router){}
-
+  constructor(private route:Router,private str:LocationStrategy){}
+  ngOnInit(): void {
+    this.preventback();
+  }
+  preventback(){
+    history.pushState(null,location.href);
+    this.str.onPopState(()=>{
+      history.pushState(null,location.href)
+    })
+  }
   adminhome(){
-    this.route.navigate(['/admindashboard', 'adminhome']);
+    this.route.navigate(['/admindashboard', '']);
   }
   admincreation(){
     this.route.navigate(['/superadmin', 'admincreation']);

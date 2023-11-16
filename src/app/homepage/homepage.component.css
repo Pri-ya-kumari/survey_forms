@@ -112,3 +112,20 @@
     Arial
     sans-serif;
 }
+.btn{
+    border: 1px solid gray;
+    width: 90px;
+    height: 30px;
+    font-size: 19px;
+    color: white;
+    background-color: green;
+    position: absolute;
+    margin-top:-137px;
+    margin-left: 1190px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: white;
+    color: red;
+    opacity: 0.8;
+}

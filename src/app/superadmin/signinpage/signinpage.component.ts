@@ -48,7 +48,7 @@ export class SigninpageComponent {
               title: 'Successfully',
               text: 'User Loggin successfully'
             });
-            localStorage.setItem("isloggedin", "true");
+            localStorage.setItem("issuperadminin", "true");
             this.Login.reset();
             this.route.navigate(['/superadmin']);
           } else {
@@ -57,7 +57,7 @@ export class SigninpageComponent {
               title: 'Oops...',
               text: 'User not found'
             });
-            localStorage.setItem("isloggedin", "false");
+            localStorage.setItem("issuperadminin", "false");
           }
         });
       }

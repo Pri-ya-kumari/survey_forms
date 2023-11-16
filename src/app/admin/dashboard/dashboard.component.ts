@@ -1,3 +1,4 @@
+import { LocationStrategy } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { map } from 'rxjs';
@@ -10,7 +11,7 @@ import { RequestuserService } from 'src/app/service/requestuser.service';
 })
 export class DashboardComponent {
 
-  constructor (private route : Router,private req :RequestuserService){
+  constructor (private route : Router,private req :RequestuserService,private str:LocationStrategy){
     this.request = this.req.getuser().pipe(
     map((resdata: any) => {
       console.log(resdata);
@@ -30,9 +31,20 @@ export class DashboardComponent {
     this.request = res;
   });
 }
-
-
   request:any;
+
+  
+  ngOnInit(): void {
+    this.preventback();
+  }
+
+  
+  preventback(){
+    history.pushState(null,location.href);
+    this.str.onPopState(()=>{
+      history.pushState(null,location.href)
+    })
+  }
 
 
   adminhome(){

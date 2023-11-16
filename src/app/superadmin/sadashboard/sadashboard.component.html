@@ -12,9 +12,8 @@
             </label>
             
             <ul class="dropdown-content" role="menu">
-              <!--<li><span *ngIf="user$ | async as user" class="profile">{{user.email}}</span></li>-->
-              <li><span class="profile">General User</span></li>
-              <li><button class="btn">Log out</button></li>
+              <li><span class="profiles">Super Admin</span></li>
+              <li><button class="btn" (click)="logout()">Log out</button></li>
             </ul>
           </div>
     </div>
@@ -28,7 +27,6 @@
             <h3 class="p1"><a (click)="nonautho()"><mat-icon>horizontal_split</mat-icon>List Non Authorized User</a></h3>
             <h3 class="p1"><a (click)="request()"><mat-icon>horizontal_split</mat-icon>Gerneral User Request</a></h3>
             <h3 class="p1"><a (click)="admincreation()"><mat-icon>add_circle</mat-icon>Create Admin</a></h3>
-            <h3 class="p1"><a (click)="logout()"><mat-icon>exit_to_app</mat-icon>Log Out</a></h3>
         </div>
     </div>
 </div>

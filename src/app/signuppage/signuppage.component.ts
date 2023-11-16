@@ -19,8 +19,8 @@ export class SignuppageComponent {
     private admin: AdminserviceService,
     public dialog: MatDialog) {
 
-    localStorage.setItem("isloggedin", "false");
-    localStorage.setItem("IslogedIn", "false");
+    localStorage.setItem("isadminin", "false");
+    localStorage.setItem("isadminin", "false");
     this.lofinform();
   }
 
@@ -51,7 +51,7 @@ export class SignuppageComponent {
               title: 'Successfully',
               text: 'User Loggin successfully'
             });
-            localStorage.setItem("isloggedin", "true");
+            localStorage.setItem("isadminin", "true");
             this.Login.reset();
             this.route.navigate(['/admindashboard']);
           } else {
@@ -60,7 +60,7 @@ export class SignuppageComponent {
               title: 'Oops...',
               text: 'User not found'
             });
-            localStorage.setItem("isloggedin", "false");
+            localStorage.setItem("isadminin", "false");
           }
         });
       }
