@@ -15,8 +15,10 @@ export class SigninpageComponent {
     private superadmin: SuperadmingetingService,
     public dialog: MatDialog) {
 
-    localStorage.setItem("isloggedin", "false");
-    localStorage.setItem("IslogedIn", "false");
+      localStorage.setItem("isloggedin","false");
+      localStorage.setItem("IslogedIn", "false");
+      localStorage.setItem("isadminin", "false");
+      localStorage.setItem("issuperadminin", "false");
     this.lofinform();
   }
 

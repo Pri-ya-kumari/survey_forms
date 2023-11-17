@@ -55,6 +55,12 @@
       "email": "yashika@surveyform.com",
       "password": "12345",
       "id": 9
+    },
+    {
+      "name": "jhon",
+      "email": "jhon@gmail.com",
+      "password": "jhon",
+      "id": 10
     }
   ],
   "addtest": [
@@ -484,7 +490,7 @@
   ],
   "admins": [
     {
-      "name": "saurav",
+      "name": "sauravjain",
       "email": "sauravadmin@gmail.com",
       "password": "sauravadmin",
       "id": 1

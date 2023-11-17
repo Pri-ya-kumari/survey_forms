@@ -45,6 +45,10 @@ import { CreateuserComponent } from './admin/createuser/createuser.component';
 import { AuthorizeduserlistComponent } from './superadmin/authorizeduserlist/authorizeduserlist.component';
 import { adminguardGuard } from './guard/adminguard.guard';
 import { superguardGuard } from './guard/superguard.guard';
+import { UpdateadminDetailsComponent } from './superadmin/updateadmin-details/updateadmin-details.component';
+import { UpdateauthouserDetailsComponent } from './superadmin/updateauthouser-details/updateauthouser-details.component';
+import { SuperadminprofileComponent } from './superadmin/superadminprofile/superadminprofile.component';
+import { UpdatesuperadminComponent } from './superadmin/updatesuperadmin/updatesuperadmin.component';
 const redirectToLoginIn = () => redirectUnauthorizedTo(['/login'])
 const redirectToHome = () => redirectLoggedInTo(['/mainpage'])
 //const redirectTosuperadmin = () => redirectUnauthorizedTo(['/superadmin'])
@@ -99,27 +103,27 @@ const routes: Routes = [
   {
     path: 'users',
     component: UsersDetailsComponent,
-    canActivate:[authGuard]
+    canActivate:[adminguardGuard],
   },
   {
     path: 'update/:id',
     component: UpdateComponentComponent,
-    canActivate:[authGuard]
+    canActivate:[adminguardGuard],
   },
   {
     path: 'updateadmin/:id',
     component: EditformdialogComponent,
-    canActivate:[authGuard]
+    canActivate:[adminguardGuard],
   },
   {
     path: 'analysis',
     component: AnalysisDataComponent,
-    canActivate:[authGuard]
+    canActivate:[adminguardGuard],
   },
   {
     path: 'profile',
     component: ProfileComponent,
-    canActivate:[authGuard]
+    canActivate:[adminguardGuard],
   },
   {
     path: 'generalusers',
@@ -129,7 +133,7 @@ const routes: Routes = [
   {
     path: 'guser',
     component: GeneralUsersComponent,
-    canActivate:[authGuard],
+    canActivate:[adminguardGuard],
     //data:{
       //expectedRole:['Admin']
     //}
@@ -137,7 +141,7 @@ const routes: Routes = [
   {
     path: 'updatepass/:cid',
     component: UpdatePasswordComponent,
-    canActivate:[authGuard]
+    canActivate:[adminguardGuard],
   },
   {
     path: 'angularrecord',
@@ -170,15 +174,35 @@ const routes: Routes = [
         canActivate:[authGuard]
       },
     ]
+  }, 
+  {
+    path: 'updateadmindetails/:id',
+    component: UpdateadminDetailsComponent,
+    canActivate:[superguardGuard],
+  }, 
+  {
+    path: 'updateuserdetails/:id',
+    component: UpdateauthouserDetailsComponent,
+    canActivate:[superguardGuard],
   },
+  {
+    path: 'updatesuperadmin/:cid',
+    component: UpdatesuperadminComponent,
+    canActivate:[superguardGuard],
+  },  
   {
     path: 'superadmin',
     component: SadashboardComponent,
     children: [
       {
         path: '',
-        redirectTo: 'adminhome',
+        redirectTo: 'superadminprofile',
         pathMatch: 'full'
+      },
+      {
+        path: 'superadminprofile',
+        component:SuperadminprofileComponent,
+        canActivate:[superguardGuard],
       },
       { 
         path: 'admincreation',

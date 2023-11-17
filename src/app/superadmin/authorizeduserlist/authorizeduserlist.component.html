@@ -1,12 +1,12 @@
 <div class="box">
-    <span class="t1">Admin List</span>
+    <span class="t1">Authorized User List</span>
     <div class="b1">
         <div *ngFor="let c of test"  class="list">
             <div class="circle">
                 <img src="assets/images/admin.png" class="img-2">
             </div>
             <div >
-                <button class="circle1" routerLink="/updateadmin/{{c.id}}"><mat-icon class="icon2">create</mat-icon></button>
+                <button class="circle1" routerLink="/updateuserdetails/{{c.id}}"><mat-icon class="icon2">create</mat-icon></button>
             </div>
             <div>
                 <button class="circle2" (click)="deleteadmin(c.id)"><mat-icon class="icon2">delete</mat-icon></button>

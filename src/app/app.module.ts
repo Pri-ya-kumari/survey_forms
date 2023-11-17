@@ -70,6 +70,10 @@ import { SignuppageComponent } from './signuppage/signuppage.component';
 import { CreateuserComponent } from './admin/createuser/createuser.component';
 import { AuthorizeduserlistComponent } from './superadmin/authorizeduserlist/authorizeduserlist.component';
 import { CookieService } from 'ngx-cookie-service';
+import { UpdateadminDetailsComponent } from './superadmin/updateadmin-details/updateadmin-details.component';
+import { UpdateauthouserDetailsComponent } from './superadmin/updateauthouser-details/updateauthouser-details.component';
+import { SuperadminprofileComponent } from './superadmin/superadminprofile/superadminprofile.component';
+import { UpdatesuperadminComponent } from './superadmin/updatesuperadmin/updatesuperadmin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -117,6 +121,10 @@ import { CookieService } from 'ngx-cookie-service';
     SignuppageComponent,
     CreateuserComponent,
     AuthorizeduserlistComponent,
+    UpdateadminDetailsComponent,
+    UpdateauthouserDetailsComponent,
+    SuperadminprofileComponent,
+    UpdatesuperadminComponent,
   ],
   imports: [
     BrowserModule,

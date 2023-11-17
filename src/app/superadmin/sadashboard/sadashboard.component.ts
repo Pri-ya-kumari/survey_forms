@@ -21,7 +21,7 @@ export class SadashboardComponent implements OnInit{
     })
   }
   adminhome(){
-    this.route.navigate(['/admindashboard', '']);
+    this.route.navigate(['/superadmin']);
   }
   admincreation(){
     this.route.navigate(['/superadmin', 'admincreation']);

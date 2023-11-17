@@ -1,17 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { SignuserService } from 'src/app/service/signuser.service';
+import { AdmincreationService } from '../superservice/admincreation.service';
+import { SigneduserService } from '../superservice/signeduser.service';
+
 
 @Component({
-  selector: 'app-update-component',
-  templateUrl: './update-component.component.html',
-  styleUrls: ['./update-component.component.css']
+  selector: 'app-updateauthouser-details',
+  templateUrl: './updateauthouser-details.component.html',
+  styleUrls: ['./updateauthouser-details.component.css']
 })
-export class UpdateComponentComponent implements OnInit {
+export class UpdateauthouserDetailsComponent {
 
-  //Id=1;
-  constructor(private route:ActivatedRoute,private fb: FormBuilder,private updatedeta:SignuserService,private router:Router){
+   //Id=1;
+   constructor(private route:ActivatedRoute,private fb: FormBuilder,private updatedeta:SigneduserService,private router:Router){
     this.setupForm();
   }
   user:any=[];
@@ -50,7 +52,7 @@ export class UpdateComponentComponent implements OnInit {
     console.log(this.froms.value);
     this.updatedeta.updateItem(this.route.snapshot.params["id"],this.froms.value,).subscribe((datas:any)=>{
       console.warn(datas);
-      this.router.navigate(['/users'])
+      this.router.navigate(['/superadmin/authorizeduserlist'])
     })
   }
 }

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { AdminLoginService } from '../adminservice/admin-login.service';
 import { SignuserService } from '../service/signuser.service';
 import Swal from 'sweetalert2';
 @Component({
@@ -14,7 +13,6 @@ export class LoginpageComponent {
 
 
   constructor(private route: Router, private fb: FormBuilder, private sign: SignuserService,
-    private admin: AdminLoginService,
     public dialog: MatDialog) {
 
     localStorage.setItem("isloggedin", "false");
@@ -39,20 +37,6 @@ export class LoginpageComponent {
 
   loginsubmit(data: any) {
     console.log("button works");
-    /*this.admin.checkadmin().subscribe((che: any) => {
-      const adminl = che.find((b: any) => {
-        return b.email == this.Login.value.loginemail && b.password == this.Login.value.loginpassword;
-      });
-      if (adminl) {
-        Swal.fire({
-          icon: 'success',
-          title: 'Successfully',
-          text: 'Admin Loggin successfully'
-        });
-        localStorage.setItem("isloggedin", "true");
-        this.Login.reset();
-        this.route.navigate(['/admindashboard']);
-      } */
       {
         this.sign.loginuser(data).subscribe((res: any) => {
           const user = res.find((a: any) => {

@@ -19,13 +19,13 @@
                 <form [formGroup]="Login" novalidate (ngSubmit)="savedata(Login.value)">
                     <span class="lab">Edit & Update </span>
                     
-                    <label class="lab2">Name</label>
-                    <input type="text" class="t2" formControlName="name"><br>
+                    <label class="lab1">Name</label>
+                    <input type="text" class="t1" formControlName="name"><br>
                     <label class="lab2">Email Id</label>
                     <input type="text" class="t2" formControlName="email"><br>
                     <label class="lab3">Password</label>
                     <input type="password" class="t3" formControlName="password"> <br>
-                    <button class="btn-2" routerLink="/profile">Cancel</button>
+                    <button class="btn-2" routerLink="/superadmin/superadminprofile">Cancel</button>
                 <button class="btn-1">Save</button>
             </form>
                 </div>

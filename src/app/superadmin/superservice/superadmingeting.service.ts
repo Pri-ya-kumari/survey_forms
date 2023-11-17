@@ -14,33 +14,6 @@ export class SuperadmingetingService {
 
   public signup='http://localhost:3000/superadmins';
   
-  urls= 'https://survey-forms-3ecc3-default-rtdb.firebaseio.com/users.json';
-
-
-  /*authentication logic here
-  postuser(name:any,loginemail:any,loginpassword:any){
-    return from(this.auth.createUserWithEmailAndPassword(loginemail, loginpassword))
-  }
-  getuser(loginemail:any,loginpassword:any){
-    return from(this.auth.signInWithEmailAndPassword(loginemail,loginpassword));
-  }*/
-
-  logout(){
-    return from(this.auth.signOut())
-  }
-
-  post(res:any){
-    return this.http.post(this.urls,res);
-  }
-  
-  getlogin(id:any){
-    return this.http.get(this.urls,id);
-  }
-  
-  getUsers(){
-    return this.http.get(this.urls);
-  }
-
   Createuser(res:any){
     return this.http.post(this.signup,res);
   }
@@ -50,6 +23,12 @@ export class SuperadmingetingService {
   }
   loginuses(){
     return this.http.get(this.signup);
+  }
+  getdamin(){
+    return this.http.get(this.signup);
+  }
+  getdatass(id:any){
+    return this.http.get(`${this.signup}/${id}`);
   }
   getdata(id:any){
     return this.http.get(`${this.signup}/${id}`);
@@ -61,10 +40,4 @@ export class SuperadmingetingService {
     const url = `${this.signup}/${id}`;
     return this.http.put(url, updatedData);
   }
-/*
-  update(Id:any){
-    return this.http.put(`${this.signup}/${Id}`);
-  }*/
-}
-function signInWithEmailAndPassword(auth: AngularFireAuth, loginemail: any, loginpassword: any): any {
 }

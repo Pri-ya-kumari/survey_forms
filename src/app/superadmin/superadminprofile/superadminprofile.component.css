@@ -40,7 +40,7 @@
     width: 760px;
     height: 500px;
     margin-top: 25px;
-    margin-left: 300px;
+    margin-left: 400px;
     background-color: #EDEBF2;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -64,7 +64,7 @@
     width: 300px;
     height: 30px;
     display: inline-block;
-    padding-left:-25px;
+    padding-left:-35px;
     padding-top: 12px;
     font-size: 30px;
     margin-left: 200px;
@@ -77,7 +77,7 @@
     position: absolute;
     margin-top: 80px;
     font-size: 20px;
-    margin-left: -450px;
+    margin-left: -380px;
     color: gray;
 }
 .lb2{
@@ -87,7 +87,7 @@
     position: absolute;
     margin-top: 110px;
     font-size: 22px;
-    margin-left: -450px;
+    margin-left: -380px;
 }
 .lb3{
     width: 190px;
@@ -96,7 +96,7 @@
     position: absolute;
     margin-top: 80px;
     font-size: 20px;
-    margin-left: -100px;
+    margin-left: -50px;
     color: gray;
 }
 .lb4{
@@ -106,7 +106,7 @@
     position: absolute;
     margin-top: 110px;
     font-size: 22px;
-    margin-left: -100px;
+    margin-left: -50px;
 }
 .lb5{
     width: 190px;
@@ -115,7 +115,7 @@
     position: absolute;
     margin-top: 140px;
     font-size: 20px;
-    margin-left: -100px;
+    margin-left: -50px;
     color: gray;
 }
 .lb6{
@@ -125,7 +125,7 @@
     position: absolute;
     margin-top: 170px;
     font-size: 22px;
-    margin-left: -100px;
+    margin-left: -50px;
 }
 .lb7{
     width: 120px;
@@ -134,7 +134,7 @@
     position: absolute;
     margin-top: 140px;
     font-size: 20px;
-    margin-left: -450px;
+    margin-left: -380px;
     color: gray;
 }
 .lb8{
@@ -144,14 +144,14 @@
     position: absolute;
     margin-top: 170px;
     font-size: 22px;
-    margin-left: -450px;
+    margin-left: -380px;
 }
 .line{
     border: 1px solid black;
     width: 220px;
     margin-top: 130px;
     background-color: lightgray;
-    margin-left: -450px;
+    margin-left: -380px;
     position: absolute;
 }
 .line1{
@@ -159,7 +159,7 @@
     width: 220px;
     margin-top: 190px;
     background-color: lightgray;
-    margin-left: -450px;
+    margin-left: -380px;
     position: absolute;
 }
 .line2{
@@ -167,15 +167,15 @@
     width: 220px;
     margin-top: 190px;
     background-color: lightgray;
-    margin-left: -100px;
+    margin-left: -50px;
     position: absolute;
 }
 .line3{
     border: 1px solid black;
-    width: 260px;
+    width: 220px;
     margin-top: 135px;
     background-color: lightgray;
-    margin-left:-100px;
+    margin-left:-50px;
     position: absolute;
 }
 .img-2{
@@ -188,6 +188,6 @@
     cursor: pointer;
     color: blue;
     text-decoration: underline;
-     margin-left:-450px;
+     margin-left:-380px;
      margin-top: 200px;
 }

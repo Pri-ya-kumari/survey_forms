@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AdmincreationService } from '../superservice/admincreation.service';
 import { map } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 import Swal from 'sweetalert2';
@@ -16,7 +15,7 @@ export class AuthorizeduserlistComponent {
   test: any; 
 
   constructor(private route: Router, private showlist: SigneduserService,public dialog :MatDialog) {
-    this.test = this.showlist.getUsers().pipe(
+    this.test = this.showlist.getdeta().pipe(
       map((resdata: any) => {
         console.log(resdata);
         const survey: any[] = [];

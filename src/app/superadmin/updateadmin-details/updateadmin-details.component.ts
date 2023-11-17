@@ -1,23 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { SignuserService } from 'src/app/service/signuser.service';
+import { AdmincreationService } from '../superservice/admincreation.service';
+
 
 @Component({
-  selector: 'app-update-component',
-  templateUrl: './update-component.component.html',
-  styleUrls: ['./update-component.component.css']
+  selector: 'app-updateadmin-details',
+  templateUrl: './updateadmin-details.component.html',
+  styleUrls: ['./updateadmin-details.component.css']
 })
-export class UpdateComponentComponent implements OnInit {
-
+export class UpdateadminDetailsComponent {
   //Id=1;
-  constructor(private route:ActivatedRoute,private fb: FormBuilder,private updatedeta:SignuserService,private router:Router){
+  constructor(private route:ActivatedRoute,private fb: FormBuilder,private updatedeta:AdmincreationService,private router:Router){
     this.setupForm();
   }
   user:any=[];
   ngOnInit(): void {
     console.log(this.route.snapshot.params["id"])
-    this.updatedeta.getdata(this.route.snapshot.params["id"]).subscribe((res:any)=>{
+    this.updatedeta.getdatass(this.route.snapshot.params["id"]).subscribe((res:any)=>{
       console.log(res); 
       this.froms = new FormGroup({
         name: new FormControl(res['name']),
@@ -50,7 +50,7 @@ export class UpdateComponentComponent implements OnInit {
     console.log(this.froms.value);
     this.updatedeta.updateItem(this.route.snapshot.params["id"],this.froms.value,).subscribe((datas:any)=>{
       console.warn(datas);
-      this.router.navigate(['/users'])
+      this.router.navigate(['/superadmin/alladminlist'])
     })
   }
 }

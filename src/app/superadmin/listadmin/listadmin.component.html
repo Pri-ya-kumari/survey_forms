@@ -6,7 +6,7 @@
                 <img src="assets/images/admin.png" class="img-2">
             </div>
             <div >
-                <button class="circle1" routerLink="/updateadmin/{{c.id}}"><mat-icon class="icon2">create</mat-icon></button>
+                <button class="circle1" routerLink="/updateadmindetails/{{c.id}}"><mat-icon class="icon2">create</mat-icon></button>
             </div>
             <div>
                 <button class="circle2" (click)="deleteadmin(c.id)"><mat-icon class="icon2">delete</mat-icon></button>
@@ -14,7 +14,7 @@
             <span class="tit1">Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{c.name}}</span>
             <span class="tit2">Email Id:&nbsp;&nbsp;{{c.email}}</span>
             <span class="desc">Role:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Admin</span>
-            <span class="tit3">Number:&nbsp;{{c.number}}</span>
+            <span class="tit3">Password:&nbsp;{{c.password}}</span>
         </div>
     </div>
 </div>

@@ -1,23 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AdmincreationService } from 'src/app/superadmin/superservice/admincreation.service';
+import { SuperadmingetingService } from '../superservice/superadmingeting.service';
 
 @Component({
-  selector: 'app-update-password',
-  templateUrl: './update-password.component.html',
-  styleUrls: ['./update-password.component.css']
+  selector: 'app-updatesuperadmin',
+  templateUrl: './updatesuperadmin.component.html',
+  styleUrls: ['./updatesuperadmin.component.css']
 })
-export class UpdatePasswordComponent implements OnInit {
-
-  
+export class UpdatesuperadminComponent {
+ 
   Login = new FormGroup({
     name: new FormControl(''),
     email: new FormControl(''),
     password: new FormControl(''),
   })
 
-  constructor(private route :Router,private service:AdmincreationService,private active:ActivatedRoute){}
+  constructor(private route :Router,private service:SuperadmingetingService,private active:ActivatedRoute){}
   ngOnInit(): void {
     console.log(this.active.snapshot.params['cid']);
     this.service.getdatass(this.active.snapshot.params['cid']).subscribe((res:any)=>{
@@ -34,7 +33,7 @@ export class UpdatePasswordComponent implements OnInit {
     console.log(this.Login.value);
     this.service.updateItem(this.active.snapshot.params['cid'],this.Login.value).subscribe((data1:any)=>{
       console.warn(data1);
-      this.route.navigate(['/profile']);
+      this.route.navigate(['/superadmin/superadminprofile']);
     })
   }
 
