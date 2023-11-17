@@ -12,7 +12,7 @@ export const authGuard: CanActivateFn = (route, state) => {
     Swal.fire({
       icon: 'error',
       title: 'Oops...',
-      text: 'Please Login To Access The Page'})
+      text: 'Please Login to access the page'})
         return false
   }
   return true;  

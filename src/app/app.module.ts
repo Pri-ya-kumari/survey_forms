@@ -69,6 +69,7 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { SignuppageComponent } from './signuppage/signuppage.component';
 import { CreateuserComponent } from './admin/createuser/createuser.component';
 import { AuthorizeduserlistComponent } from './superadmin/authorizeduserlist/authorizeduserlist.component';
+import { CookieService } from 'ngx-cookie-service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -156,7 +157,7 @@ import { AuthorizeduserlistComponent } from './superadmin/authorizeduserlist/aut
       provide: API_KEY,
       useValue: environment.googleSheetsApiKey,
     },
-    GoogleSheetsDbService,AddtestService,SignuserService
+    GoogleSheetsDbService,AddtestService,SignuserService,CookieService
    ],
   bootstrap: [AppComponent]
 })

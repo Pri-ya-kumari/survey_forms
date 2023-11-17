@@ -17,10 +17,11 @@ export class SignuppageComponent {
 
   constructor(private route: Router, private fb: FormBuilder, private sign: SignuserService,
     private admin: AdminserviceService,
-    public dialog: MatDialog) {
+    public dialog: MatDialog,) {
 
     localStorage.setItem("isadminin", "false");
     localStorage.setItem("isadminin", "false");
+    //sessionStorage.setItem("isadminin","false");
     this.lofinform();
   }
 
