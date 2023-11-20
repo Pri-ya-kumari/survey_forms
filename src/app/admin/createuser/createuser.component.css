@@ -77,16 +77,16 @@
 }
 .lab3{
     position: absolute;
-    margin-top: 265px;
+    margin-top: 255px;
     font-size: 25px;
     margin-left: 132px;
 }
 .t3{
     position: absolute;
-    margin-top: 299px;
+    margin-top: 280px;
     margin-left: 132px;
     width: 520px;
-    height: 36px;
+    height: 30px;
     border: 0;
     border-bottom: 2px solid #54B069;
     outline: 0;
@@ -164,4 +164,9 @@
     margin-top:100px;
     margin-left: 2px;
     font-size: 19px;
+}
+.icons{
+    position: absolute;
+    margin-top: 290px;
+    margin-left: 620px;
 }

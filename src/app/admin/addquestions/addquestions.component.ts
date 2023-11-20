@@ -1,3 +1,4 @@
+import { LocationStrategy } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { QuestionsService } from 'src/app/adminservice/questions.service';
@@ -15,9 +16,11 @@ export class AddquestionsComponent implements OnInit{
     this.qId = this.route.snapshot.params['fid'];
     this.qtitle = this.route.snapshot.params['title'];
     this.question.tests['fid']=this.qId;
+    this.preventback();
+
   }
   constructor(
-    private route:ActivatedRoute,private addq:QuestionsService
+    private route:ActivatedRoute,private addq:QuestionsService,private str:LocationStrategy
   ){}
 
   qId:any;
@@ -39,4 +42,11 @@ export class AddquestionsComponent implements OnInit{
     this.question.reset();
   })
   }
+  
+preventback(){
+  history.pushState(null,location.href);
+  this.str.onPopState(()=>{
+    history.pushState(null,location.href)
+  })
+}
 }

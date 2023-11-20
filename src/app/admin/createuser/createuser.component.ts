@@ -17,6 +17,11 @@ export class CreateuserComponent {
     public dialog: MatDialog) {
     this.setupForm();
   }
+  showPassword: boolean = false;
+
+  showHidePassword() {
+    this.showPassword = !this.showPassword;
+  }
   froms = new FormGroup({
     name: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required]),

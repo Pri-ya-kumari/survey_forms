@@ -30,6 +30,10 @@
                     <span>*password is required</span>
                 </div>
             </div><!--(click)="homepage(email.value,password.value)"-->
+            <input type="password" class="t3" formControlName="loginpassword" #passwordin [type]=" showPassword ? 'text' : 'password' ">
+                    <mat-icon class="icons" matSuffix (click)="showHidePassword()">
+                        {{showPassword?'visibility_off':'visibility'}}
+                    </mat-icon>
             <button class="btn-1" [disabled]="!froms.valid">Create</button>
         </form>
         <!--<span (click)="Signup()" class="signup">Create account click here</span>-->

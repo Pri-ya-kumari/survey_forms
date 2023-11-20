@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { LocationStrategy } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AddtestService } from 'src/app/adminservice/addtest.service';
@@ -8,9 +9,12 @@ import { AddtestService } from 'src/app/adminservice/addtest.service';
   templateUrl: './a-add-test.component.html',
   styleUrls: ['./a-add-test.component.css']
 })
-export class AAddTestComponent {
+export class AAddTestComponent implements OnInit{
 
-  constructor(private route:Router,private addservice:AddtestService){}
+  constructor(private route:Router,private addservice:AddtestService,private str:LocationStrategy){}
+  ngOnInit(): void {
+    this.preventback();
+  }
 
   addes = new FormGroup({
     title : new FormControl('',[Validators.required]),
@@ -34,5 +38,11 @@ export class AAddTestComponent {
   })
 }
 
+preventback(){
+  history.pushState(null,location.href);
+  this.str.onPopState(()=>{
+    history.pushState(null,location.href)
+  })
+}
 
 }

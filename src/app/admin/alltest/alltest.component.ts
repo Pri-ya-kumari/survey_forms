@@ -1,3 +1,4 @@
+import { LocationStrategy } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { map } from 'rxjs/operators'; // Import 'map' from 'rxjs/operators' instead of 'rxjs'
@@ -11,7 +12,7 @@ import { AddtestService } from 'src/app/adminservice/addtest.service';
 export class AlltestComponent implements OnInit {
   test: any; 
 
-  constructor(private route: Router, private showtest: AddtestService) {
+  constructor(private route: Router, private showtest: AddtestService,private str:LocationStrategy) {
     this.test = this.showtest.getdata().pipe(
       map((resdata: any) => {
         console.log(resdata);
@@ -31,9 +32,17 @@ export class AlltestComponent implements OnInit {
       this.test = res;
     });
   }
-
   ngOnInit(): void {
+    this.preventback();
   }
+
+  
+preventback(){
+  history.pushState(null,location.href);
+  this.str.onPopState(()=>{
+    history.pushState(null,location.href)
+  })
+}
 
   addt() {
     this.route.navigate(['/admindashboard', 'atest']);
