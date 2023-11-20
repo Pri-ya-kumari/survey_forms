@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
   templateUrl: './loginpage.component.html',
   styleUrls: ['./loginpage.component.css']
 })
-export class LoginpageComponent {
+export class LoginpageComponent implements OnInit{
 
 
   constructor(private route: Router, private fb: FormBuilder, private sign: SignuserService,
@@ -19,12 +19,17 @@ export class LoginpageComponent {
     localStorage.setItem("IslogedIn", "false");
     this.lofinform();
   }
-
+  ngOnInit(): void {
+  }
   Login = new FormGroup({
     loginemail: new FormControl('', [Validators.required]),
     loginpassword: new FormControl(''),
   })
+  showPassword: boolean = false;
 
+  showHidePassword() {
+    this.showPassword = !this.showPassword;
+  }
 
   lofinform() {
     this.Login = this.fb.group({

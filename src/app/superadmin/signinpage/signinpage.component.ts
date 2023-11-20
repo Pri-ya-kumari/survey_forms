@@ -27,6 +27,12 @@ export class SigninpageComponent {
     loginpassword: new FormControl(''),
   })
 
+  showPassword: boolean = false;
+
+  showHidePassword() {
+    this.showPassword = !this.showPassword;
+  }
+
 
   lofinform() {
     this.Login = this.fb.group({

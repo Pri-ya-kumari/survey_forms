@@ -2,7 +2,7 @@
     <!--login form  *ngIf="!issignin"-->
     <div>
         <div class="container1">
-            <form [formGroup]="Login" novalidate >
+            <form [formGroup]="Login" novalidate>
                 <span class="lab">Login In </span>
                 <label class="lab2">Email Id</label>
                 <input type="text" class="t2" formControlName="loginemail" #emailin><br>
@@ -15,7 +15,11 @@
                     </div>
                 </div>
                 <label class="lab3">Password</label><!--loginsubmit(emailin.value,passwordin.value)"-->
-                <input type="password" class="t3" formControlName="loginpassword" #passwordin> <br>
+                <input type="password" class="t3" formControlName="loginpassword" #passwordin [type]=" showPassword ? 'text' : 'password' ">
+                    <mat-icon class="btns" matSuffix (click)="showHidePassword()">
+                        {{showPassword?'visibility_off':'visibility'}}
+                    </mat-icon>
+                <br>
                 <button class="btn-2" (click)="loginsubmit(Login.value)">Login In</button>
             </form>
             <span class="e1">Are You Employee?</span>

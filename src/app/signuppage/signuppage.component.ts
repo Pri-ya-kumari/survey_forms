@@ -31,6 +31,12 @@ export class SignuppageComponent {
   })
 
 
+  showPassword: boolean = false;
+
+  showHidePassword() {
+    this.showPassword = !this.showPassword;
+  }
+
   lofinform() {
     this.Login = this.fb.group({
       loginemail: ['', [Validators.required,

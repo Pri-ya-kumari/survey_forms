@@ -166,3 +166,8 @@
     margin-left: 240px;
     cursor: pointer;
 }
+.btns{
+    position: absolute;
+    margin-top: 230px;
+    margin-left: 590px;
+}
