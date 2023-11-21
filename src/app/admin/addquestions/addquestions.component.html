@@ -2,9 +2,8 @@
     <h1 class="t1">Add Questions to {{qtitle}}</h1>
     <div class="bg2">
         <form (ngSubmit)="Submit()" novalidate >
-            
-            <label class="l1">Enter the questions</label>
-            <input type="text" class="inp1" placeholder="Enter the question" [(ngModel)]="question.content" name="content">
+            <ckeditor [editor]="Editor" data="Enter Question Here" class="inp1" [(ngModel)]="question.content" name="content"></ckeditor>
+
             <!--options here-->
             
             <label class="l2">option 1</label>

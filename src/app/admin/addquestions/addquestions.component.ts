@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { QuestionsService } from 'src/app/adminservice/questions.service';
 import Swal from 'sweetalert2';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 @Component({
   selector: 'app-addquestions',
@@ -19,6 +20,9 @@ export class AddquestionsComponent implements OnInit{
     this.preventback();
 
   }
+
+  public Editor = ClassicEditor;
+
   constructor(
     private route:ActivatedRoute,private addq:QuestionsService,private str:LocationStrategy
   ){}
