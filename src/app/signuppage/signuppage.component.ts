@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { AdminLoginService } from '../adminservice/admin-login.service';
 import { SignuserService } from '../service/signuser.service';
 import Swal from 'sweetalert2';
 import { AdminserviceService } from '../service/adminservice.service';
