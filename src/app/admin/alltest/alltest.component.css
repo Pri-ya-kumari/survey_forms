@@ -70,3 +70,15 @@
     margin-left: 500px;
     cursor: pointer;
 }
+.btn2{
+    border: 1px solid #EDEBF2;
+    width: 80px;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    height: 40px;
+    position: absolute;
+    margin-top: 45px ;
+    margin-left: 400px;
+    cursor: pointer;
+}

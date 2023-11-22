@@ -3,10 +3,14 @@
         <div>
             <p class="no">&nbsp;Q{{i+1}}&nbsp;&nbsp;
                 <span class="q1">{{q.content}}</span>
-                <span class="op1">1)&nbsp;&nbsp;{{q.option1}}</span>
-                <span class="op2">2)&nbsp;&nbsp;{{q.option2}}</span>
-                <span class="op3">3)&nbsp;&nbsp;{{q.option3}}</span>
-                <span class="op4">4)&nbsp;&nbsp;{{q.option4}}</span>
+                <input type="radio" [value]="q.option1" [name]="i" class="op1">
+                <span class="opp1">{{q.option1}}</span>
+                <input type="radio" [value]="q.option2" [name]="i" class="op2">
+                <span class="opp2">{{q.option2}}</span>
+                <input type="radio" [value]="q.option3" [name]="i" class="op3">
+                <span class="opp3">{{q.option3}}</span>
+                <input type="radio" [value]="q.option4" [name]="i" class="op4">
+                <span class="opp4">{{q.option4}}</span>
             </p>
         </div>
     </div>

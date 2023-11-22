@@ -5,8 +5,9 @@
             <span class="tit1">course id:{{c.fid}}</span>
             <span class="tit">{{c.title}}</span>
             <span class="desc">{{c.description}}</span>
+            <button class="btn2" (click)="delet(c.id)">Delete</button>
             <button class="btn1" [routerLink]="'/admindashboard/aquestion/'+c.id+'/'+c.title">Add Questions</button>
         </div>
     </div>
     <button class="btn" (click)="addt()">Add Test</button>
-    </div>
+</div>

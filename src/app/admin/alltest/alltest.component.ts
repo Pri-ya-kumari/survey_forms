@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { map } from 'rxjs/operators'; // Import 'map' from 'rxjs/operators' instead of 'rxjs'
 import { AddtestService } from 'src/app/adminservice/addtest.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-alltest',
@@ -46,5 +47,28 @@ preventback(){
 
   addt() {
     this.route.navigate(['/admindashboard', 'atest']);
+  }  
+  delet(data:any){
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "Are You Sure You Want To Delete this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.test.splice(data-1,1)
+        Swal.fire(
+          'Deleted!',
+          'Your data has been deleted.',
+          'success'
+        )
+      }
+    })
+    this.test;
+    
   }
+
 }

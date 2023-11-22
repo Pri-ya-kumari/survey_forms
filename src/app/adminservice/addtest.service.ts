@@ -26,4 +26,7 @@ export class AddtestService {
   getdata(){
     return this.http.get(this.urls);
   }
+  detet(){
+    return this.http.delete(this.urls);
+  }
 }
