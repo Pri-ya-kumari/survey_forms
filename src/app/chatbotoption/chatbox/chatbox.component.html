@@ -1,0 +1,21 @@
+<div class='container'>
+<div class="header">
+    <img src="assets/images/chatbotprofile.png" class="img-2">
+    <p class="t1">ChatBot</p>
+    <p class="t2">Live</p>
+</div>
+<div class="body">
+    <div class="over content">
+        <mat-card-content *ngFor="let message of messages">
+            <div class="message" [ngClass]="{'from':message.auther==='bot','to':message.auther==='user'}">{{message.content}}</div>
+        </mat-card-content>
+        </div>
+        <form class="example-form">
+            <mat-form-field class="example-full-width">
+                <mat-label>Text</mat-label>
+                <input matInput type="text" name="messages" [(ngModel)]="value" (keyup.enter)="sendmessage()" >
+            </mat-form-field>
+        </form>
+        <button (click)="sendmessage()" class="btn"><mat-icon class="icons">send</mat-icon></button>
+</div>
+</div>

@@ -4,6 +4,7 @@ import { animate, query, stagger, state, style, transition, trigger } from '@ang
 import { MatDialog } from '@angular/material/dialog';
 import { SignuserService } from '../service/signuser.service';
 import { Router } from '@angular/router';
+import { ChatboxComponent } from '../chatbotoption/chatbox/chatbox.component';
 
 @Component({
   selector: 'app-guser',
@@ -36,5 +37,11 @@ export class GuserComponent {
   }
   Login(){
     this.route.navigate(['/loginpage'])
+  }
+  showchatbot(){
+    this.dialog.open(ChatboxComponent,{
+      width:'330px',height:'380px',    
+      position: { top: '100px',right:'10px'},
+    });
   }
 }

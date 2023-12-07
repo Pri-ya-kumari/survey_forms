@@ -1,0 +1,102 @@
+.header{
+    width: 330px;
+    height: 50px;
+}
+.img-2{
+    margin-left: 6px;
+    margin-top: 4px;
+    width: 45px;
+    height: 45px;
+}
+.container{
+    width: 330px;
+    height: 380px;
+    overflow: hidden;
+}
+
+.t1{
+    width: 79px;
+    height: 28px;
+    font-size: 20px;
+    margin-top: -50px;
+    margin-left: 58px;
+}
+.t2{
+    color: green;
+    font-size: 12x;
+    margin-top: -20px;
+    margin-left: 60px;
+}
+.body{
+    width: 330px;
+    height: 330px;
+    overflow: hidden;
+    background-color:#F8F8FF;
+
+}
+
+.content {
+    height: 250px;
+}
+
+.over{
+    overflow-y: auto;
+}
+.example-form {
+    overflow: hidden;
+    position: absolute;
+    margin-top: -1px;
+    width: 326px;
+    background-color: #fff;
+}
+.example-full-width {
+    background-color: white;
+    width: 100%;
+}
+.message{
+    height: 20px;
+    width: 30px;
+    font-size: 14px;
+    padding: 10px 20px;
+    margin-left: 20px ;
+    margin-top: 10px;
+    background-color: aliceblue;
+    border-radius: 50px;
+    position: relative;
+}
+.message.to{
+    background-color: #2095FE;
+    color: #fff;
+    font-size: 14px;
+    margin-left: 100px;
+    width: 180px;
+    text-align: right;
+}
+.message.from{
+    background-color: #E5E4E9;
+    color: #363636;
+    margin-left: 10px;
+    width: 210px;
+    height: 35px;
+}
+.message.to + .message.to,
+.message.from + .message.from{
+    margin-top: -20px;
+}
+.btn{
+    cursor: pointer;
+    border: 1px solid white;
+    margin-left: 288px;
+    width: 39px;
+    height: 30px;
+    position: absolute;
+    margin-top: 20px;
+    color: white;
+    font-size: 22px;
+    background-color: #0B6623;
+}
+.icons{
+    margin-left: -10px;
+    margin-top: -13px;
+    position: absolute;
+}

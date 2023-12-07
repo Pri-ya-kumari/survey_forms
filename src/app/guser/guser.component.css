@@ -145,6 +145,16 @@
     width:40px;
     margin-left:1250px;
     border-radius: 120px;
+    cursor:pointer;
+}
+.chatbots{
+    cursor: pointer;
+    position: absolute;
+    margin-top: 420px;
+    height: 40px;
+    width:40px;
+    margin-left:-48px;
+    border-radius: 10px;
 }
 .icon2{
     position: absolute;
@@ -271,4 +281,7 @@ input[type="checkbox"]:checked ~ .dropdown-content {
 }
 .btn3:hover{
     opacity: 0.8;
+}
+.setsize{
+    margin-left: 200px;
 }

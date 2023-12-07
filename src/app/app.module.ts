@@ -74,6 +74,9 @@ import { UpdateadminDetailsComponent } from './superadmin/updateadmin-details/up
 import { UpdateauthouserDetailsComponent } from './superadmin/updateauthouser-details/updateauthouser-details.component';
 import { SuperadminprofileComponent } from './superadmin/superadminprofile/superadminprofile.component';
 import { UpdatesuperadminComponent } from './superadmin/updatesuperadmin/updatesuperadmin.component';
+import {MatCardModule} from '@angular/material/card';
+
+import { ChatboxComponent } from './chatbotoption/chatbox/chatbox.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -125,6 +128,7 @@ import { UpdatesuperadminComponent } from './superadmin/updatesuperadmin/updates
     UpdateauthouserDetailsComponent,
     SuperadminprofileComponent,
     UpdatesuperadminComponent,
+    ChatboxComponent,
   ],
   imports: [
     BrowserModule,
@@ -158,7 +162,8 @@ import { UpdatesuperadminComponent } from './superadmin/updatesuperadmin/updates
     }),
     AngularFireAuthModule,
     MatDialogModule,
-    CKEditorModule
+    CKEditorModule,
+    MatCardModule
   ],
   providers: [ 
     {
