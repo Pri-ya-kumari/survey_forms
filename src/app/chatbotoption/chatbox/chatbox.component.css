@@ -61,23 +61,26 @@
     margin-left: 20px ;
     margin-top: 10px;
     background-color: aliceblue;
-    border-radius: 50px;
+    border-radius: 40px;
     position: relative;
 }
 .message.to{
     background-color: #2095FE;
     color: #fff;
     font-size: 14px;
-    margin-left: 100px;
-    width: 180px;
-    text-align: right;
+    margin-left: 150px;
+    width: auto;
+    overflow-x: hidden;
+    height: auto;
 }
 .message.from{
     background-color: #E5E4E9;
     color: #363636;
     margin-left: 10px;
-    width: 210px;
-    height: 35px;
+    max-width: 120px;
+    width: auto;
+    overflow-x: hidden;
+    height: auto;
 }
 .message.to + .message.to,
 .message.from + .message.from{
