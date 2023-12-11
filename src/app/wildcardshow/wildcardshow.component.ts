@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-wildcardshow',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./wildcardshow.component.css']
 })
 export class WildcardshowComponent {
-
+  constructor(private route:Router){}
+  
+  see(){
+    this.route.navigate(['/mainpage'])
+  }
 }

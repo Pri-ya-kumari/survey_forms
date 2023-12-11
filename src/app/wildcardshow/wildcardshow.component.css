@@ -1,0 +1,69 @@
+.img-1{
+    width: 390px;
+    height:300px;
+    margin-top: 80px;
+    margin-left: 140px;
+    position: absolute;
+}
+.design{
+    width: 39%;
+    height: 70%;
+    margin-top: 80px ;
+    margin-left: 820px;
+    position: absolute;
+    border-radius: 40rem 15rem 15rem 12rem;
+    background-color: #54B069;
+}
+.errorde{
+    margin-left: 230px;
+    margin-top: 300px;
+    font-size: 270px;
+    position: absolute;
+    font-family: 'Lato', sans-serif;
+    color: #54B069;
+}
+.pg{
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 250px;
+    font-size: 68px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+}
+.errorde2{
+    position: absolute;
+    margin-top: 165px;
+    margin-left: 250px;
+    font-size: 15px;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: lighter;
+}
+.errorde3{
+    position: absolute;
+    margin-top: 450px;
+    margin-left: 250px;
+    font-size: 15px;
+    font-family: 'Maven Pro', sans-serif;
+}
+.btn2{
+    border: 1px solid #54B069;
+    position: absolute;
+    width: 80px;
+    height: 35px;
+    margin-top: 486px;
+    margin-left: 250px;
+    font-size: 20px;
+    color: white;
+    font-size: 20px;
+    background-color: darkgreen;
+    cursor: pointer;
+    border-radius: 33px;
+}
+.btn2:hover{
+    opacity: 0.8;
+}
+.back{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
