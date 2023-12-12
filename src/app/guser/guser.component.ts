@@ -44,4 +44,14 @@ export class GuserComponent {
       position: { top: '100px',right:'10px'},
     });
   }
+
+  userlogin(){
+    this.route.navigate(['/loginpage'])
+  }
+  adminlogin(){
+    this.route.navigate(['/adminlogin'])
+  }
+  superadmin(){
+    this.route.navigate(['/superadminLogin'])
+  }
 }

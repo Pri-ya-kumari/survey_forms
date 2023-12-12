@@ -4,16 +4,29 @@
     height: 100%;
     background-color:#EDEBF2;
 }
+.img-1{
+    width: 35px;
+    position: absolute;
+    margin-top: 49px;
+    margin-left: 502px;
+}
+.wd-1{
+    position: absolute;
+    margin-top: 58px;
+    font-size: 32px;
+    margin-left: 538px;
+    font-family: 'Public Sans', sans-serif;
+    color: #54B069;
+}
 .container1{
     position: absolute;
     border: 1px solid #EDEBF2;
-    width: 800px;
-    height: 450px;
+    width: 430px;
+    height: 400px;
     align-items: center;
-    margin-top: 75px;
-    margin-left: 300px;
+    margin-top: 135px;
+    margin-left: 490px;
     background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .login{
     position: absolute;
@@ -24,21 +37,23 @@
 }
 .lab{
     position: absolute;
-    margin-top: 29px;
-    font-size: 40px;
-    margin-left: 300px;
+    margin-top: 59px;
+    font-size: 35px;
+    font-weight: lighter;
+    margin-left: 30px;
 }
 .lab2{
     position: absolute;
     margin-top: 105px;
-    font-size: 25px;
-    margin-left: 102px;
+    font-size: 15px;
+    margin-left: 32px;
+    font-family: 'Public Sans', sans-serif;
 }
 .t2{
     position: absolute;
-    margin-top: 135px;
-    margin-left: 102px;
-    width: 520px;
+    margin-top: 125px;
+    margin-left: 32px;
+    width: 350px;
     height: 36px;
     border: 0;
     border-bottom: 2px solid #54B069;
@@ -51,15 +66,16 @@
 }
 .lab3{
     position: absolute;
-    margin-top: 195px;
-    font-size: 25px;
-    margin-left: 102px;
+    margin-top: 180px;
+    font-size: 15px;
+    margin-left: 32px;
+    font-family: 'Public Sans', sans-serif;
 }
 .t3{
     position: absolute;
-    margin-top: 220px;
-    margin-left: 102px;
-    width: 520px;
+    margin-top: 195px;
+    margin-left: 32px;
+    width: 350px;
     height: 36px;
     border: 0;
     border-bottom: 2px solid #54B069;
@@ -72,14 +88,15 @@
 }
 .btn-2{
     border: 1px solid #54B069;
-    width: 140px;
-    height: 40px;
-    margin-top: 270px;
-    margin-left: 300px;
+    width: 360px;
+    height: 45px;
+    margin-top: 250px;
+    margin-left: 32px;
     background-color: #54B069;
     color: #EDEBF2;
-    font-size: 28px;
-    border-radius: 120px;
+    font-size: 17px;
+    font-family: 'Public Sans', sans-serif;
+    border-radius: 12px;
 }
 .btn-2:hover{
     opacity: 0.8;
@@ -103,9 +120,9 @@
     position: absolute;
     color: red;
     width: 300px;
-    margin-top: 60px;
-    margin-left: 102px;
-    font-size: 19px;
+    margin-top: 50px;
+    margin-left: 32px;
+    font-size: 15px;
 }
 
 .alert2 {
@@ -127,9 +144,9 @@
 .alerts4 {
     position: absolute;
     color: red;
-    margin-top: 60px;
-    margin-left: 102px;
-    font-size: 19px;
+    margin-top: 50px;
+    margin-left: 32px;
+    font-size: 15px;
     width: 600px;
 }
 .alert3 {
@@ -144,16 +161,18 @@
     position: absolute;
     width: 550px;
     height: 40px;
-    margin-left: 102px;
+    margin-left: 35px;
     font-size: 15px;
     margin-top: 12px;
-    font-weight: bold;
+    font-weight: lighter;
+    font-family: 'Public Sans', sans-serif;
 }
 .e2{
     position: absolute;
-    margin-left: 103px;
+    margin-left: 35px;
     font-size: 15px;
-    font-weight: bold;
+    font-weight: lighter;
+    font-family: 'Public Sans', sans-serif;
     margin-top: 30px;
 }
 .signup{
@@ -163,12 +182,12 @@
     text-decoration: underline;
     font-size: 16px;
     margin-top: 14px;
-    margin-left: 240px;
+    margin-left: 218px;
     cursor: pointer;
+    font-family: 'Public Sans', sans-serif;
 }
-
 .btns{
     position: absolute;
-    margin-top: 230px;
-    margin-left: 590px;
+    margin-top: 210px;
+    margin-left: 360px;
 }

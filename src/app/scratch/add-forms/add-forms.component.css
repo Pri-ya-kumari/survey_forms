@@ -2,29 +2,145 @@
     flex: 1 1 auto;
 }
 .shade1 {
-    background-color: #404040;
+    background-color: #fff;
     color: white;
-    width: 100%  auto;
-    height: 70px;
+    height: 80px;
+}
+.sidenav{
+    border: 1px solid white;
+    width: 210px;
+    height: 496px;
+    position: absolute;
+    margin-top: 76px;
+    background-color: #FEFEFA;
+}
+.b1{
+    border: 1px solid #FFFFF0;
+    width: 210px;
+    height: 40px;
+    margin-top: 0px;
+    position: absolute;
+    background-color: #FFFFF0;
+    box-shadow: 0 2px 0px 0px #54B069;
+}
+.imgs{
+    width: 20px;
+    position: absolute;
+    margin-left: 180px;
+    margin-top: 10px;
+}
+.imgs1{
+    width: 30px;
+    position: absolute;
+    margin-left: 170px;
+    margin-top: 10px;
+}
+.b1-op{
+    position: absolute;
+    margin-top: 12px;
+    margin-left: 12px;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+.b11{
+    border: 1px solid #FFFFF0;
+    width: 210px;
+    height: 40px;
+    margin-top: 45px;
+    position: absolute;
+    background-color: #FFFFF0;
+    box-shadow: 0 2px 0px 0px #54B069;
+}
+.b12{
+    border: 1px solid #FFFFF0;
+    width: 210px;
+    height: 40px;
+    margin-top: 90px;
+    position: absolute;
+    background-color: #FFFFF0;
+    box-shadow: 0 2px 0px 0px #54B069;
+}
+.b13{
+    border: 1px solid #FFFFF0;
+    width: 210px;
+    height: 40px;
+    margin-top: 139px;
+    position: absolute;
+    background-color: #FFFFF0;
+    box-shadow: 0 2px 0px 0px #54B069;
+}
+.b14{
+    border: 1px solid #FFFFF0;
+    width: 210px;
+    height: 40px;
+    margin-top: 188px;
+    position: absolute;
+    background-color: #FFFFF0;
+    box-shadow: 0 2px 0px 0px #54B069;
+}
+.b1-op1{
+    position: absolute;
+    margin-top: 12px;
+    margin-left: 12px;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
 }
 .wd-1 {
-    margin-left: 12px;
+    margin-left: 62px;
     font-weight: 100px;
     font-size: 22px;
+    margin-top: 25px;
+    color: #54B069;
+    position: absolute;
+    font-family: 'Public Sans', sans-serif;
+} 
+
+.img{
+    width: 30px;
+    position: absolute;
+    margin-top: 18px;
+    margin-left: 32px;
 }
-.wd-2 {
-    margin-left: 39px;
-    font-weight: lighter;
-    font-size: 19px;
-    margin-top: 2px;
+.img-11{
+    margin-top: 29px;
+    margin-left: 1113px;
+    width: 12px;
+    position: absolute;
+}
+.btn33{
+    border: 1px solid #fff;
+    width: 88px;
+    height: 36px;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 1113px;
+    font-size: 17px;
+    color: black;
+    background-color: #fff;
     cursor: pointer;
-    font-family: 'Nunito Sans', sans-serif;
+}
+.btn33:hover{
+    opacity: 0.8;
+}
+
+.img-11{
+    margin-top: 29px;
+    margin-left: 1113px;
+    width: 12px;
+    position: absolute;
 }
 .bg {
     position: absolute;
-    margin-top: -13px;
+    margin-top: -30px;
     width: 100% ;
     height: 100% auto;
+    background-color: #EDEBF2;
+}
+.fm-b {
+    border: 1px solid #EDEBF2;
+    width: 1014px;
+    height: 400px auto;
+    margin-left: 185px;
     background-color: #EDEBF2;
 }
 .hd-b {
@@ -32,7 +148,7 @@
     width: 99.8%;
     height: 70px;
     margin-top: 2px;
-    background-color: white;
+    background-color: #EDEBF2;
 }
 .input1 {
     border: 1px solid #EDEBF2;
@@ -53,19 +169,13 @@
 .input1:focus {
     border: 1px solid #EDEBF2;
 }
-.fm-b {
-    border: 1px solid #EDEBF2;
-    width: 1014px;
-    height: 400px auto;
-    margin-left: 125px;
-}
 .ti-1 {
     border: 1px solid #EDEBF2;
-    width: 880px;
+    width: 1080px;
     height: 170px;
-    margin-left: 60px;
+    margin-left: 43px;
     margin-top: 22px;
-    background-color: whitesmoke;
+    background-color: #fff;
     padding-top: 29px;
     border-radius: 34px;
    
@@ -137,38 +247,38 @@
 }
 .fm-b2 {
     border: 1px solid #EDEBF2;
-    width: 880px;
+    width: 1131px;
     height: 110px auto;
-    margin-left: 165px;
-    margin-top: 2px;
+    margin-left: 215px;
+    margin-top: -12px;
     background-color: #EDEBF2;
     padding-top: 29px;
-    border-radius: 24px;
+    position: absolute;
 }
 .input3{
     position: absolute;
     border: 1px solid  #E3DAC9;
-    width: 370px;
+    width: 440px;
     height: 40px;
     margin-top: 20px;
-    margin-left: 27px;
+    margin-left: 47px;
 }
 .ch-1{
     position: absolute;
     border: 1px solid  #E3DAC9;
-    width: 340px;
+    width: 470px;
     height: 44px;
     margin-top: 20px;
-    margin-left: 419px;
+    margin-left: 499px;
     font-size: 18px;
 }
 .btn5 {
     border: 1px solid lightgray;
     position: relative;
-    width: 90px;
-    height: 40px;
-    font-size: 21px;
-    margin-left: 530px;
+    width: 67px;
+    height: 33px;
+    font-size: 17px;
+    margin-left: 810px;
     margin-top: 100px;
     margin-bottom: 10px;
     font-family: 'Nunito', sans-serif;
@@ -177,9 +287,9 @@
 .btn6{
     border: 1px solid white;
     position: absolute;
-    width: 90px;
-    height: 40px;
-    font-size: 21px;
+    width: 67px;
+    height: 33px;
+    font-size: 17px;
     margin-left: 20px;
     margin-top: 100px ;
     background-color: #64CE7A;
@@ -195,7 +305,7 @@
     height: 45px;
     bottom: 52px;
     margin-top: 150px;
-    margin-left: 250px;
+    margin-left: 415px;
     font-size: 20px;
     background-color: #64CE7A;
     color: white;
@@ -208,7 +318,7 @@
     height: 45px;
     bottom: 53px;
     margin-top: 5px;
-    margin-left: 400px;
+    margin-left: 570px;
     font-size: 20px;
     background-color: #64CE7A;
     color: white;
@@ -216,7 +326,7 @@
 }
 .fm-b3 {
     border: 1px solid white;
-    width: 780px;
+    width: 1080px;
     height: 110px auto;
     margin-left: 40px;
     margin-top: 22px;

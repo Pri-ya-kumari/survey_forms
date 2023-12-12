@@ -1,39 +1,43 @@
 <div class="nav">
     <div class="shade1">
-        <mat-icon class="icon">insert_drive_file</mat-icon>
+        <img src="assets/images/pageicon.png" class="img">
         <span class="wd-1">SurveyForms</span>
         <span class="example-spacer"></span>
         <span class="example-spacer"></span>
-        <button class="btn3" (click)="Login()">Login</button>
-
-        <!--<div class="dropdown">
-            <input type="checkbox" id="dropdown" />
+        <button class="btn3">Login</button>
+        <img src="assets/images/loginlogo.png" class="img-11">
+        <input type="checkbox" id="dropdown" />
             <label for="dropdown" class="dropdown-btn">
-              <span>Profile</span>
               <span class="arrow"></span>
             </label>
-                    <button class="btn2" (click)="signup()">Sign Up</button>
-
             <ul class="dropdown-content" role="menu">
-              <li><span *ngIf="user$ | async as user" class="profile">{{user.email}}</span></li>
-              <li><span class="profile">General User</span></li>
-              <li><button (click)="logout()" class="btn">Log out</button></li>
-            </ul>-->
+              <li><span class="profile" (click)="userlogin()">User</span></li>
+              <div class="gaps"></div>
+              <li><span class="profile" (click)="adminlogin()">Admin</span></li>
+              <div class="gaps"></div>
+              <li><span class="profile" (click)="superadmin()">Super admin</span></li>
+            </ul>
     </div>
 </div>
 <div class="box2">
+    <div class="outer">
+        <img src="assets/images/guserimaeg.png" class="img-1">
+    </div>
+    <div>
+        <span class="t1">Get start with surveys</span>
+    </div>
     <div>
         <div class="b1" routerLink="/demof1" @fade>
             <div class="logo">
                 <img src="assets/images/contact.png" class="img-2">
-                <span class="wd-3">Contact Form</span>
+                <span class="wd-33">Contact Form</span>
                 <span class="wd-4">click to see the form </span>
             </div>
         </div>
         <div class="b2" routerLink="/event" @fade>
             <div class="logo">
                 <img src="assets/images/contact.png" class="img-2">
-                <span class="wd-3">Event Form</span>
+                <span class="wd-33">Event Form</span>
                 <span class="wd-4">click to see the form </span>
             </div>
         </div>

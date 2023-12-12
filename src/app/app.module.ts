@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { AddFormsComponent } from './scratch/add-forms/add-forms.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -31,7 +30,6 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { AhomepageComponent } from './admin/ahomepage/ahomepage.component';
 import { AAddquestionComponent } from './admin/a-addquestion/a-addquestion.component';
 import { AAddTestComponent } from './admin/a-add-test/a-add-test.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
 import {MatListModule} from '@angular/material/list';
 import { AlltestComponent } from './admin/alltest/alltest.component';
 import { AddquestionsComponent } from './admin/addquestions/addquestions.component';
@@ -80,7 +78,6 @@ import { ChatboxComponent } from './chatbotoption/chatbox/chatbox.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     HomepageComponent,
     AddFormsComponent,
     PreviewDataComponent,
@@ -97,7 +94,6 @@ import { ChatboxComponent } from './chatbotoption/chatbox/chatbox.component';
     AhomepageComponent,
     AAddquestionComponent,
     AAddTestComponent,
-    NavBarComponent,
     AlltestComponent,
     AddquestionsComponent,
     UsersDetailsComponent,

@@ -67,6 +67,12 @@
       "email": "kavi@gmail.com",
       "password": "kavi",
       "id": 11
+    },
+    {
+      "name": "mrinal",
+      "email": "mrinal.k@navriti.com",
+      "password": "123456",
+      "id": 12
     }
   ],
   "addtest": [
@@ -504,6 +510,12 @@
     },
     {
       "id": 14
+    },
+    {
+      "id": 15
+    },
+    {
+      "id": 16
     }
   ],
   "admins": [

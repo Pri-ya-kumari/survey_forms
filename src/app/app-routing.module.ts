@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddFormsComponent } from './scratch/add-forms/add-forms.component';
-import { HeaderComponent } from './header/header.component';
 import { PreviewDataComponent } from './scratch/preview-data/preview-data.component';
 import { TemplateComponent } from './scratch/template/template.component';
 import { AngularsFormComponent } from './scratch/template/angulars-form/angulars-form.component';
@@ -49,6 +48,7 @@ import { UpdateadminDetailsComponent } from './superadmin/updateadmin-details/up
 import { UpdateauthouserDetailsComponent } from './superadmin/updateauthouser-details/updateauthouser-details.component';
 import { SuperadminprofileComponent } from './superadmin/superadminprofile/superadminprofile.component';
 import { UpdatesuperadminComponent } from './superadmin/updatesuperadmin/updatesuperadmin.component';
+import { HomepageComponent } from './homepage/homepage.component';
 const redirectToLoginIn = () => redirectUnauthorizedTo(['/login'])
 const redirectToHome = () => redirectLoggedInTo(['/mainpage'])
 //const redirectTosuperadmin = () => redirectUnauthorizedTo(['/superadmin'])
@@ -72,7 +72,7 @@ const routes: Routes = [
   },
   {
     path: 'homepage',
-    component: HeaderComponent,
+    component: HomepageComponent,
     canActivate:[authGuard]
   },
   {

@@ -1,10 +1,29 @@
-<div class="title">
-    <span class="wd-1">Choose a starting point</span>
-    <hr class="li-1"> <!--li-1=lineone-->
-    <button class="btn" (click)="logout()">logout</button>
+<div class="nav">
+    <div class="shade1">
+        <img src="assets/images/pageicon.png" class="img">
+        <span class="wd-1">SurveyForms</span>
+        <span class="example-spacer"></span>
+        <span class="example-spacer"></span>
+        <button class="btn3" (click)="logout()">sign out</button>
+        <img src="assets/images/signoutlogo.png" class="img-11">
+        <!--<input type="checkbox" id="dropdown" />
+            <label for="dropdown" class="dropdown-btn">
+              <span class="arrow"></span>
+            </label>
+            <ul class="dropdown-content" role="menu">
+              <li><span class="profile">User</span></li>
+              <div class="gaps"></div>
+              <li><span class="profile">Admin</span></li>
+              <div class="gaps"></div>
+              <li><span class="profile">Super admin</span></li>
+            </ul>-->
+    </div>
 </div>
 <div class="block">
-    <img src="assets/images/sbg3.png" class="img-3">
+<div class="title">
+    <span class="wd-11">Choose a starting point</span>
+    <hr class="li-1"> <!--li-1=lineone-->
+</div>
     <div class="block-1" routerLink="/add-forms">
         <img src="assets/images/simage.png" class="img-1">
         <span class="wd-2">Start from scratch</span>
@@ -14,6 +33,11 @@
         <img src="assets/images/timage.png" class="img-2">
         <span class="wd-2">Quick start template</span>
         <span class="wd-3">Select a pre-made survey you can customize to meet your needs</span>
+    </div>
+    <div class="block-3" routerLink="/temphome">
+        <img src="assets/images/timage.png" class="img-2">
+        <span class="wd-2">Saved Forms</span>
+        <span class="wd-33">Your created Forms saved here</span>
     </div>
 </div>
 <router-outlet></router-outlet>

@@ -1,10 +1,15 @@
 <div class="bg">
     <!--login form  *ngIf="!issignin"-->
     <div>
+        <img src="assets/images/pageicon.png" class="img-1">
+        <span class="wd-1">SurveyForms</span>
+        
+    </div>
+    <div>
         <div class="container1">
             <form [formGroup]="Login" novalidate>
-                <span class="lab">Login In </span>
-                <label class="lab2">Email Id</label>
+                <span class="lab">Log in </span>
+                <label class="lab2">Email address</label>
                 <input type="text" class="t2" formControlName="loginemail" #emailin><br>
                 <div *ngIf="l['loginemail'].invalid && l['loginemail'].touched" class="alert2">
                     <div *ngIf="l['loginemail'].errors && l['loginemail'].errors['required']" class="alerts2">
@@ -17,14 +22,11 @@
                 <label class="lab3">Password</label><!--loginsubmit(emailin.value,passwordin.value)"-->
                 <input type="password" class="t3" formControlName="loginpassword" #passwordin [type]=" showPassword ? 'text' : 'password' ">
                     <mat-icon class="btns" matSuffix (click)="showHidePassword()">
-                        {{showPassword?'visibility_off':'visibility'}}
+                        {{showPassword?'visibility':'visibility_off'}}
                     </mat-icon>
                 <br>
                 <button class="btn-2" (click)="loginsubmit(Login.value)">Login In</button>
             </form>
-            <span class="e1">Are You Employee?</span>
-            <span (click)="Signup()" class="signup">Click Here </span>
-            <span class="e2">To Login In</span>
-        </div>
+            </div>
     </div>
 </div>

@@ -1,17 +1,36 @@
-<!--Make an header first-->
-<p>
-    <mat-toolbar class="shade1">
-        <mat-icon>insert_drive_file</mat-icon>
+<div class="nav">
+    <div class="shade1">
+        <img src="assets/images/pageicon.png" class="img">
         <span class="wd-1">SurveyForms</span>
-        <!--wd-1 = word1 it is the titile of the forms-->
-        <span class="wd-2" routerLink="/homepage">Home</span>
-        <!--wd-1 = word1 its is the link page tothe first page home page -->
         <span class="example-spacer"></span>
-        <!--<mat-icon class="preview" (click)="saveform()">remove_red_eye</mat-icon>
-        <p class="preview1">Preview</p>-->
-    </mat-toolbar>
-</p>
+        <span class="example-spacer"></span>
+        <button class="btn33">sign out</button>
+        <img src="assets/images/signoutlogo.png" class="img-11">
+    </div>
+</div>
 <div class="bg">
+    <div class="sidenav">
+        <div class="b1">
+            <span class="b1-op">Build</span>
+            <img src="assets/images/build.png" class="imgs">
+        </div>
+        <div class="b11">
+            <span class="b1-op1">Multiple Choice</span>
+            <mat-icon class="imgs1">list</mat-icon>
+        </div>
+        <div class="b12">
+            <span class="b1-op1">checkbox</span>
+            <mat-icon class="imgs1">check_box</mat-icon>        
+        </div>
+        <div class="b13">
+            <span class="b1-op1">Single text</span>
+            <mat-icon class="imgs1">crop_7_5</mat-icon>
+        </div>
+        <div class="b14">
+            <span class="b1-op1">Comment Box</span>
+            <mat-icon class="imgs1">chat_bubble_outline</mat-icon>
+        </div>
+    </div>
 <!--design a form titile here -->
 <div class="hd-b"><!--hd-b=headblock-->
     <h2 class="input1" (click)="toggle()">{{displayTitle}}</h2>
