@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { question } from '../data-type';
 import { ftitle } from '../data-type';
+import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
 export class AddDataService {
-  constructor() { }
+  constructor(private http:HttpClient) { }
   private studentForm:any={};
   private formTitle:any={};
 
@@ -24,6 +25,21 @@ export class AddDataService {
   }
   getformtitle(){
     return this.formTitle;
+  }
+
+
+  urls= 'https://survey-forms-3ecc3-default-rtdb.firebaseio.com/surveyformtitle.json';
+  
+  postdata(data:any[]){
+    //return this.http.post(this.urls,data);
+    return this.http.post(this.urls,data);
+
+  }
+  getdata(){
+    return this.http.get(this.urls);
+  }
+  detet(){
+    return this.http.delete(this.urls);
   }
   
 }

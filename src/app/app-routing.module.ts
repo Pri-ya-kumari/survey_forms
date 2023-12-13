@@ -49,6 +49,8 @@ import { UpdateauthouserDetailsComponent } from './superadmin/updateauthouser-de
 import { SuperadminprofileComponent } from './superadmin/superadminprofile/superadminprofile.component';
 import { UpdatesuperadminComponent } from './superadmin/updatesuperadmin/updatesuperadmin.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { SavedformsComponent } from './scratch/savedforms/savedforms.component';
+import { ListsavedformsComponent } from './scratch/listsavedforms/listsavedforms.component';
 const redirectToLoginIn = () => redirectUnauthorizedTo(['/login'])
 const redirectToHome = () => redirectLoggedInTo(['/mainpage'])
 //const redirectTosuperadmin = () => redirectUnauthorizedTo(['/superadmin'])
@@ -79,6 +81,16 @@ const routes: Routes = [
     path: 'add-forms',
     component: AddFormsComponent,
     canActivate:[authGuard]
+  },
+  {
+    path: 'listsurveyforms',
+    component: ListsavedformsComponent,
+    canActivate:[authGuard],
+  },
+  {
+    path: 'allforms',
+    component: SavedformsComponent,
+    canActivate:[authGuard],
   },
   {
     path: 'pd',

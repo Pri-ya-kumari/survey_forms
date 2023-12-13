@@ -75,6 +75,8 @@ import { UpdatesuperadminComponent } from './superadmin/updatesuperadmin/updates
 import {MatCardModule} from '@angular/material/card';
 
 import { ChatboxComponent } from './chatbotoption/chatbox/chatbox.component';
+import { SavedformsComponent } from './scratch/savedforms/savedforms.component';
+import { ListsavedformsComponent } from './scratch/listsavedforms/listsavedforms.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -125,6 +127,8 @@ import { ChatboxComponent } from './chatbotoption/chatbox/chatbox.component';
     SuperadminprofileComponent,
     UpdatesuperadminComponent,
     ChatboxComponent,
+    SavedformsComponent,
+    ListsavedformsComponent,
   ],
   imports: [
     BrowserModule,

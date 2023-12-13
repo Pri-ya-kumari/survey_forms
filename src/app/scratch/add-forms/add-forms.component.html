@@ -4,6 +4,8 @@
         <span class="wd-1">SurveyForms</span>
         <span class="example-spacer"></span>
         <span class="example-spacer"></span>
+        <mat-icon class="icon1">home</mat-icon>
+        <span class="test1" (click)="homepage()">Home</span>
         <button class="btn33">sign out</button>
         <img src="assets/images/signoutlogo.png" class="img-11">
     </div>
@@ -33,32 +35,39 @@
     </div>
 <!--design a form titile here -->
 <div class="hd-b"><!--hd-b=headblock-->
-    <h2 class="input1" (click)="toggle()">{{displayTitle}}</h2>
+    <h2 class="input1">{{displayTitle}}</h2>
 </div>
 <!--creating the form title block where we can write the titile of the form -->
 <div class="fm-b"><!--fm-b = form block-->
     <div>
-        <button class="btn3" [hidden]="display" (click)="toggle()">Edit</button>
         <h2 class="input-1" (mouseover)="display = false"
             (mouseleave)="display = true">{{displayTitle}}</h2>
     </div>
-    <div class="ti-1" *ngIf="isclicked"><!--ti-1= title part *ngIf="isclicked"-->
-        <form [formGroup]="formTitle">
-            <div formArrayName="titlelist">
-                <label class="wd-3" >Survey title</label><br>
-                
-                <input type="text" #nameBox placeholder="Enter title"
-                    class="input2"
-                    formControlName="title"><br>
-                <button class="btn1" (click)="disable()">Cancel</button><!---->
-                <button class="btn2" value="click"
-                    type="submit" (click)="getTitle(nameBox.value)">Submit</button>
-            </div>
+</div>
+<div class="fm-b2">
+    <div class="borders"></div>
+    <span class="titl1">First add your Survey Title</span>
+    <div class="borders1"></div>
+    <button class="circle" (click)="showalert()"><mat-icon>arrow_forward</mat-icon>
+    </button>
+    <div class="ti-1"><!--ti-1= title part *ngIf="isclicked"-->
+        <form [formGroup]="addes" novalidate (ngSubmit)="formssubmits(addes.value)"><!--[formGroup]="formTitle"-->
+            <!--<div formArrayName="titlelist">-->
+                <label class="wd-3">Survey title</label><br>
+                <input type="text" #nameBox placeholder="Enter title" class="input2" formControlName="title" ngModel><br>
+                <div *ngIf="l['title'].invalid && l['title'].touched" class="alert2">
+                    <div *ngIf="l['title'].errors && l['title'].errors['required']" class="alerts2">
+                        <span>*title is required</span>
+                    </div>
+                </div>
+                <button class="btn1">Cancel</button>
+                <button class="btn2" (click)="formssubmits(addes.value)">Save</button>
+            <!--</div> (click)="getTitle(nameBox.value)"-->
         </form>
     </div>
 </div>
-<!--creating a from for taking input-->
-<div class="fm-b2"><!--fm-b2= formblock 2-->
+<!--creating a from for taking input
+<div class="fm-b2">fm-b2= formblock 2
     <form #save="ngForm" [formGroup]="studentForm">
         <div formArrayName="studentlist">
             <div
@@ -71,7 +80,7 @@
                     <select class="ch-1" name="option{{i}}"
                         formControlName="option"
                         #choice [(ngModel)]="selectedOptions[i]">
-                        <!--(change)="check(this)" ch-1=chooice 1  (change)="onOptionSelected($event)" (click)="chooseme(choice.value)"-->
+                        <!--(change)="check(this)" ch-1=chooice 1  (change)="onOptionSelected($event)" (click)="chooseme(choice.value)"
                         <option value="multi">Multiple choice</option>
                         <option value="check">Check Box</option>
                         <option value="comment">Comment Box</option>
@@ -81,7 +90,7 @@
                     <button class="btn6" value="click" (click)="getformData()">Save</button>
                 </div>
                 <div [ngSwitch]="selectedOptions[i]">
-                    <!--[ngSwitch]="choice"Multiple choice-->
+                    <!--[ngSwitch]="choice"Multiple choice
                     <div class="option" name="option "
                         *ngSwitchCase="'multi'" ngDefaultControl>
                         <section class="example-section"
@@ -95,7 +104,7 @@
                         </section>
                         <mat-icon class="btn7" (click)="addcheck()">add</mat-icon>
                     </div>
-                    <!--check box option here -->
+                    <!--check box option here 
                     <div class="option" name="option "
                         *ngSwitchCase="'check'">
                         <section class="example-section"
@@ -109,7 +118,7 @@
                         </section>
                         <mat-icon class="btn7" (click)="addch()">add</mat-icon>
                     </div>
-                    <!--comment box-->
+                    <!--comment box
                     <div class="option" name="option "
                         *ngSwitchCase="'comment'">
                         <p>
@@ -118,7 +127,7 @@
                                 class="option1"></textarea>
                         </p>
                     </div>
-                    <!--single text-->
+                    <!--single text
                     <div class="option" name="option "
                         *ngSwitchCase="'single'">
                         <p>
@@ -138,4 +147,4 @@
         </div>
     </form>
 </div>
-</div>
+</div>-->
