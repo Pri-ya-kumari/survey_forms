@@ -77,6 +77,9 @@ import {MatCardModule} from '@angular/material/card';
 import { ChatboxComponent } from './chatbotoption/chatbox/chatbox.component';
 import { SavedformsComponent } from './scratch/savedforms/savedforms.component';
 import { ListsavedformsComponent } from './scratch/listsavedforms/listsavedforms.component';
+import { ListsavedhomepageComponent } from './scratch/listsavedforms/listsavedhomepage/listsavedhomepage.component';
+import { MyformslistComponent } from './scratch/listsavedforms/myformslist/myformslist.component';
+import { TemplateformslistComponent } from './scratch/listsavedforms/templateformslist/templateformslist.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -129,6 +132,9 @@ import { ListsavedformsComponent } from './scratch/listsavedforms/listsavedforms
     ChatboxComponent,
     SavedformsComponent,
     ListsavedformsComponent,
+    ListsavedhomepageComponent,
+    MyformslistComponent,
+    TemplateformslistComponent,
   ],
   imports: [
     BrowserModule,

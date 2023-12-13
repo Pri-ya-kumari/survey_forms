@@ -50,13 +50,13 @@
     height: 537px;
 }
 .block1{
-    border: 1px solid black;
-    width: 1110px;
-    height: 537px;
+    border: 1px solid #EDEBF2;
+    width: 1096px;
+    height: 536px;
     overflow-x:hidden ;
-    margin-left: 251px;
+    margin-left: 241px;
     position: absolute;
-    margin-top: -539px;
+    margin-top: -557px;
     background-color: #EDEBF2;
     opacity: 0.4;
     border-radius: 20px;
@@ -83,7 +83,7 @@
     position: absolute;
 }
 .inside-sidenav{
-    border: 1px solid black;
+    border: 1px solid white;
     width: 250px;
     height: 440px;
     position: absolute;
@@ -157,4 +157,19 @@
     width: 25px;
     margin-top: 3px;
     margin-left: 25px;
+}
+.test2{
+    position: absolute;
+    color: black;
+    font-size: 15px;
+    margin-top: 28px;
+    margin-left: 1053px;    
+    cursor: pointer;
+}
+.icon3{
+    position: absolute;
+    width: 80px;
+    margin-top: 23px;
+    margin-left: 1029px;
+    color: black;
 }

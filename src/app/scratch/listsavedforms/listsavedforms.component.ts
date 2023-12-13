@@ -13,8 +13,19 @@ export class ListsavedformsComponent {
   logout(){
     this.route.navigate(['/mainpage'])
   }
-  
+  mainpage(){
+    this.route.navigate(['homepage']);
+  }
   homepage(){
-    this.route.navigate(['/homepage']);
+    this.route.navigate(['/listsurveyhome','listsavedhomepage']);
+  }
+  createform(){
+    this.route.navigate(['/add-forms']);
+  }
+  myforms(){
+    this.route.navigate(['/listsurveyhome','myformlist'])
+  }
+  templatefroms(){
+    this.route.navigate(['/listsurveyhome','templateformlist'])
   }
 }

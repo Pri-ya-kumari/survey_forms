@@ -51,6 +51,9 @@ import { UpdatesuperadminComponent } from './superadmin/updatesuperadmin/updates
 import { HomepageComponent } from './homepage/homepage.component';
 import { SavedformsComponent } from './scratch/savedforms/savedforms.component';
 import { ListsavedformsComponent } from './scratch/listsavedforms/listsavedforms.component';
+import { ListsavedhomepageComponent } from './scratch/listsavedforms/listsavedhomepage/listsavedhomepage.component';
+import { MyformslistComponent } from './scratch/listsavedforms/myformslist/myformslist.component';
+import { TemplateformslistComponent } from './scratch/listsavedforms/templateformslist/templateformslist.component';
 const redirectToLoginIn = () => redirectUnauthorizedTo(['/login'])
 const redirectToHome = () => redirectLoggedInTo(['/mainpage'])
 //const redirectTosuperadmin = () => redirectUnauthorizedTo(['/superadmin'])
@@ -83,10 +86,54 @@ const routes: Routes = [
     canActivate:[authGuard]
   },
   {
-    path: 'listsurveyforms',
+    path: 'listsurveyhome',
     component: ListsavedformsComponent,
     canActivate:[authGuard],
+    children:[
+      {
+        path: '',
+        redirectTo: 'listsavedhomepage',
+        pathMatch: 'full',
+      },
+      {
+        path: 'listsavedhomepage',
+        component:ListsavedhomepageComponent,
+        canActivate:[authGuard]
+      },
+      {
+        path: 'myformlist',
+        component:MyformslistComponent,
+        canActivate:[authGuard]
+      },
+      {
+        path: 'templateformlist',
+        component:TemplateformslistComponent,
+        canActivate:[authGuard]
+      },
+    ]
   },
+  {
+    path: 'temphome',
+    component: TempHomeComponent,
+    canActivate:[authGuard],
+    children: [
+      {
+        path: '',
+        redirectTo: 'template-form',
+        pathMatch: 'full',
+      },
+      {
+        path: 'template-form',
+        component: TemplateComponent,
+        canActivate:[authGuard]
+      },
+      {
+        path: 'viewsurvey/:fid/:title',
+        component: ViewSurveyComponent,
+        canActivate:[authGuard]
+      },
+    ]
+  }, 
   {
     path: 'allforms',
     component: SavedformsComponent,
@@ -165,28 +212,6 @@ const routes: Routes = [
     component: UserrequestComponent,
     canActivate:[authGuard]
   },
-  {
-    path: 'temphome',
-    component: TempHomeComponent,
-    canActivate:[authGuard],
-    children: [
-      {
-        path: '',
-        redirectTo: 'template-form',
-        pathMatch: 'full',
-      },
-      {
-        path: 'template-form',
-        component: TemplateComponent,
-        canActivate:[authGuard]
-      },
-      {
-        path: 'viewsurvey/:fid/:title',
-        component: ViewSurveyComponent,
-        canActivate:[authGuard]
-      },
-    ]
-  }, 
   {
     path: 'updateadmindetails/:id',
     component: UpdateadminDetailsComponent,

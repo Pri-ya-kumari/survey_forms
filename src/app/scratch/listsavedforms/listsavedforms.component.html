@@ -4,6 +4,8 @@
         <span class="wd-1">SurveyForms</span>
         <span class="example-spacer"></span>
         <span class="example-spacer"></span>
+        <mat-icon class="icon3" >home</mat-icon>
+        <span class="test2" (click)="mainpage()">home</span>
         <button class="btn3" (click)="logout()">sign out</button>
         <img src="assets/images/signoutlogo.png" class="img-11">
         <!--<input type="checkbox" id="dropdown" />
@@ -20,21 +22,22 @@
     </div>
 </div>
 <div class="side-nav">
-    <button class="btn"><img src="assets/images/add.png" class="logo">New</button>
+    <button class="btn" (click)="createform()"><img src="assets/images/add.png" class="logo">New</button>
     <div class="inside-sidenav">
         <div class="box1">
-        <mat-icon class="icon1">home</mat-icon>
+        <mat-icon class="icon1">dashboard</mat-icon>
         <span class="test1" (click)="homepage()">Home</span>
         </div>
         <div class="box2">
             <mat-icon class="icon1">list</mat-icon>
-            <span class="test1" (click)="homepage()">My Forms</span>
+            <span class="test1" (click)="myforms()">My Forms</span>
         </div>
         <div class="box3">
             <img src="assets/images/template.png" class="icon2">
-            <span class="test1" (click)="homepage()">Template Forms</span>
+            <span class="test1" (click)="templatefroms()">Template Forms</span>
         </div>
     </div>
 </div>
 <div class="block1">
 </div>
+<router-outlet></router-outlet>

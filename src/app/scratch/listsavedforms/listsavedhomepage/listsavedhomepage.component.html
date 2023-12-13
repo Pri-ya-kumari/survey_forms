@@ -1,0 +1,26 @@
+<div>
+    <span class="wd-1">Home </span>
+</div>
+<div class="block1">
+    <div class="insideblock">
+    <span class="wd-2">My Forms</span>
+    <div class="gaps">
+    <div class="list" *ngFor="let f of myforms">
+        <img src="assets/images/formlogo.png" class="img-11">
+        <span class="wd-3">{{f.title}}</span>
+    </div> 
+    </div>
+    </div>
+    <div class="insideblock">
+    <span class="wd-4">Templates</span>
+    <div class="gaps">
+        <div class="list" *ngFor="let f of templatef">
+            <img src="assets/images/madeforms.png" class="img-11">
+            <span class="wd-5">{{f.title}}</span>
+        </div> 
+    </div>
+       </div> 
+        <!--<div *ngFor="let c of templatef">
+        <span>{{c.title}}</span>
+    </div>-->
+</div>
