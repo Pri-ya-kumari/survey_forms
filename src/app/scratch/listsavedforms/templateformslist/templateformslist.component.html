@@ -3,11 +3,11 @@
 </div>
 <div class="block1">
     <div class="insideblock">
-    <div class="gaps">
-    <div class="list" *ngFor="let f of templatef">
-        <img src="assets/images/formlogo.png" class="img-11">
-        <span class="wd-3">{{f.title}}</span>
-    </div> 
-    </div>
+        <div class="gaps">
+            <div class="list" *ngFor="let f of templatef">
+                <img src="assets/images/formlogo.png" class="img-11">
+                <span class="wd-3" [routerLink]="'/listsurveyhome/viewadminsavedforms/'+f.id+'/'+f.title">{{f.title}}</span>
+            </div>
+        </div>
     </div>
 </div>

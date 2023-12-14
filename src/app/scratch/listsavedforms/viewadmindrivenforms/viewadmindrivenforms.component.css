@@ -1,0 +1,120 @@
+.bg{
+    position: absolute;
+    margin-top: -540px;
+    margin-left: 620px;
+    font-size: 25px;
+    text-decoration: underline;
+}
+.block1{
+    border: 1px solid #EDEBF2;
+    width: 1035px;
+    height: 500px;
+    position: absolute;
+    margin-top: -500px;
+    margin-left: 270px;
+    overflow-x: hidden;
+}
+.b1{
+    position: relative;
+    background-color:white;
+    position: relative;
+    border: 1px solid #EDEBF2;
+    width: 95%;
+    height: 24%;
+    margin-left: 20px;
+    display: block;
+    margin-top: 12px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+.no{
+    position: absolute;
+    margin-top: 12px;
+    width: 100px;
+    margin-left: 12px;
+    font-size: 19px;
+}
+.q1{
+    position: absolute;
+    width: 500px;
+    font-size: 17px;
+    overflow: hidden;
+}
+.op1{
+    position: absolute;
+    margin-top: 10px;
+    display: block;
+    height: 20px;
+    width: 20px;
+    background-color: lightgray;
+    border-radius: 10%;
+    margin-left: 49px;
+}
+.opp1{
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 46px;
+    width: 260px;
+}
+.op2{
+    position: absolute;
+    margin-top: 10px;
+    display: block;
+    margin-left: 452px;
+    height: 20px;
+    width: 20px;
+    background-color: lightgray;
+    border-radius: 10%;
+}
+.opp2{
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 456px;
+    width: 260px;
+}
+.op3{
+    position: absolute;
+    margin-top: 45px;
+    display: block;
+    margin-left: 49px;
+    height: 20px;
+    width: 20px;
+    background-color: lightgray;
+    border-radius: 10%;
+    
+}
+.opp3{
+    position: absolute;
+    margin-top: 67px;
+    margin-left: 46px;
+    width: 260px;
+}
+.op4{
+    position: absolute;
+    margin-top: 45px;
+    display: block;
+    margin-left: 452px;
+    height: 20px;
+    width: 20px;
+    background-color: lightgray;
+    border-radius: 10%;
+    
+}
+.opp4{
+    position: absolute;
+    margin-top: 67px;
+    margin-left: 456px;
+    width: 260px;
+}
+.btn{
+    cursor: pointer;
+    border: 1px solid #EDEBF2;
+    width: 70px;
+    height: 32px;
+    font-size: 18px;
+    position: absolute;
+    margin-top: -44px;
+    margin-left: 540px;
+    background-color: #54B069;
+    color: white;
+    font-family: 'Hedvig Letters Sans', sans-serif;
+}

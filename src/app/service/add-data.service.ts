@@ -41,5 +41,12 @@ export class AddDataService {
   detet(){
     return this.http.delete(this.urls);
   }
-  
+
+  Urlss = 'https://survey-forms-3ecc3-default-rtdb.firebaseio.com';
+
+  getQuestions(fid: any) {
+    const urlss = `${this.Urlss}/surveyformtitle/${fid}.json`; 
+    return this.http.get(urlss);
+  }
+
 }

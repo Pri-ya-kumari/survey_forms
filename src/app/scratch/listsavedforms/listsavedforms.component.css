@@ -47,16 +47,16 @@
 .side-nav{
     border: 1px solid white;
     width: 250px;
-    height: 537px;
+    height: 520px;
 }
 .block1{
     border: 1px solid #EDEBF2;
     width: 1096px;
-    height: 536px;
+    height: 525px;
     overflow-x:hidden ;
     margin-left: 241px;
     position: absolute;
-    margin-top: -557px;
+    margin-top: -543px;
     background-color: #EDEBF2;
     opacity: 0.4;
     border-radius: 20px;
@@ -163,13 +163,13 @@
     color: black;
     font-size: 15px;
     margin-top: 28px;
-    margin-left: 1053px;    
+    margin-left: 1023px;    
     cursor: pointer;
 }
 .icon3{
     position: absolute;
     width: 80px;
     margin-top: 23px;
-    margin-left: 1029px;
+    margin-left: 1000px;
     color: black;
 }

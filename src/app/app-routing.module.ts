@@ -54,6 +54,8 @@ import { ListsavedformsComponent } from './scratch/listsavedforms/listsavedforms
 import { ListsavedhomepageComponent } from './scratch/listsavedforms/listsavedhomepage/listsavedhomepage.component';
 import { MyformslistComponent } from './scratch/listsavedforms/myformslist/myformslist.component';
 import { TemplateformslistComponent } from './scratch/listsavedforms/templateformslist/templateformslist.component';
+import { ViewsavedformsComponent } from './scratch/listsavedforms/viewsavedforms/viewsavedforms.component';
+import { ViewadmindrivenformsComponent } from './scratch/listsavedforms/viewadmindrivenforms/viewadmindrivenforms.component';
 const redirectToLoginIn = () => redirectUnauthorizedTo(['/login'])
 const redirectToHome = () => redirectLoggedInTo(['/mainpage'])
 //const redirectTosuperadmin = () => redirectUnauthorizedTo(['/superadmin'])
@@ -108,6 +110,16 @@ const routes: Routes = [
       {
         path: 'templateformlist',
         component:TemplateformslistComponent,
+        canActivate:[authGuard]
+      },
+      {
+        path: 'viewsavedforms/:fid/:title',
+        component: ViewsavedformsComponent,
+        canActivate:[authGuard]
+      },
+      {
+        path: 'viewadminsavedforms/:fid/:title',
+        component: ViewadmindrivenformsComponent,
         canActivate:[authGuard]
       },
     ]

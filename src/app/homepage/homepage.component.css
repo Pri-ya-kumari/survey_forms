@@ -30,7 +30,7 @@
 }
 .block{
     border: 1px solid white ;
-    width: 1361px;
+    width: 1362px;
     height: 557px;
     margin-top: -22px;
     margin-left: 1px;
@@ -87,8 +87,8 @@
     border: 1px solid lightgray;
     width:520px;
     height: 220px;
-    margin-top: 430px;
-    margin-left: 42px;
+    margin-top: 170px;
+    margin-left: 592px;
     border-radius: 39px;
     cursor: pointer;
     transition: 1s ease;
@@ -176,7 +176,8 @@
 .shade1 {
     background-color: #fff;
     color: white;
-    height: 80px;
+    height: 70px;
+    overflow: hidden;
 }
 
 .wd-1 {

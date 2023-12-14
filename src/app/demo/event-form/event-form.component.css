@@ -1,37 +1,47 @@
-.example-spacer {
-    flex: 1 1 auto;
+.img{
+    width: 30px;
+    position: absolute;
+    margin-top: 18px;
+    margin-left: 32px;
 }
 
 .shade1 {
-    background-color: #404040;
+    background-color: #fff;
     color: white;
-    height: 80px;
+    height: 70px;
+    overflow: hidden;
 }
+
 .wd-1 {
-    margin-left: 12px;
+    margin-left: 62px;
     font-weight: 100px;
     font-size: 22px;
+    margin-top: 25px;
+    color: #54B069;
+    position: absolute;
+    font-family: 'Public Sans', sans-serif;
+} 
+.btn3{
+    border: 1px solid #fff;
+    width: 88px;
+    height: 36px;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 1113px;
+    font-size: 17px;
+    color: black;
+    background-color: #fff;
+    cursor: pointer;
+}
+.btn3:hover{
+    opacity: 0.8;
 }
 
-.wd-2 {
-    margin-left: 39px;
-    font-weight: lighter;
-    font-size: 19px;
-    margin-top: 2px;
-    cursor: pointer;
-    font-family: 'Nunito Sans', sans-serif;
-}
-
-.wd-3 {
-    margin-left: 689px;
-    font-size: 20px;
-    margin-top: 8px;
-    cursor: pointer;
-    height: 40px;
-    border-radius: 12px;
-    font-family: 'Nunito Sans', sans-serif;
-    background-color: #4CAF50;
-    color: white;
+.img-11{
+    margin-top: 29px;
+    margin-left: 1113px;
+    width: 12px;
+    position: absolute;
 }
 /*.img-m{
     border-radius: 200px;
@@ -103,12 +113,6 @@
     background-color: white;
 }
 
-.line {
-    border: 1px solid black;
-    width: 880px;
-    margin-top: 290px;
-    margin-left: 97px;
-}
 
 .text-1 {
     margin-top: 22px;
@@ -148,30 +152,6 @@
     margin-top: 1px;
     font-size: 19px;
 }
-
-.example-spacer {
-    flex: 1 1 auto;
-}
-
-.shade1 {
-    background-color: #404040;
-    color: white;
-}
-
-.wd-1 {
-    margin-left: 12px;
-    font-weight: 100px;
-    font-size: 25px;
-}
-
-.wd-2 {
-    margin-left: 19px;
-    font-weight: lighter;
-    font-size: 20px;
-    margin-top: 8px;
-    cursor: pointer;
-}
-
 .b2 {
     position: relative;
     border: 1px solid #EDEBF2;
@@ -205,8 +185,8 @@
 }
 .option2 {
     position: absolute;
-    margin-top: 50px;
-    margin-left:130px;
+    margin-top: 2px;
+    margin-left:70px;
     font-size: 23px;
 }
 .rdesign1{
@@ -284,8 +264,14 @@
     height: 270px;
     opacity: 0.4;
     margin-top: 4px;
-    margin-left: 33px;
+    margin-left: 200px;
     border-radius: 22px;
+}
+.line {
+    border: 1px solid black;
+    width: 880px;
+    margin-top: 290px;
+    margin-left: 270px;
 }
 
 .hd1 {
@@ -310,7 +296,7 @@
     width: 930px;
     height: 140px;
     margin-top: 10px;
-    margin-left:70px;
+    margin-left:230px;
     border-radius: 22px;
     background-color: white;
 }
