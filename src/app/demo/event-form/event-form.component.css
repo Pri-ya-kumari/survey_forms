@@ -21,22 +21,22 @@
     position: absolute;
     font-family: 'Public Sans', sans-serif;
 } 
-.btn3{
-    border: 1px solid #fff;
-    width: 88px;
-    height: 36px;
+
+.test1{
     position: absolute;
-    margin-top: 20px;
-    margin-left: 1113px;
-    font-size: 17px;
     color: black;
-    background-color: #fff;
+    font-size: 15px;
+    margin-top: 28px;
+    margin-left: 1053px;    
     cursor: pointer;
 }
-.btn3:hover{
-    opacity: 0.8;
+.icon1{
+    position: absolute;
+    width: 80px;
+    margin-top: 23px;
+    margin-left: 1029px;
+    color: black;
 }
-
 .img-11{
     margin-top: 29px;
     margin-left: 1113px;
@@ -107,7 +107,7 @@
     height: 120px;
     padding-top: 33px;
     padding-left: 32px;
-    margin-left: -31px;
+    margin-left: 130px;
     margin-top: 15px;
     border-radius: 19px;
     background-color: white;
@@ -168,7 +168,7 @@
     height: 120px;
     padding-top: 33px;
     padding-left: 72px;
-    margin-left: -80px;
+    margin-left: 85px;
     margin-top: -8px;
     border-radius: 19px;
     background-color: white;
@@ -244,18 +244,16 @@
 }
 
 .btn-1 {
+    border: 1px solid #EDEBF2;
     background-color: #4CAF50;
-    /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
+    width: 80px;
+    height: 40px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+    font-size:22px;
     margin-bottom: 70px;
+    color: white;
     margin-top: 22px;
-    margin-left: 400px;
+    margin-left: 550px;
     cursor: pointer;
 }
 
@@ -296,7 +294,7 @@
     width: 930px;
     height: 140px;
     margin-top: 10px;
-    margin-left:230px;
+    margin-left:240px;
     border-radius: 22px;
     background-color: white;
 }

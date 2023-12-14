@@ -57,4 +57,9 @@ export class EventFormComponent {
     //this..saveFormData(this.today).subscribe(console.log)
     //this.preview.save(this.forms.value).subscribe(console.log)
   }
+
+  
+  home(){
+    this.router.navigate(['/generalusers'])
+  }
 }

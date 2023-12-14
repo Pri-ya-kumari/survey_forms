@@ -65,4 +65,7 @@ export class ConactFormComponent {
    // this.googlesheet.saveFormData(this.today).subscribe(console.log)
     //this.googlesheet.saveFormData(this.forms.value).subscribe(console.log)
   }
+  home(){
+    this.router.navigate(['/generalusers'])
+  }
 }
