@@ -48,5 +48,10 @@ export class AddDataService {
     const urlss = `${this.Urlss}/surveyformtitle/${fid}.json`; 
     return this.http.get(urlss);
   }
+  
+  sendQuestions(fid: any, questionsToSend: any) {
+    const urlss = `${this.Urlss}/surveyformtitle/${fid}.json`; 
+    return this.http.post(urlss, questionsToSend);
+  }
 
 }

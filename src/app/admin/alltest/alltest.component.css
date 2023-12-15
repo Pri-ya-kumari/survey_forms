@@ -1,47 +1,93 @@
 .bg{
-    background-color: #EDEBF2;
-    width: 77.6%;
-    height: 88.7%;
-    margin-left: 300px;
+    border: 1px solid #EDEBF2;
+    width: 1070px;
+    height:520px;
+    position: absolute;
+    margin-top: -530px;
+    margin-left: 250px;
+    border-radius: 30px;
+    
+}
+.wd-1{
+    position: absolute;
+    font-size: 29px;
+    color:black;
+    font-family: 'Public Sans', sans-serif;
+    margin-top: -500px;
+    margin-left: 280px;
 }
 .b1{
     border: 1px solid #EDEBF2;
-    width: 800px;
-    height: 50px;
-    padding-top: 50px;
+    width: 988px;
+    height: 380px;
+    padding-top: -10px;
     padding-left: 12px;
-    margin-left: 50px;
-    margin-top: -12px;
+    overflow-x: hidden;
+    margin-left: 30px;
+    border-radius: 20px;
+    margin-top: 69px;
     background-color: white;
-}
-.t1{
-    font-size: 20px;
-    font-weight: lighter;
 }
 .tit{
     position: absolute;
-    margin-top: 20px;
-    margin-left: -80px;
+    font-size: 20px;
+    margin-top: 8px;
+    margin-left:2px;
+    text-align: left;
+    font-family: 'Hedvig Letters Sans', sans-serif;
+    font-weight: lighter;
+}
+.t2{
+    position: absolute;
+    font-size: 17px;
+    margin-top: 8px;
+    margin-left:59px;
+    text-align: left;
+    font-family: 'Hedvig Letters Sans', sans-serif;
+    font-weight: lighter;
 }
 .desc{
     position: absolute;
-    margin-top: 40px;
-    margin-left: -80px;
+    margin-top: 53px;
+    font-size: 20px;
+    margin-left: 2px;
+    font-family: 'Hedvig Letters Sans', sans-serif;
+    font-weight: lighter;
+}
+.t3{
+    position: absolute;
+    margin-top: 53px;
+    font-size: 17px;
+    margin-left: 122px;
+    font-family: 'Hedvig Letters Sans', sans-serif;
+    font-weight: lighter;
 }
 .tit1{
-    position: relative;
-    margin-top: -63px;
-    margin-left: 10px;
+    position: absolute;
+    margin-top: 30px;
+    font-size: 20px;
+    font-family: 'Hedvig Letters Sans', sans-serif;
+    font-weight: lighter;
+    margin-left: 2px;
+}
+.t1{
+    position: absolute;
+    margin-top: 30px;
+    font-size: 17px;
+    font-family: 'Hedvig Letters Sans', sans-serif;
+    font-weight: lighter;
+    margin-left: 102px;
 }
 .list{
     position:relative;
+    width: 890px;
     height: 90px;
-    margin-top: 7px;
-    margin-left: -13px;
-    border: 1px solid #EDEBF2;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: 1px solid #fff;
     padding-left: 10px;
     background-color: white;
-}
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;}
 .btn{
     border: 1px solid #EDEBF2;
     width: 100px;
@@ -60,25 +106,41 @@
 }
 .btn1{
     border: 1px solid #EDEBF2;
-    width: 120px;
+    width: 50px;
     background-color: orange;
     color: white;
     font-size: 16px;
     height: 40px;
+    border-radius: 10px;
     position: relative;
-    margin-top: 45px ;
-    margin-left: 500px;
+    margin-top: 2px ;
+    margin-left:810px;
     cursor: pointer;
 }
 .btn2{
+    border-radius: 10px;
+    padding-left: -10px;
+    padding-top: 4px;
     border: 1px solid #EDEBF2;
-    width: 80px;
+    width: 50px;
     background-color: red;
     color: white;
-    font-size: 16px;
-    height: 40px;
+    font-size: 15px;
+    height: 35px;
     position: absolute;
     margin-top: 45px ;
-    margin-left: 400px;
+    margin-left: 810px;
     cursor: pointer;
+}
+.img{
+    margin-top: -1px;
+    position: absolute;
+    width: 15px;
+    color: black;
+}
+.img1{
+    position: absolute;
+    width: 20px;
+    margin-left: -19px;
+    margin-top: -17px;
 }

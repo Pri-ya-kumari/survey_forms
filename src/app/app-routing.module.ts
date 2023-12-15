@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AddFormsComponent } from './scratch/add-forms/add-forms.component';
 import { PreviewDataComponent } from './scratch/preview-data/preview-data.component';
 import { TemplateComponent } from './scratch/template/template.component';
 import { AngularsFormComponent } from './scratch/template/angulars-form/angulars-form.component';
@@ -56,6 +55,10 @@ import { MyformslistComponent } from './scratch/listsavedforms/myformslist/myfor
 import { TemplateformslistComponent } from './scratch/listsavedforms/templateformslist/templateformslist.component';
 import { ViewsavedformsComponent } from './scratch/listsavedforms/viewsavedforms/viewsavedforms.component';
 import { ViewadmindrivenformsComponent } from './scratch/listsavedforms/viewadmindrivenforms/viewadmindrivenforms.component';
+import { AddingtitleComponent } from './scratch/addingtitle/addingtitle.component';
+import { AddformshomepageComponent } from './scratch/addformshomepage/addformshomepage.component';
+import { CreateaddquestionComponent } from './scratch/createaddquestion/createaddquestion.component';
+import { AddquestionsnowComponent } from './scratch/addquestionsnow/addquestionsnow.component';
 const redirectToLoginIn = () => redirectUnauthorizedTo(['/login'])
 const redirectToHome = () => redirectLoggedInTo(['/mainpage'])
 //const redirectTosuperadmin = () => redirectUnauthorizedTo(['/superadmin'])
@@ -71,7 +74,7 @@ const routes: Routes = [
   },
   {
     path: 'adminlogin',
-    component:SignuppageComponent,
+    component: SignuppageComponent,
   },
   {
     path: 'superadminLogin',
@@ -80,18 +83,40 @@ const routes: Routes = [
   {
     path: 'homepage',
     component: HomepageComponent,
-    canActivate:[authGuard]
+    canActivate: [authGuard]
   },
   {
-    path: 'add-forms',
-    component: AddFormsComponent,
-    canActivate:[authGuard]
+    path: 'addfromshome',
+    component: AddformshomepageComponent,
+    canActivate: [authGuard],
+    children: [
+      {
+        path: '',
+        redirectTo: 'addtitle',
+        pathMatch: 'full',
+      },
+      {
+        path: 'addtitle',
+        component: AddingtitleComponent,
+        canActivate: [authGuard]
+      },
+      {
+        path: 'questionaddingforms',
+        component: CreateaddquestionComponent,
+        canActivate: [authGuard]
+      },
+      {
+        path: 'addingquestionnow/:fid/:title',
+        component: AddquestionsnowComponent,
+        canActivate: [authGuard]
+      },
+    ]
   },
   {
     path: 'listsurveyhome',
     component: ListsavedformsComponent,
-    canActivate:[authGuard],
-    children:[
+    canActivate: [authGuard],
+    children: [
       {
         path: '',
         redirectTo: 'listsavedhomepage',
@@ -99,35 +124,35 @@ const routes: Routes = [
       },
       {
         path: 'listsavedhomepage',
-        component:ListsavedhomepageComponent,
-        canActivate:[authGuard]
+        component: ListsavedhomepageComponent,
+        canActivate: [authGuard]
       },
       {
         path: 'myformlist',
-        component:MyformslistComponent,
-        canActivate:[authGuard]
+        component: MyformslistComponent,
+        canActivate: [authGuard]
       },
       {
         path: 'templateformlist',
-        component:TemplateformslistComponent,
-        canActivate:[authGuard]
+        component: TemplateformslistComponent,
+        canActivate: [authGuard]
       },
       {
         path: 'viewsavedforms/:fid/:title',
         component: ViewsavedformsComponent,
-        canActivate:[authGuard]
+        canActivate: [authGuard]
       },
       {
         path: 'viewadminsavedforms/:fid/:title',
         component: ViewadmindrivenformsComponent,
-        canActivate:[authGuard]
+        canActivate: [authGuard]
       },
     ]
   },
   {
     path: 'temphome',
     component: TempHomeComponent,
-    canActivate:[authGuard],
+    canActivate: [authGuard],
     children: [
       {
         path: '',
@@ -137,64 +162,54 @@ const routes: Routes = [
       {
         path: 'template-form',
         component: TemplateComponent,
-        canActivate:[authGuard]
+        canActivate: [authGuard]
       },
       {
         path: 'viewsurvey/:fid/:title',
         component: ViewSurveyComponent,
-        canActivate:[authGuard]
+        canActivate: [authGuard]
       },
     ]
-  }, 
+  },
   {
     path: 'allforms',
     component: SavedformsComponent,
-    canActivate:[authGuard],
+    canActivate: [authGuard],
   },
   {
     path: 'pd',
     component: PreviewDataComponent,
-    canActivate:[authGuard]
+    canActivate: [authGuard]
   },
   {
     path: 'angular-s-form',
     component: AngularsFormComponent,
-    canActivate:[authGuard]
+    canActivate: [authGuard]
   },
   {
     path: 'complete',
     component: FinalsubmitComponent,
-    canActivate:[authGuard]
+    canActivate: [authGuard]
   },
   {
     path: 'htcsjs-form',
     component: HtcsjsComponent,
-    canActivate:[authGuard]
-  },
-  {
-    path: 'users',
-    component: UsersDetailsComponent,
-    canActivate:[adminguardGuard],
+    canActivate: [authGuard]
   },
   {
     path: 'update/:id',
     component: UpdateComponentComponent,
-    canActivate:[adminguardGuard],
+    canActivate: [adminguardGuard],
   },
   {
     path: 'updateadmin/:id',
     component: EditformdialogComponent,
-    canActivate:[adminguardGuard],
+    canActivate: [adminguardGuard],
   },
   {
     path: 'analysis',
     component: AnalysisDataComponent,
-    canActivate:[adminguardGuard],
-  },
-  {
-    path: 'profile',
-    component: ProfileComponent,
-    canActivate:[adminguardGuard],
+    canActivate: [adminguardGuard],
   },
   {
     path: 'generalusers',
@@ -204,41 +219,36 @@ const routes: Routes = [
   {
     path: 'guser',
     component: GeneralUsersComponent,
-    canActivate:[adminguardGuard],
+    canActivate: [adminguardGuard],
     //data:{
-      //expectedRole:['Admin']
+    //expectedRole:['Admin']
     //}
-  },
-  {
-    path: 'updatepass/:cid',
-    component: UpdatePasswordComponent,
-    canActivate:[adminguardGuard],
   },
   {
     path: 'angularrecord',
     component: AngularRecordComponent,
-    canActivate:[authGuard]
+    canActivate: [authGuard]
   },
   {
     path: 'userrequest',
     component: UserrequestComponent,
-    canActivate:[authGuard]
+    canActivate: [authGuard]
   },
   {
     path: 'updateadmindetails/:id',
     component: UpdateadminDetailsComponent,
-    canActivate:[superguardGuard],
-  }, 
+    canActivate: [superguardGuard],
+  },
   {
     path: 'updateuserdetails/:id',
     component: UpdateauthouserDetailsComponent,
-    canActivate:[superguardGuard],
+    canActivate: [superguardGuard],
   },
   {
     path: 'updatesuperadmin/:cid',
     component: UpdatesuperadminComponent,
-    canActivate:[superguardGuard],
-  },  
+    canActivate: [superguardGuard],
+  },
   {
     path: 'superadmin',
     component: SadashboardComponent,
@@ -250,40 +260,40 @@ const routes: Routes = [
       },
       {
         path: 'superadminprofile',
-        component:SuperadminprofileComponent,
-        canActivate:[superguardGuard],
+        component: SuperadminprofileComponent,
+        canActivate: [superguardGuard],
       },
-      { 
+      {
         path: 'admincreation',
         component: AdmincreationComponent,
-        canActivate:[superguardGuard],
+        canActivate: [superguardGuard],
       },
       {
         path: 'alladminlist',
         component: ListadminComponent,
-        canActivate:[superguardGuard],
+        canActivate: [superguardGuard],
       },
       {
         path: 'userresquest',
         component: UserrequestsComponent,
-        canActivate:[superguardGuard],
+        canActivate: [superguardGuard],
       },
       {
         path: 'nonauthorized',
         component: NonauthorizeduserComponent,
-        canActivate:[superguardGuard],
+        canActivate: [superguardGuard],
       },
       {
         path: 'authorizeduserlist',
         component: AuthorizeduserlistComponent,
-        canActivate:[superguardGuard],
+        canActivate: [superguardGuard],
       },
     ]
   },
   {
     path: 'admindashboard',
     component: DashboardComponent,
-    canActivate:[adminguardGuard],
+    canActivate: [adminguardGuard],
     children: [
       {
         path: '',
@@ -293,33 +303,50 @@ const routes: Routes = [
       {
         path: 'adminhome',
         component: AhomepageComponent,
-        canActivate:[adminguardGuard],
+        canActivate: [adminguardGuard],
       },
       {
         path: 'atest',
         component: AAddTestComponent,
-        canActivate:[adminguardGuard],
+        canActivate: [adminguardGuard],
       },
       {
         path: 'aquestion/:fid/:title',
         component: AAddquestionComponent,
-        canActivate:[adminguardGuard],
+        canActivate: [adminguardGuard],
       },
       {
         path: 'addquestion/:fid/:title',
         component: AddquestionsComponent,
-        canActivate:[adminguardGuard],
+        canActivate: [adminguardGuard],
       },
       {
         path: 'alltest',
         component: AlltestComponent,
-        canActivate:[adminguardGuard],
+        canActivate: [adminguardGuard],
       },
       {
         path: 'cusers',
         component: CreateuserComponent,
-        canActivate:[adminguardGuard],
-      }
+        canActivate: [adminguardGuard],
+      },
+      {
+        path: 'profile',
+        component: ProfileComponent,
+        canActivate: [adminguardGuard],
+        children:[
+          {
+            path: 'updatepass/:cid',
+            component: UpdatePasswordComponent,
+            canActivate: [adminguardGuard],
+          },
+        ]
+      },
+      {
+        path: 'users',
+        component: UsersDetailsComponent,
+        canActivate: [adminguardGuard],
+      },
     ]
   },
   {
@@ -348,9 +375,9 @@ const routes: Routes = [
     //canActivate:[authGuard]
   },
   {
-    path:'**',
-    component:WildcardshowComponent,
-    pathMatch:'full'
+    path: '**',
+    component: WildcardshowComponent,
+    pathMatch: 'full'
   }
 ];
 

@@ -1,11 +1,11 @@
-<div class="nav">
+<!--<div class="nav">
     <div class="shade1">
         <img src="assets/images/pageicon.png" class="img">
         <span class="wd-1">SurveyForms</span>
         <span class="example-spacer"></span>
         <span class="example-spacer"></span>
         <mat-icon class="icon1">home</mat-icon>
-        <span class="test1" (click)="homepage()">Home</span>
+        <span class="test1" (click)="homepage()">Mainmenu</span>
         <button class="btn33">sign out</button>
         <img src="assets/images/signoutlogo.png" class="img-11">
     </div>
@@ -13,8 +13,11 @@
 <div class="bg">
     <div class="sidenav">
         <div class="b1">
-            <span class="b1-op">Build</span>
+            <span class="b1-op" (click)="titleoption()">Build</span>
             <img src="assets/images/build.png" class="imgs">
+            <label for="dropdown" class="dropdown-btn">
+              <span class="arrow"></span>
+            </label>
         </div>
         <div class="b11">
             <span class="b1-op1">Multiple Choice</span>
@@ -33,39 +36,41 @@
             <mat-icon class="imgs1">chat_bubble_outline</mat-icon>
         </div>
     </div>
-<!--design a form titile here -->
-<div class="hd-b"><!--hd-b=headblock-->
-    <h2 class="input1">{{displayTitle}}</h2>
 </div>
-<!--creating the form title block where we can write the titile of the form -->
-<div class="fm-b"><!--fm-b = form block-->
-    <div>
-        <h2 class="input-1" (mouseover)="display = false"
-            (mouseleave)="display = true">{{displayTitle}}</h2>
-    </div>
-</div>
-<div class="fm-b2">
-    <div class="borders"></div>
-    <span class="titl1">First add your Survey Title</span>
-    <div class="borders1"></div>
-    <button class="circle" (click)="showalert()"><mat-icon>arrow_forward</mat-icon>
-    </button>
-    <div class="ti-1"><!--ti-1= title part *ngIf="isclicked"-->
-        <form [formGroup]="addes" novalidate (ngSubmit)="formssubmits(addes.value)"><!--[formGroup]="formTitle"-->
-            <!--<div formArrayName="titlelist">-->
-                <label class="wd-3">Survey title</label><br>
-                <input type="text" #nameBox placeholder="Enter title" class="input2" formControlName="title" ngModel><br>
-                <div *ngIf="l['title'].invalid && l['title'].touched" class="alert2">
-                    <div *ngIf="l['title'].errors && l['title'].errors['required']" class="alerts2">
-                        <span>*title is required</span>
-                    </div>
-                </div>
-                <button class="btn1">Cancel</button>
-                <button class="btn2" (click)="formssubmits(addes.value)">Save</button>
-            <!--</div> (click)="getTitle(nameBox.value)"-->
-        </form>
-    </div>
-</div>
+<div class="block1">
+
+</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!--creating a from for taking input
 <div class="fm-b2">fm-b2= formblock 2
     <form #save="ngForm" [formGroup]="studentForm">

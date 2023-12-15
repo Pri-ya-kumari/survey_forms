@@ -1,8 +1,12 @@
 <!--signup  *ngIf="!issignin"-->
+
 <div class="bg">
+    <div>
+        <span class="wd-1">Create User</span>
+    </div>
     <div class="container">
+        <img src="assets/images/loginimg.png" class="image">
         <form [formGroup]="froms" novalidate (ngSubmit)="homepage(froms.value)">
-            <span class="lab">Create User </span>
             <label class="lab1">Name</label>
             <input type="text" class="t1" formControlName="name"><br>
             <div *ngIf="f['name'].invalid && f['name'].touched " class="alert">

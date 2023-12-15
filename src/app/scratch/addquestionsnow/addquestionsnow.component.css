@@ -1,0 +1,38 @@
+.bg{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 680px;
+    font-size: 25px;
+    text-decoration: underline;
+}
+.block1{
+    border: 1px solid black;
+    margin-top: 60px;
+    width: 1045px;
+    height: 448px;
+    border-radius: 30px 30px 0px 0px;
+    margin-left: 300px;
+    position: absolute;
+    overflow-x: hidden;
+}
+.box{
+    border: 1px solid black;
+    width: 920px;
+    height: 190px;
+    border-radius: 30px;
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 56px;
+}
+.input1{
+    
+    border: 1px solid #EDEBF2;
+    width: 450px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 29px;
+    padding-left: 28px;
+    outline: none;
+    cursor: pointer;
+}

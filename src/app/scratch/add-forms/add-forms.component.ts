@@ -25,7 +25,6 @@ export class AddFormsComponent {
 
   constructor(private addDataService: AddDataService,private fb: FormBuilder
     ,private router: Router) { 
-      this.titleform();
     }
 
   /*saveform() {
@@ -98,42 +97,8 @@ export class AddFormsComponent {
   homepage(){
     this.router.navigate(['/homepage']);
   }
-  addes = new FormGroup({
-    title : new FormControl('',[Validators.required]),
-  })
-  titleform(){
-    this.addes = this.fb.group({
-      title:['',[Validators.required]]
-    })
+  titleoption(){
+    this.router.navigate(['/add-forms','listsavedhomepage']);
   }
-  get l() {
-    return this.addes.controls;
-  }
-  formssubmits(datas:any){
-    console.log("button works for firebase savgin")
-    this.addDataService.postdata(datas).subscribe((res)=>{
-      if(res!=""){
-        Swal.fire(
-          'Success!',
-          'Your Form Title has been saved now moving to the nextpage',
-          'success'
-        )
-        this.router.navigate(['/allforms'])
-      }
-      else{
-        Swal.fire(
-          'Alert!',
-          'Enter Your Title.',
-          'warning'
-        )      
-      }
-    })
-  }
-  showalert(){
-    Swal.fire(
-      'Alert!',
-      'First Save Your Title.',
-      'warning'
-    )
-  }
+  
 }

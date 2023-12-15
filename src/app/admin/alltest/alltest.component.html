@@ -1,13 +1,22 @@
+<div>
+    <span class="wd-1">My Forms </span>
+</div>
 <div class="bg">
     <div class="b1">
-        <span class="t1">All tests</span>
         <div *ngFor="let c of test" class="list">
-            <span class="tit1">course id:{{c.fid}}</span>
-            <span class="tit">{{c.title}}</span>
-            <span class="desc">{{c.description}}</span>
-            <button class="btn2" (click)="delet(c.id)">Delete</button>
-            <button class="btn1" [routerLink]="'/admindashboard/aquestion/'+c.id+'/'+c.title">Add Questions</button>
+            <span class="tit1">course id: </span>
+            <span class="t1">{{c.fid}}</span>
+            <span class="tit">Title: </span>
+            <span class="t2">{{c.title}}</span>
+            <span class="desc">Description: </span>
+            <span class="t3">{{c.description}}</span>
+            <button class="btn2" (click)="delet(c.id)"><mat-icon>delete</mat-icon>
+            </button>
+            <button class="btn1" [routerLink]="'/admindashboard/aquestion/'+c.id+'/'+c.title">
+                <img src="assets/images/addq.png" class="img">
+                <img src="assets/images/qimag.png" class="img1">
+            </button>
+
         </div>
     </div>
-    <button class="btn" (click)="addt()">Add Test</button>
 </div>

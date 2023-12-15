@@ -22,4 +22,8 @@ export class ProfileComponent implements OnInit{
   }
   test:any=[];
 
+  previous(){
+    this.route.navigate(['/admindashboard', 'adminhome']);
+  }
+
 }

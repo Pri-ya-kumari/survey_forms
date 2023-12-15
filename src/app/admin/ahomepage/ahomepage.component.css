@@ -9,71 +9,75 @@
 .b1{
     position: absolute;
     border: 1px solid #EDEBF2;
-    width: 26%;
-    height: 44%;
-    margin-left: 320px;
+    width: 20%;
+    height: 35%;
+    margin-left: 56px;
     border-radius: 29px;
     margin-top: 12px;
     background-color: white;
     cursor: pointer;
-}
-.b2{
-    position: absolute;
-    border: 1px solid #EDEBF2;
-    width: 26%;
-    height: 44%;
-    margin-left: 800px;
-    border-radius: 29px;
-    margin-top: 12px;
-    background-color: white;
-    cursor: pointer;
-}
-.b3{
-    position: absolute;
-    border: 1px solid #EDEBF2;
-    width: 26%;
-    height: 44%;
-    margin-left: 320px;
-    border-radius: 29px;
-    margin-top: 310px;
-    background-color: white;
-    cursor: pointer;
-}
-.b4{
-    position: absolute;
-    border: 1px solid #EDEBF2;
-    width: 26%;
-    height: 44%;
-    margin-left: 800px;
-    border-radius: 29px;
-    margin-top: 310px;
-    background-color: white;
-    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .img-2{
-    width: 220px;
-    border-radius: 120px;
-    margin-top: 12px;
-    margin-left: 60px;
+    width: 150px;
+    border-radius: 170px;
+    margin-top: 8px;
+    margin-left: 20px;
 }
 .t1{
     font-size: 30px;
     font-weight: bold;
     position: absolute;
-    margin-top: 230px;
-    margin-left: -150px;
+    margin-top: 180px;
+    margin-left: -120px;
 }
 .t1:hover{
     color: green;
 }
+.b2{
+    position: absolute;
+    border: 1px solid #EDEBF2;
+    width: 20%;
+    height: 35%;
+    margin-left: 450px;
+    border-radius: 29px;
+    margin-top: 14px;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.b3{
+    position: absolute;
+    border: 1px solid #EDEBF2;
+    width: 20%;
+    height: 35%;
+    margin-left: 60px;
+    border-radius: 29px;
+    margin-top: 240px;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.b4{
+    position: absolute;
+    border: 1px solid #EDEBF2;
+    width: 20%;
+    height: 35%;
+    margin-left: 460px;
+    border-radius: 29px;
+    margin-top: 240px;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
 .t2{
-    font-size: 30px;
+    font-size: 25px;
     width: 260px;
     text-align: justify;
     font-weight: bold;
     position: absolute;
-    margin-top: 230px;
-    margin-left: -200px;
+    margin-top: 180px;
+    margin-left: -150px;
     cursor: pointer;
 }
 .t2:hover{
@@ -81,21 +85,80 @@
 }
 
 .t3{
-    font-size: 30px;
+    font-size: 25px;
     width: 200px;
     text-align: justify;
     font-weight: bold;
     position: absolute;
-    margin-top: 230px;
+    margin-top: 180px;
     cursor: pointer;
-    margin-left: -200px;
+    margin-left: -150px;
 }
 .t3:hover{
     color: green;
 }
 .body{
-    width: 99.9%;
-    height: 100%;
-    margin-top: -12px;
-    background-color: #EDEBF2;
+    border: 1px solid #EDEBF2;
+    width: 1070px;
+    height:530px;
+    position: absolute;
+    margin-top: -543px;
+    margin-left: 250px;
+    border-radius: 30px;
+}
+
+.block{
+    overflow-x: hidden;
+    border: 1px solid #EDEBF2;
+    width: 1000px;
+    height: 470px;
+    margin-left: 30px;
+    background-color: white;
+    margin-top: 50px;
+    position: absolute;
+    
+}
+.img{
+    width: 30px;
+    position: absolute;
+    margin-top: 18px;
+    margin-left: 32px;
+}
+
+.shade1 {
+    background-color: #fff;
+    color: white;
+    height: 70px;
+    overflow: hidden;
+}
+
+.wd-1 {
+    margin-left: 22px;
+    font-weight: 100px;
+    font-size: 29px;
+    margin-top: 23px;
+    position: absolute;
+    font-family: 'Public Sans', sans-serif;
+} 
+.btn3{
+    border: 1px solid #EDEBF2;
+    width: 88px;
+    height: 36px;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 1113px;
+    font-size: 17px;
+    color: black;
+    background-color: #fff;
+    cursor: pointer;
+}
+.btn3:hover{
+    opacity: 0.8;
+}
+
+.img-11{
+    margin-top: 29px;
+    margin-left: 1113px;
+    width: 12px;
+    position: absolute;
 }

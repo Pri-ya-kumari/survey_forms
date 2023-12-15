@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
-import { AddFormsComponent } from './scratch/add-forms/add-forms.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
@@ -82,11 +81,14 @@ import { MyformslistComponent } from './scratch/listsavedforms/myformslist/myfor
 import { TemplateformslistComponent } from './scratch/listsavedforms/templateformslist/templateformslist.component';
 import { ViewsavedformsComponent } from './scratch/listsavedforms/viewsavedforms/viewsavedforms.component';
 import { ViewadmindrivenformsComponent } from './scratch/listsavedforms/viewadmindrivenforms/viewadmindrivenforms.component';
+import { AddingtitleComponent } from './scratch/addingtitle/addingtitle.component';
+import { AddformshomepageComponent } from './scratch/addformshomepage/addformshomepage.component';
+import { CreateaddquestionComponent } from './scratch/createaddquestion/createaddquestion.component';
+import { AddquestionsnowComponent } from './scratch/addquestionsnow/addquestionsnow.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
-    AddFormsComponent,
     PreviewDataComponent,
     TemplateComponent,
     AngularsFormComponent,
@@ -139,6 +141,10 @@ import { ViewadmindrivenformsComponent } from './scratch/listsavedforms/viewadmi
     TemplateformslistComponent,
     ViewsavedformsComponent,
     ViewadmindrivenformsComponent,
+    AddingtitleComponent,
+    AddformshomepageComponent,
+    CreateaddquestionComponent,
+    AddquestionsnowComponent,
   ],
   imports: [
     BrowserModule,

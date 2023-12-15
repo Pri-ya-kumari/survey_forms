@@ -37,5 +37,8 @@ export class UpdatePasswordComponent implements OnInit {
       this.route.navigate(['/profile']);
     })
   }
+  profilback(){
+    this.route.navigate(['/admindashboard', 'profile']);
+  }
 
 }

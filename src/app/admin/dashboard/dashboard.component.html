@@ -1,40 +1,44 @@
-<div class="body1">
-    <p>
-        <mat-toolbar class="shade1">
-            <mat-icon>insert_drive_file</mat-icon>
-            <span class="wd-1">SurveyForms</span>
-            <!--wd-1 = word1 it is the titile of the forms-->
-            <span class="wd-2">Admin</span>
-            <!--wd-1 = word1 its is the link page tothe first page home page -->
-            <span class="example-spacer"></span>
-            <div class="dropdown">
-                <input type="checkbox" id="dropdown" />
-                <label for="dropdown" class="dropdown-btn">
-                    <mat-icon class="icn">notifications</mat-icon>
-                </label>
-                <div class="dropdown-content">
-                    <div *ngFor="let c of request" class="list">
-                        <span class="tit1">Name:{{c.name}}</span>
-                        <span class="email1">Email:{{c.email}}</span>
-                        <span class="desc">Phone:{{c.number}}</span>
-                        <div class="msg"> 
-                            <span class="desc1">Message:{{c.message}}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </mat-toolbar>
-    </p>
+<div class="nav">
+    <div class="shade1">
+        <img src="assets/images/pageicon.png" class="img">
+        <span class="wd-1">SurveyForms</span>
+        <span class="example-spacer"></span>
+        <span class="example-spacer"></span>
+        <button class="btn3" (click)="logout()">sign out</button>
+        <img src="assets/images/signoutlogo.png" class="img-11">
+        <!--<input type="checkbox" id="dropdown" />
+            <label for="dropdown" class="dropdown-btn">
+              <span class="arrow"></span>
+            </label>
+            <ul class="dropdown-content" role="menu">
+              <li><span class="profile">User</span></li>
+              <div class="gaps"></div>
+              <li><span class="profile">Admin</span></li>
+              <div class="gaps"></div>
+              <li><span class="profile">Super admin</span></li>
+            </ul>-->
+    </div>
 </div>
-<div class="body">
-    <div class="side-nav">
-        <div class="menus">
-            <h3 class="p1"><a (click)="adminhome()"><mat-icon>home</mat-icon>Home</a></h3>
-            <h3 class="p1"><a (click)="aallt()"><mat-icon>horizontal_split</mat-icon>All Survey</a></h3>
-            <h3 class="p1"><a (click)="atest()"><mat-icon>add_circle</mat-icon>Add SurveyForms</a></h3>
-            <h3 class="p1"><a (click)="cuser()"><mat-icon>add_circle</mat-icon>Create User</a></h3>
-            <h3 class="p1"><a (click)="logout()"><mat-icon>exit_to_app</mat-icon>Log Out</a></h3>
+
+<div class="side-nav">
+    <button class="btn" (click)="atest()">
+        <img src="assets/images/add.png" class="logo">New
+    </button>
+    <div class="inside-sidenav">
+        <div class="box1" (click)="adminhome()">
+        <mat-icon class="icon1">dashboard</mat-icon>
+        <span class="test1">Home</span>
+        </div>
+        <div class="box2" (click)="aallt()">
+            <mat-icon class="icon1">list</mat-icon>
+            <span class="test1">My Forms</span>
+        </div>
+        <div class="box3">
+            <img src="assets/images/createp.png" class="icon2">
+            <span class="test1" (click)="cuser()">Create User</span>
         </div>
     </div>
+</div>
+<div class="block1">
 </div>
 <router-outlet></router-outlet>

@@ -1,0 +1,25 @@
+<div class="head">
+    <span class="titl2">Build</span>
+</div>
+<div class="fm-b2">
+    <div class="borders"></div>
+    <span class="titl1">Add Survey Title</span>
+    <button class="circle" (click)="showalert()"><mat-icon>arrow_forward</mat-icon>
+    </button>
+    <div class="ti-1"><!--ti-1= title part *ngIf="isclicked"-->
+        <form [formGroup]="addes" novalidate (ngSubmit)="formssubmits(addes.value)"><!--[formGroup]="formTitle"-->
+            <!--<div formArrayName="titlelist">-->
+                <label class="wd-3">Survey title</label><br>
+                <input type="text" #nameBox placeholder="Enter title" class="input2" formControlName="title" ngModel><br>
+                <div *ngIf="l['title'].invalid && l['title'].touched" class="alert2">
+                    <div *ngIf="l['title'].errors && l['title'].errors['required']" class="alerts2">
+                        <span>*title is required</span>
+                    </div>
+                </div>
+                <button class="btn1">Cancel</button>
+                <button class="btn2" (click)="formssubmits(addes.value)"  >Save</button>
+            <!--</div> (click)="getTitle(nameBox.value)" [routerLink]="'addfromshome/questionaddingforms/'+id+'/'+title"-->
+        </form>
+    </div>
+</div>
+<router-outlet></router-outlet>
