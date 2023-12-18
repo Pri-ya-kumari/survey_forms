@@ -17,4 +17,7 @@ export class GeneralUsersComponent {
       this.dataCount = res.length;
     })
   }  
+  previouspage(){
+    this.route.navigate(['/admindashboard']);
+  }
 }

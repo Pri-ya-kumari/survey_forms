@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AddtestService } from 'src/app/adminservice/addtest.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-a-add-test',
@@ -26,7 +27,11 @@ export class AAddTestComponent implements OnInit{
     //this.addservice.addtest(data).subscribe((res)=>{
       this.addservice.postdata(data).subscribe((res)=>{
       if(res!=""){
-        alert("record added");
+        Swal.fire(
+          'Added!',
+          'Your data has been added.',
+          'success'
+        )
         this.addes.reset();
         this.route.navigate(['/admindashboard', 'alltest'])
         
@@ -43,6 +48,10 @@ preventback(){
   this.str.onPopState(()=>{
     history.pushState(null,location.href)
   })
+}
+
+previouspage(){
+  this.route.navigate(['/admindashboard','adminhome']);
 }
 
 }

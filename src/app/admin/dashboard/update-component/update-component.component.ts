@@ -50,7 +50,10 @@ export class UpdateComponentComponent implements OnInit {
     console.log(this.froms.value);
     this.updatedeta.updateItem(this.route.snapshot.params["id"],this.froms.value,).subscribe((datas:any)=>{
       console.warn(datas);
-      this.router.navigate(['/users'])
+      this.router.navigate(['/admindashboard/users'])
     })
+  }
+  profilback(){
+    this.router.navigate(['/admindashboard', 'users']);
   }
 }

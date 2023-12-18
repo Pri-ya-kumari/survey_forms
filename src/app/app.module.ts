@@ -61,9 +61,7 @@ import { UserrequestsComponent } from './superadmin/userrequests/userrequests.co
 import { NonauthorizeduserComponent } from './superadmin/nonauthorizeduser/nonauthorizeduser.component';
 import { WildcardshowComponent } from './wildcardshow/wildcardshow.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
-import { SigninpageComponent } from './superadmin/signinpage/signinpage.component';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
-import { SignuppageComponent } from './signuppage/signuppage.component';
 import { CreateuserComponent } from './admin/createuser/createuser.component';
 import { AuthorizeduserlistComponent } from './superadmin/authorizeduserlist/authorizeduserlist.component';
 import { CookieService } from 'ngx-cookie-service';
@@ -85,6 +83,7 @@ import { AddingtitleComponent } from './scratch/addingtitle/addingtitle.componen
 import { AddformshomepageComponent } from './scratch/addformshomepage/addformshomepage.component';
 import { CreateaddquestionComponent } from './scratch/createaddquestion/createaddquestion.component';
 import { AddquestionsnowComponent } from './scratch/addquestionsnow/addquestionsnow.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -125,8 +124,6 @@ import { AddquestionsnowComponent } from './scratch/addquestionsnow/addquestions
     NonauthorizeduserComponent,
     WildcardshowComponent,
     LoginpageComponent,
-    SigninpageComponent,
-    SignuppageComponent,
     CreateuserComponent,
     AuthorizeduserlistComponent,
     UpdateadminDetailsComponent,
@@ -145,6 +142,7 @@ import { AddquestionsnowComponent } from './scratch/addquestionsnow/addquestions
     AddformshomepageComponent,
     CreateaddquestionComponent,
     AddquestionsnowComponent,
+    
   ],
   imports: [
     BrowserModule,

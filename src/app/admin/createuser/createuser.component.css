@@ -7,6 +7,19 @@
     margin-left: 230px;
     overflow-y: hidden;
 }
+.circle1{
+    border: 1px solid #EDEBF2;
+    width: 35px;
+    padding-top: 3px;
+    padding-left: -1px;
+    height: 35px;
+    margin-top: 15px;
+    margin-left: 20px;
+    border-radius: 120px;
+    position: absolute;
+    background-color: white;
+    cursor: pointer;
+}
 .container{
     position: absolute;
     border: 1px solid #EDEBF2;
@@ -18,7 +31,7 @@
     background-color: white;
 }
 .wd-1 {
-    margin-left: 30px;
+    margin-left: 60px;
     font-weight: 100px;
     font-size: 29px;
     margin-top: 23px;

@@ -1,79 +1,146 @@
-.title1{
-    position: relative;
-    margin-top: 10px;
-    margin-left: 330px;
-    text-decoration: underline;
-    font-size: 29px;
-}
-.btn1{
-    position: relative;
-    border: 1px solid #EDEBF2;
-    width: 160px;
-    background-color: green;
-    color: white;
-    font-size: 16px;
-    height: 40px;
-    margin-top: -30px ;
-    margin-bottom: auto;
-    margin-left: 40px;
-    cursor: pointer;
-}
-.btn{
+.bg{
     position: absolute;
+    margin-top: -540px;
+    margin-left: 620px;
+    font-size: 25px;
+    text-decoration: underline;
+}
+.block1{
     border: 1px solid #EDEBF2;
-    width: 60px;
-    background-color: green;
-    color: white;
-    font-size: 16px;
-    height: 30px;
-    margin-top: 55px ;
-    margin-bottom: auto;
-    margin-left: 40px;
-    cursor: pointer;
-    display: block;
+    width: 1035px;
+    height: 500px;
+    position: absolute;
+    margin-top: -500px;
+    margin-left: 270px;
+    overflow-x: hidden;
 }
 .b1{
     position: relative;
     background-color:white;
     position: relative;
     border: 1px solid #EDEBF2;
-    width: 77%;
-    height: 18%;
-    margin-left: 40px;
+    width: 95%;
+    height: 24%;
+    margin-left: 20px;
     display: block;
     margin-top: 12px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 }
-.bg{
-    margin-top: -12px;
-    position: relative;
-    background-color: #EDEBF2;
-    margin-left: 300px;
-    height: 100% ;
+.no{
+    position: absolute;
+    margin-top: 12px;
+    width: 100px;
+    margin-left: 12px;
+    font-size: 19px;
+}
+.q1{
+    position: absolute;
+    width: 860px;
+    font-size: 17px;
+    overflow: hidden;
+}
+
+.circle1{
+    border: 1px solid #EDEBF2;
+    width: 35px;
+    padding-top: 3px;
+    padding-left: -1px;
+    height: 35px;
+    margin-top: -46px;
+    margin-left: -350px;
+    border-radius: 120px;
+    position: absolute;
+    background-color: white;
+    cursor: pointer;
 }
 .op1{
     position: absolute;
-    margin-top: 2px;
+    margin-top: 10px;
     display: block;
-    margin-left: 42px;
+    height: 20px;
+    width: 20px;
+    background-color: lightgray;
+    border-radius: 10%;
+    margin-left: 49px;
 }
-
+.opp1{
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 46px;
+    width: 260px;
+}
 .op2{
     position: absolute;
-    margin-top: 4px;
+    margin-top: 10px;
     display: block;
-    margin-left: 342px;
+    margin-left: 452px;
+    height: 20px;
+    width: 20px;
+    background-color: lightgray;
+    border-radius: 10%;
 }
-
+.opp2{
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 456px;
+    width: 260px;
+}
 .op3{
     position: absolute;
-    margin-top: 32px;
+    margin-top: 45px;
     display: block;
-    margin-left: 42px;
+    margin-left: 49px;
+    height: 20px;
+    width: 20px;
+    background-color: lightgray;
+    border-radius: 10%;
+    
 }
-
+.opp3{
+    position: absolute;
+    margin-top: 67px;
+    margin-left: 46px;
+    width: 260px;
+}
 .op4{
     position: absolute;
-    margin-top: 34px;
+    margin-top: 45px;
     display: block;
-    margin-left: 342px;
+    margin-left: 452px;
+    height: 20px;
+    width: 20px;
+    background-color: lightgray;
+    border-radius: 10%;
+    
+}
+.opp4{
+    position: absolute;
+    margin-top: 67px;
+    margin-left: 456px;
+    width: 260px;
+}
+.btn{
+    cursor: pointer;
+    border: 1px solid #EDEBF2;
+    width: 70px;
+    height: 32px;
+    font-size: 18px;
+    position: absolute;
+    margin-top: -44px;
+    margin-left: 540px;
+    background-color: #54B069;
+    color: white;
+    font-family: 'Hedvig Letters Sans', sans-serif;
+}
+.btn1{
+    border: 1px solid white;
+    width: 70px;
+    font-size: 19px;
+    height: 32px;
+    cursor: pointer;
+    margin-left: 500px;
+    margin-top: -45px;
+    position: absolute;
+    color: white;
+    background-color: orange;
 }

@@ -32,4 +32,8 @@ export class ViewadmindrivenformsComponent {
       }
     );
   }
+  
+  previous(){
+    this.route.navigate(['/listsurveyhome','templateformlist']);
+  }
 }

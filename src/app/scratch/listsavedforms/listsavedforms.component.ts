@@ -20,7 +20,7 @@ export class ListsavedformsComponent {
     this.route.navigate(['/listsurveyhome','listsavedhomepage']);
   }
   createform(){
-    this.route.navigate(['/add-forms']);
+    this.route.navigate(['/addfromshome']);
   }
   myforms(){
     this.route.navigate(['/listsurveyhome','myformlist'])

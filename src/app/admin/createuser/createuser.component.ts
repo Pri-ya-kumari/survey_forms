@@ -67,5 +67,9 @@ export class CreateuserComponent {
   loginf(){
     this.route.navigate(['/loginpage'])
   }
+  
+previouspage(){
+  this.route.navigate(['/admindashboard','users']);
+}
 
 }

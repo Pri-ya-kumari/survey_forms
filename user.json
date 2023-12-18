@@ -4,9 +4,7 @@
       "name": "priya",
       "email": "p@gmail.com",
       "password": "1212",
-      "id": 1,
-      "isactive": "true",
-      "role": ""
+      "id": 1
     },
     {
       "name": "mina",

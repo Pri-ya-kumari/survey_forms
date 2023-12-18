@@ -22,8 +22,8 @@
     padding-top: 3px;
     padding-left: -1px;
     height: 35px;
-    margin-top: 20px;
-    margin-left: 920px;
+    margin-top: 19px;
+    margin-left: 20px;
     border-radius: 120px;
     position: absolute;
     background-color: white;
@@ -85,7 +85,7 @@
     font-size: 22px;
 }
 .block{
-    border: 1px solid black;
+    border: 1px solid #EDEBF2;
     position: absolute;
     width: 940px;
     height: 340px;
@@ -124,7 +124,7 @@
     opacity: 0.5;
 }
 .img-2{
-    width: 20px;
+    width: 25px;
     color: white;
 }
 .btn3{
@@ -136,9 +136,20 @@
     position: absolute;
     width: 40px;
     font-size: 20px;
-    background-color: green;
+    background-color: #54B069;
     color: white;
 }
 .btn3:hover{
     opacity: 0.5;
+}
+.btn4{
+    cursor: pointer;
+    border: 1px solid white;
+    width: 70px;
+    color: white;
+    background-color: orange;
+    margin-top: 16px;
+    position: absolute;
+    height: 30px;
+    margin-left: 900px;
 }

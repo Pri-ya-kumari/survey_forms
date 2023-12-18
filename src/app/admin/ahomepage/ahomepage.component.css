@@ -13,7 +13,7 @@
     height: 35%;
     margin-left: 56px;
     border-radius: 29px;
-    margin-top: 12px;
+    margin-top: 55px;
     background-color: white;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -34,26 +34,14 @@
 .t1:hover{
     color: green;
 }
-.b2{
-    position: absolute;
-    border: 1px solid #EDEBF2;
-    width: 20%;
-    height: 35%;
-    margin-left: 450px;
-    border-radius: 29px;
-    margin-top: 14px;
-    background-color: white;
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-}
 .b3{
     position: absolute;
     border: 1px solid #EDEBF2;
     width: 20%;
     height: 35%;
-    margin-left: 60px;
+    margin-left: 330px;
     border-radius: 29px;
-    margin-top: 240px;
+    margin-top: 55px;
     background-color: white;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -63,9 +51,9 @@
     border: 1px solid #EDEBF2;
     width: 20%;
     height: 35%;
-    margin-left: 460px;
+    margin-left: 590px;
     border-radius: 29px;
-    margin-top: 240px;
+    margin-top: 55px;
     background-color: white;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;

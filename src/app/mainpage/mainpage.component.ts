@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { animate, query, stagger, state, style, transition, trigger } from '@angular/animations';
 import { MatDialog } from '@angular/material/dialog';
@@ -21,14 +21,16 @@ import { UseraccesdelogComponent } from '../useraccesdelog/useraccesdelog.compon
       ])
     ]),
 ]})
-export class MainpageComponent {
+export class MainpageComponent implements OnInit {
   constructor(
     private router: Router,public dialog :MatDialog) {
-      localStorage.setItem("isloggedin","false");
-      localStorage.setItem("IslogedIn", "false");
+      //localStorage.setItem("isloggedin","false");
+      //localStorage.setItem("IslogedIn", "false");
       localStorage.setItem("isadminin", "false");
       localStorage.setItem("issuperadminin", "false");
     }
+  ngOnInit(): void {
+  }
   loginpage(){
     this.router.navigate(['/generalusers']);
     this.dialog.open(UseraccesdelogComponent,{

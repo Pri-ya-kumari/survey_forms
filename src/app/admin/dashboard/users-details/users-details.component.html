@@ -2,7 +2,8 @@
     <div>
         <span class="wd-1">User Details</span>
     </div>
-    <button class="circle1"><mat-icon>arrow_back</mat-icon></button>
+    <button class="circle1" (click)="previouspage()"><mat-icon>arrow_back</mat-icon></button>
+    <button class="btn4" (click)="adduser()">Add User</button>
     <div class="boxes">
         <mat-list class="list">
             <span class="t2">Id</span>
@@ -18,7 +19,7 @@
                 <span class="t3">{{c.name}}</span>
                 <span class="t4">{{c.email}}</span>
                 <span class="t5">{{c.password}}</span>
-                <button class="btn3" routerLink="/update/{{c.id}}"><img src="assets/images/pencil-removebg-preview.png" class="img-2">
+                <button class="btn3" routerLink="/admindashboard/update/{{c.id}}"><img src="assets/images/Screenshot_2023-12-15_152358-removebg-preview.png" class="img-2">
                 </button>
                 <button class="btn2"(click)="deleted(c.id)"><mat-icon>delete</mat-icon></button>
             </mat-list>

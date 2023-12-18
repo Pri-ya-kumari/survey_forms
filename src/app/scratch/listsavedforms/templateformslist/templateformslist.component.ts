@@ -31,4 +31,8 @@ export class TemplateformslistComponent {
       this.templatef = ress;
     });
   }
+  
+  previous(){
+    this.route.navigate(['/listsurveyhome','templateformlist']);
+  }
 }

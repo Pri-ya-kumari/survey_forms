@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class AdminLoginService {
 
   constructor(private http : HttpClient) { }
-  public urls='http://localhost:3000/admin';
+  public urls='http://localhost:3000/admins';
 
   checkadmin(){
     return this.http.get(this.urls);

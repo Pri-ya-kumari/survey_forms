@@ -37,8 +37,6 @@ import { NonauthorizeduserComponent } from './superadmin/nonauthorizeduser/nonau
 import { authGuard } from './guard/auth.guard';
 import { WildcardshowComponent } from './wildcardshow/wildcardshow.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
-import { SigninpageComponent } from './superadmin/signinpage/signinpage.component';
-import { SignuppageComponent } from './signuppage/signuppage.component';
 import { CreateuserComponent } from './admin/createuser/createuser.component';
 import { AuthorizeduserlistComponent } from './superadmin/authorizeduserlist/authorizeduserlist.component';
 import { adminguardGuard } from './guard/adminguard.guard';
@@ -71,14 +69,6 @@ const routes: Routes = [
     path: 'loginpage',
     component: LoginpageComponent,
     ...canActivate(redirectToHome)
-  },
-  {
-    path: 'adminlogin',
-    component: SignuppageComponent,
-  },
-  {
-    path: 'superadminLogin',
-    component: SigninpageComponent,
   },
   {
     path: 'homepage',
@@ -197,32 +187,14 @@ const routes: Routes = [
     canActivate: [authGuard]
   },
   {
-    path: 'update/:id',
-    component: UpdateComponentComponent,
-    canActivate: [adminguardGuard],
-  },
-  {
     path: 'updateadmin/:id',
     component: EditformdialogComponent,
-    canActivate: [adminguardGuard],
-  },
-  {
-    path: 'analysis',
-    component: AnalysisDataComponent,
     canActivate: [adminguardGuard],
   },
   {
     path: 'generalusers',
     component: GuserComponent,
     //canActivate:[authGuard]
-  },
-  {
-    path: 'guser',
-    component: GeneralUsersComponent,
-    canActivate: [adminguardGuard],
-    //data:{
-    //expectedRole:['Admin']
-    //}
   },
   {
     path: 'angularrecord',
@@ -347,6 +319,21 @@ const routes: Routes = [
         component: UsersDetailsComponent,
         canActivate: [adminguardGuard],
       },
+      {
+        path: 'update/:id',
+        component: UpdateComponentComponent,
+        canActivate: [adminguardGuard],
+      },
+      {
+        path: 'guser',
+        component: GeneralUsersComponent,
+        canActivate: [adminguardGuard],
+      },
+      {
+    path: 'analysis',
+    component: AnalysisDataComponent,
+    canActivate: [adminguardGuard],
+  },
     ]
   },
   {

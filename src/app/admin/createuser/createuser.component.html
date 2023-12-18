@@ -2,8 +2,9 @@
 
 <div class="bg">
     <div>
-        <span class="wd-1">Create User</span>
+        <span class="wd-1">Add User</span>
     </div>
+    <button class="circle1" (click)="previouspage()"><mat-icon>arrow_back</mat-icon></button>
     <div class="container">
         <img src="assets/images/loginimg.png" class="image">
         <form [formGroup]="froms" novalidate (ngSubmit)="homepage(froms.value)">

@@ -13,11 +13,15 @@ export class SignuserService {
   currentUsser$ = this.auth.authState; // Use this.auth.authState
 
   public signup='http://localhost:3000/signup';
+  
   Createuser(res:any){
     return this.http.post(this.signup,res);
   }
   loginuser(id:any){
     return this.http.get(this.signup,id);
+  }
+  login(){
+    return this.http.get(this.signup);
   }
   getdata(id:any){
     return this.http.get(`${this.signup}/${id}`);

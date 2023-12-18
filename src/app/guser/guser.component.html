@@ -4,9 +4,9 @@
         <span class="wd-1" routerLink="'mainpage'">SurveyForms</span>
         <span class="example-spacer"></span>
         <span class="example-spacer"></span>
-        <button class="btn3">Login</button>
+        <button class="btn3" (click)="userlogin()">Login</button>
         <img src="assets/images/loginlogo.png" class="img-11">
-        <input type="checkbox" id="dropdown" />
+        <!--<input type="checkbox" id="dropdown" />
             <label for="dropdown" class="dropdown-btn">
               <span class="arrow"></span>
             </label>
@@ -16,7 +16,7 @@
               <li><span class="profile" (click)="adminlogin()">Admin</span></li>
               <div class="gaps"></div>
               <li><span class="profile" (click)="superadmin()">Super admin</span></li>
-            </ul>
+            </ul>-->
     </div>
 </div>
 <div class="box2">
@@ -27,14 +27,14 @@
         <span class="t1">Get start with surveys</span>
     </div>
     <div>
-        <div class="b1" routerLink="/demof1" @fade>
+        <div class="b1" routerLink="/demof1">
             <div class="logo">
                 <img src="assets/images/contact.png" class="img-2">
                 <span class="wd-33">Contact Form</span>
                 <span class="wd-4">click to see the form </span>
             </div>
         </div>
-        <div class="b2" routerLink="/event" @fade>
+        <div class="b2" routerLink="/event" >
             <div class="logo">
                 <img src="assets/images/contact.png" class="img-2">
                 <span class="wd-33">Event Form</span>

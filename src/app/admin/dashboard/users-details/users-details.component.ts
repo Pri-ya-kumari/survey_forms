@@ -47,4 +47,10 @@ export class UsersDetailsComponent implements OnInit{
     //alert(data1);
     //this.route.navigate(['/update/'+'id'])
   }
+  previouspage(){
+    this.route.navigate(['/admindashboard','adminhome']);
+  }
+  adduser(){
+    this.route.navigate(['/admindashboard','cusers']);
+  }
 }

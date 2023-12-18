@@ -23,7 +23,9 @@ export class HomepageComponent implements OnInit{
       history.pushState(null,location.href)
     })
   }
-  logout(){
+  logout(){ 
+    localStorage.setItem("isloggedin","false");
+    localStorage.setItem("IslogedIn", "false");
     this.route.navigate(['/mainpage'])
   }
 }

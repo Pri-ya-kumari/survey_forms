@@ -63,6 +63,6 @@ export class DashboardComponent {
     this.route.navigate(['/admindashboard', 'alltest']);
   }
   cuser(){
-    this.route.navigate(['/admindashboard', 'cusers']);
+    this.route.navigate(['/admindashboard', 'users']);
   }
 }

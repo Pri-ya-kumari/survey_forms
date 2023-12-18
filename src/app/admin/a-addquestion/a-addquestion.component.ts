@@ -13,6 +13,7 @@ export class AAddquestionComponent implements OnInit {
   title: any;
   questions:any = [];
   id: any;
+
   constructor(private active:ActivatedRoute,private qservice:QuestionsService,private route :Router){
     
  }
@@ -31,5 +32,8 @@ export class AAddquestionComponent implements OnInit {
         }
       }
     );
+  }
+  previous(){
+    this.route.navigate(['/admindashboard', 'alltest']);
   }
 }

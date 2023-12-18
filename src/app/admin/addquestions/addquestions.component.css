@@ -13,11 +13,11 @@
 }
 .bg{
     border: 1px solid #EDEBF2;
-    width: 77.5%;
+    width: 70%;
     height: 80%;
     background-color: #EDEBF2;
-    position: relative;
-    margin-top: -12px;
+    position: absolute;
+    margin-top: -522px;
     margin-left: 302px;
 }
 .l1{

@@ -82,6 +82,20 @@
     border-radius: 10%;
     
 }
+
+.circle1{
+    border: 1px solid #EDEBF2;
+    width: 35px;
+    padding-top: 3px;
+    padding-left: -1px;
+    height: 35px;
+    margin-top: -540px;
+    margin-left:260px;
+    border-radius: 120px;
+    position: absolute;
+    background-color: white;
+    cursor: pointer;
+}
 .opp3{
     position: absolute;
     margin-top: 67px;

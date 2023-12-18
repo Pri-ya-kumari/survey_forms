@@ -10,7 +10,7 @@ import { ChatboxComponent } from '../chatbotoption/chatbox/chatbox.component';
   selector: 'app-guser',
   templateUrl: './guser.component.html',
   styleUrls: ['./guser.component.css'],
-  animations:[
+  /*animations:[
     trigger('fade',[
       transition('void => *',[
         style({ opacity:0 }),
@@ -23,7 +23,8 @@ import { ChatboxComponent } from '../chatbotoption/chatbox/chatbox.component';
         animate(3000)
       ])
     ]),
-]})
+]*/
+})
 
 export class GuserComponent {
 

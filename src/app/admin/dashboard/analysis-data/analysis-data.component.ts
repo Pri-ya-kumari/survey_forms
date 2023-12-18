@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import Chart from 'chart.js/auto';
 import { ChartserviceService } from 'src/app/adminservice/chartservice.service';
 
@@ -14,7 +15,7 @@ export class AnalysisDataComponent {
   option: any;
   options: any[] = [];
 
-  constructor(private dataService: ChartserviceService) { }
+  constructor(private dataService: ChartserviceService,private route:Router) { }
 
   ngOnInit(): void {
     this.dataService.getData().subscribe((data1: any) => {
@@ -106,5 +107,8 @@ export class AnalysisDataComponent {
         circumference: 180,
       }
     });
+  }
+  previouspage(){
+    this.route.navigate(['/admindashboard', 'adminhome']);
   }
 }

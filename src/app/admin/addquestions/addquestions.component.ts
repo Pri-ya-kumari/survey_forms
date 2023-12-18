@@ -24,7 +24,8 @@ export class AddquestionsComponent implements OnInit{
   public Editor = ClassicEditor;
 
   constructor(
-    private route:ActivatedRoute,private addq:QuestionsService,private str:LocationStrategy
+    private route:ActivatedRoute,private addq:QuestionsService,private str:LocationStrategy,
+    private rout:Router
   ){}
 
   qId:any;
