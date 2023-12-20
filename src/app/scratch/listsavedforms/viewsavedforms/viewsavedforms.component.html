@@ -1,4 +1,22 @@
 <div class="bg">
-    <h1 class="title1">{{title}} </h1>  
+    <h1 class="title1">{{ title }} </h1>  
+</div>
+<div class="block1">
+    <div class="b1" *ngFor="let q of question; let i=index">
+        <div>
+            <p class="no">&nbsp;Q{{i+1}}.&nbsp;&nbsp;
+                <span class="q1">{{q.ques}}</span>
+            </p>
+            <div *ngIf="q.questype === 'singleText'">
+                <input type="text" [(ngModel)]="q.answer" placeholder="Type your answer..." class="single">
+            </div>
+            <div *ngIf="q.questype === 'checkBox'">
+                <div *ngFor="let option of q.options; let j=index" class="check">
+                    <input type="checkbox" [(ngModel)]="option.isSelected" [value]="option.optionText" class="che">{{ option.optionques }}
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <router-outlet></router-outlet>
+ 

@@ -19,4 +19,7 @@ export class AddformshomepageComponent {
   saved(){
     this.router.navigate(['/addfromshome','questionaddingforms']);
   }
+  signout(){
+    this.router.navigate(['/mainpage']);
+  }
 }

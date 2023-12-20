@@ -82,7 +82,7 @@ import { ViewadmindrivenformsComponent } from './scratch/listsavedforms/viewadmi
 import { AddingtitleComponent } from './scratch/addingtitle/addingtitle.component';
 import { AddformshomepageComponent } from './scratch/addformshomepage/addformshomepage.component';
 import { CreateaddquestionComponent } from './scratch/createaddquestion/createaddquestion.component';
-import { AddquestionsnowComponent } from './scratch/addquestionsnow/addquestionsnow.component';
+import { AddquestionformnowComponent } from './scratch/addquestionformnow/addquestionformnow.component';
 
 @NgModule({
   declarations: [
@@ -141,7 +141,7 @@ import { AddquestionsnowComponent } from './scratch/addquestionsnow/addquestions
     AddingtitleComponent,
     AddformshomepageComponent,
     CreateaddquestionComponent,
-    AddquestionsnowComponent,
+    AddquestionformnowComponent,
     
   ],
   imports: [

@@ -56,7 +56,7 @@ import { ViewadmindrivenformsComponent } from './scratch/listsavedforms/viewadmi
 import { AddingtitleComponent } from './scratch/addingtitle/addingtitle.component';
 import { AddformshomepageComponent } from './scratch/addformshomepage/addformshomepage.component';
 import { CreateaddquestionComponent } from './scratch/createaddquestion/createaddquestion.component';
-import { AddquestionsnowComponent } from './scratch/addquestionsnow/addquestionsnow.component';
+import { AddquestionformnowComponent } from './scratch/addquestionformnow/addquestionformnow.component';
 const redirectToLoginIn = () => redirectUnauthorizedTo(['/login'])
 const redirectToHome = () => redirectLoggedInTo(['/mainpage'])
 //const redirectTosuperadmin = () => redirectUnauthorizedTo(['/superadmin'])
@@ -97,7 +97,7 @@ const routes: Routes = [
       },
       {
         path: 'addingquestionnow/:fid/:title',
-        component: AddquestionsnowComponent,
+        component:AddquestionformnowComponent,
         canActivate: [authGuard]
       },
     ]

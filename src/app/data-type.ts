@@ -46,3 +46,16 @@ export const charactera = {
     text3:'write',
     time:'12:00 AM',
 }
+
+// form.model.ts
+export interface Form {
+    title: string;
+    questions: FormQuestion[];
+  }
+  
+  export interface FormQuestion {
+    question: string;
+    type: 'text' | 'multipleChoice';
+    options?: string[];
+  }
+  

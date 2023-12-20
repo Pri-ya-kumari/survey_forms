@@ -1,9 +1,42 @@
 <div class="bg">
-    <h1 class="title1">{{title}} </h1>  
+  <h1 class="title1">{{title}} </h1>  
 </div>
 <div class="block1">
-    <div class="box">
-        <input type="text" class="input1">
-    </div>
+  <div class="box">
+      <form [formGroup]="form" class="ch" (ngSubmit)="submit()">
+          <input type="text" class="input1" formControlName="question">
+        <select formControlName="questionType" (change)="onChangeQuestionType()" class="selectbox">
+          <option value="" disabled>--Select an option--</option>
+          <option value="multipleChoice">Multiple Choice</option>
+          <option value="checkBox">Check Box</option>
+          <option value="singleText">Single Text</option>
+        </select>
+
+        <div *ngIf="selectedOption === 'multipleChoice'">
+          <div *ngFor="let option of options; let i = index" class="option-container">
+              <input type="text" name="option.get('option')" >
+              <input type="radio" name="option.get('isSelected')" >
+              <mat-icon class="mi" (click)="removeOption(i)">remove</mat-icon>
+          </div>
+          <mat-icon class="btn7" (click)="addOption()">add</mat-icon>
+      </div>
+        
+      <div *ngIf="selectedOption === 'checkBox'">
+          <div *ngFor="let checkbox of checkc; let i = index" class="option-container">
+            <input type="text" name="options.get('option')" class="inp-op">
+            <input type="checkbox" name="options.get('isSelected')" class="multi">
+            <mat-icon class="mi" (click)="removeCheckbox(i)">remove</mat-icon>
+          </div>
+          <mat-icon class="btn7" (click)="addCheckbox()">add</mat-icon>
+        </div>
+        
+        <div *ngIf="selectedOption === 'singleText'">
+          <input type="text" formControlName="options" class="sing">
+        </div>
+    
+        <button type="submit" class="btn">Save</button>
+      </form>
+  </div>
+
 </div>
 <router-outlet></router-outlet>

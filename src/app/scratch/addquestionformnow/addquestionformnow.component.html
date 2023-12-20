@@ -1,0 +1,41 @@
+<div class="bg">
+    <h1 class="title1">{{ title }}</h1>
+</div>
+<div class="block1">
+    <div class="box">
+        <form (ngSubmit)="submit()">
+            <input type="text" class="input1" name="question" [(ngModel)]="question.ques" placeholder="Enter Your Question here">
+            <select name="questype" class="selectbox" [(ngModel)]="question.questype">
+                <option value="" disabled>--Select an option--</option>
+                <option value="multipleChoice">Multiple Choice</option>
+                <option value="checkBox">Check Box</option>
+                <option value="singleText">Single Text</option>
+                <option value="comment">Comment</option>
+            </select>
+
+            <div *ngIf="question.questype === 'multipleChoice'">
+                <div *ngFor="let hereoption of question.options; let i = index" class="option-container">
+                    <input type="text" name="optionques" [(ngModel)]="hereoption.optionques" class="input2">
+                    <input type="radio" name="option" class="multi">
+                    <mat-icon class="mi" (click)="removeOption(i)">remove</mat-icon>
+                </div>
+                <span class="add" (click)="addOption()">Add</span>
+            </div>
+            <div *ngIf="question.questype === 'checkBox'">
+                <div *ngFor="let checkoption of question.options; let j = index" class="option-container">
+                    <input type="text" name="optionques" [(ngModel)]="checkoption.optionques" class="input3">
+                    <input type="checkbox" name="option" class="check">
+                    <mat-icon class="mi" (click)="checkOption(j)">remove</mat-icon>
+                </div>
+                <span class="add" (click)="checkaddOption()">Add</span>
+            </div>
+            <div *ngIf="question.questype === 'singleText'">
+                <input type="text" name="optionques" class="sing">
+            </div>
+            <div *ngIf="question.questype === 'comment'">
+                <input type="comment" name="optionques" class="com">
+            </div>
+            <button class="btn" class="btn">Save</button>
+        </form>
+    </div>
+</div>
