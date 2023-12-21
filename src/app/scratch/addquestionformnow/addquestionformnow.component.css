@@ -172,3 +172,16 @@
     margin-top: 25px;
     margin-left: 25px;
 }
+.circle1{
+    border: 1px solid #EDEBF2;
+    width: 35px;
+    padding-top: 3px;
+    padding-left: -1px;
+    height: 35px;
+    margin-top: -49px;
+    margin-left: 600px;
+    border-radius: 120px;
+    position: absolute;
+    background-color: white;
+    cursor: pointer;
+}

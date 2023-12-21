@@ -1,16 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AddDataService } from 'src/app/service/add-data.service';
 import { SendquestionService } from 'src/app/service/sendquestion.service';
 
 @Component({
-  selector: 'app-viewsavedforms',
-  templateUrl: './viewsavedforms.component.html',
-  styleUrls: ['./viewsavedforms.component.css']
+  selector: 'app-responses',
+  templateUrl: './responses.component.html',
+  styleUrls: ['./responses.component.css']
 })
-export class ViewsavedformsComponent implements OnInit{
+export class ResponsesComponent {
 
-  
   qId: any;
   title: any;
   question:any = [];
@@ -29,10 +28,12 @@ export class ViewsavedformsComponent implements OnInit{
           //here converting the object value in array
           this.question = Object.values(data); 
           console.log(this.question);
-        } else {
+          } 
+          else {
           console.log('empty form.');
         }
       }
     );
-  }  
+  }
 }
+

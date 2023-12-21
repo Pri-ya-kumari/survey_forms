@@ -6,7 +6,7 @@
     margin-left: 260px;
 }
 .block1{
-    border: 1px solid #EDEBF2;
+    border: 1px solid #F8F7FA;
     margin-top: -490px;
     margin-left: 260px;
     width: 1060px;
@@ -21,7 +21,7 @@
     font-family: 'Overpass', sans-serif;
 }
 .insideblock{
-    border: 1px solid #EDEBF2;
+    border: 1px solid #F8F7FA;
     width: 1038px;
     min-height: 260px;
     overflow:hidden;

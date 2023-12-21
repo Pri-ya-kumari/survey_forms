@@ -57,6 +57,7 @@ import { AddingtitleComponent } from './scratch/addingtitle/addingtitle.componen
 import { AddformshomepageComponent } from './scratch/addformshomepage/addformshomepage.component';
 import { CreateaddquestionComponent } from './scratch/createaddquestion/createaddquestion.component';
 import { AddquestionformnowComponent } from './scratch/addquestionformnow/addquestionformnow.component';
+import { ResponsesComponent } from './scratch/responses/responses.component';
 const redirectToLoginIn = () => redirectUnauthorizedTo(['/login'])
 const redirectToHome = () => redirectLoggedInTo(['/mainpage'])
 //const redirectTosuperadmin = () => redirectUnauthorizedTo(['/superadmin'])
@@ -138,6 +139,11 @@ const routes: Routes = [
         canActivate: [authGuard]
       },
     ]
+  },
+  {
+    path:'response/:fid/:title',
+    component:ResponsesComponent,
+    canActivate:[authGuard]
   },
   {
     path: 'temphome',

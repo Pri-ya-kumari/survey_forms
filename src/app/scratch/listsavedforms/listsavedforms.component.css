@@ -50,7 +50,7 @@
     height: 520px;
 }
 .block1{
-    border: 1px solid #EDEBF2;
+    border: 1px solid #F8F7FA;
     width: 1096px;
     height: 525px;
     overflow-x:hidden ;
@@ -106,7 +106,7 @@
 
 }
 .box2{
-    border: 1px solid white;
+    border: 1px solid #F8F7FA;
     width: 240px;
     position: absolute;
     height: 30px;
@@ -122,7 +122,7 @@
 
 }
 .box3{
-    border: 1px solid white;
+    border: 1px solid #F8F7FA;
     width: 240px;
     position: absolute;
     height: 30px;

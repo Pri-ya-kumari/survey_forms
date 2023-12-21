@@ -83,6 +83,7 @@ import { AddingtitleComponent } from './scratch/addingtitle/addingtitle.componen
 import { AddformshomepageComponent } from './scratch/addformshomepage/addformshomepage.component';
 import { CreateaddquestionComponent } from './scratch/createaddquestion/createaddquestion.component';
 import { AddquestionformnowComponent } from './scratch/addquestionformnow/addquestionformnow.component';
+import { ResponsesComponent } from './scratch/responses/responses.component';
 
 @NgModule({
   declarations: [
@@ -142,6 +143,7 @@ import { AddquestionformnowComponent } from './scratch/addquestionformnow/addque
     AddformshomepageComponent,
     CreateaddquestionComponent,
     AddquestionformnowComponent,
+    ResponsesComponent,
     
   ],
   imports: [

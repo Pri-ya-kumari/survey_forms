@@ -1,5 +1,6 @@
 <div class="bg">
     <h1 class="title1">{{ title }}</h1>
+    <button class="circle1" [routerLink]="'/listsurveyhome/viewsavedforms/'+qId+'/'+title"><mat-icon>arrow_forward</mat-icon></button>
 </div>
 <div class="block1">
     <div class="box">
@@ -9,8 +10,8 @@
                 <option value="" disabled>--Select an option--</option>
                 <option value="multipleChoice">Multiple Choice</option>
                 <option value="checkBox">Check Box</option>
-                <option value="singleText">Single Text</option>
-                <option value="comment">Comment</option>
+                <option value="singleText">Short answer</option>
+                <option value="comment">Paragraph</option>
             </select>
 
             <div *ngIf="question.questype === 'multipleChoice'">
@@ -33,9 +34,10 @@
                 <input type="text" name="optionques" class="sing">
             </div>
             <div *ngIf="question.questype === 'comment'">
-                <input type="comment" name="optionques" class="com">
+                <textarea name="optionques" class="com"></textarea>
             </div>
-            <button class="btn" class="btn">Save</button>
+            <button class="btn" class="btn" >Save</button>
+            <!--/admindashboard/addquestion/'+qId+'/'+title"-->
         </form>
     </div>
 </div>

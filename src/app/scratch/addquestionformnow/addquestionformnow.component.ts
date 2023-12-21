@@ -17,7 +17,7 @@ export class AddquestionformnowComponent implements OnInit{
   questions: any = {};
 
   constructor(private active: ActivatedRoute,private qservice: AddDataService,private fb: FormBuilder,
-    private sendq:SendquestionService
+    private sendq:SendquestionService,private router:Router
   ) {}
   ngOnInit(): void {
     this.qId = this.active.snapshot.params['fid'];
@@ -42,7 +42,7 @@ export class AddquestionformnowComponent implements OnInit{
     },
     ques: '',
     questype: '',
-    options: [], // Updated property name from 'option' to 'options'
+    options: [], 
   };
   addOption(): void {
     this.question.options.push({ optionques: ''});
@@ -64,7 +64,7 @@ export class AddquestionformnowComponent implements OnInit{
     this.sendq.sendquestion(this.qId,this.question).subscribe((res)=>{
       Swal.fire('success','all deta send successfully','success');
       console.log(res);
-      this.question.reset();
+      this.questions.reset();
     })
   }
 }
