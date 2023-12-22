@@ -1,11 +1,13 @@
-
 <div class="bg">
-    <div class="container">
+    <div>
+        <span class="wd-1">Profile</span>
+    </div>
+    <div>
         <div class="circle">
-            <img src="assets/images/admin.png" class="img-2">
+            <img src="assets/images/adminpro.png" class="img-2">
         </div>
         <div class="box" *ngFor="let c of test" >
-            <span class="header">Super Admin Details </span>
+            <span class="header">Admin Details </span>
             <span class="lb1">Your Name: </span>
             <span class="lb2">{{c.name}}</span>
             <span class="line"></span>
@@ -18,7 +20,8 @@
             <span class="lb7">Your Role: </span>
             <span class="lb8">Super Admin</span>
             <span class="line1"></span>
-            <span class="change" routerLink="/updatesuperadmin/{{c.id}}">Change Password? </span>
+            <span class="change" routerLink="/superadmin/superadminprofile/updatesuperadmin/{{c.id}}">Change Password? </span>
         </div>
     </div>
 </div>
+<router-outlet></router-outlet>

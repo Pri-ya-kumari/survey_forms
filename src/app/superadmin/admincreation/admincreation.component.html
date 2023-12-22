@@ -1,7 +1,13 @@
-<div class="box">
+<div class="bg">
     <div>
-        <form [formGroup]="froms" novalidate (ngSubmit)="send(froms.value)">
-            <span class="title">Admin Register Form</span>
+        <span class="wd-1">Create Admin</span>
+    </div>
+    <div class="container">
+        <img src="assets/images/Screenshot_2023-12-15_164200-removebg-preview (1).png" class="image">
+        <img src="assets/images/pageicon.png" class="image1">
+    </div>
+    <form [formGroup]="froms" novalidate (ngSubmit)="send(froms.value)">
+        <div class="b2">
             <span class="t1">Enter Name :</span>
             <input class="inp1" type="text" formControlName="name">
             <span class="t2">Enter Email Id :</span>
@@ -10,14 +16,8 @@
             <input class="inp3" type="text" formControlName="number" maxlength="10">
             <Span class="t5">Enter password :</Span>
             <input class="inp4" type="text" formControlName="password" maxlength="10">
-            <span class="t4">List of Permission is Provided</span>
-            <div class="list">
-                <li>Can See the List Of General User.</li>
-                <li>Can Create the General User Authorized User.</li>
-                <li>Can Edit , delete the General User.</li>
-            </div>
-            <button class="btn1">Create</button>
-        </form>
-    </div>
+        </div>
+        <button class="btn1">Create</button>
+    </form>
 </div>
 <router-outlet></router-outlet>

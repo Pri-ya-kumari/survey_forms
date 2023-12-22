@@ -5,14 +5,15 @@ import { SendquestionService } from 'src/app/service/sendquestion.service';
 
 @Component({
   selector: 'app-responses',
-  templateUrl: './responses.component.html',
-  styleUrls: ['./responses.component.css']
+  templateUrl: './previewfile.component.html',
+  styleUrls: ['./previewfile.component.css']
 })
-export class ResponsesComponent {
+export class previewfileComponent {
 
   qId: any;
   title: any;
   question:any = [];
+  answer:any=[];
   selected:any;
   selectedOption: any;
 
@@ -34,6 +35,12 @@ export class ResponsesComponent {
         }
       }
     );
+  }
+  Submit(){
+    console.log(this.question);
+    this.sendq.sendquestion(this.qId,this.question).subscribe((res)=>{
+      console.log(res);
+    })
   }
 }
 

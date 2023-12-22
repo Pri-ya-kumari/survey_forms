@@ -1,8 +1,10 @@
-<div class="b">
 <div class="bg">
     <h1 class="title1">{{ title }} </h1>
+    <span class="res" [routerLink]="'/listsurveyhome/viewsavedforms/response/'+qId+'/'+title">Response</span>
+    <button [routerLink]="'/response/'+qId+'/'+title" class="b"><mat-icon class="show" >visibility</mat-icon></button>
 </div>
 <div class="block1">
+    <button class="btn1" [routerLink]="'/addfromshome/addingquestionnow/'+qId+'/'+title"><mat-icon class="a">add_circle_outline</mat-icon></button>
     <div class="b1" *ngFor="let q of question; let i=index">
         <div>
             <p class="no">&nbsp;Q{{i+1}}.&nbsp;&nbsp;

@@ -522,6 +522,13 @@
       "email": "sauravadmin@gmail.com",
       "password": "sauravadmin",
       "id": 1
+    },
+    {
+      "name": "rohan",
+      "email": "rohan@superadmin.com",
+      "password": "rohan",
+      "number": "2321323343",
+      "id": 2
     }
   ],
   "superadmins": [

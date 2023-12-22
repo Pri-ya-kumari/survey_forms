@@ -1,0 +1,41 @@
+.block1 {
+    border: 1px solid white;
+    position: absolute;
+    width: 620px;
+    margin-top: -480px;
+    margin-left: 440px;
+    height: 120px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.block2{
+    border: 1px solid #fff;
+    width: 1090px;
+    height: 360px;
+    position: absolute;
+    margin-top: -360px;
+    margin-left: 240px;
+    overflow-x: hidden;
+}
+.b1{
+    position: relative;
+    background-color:white;
+    position: relative;
+    border: 1px solid #EDEBF2;
+    width: 58%;
+    border-radius: 12px;
+    height: 66%;
+    margin-left: 200px;
+    display: block;
+    margin-top: 12px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.q1{
+    position: absolute;
+    width: 860px;
+    margin-top: 12px;
+    margin-left: 12px;
+    font-size: 17px;
+    overflow: hidden;
+}

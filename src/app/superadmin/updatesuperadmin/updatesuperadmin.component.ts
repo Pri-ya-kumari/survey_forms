@@ -36,5 +36,8 @@ export class UpdatesuperadminComponent {
       this.route.navigate(['/superadmin/superadminprofile']);
     })
   }
-
+  
+  profilback(){
+    this.route.navigate(['/superadmin', 'superadminprofile']);
+  }
 }

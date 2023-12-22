@@ -57,7 +57,10 @@ import { AddingtitleComponent } from './scratch/addingtitle/addingtitle.componen
 import { AddformshomepageComponent } from './scratch/addformshomepage/addformshomepage.component';
 import { CreateaddquestionComponent } from './scratch/createaddquestion/createaddquestion.component';
 import { AddquestionformnowComponent } from './scratch/addquestionformnow/addquestionformnow.component';
-import { ResponsesComponent } from './scratch/responses/responses.component';
+import { previewfileComponent } from './scratch/previewfile/previewfile.component';
+import { QuestionshowcompComponent } from './scratch/questionshowcomp/questionshowcomp.component';
+import { ResponseComponent } from './scratch/response/response.component';
+import { AdminshowComponent } from './superadmin/adminshow/adminshow.component';
 const redirectToLoginIn = () => redirectUnauthorizedTo(['/login'])
 const redirectToHome = () => redirectLoggedInTo(['/mainpage'])
 //const redirectTosuperadmin = () => redirectUnauthorizedTo(['/superadmin'])
@@ -98,7 +101,7 @@ const routes: Routes = [
       },
       {
         path: 'addingquestionnow/:fid/:title',
-        component:AddquestionformnowComponent,
+        component: AddquestionformnowComponent,
         canActivate: [authGuard]
       },
     ]
@@ -129,9 +132,21 @@ const routes: Routes = [
         canActivate: [authGuard]
       },
       {
-        path: 'viewsavedforms/:fid/:title',
+        path: 'viewsavedforms',
         component: ViewsavedformsComponent,
-        canActivate: [authGuard]
+        canActivate: [authGuard],
+        children: [
+          {
+            path: 'questionshowcomp/:fid/:title',
+            component: QuestionshowcompComponent,
+            canActivate: [authGuard]
+          },
+          {
+            path: 'response/:fid/:title',
+            component: ResponseComponent,
+            canActivate: [authGuard]
+          },
+        ]
       },
       {
         path: 'viewadminsavedforms/:fid/:title',
@@ -141,9 +156,9 @@ const routes: Routes = [
     ]
   },
   {
-    path:'response/:fid/:title',
-    component:ResponsesComponent,
-    canActivate:[authGuard]
+    path: 'response/:fid/:title',
+    component: previewfileComponent,
+    canActivate: [authGuard]
   },
   {
     path: 'temphome',
@@ -223,11 +238,6 @@ const routes: Routes = [
     canActivate: [superguardGuard],
   },
   {
-    path: 'updatesuperadmin/:cid',
-    component: UpdatesuperadminComponent,
-    canActivate: [superguardGuard],
-  },
-  {
     path: 'superadmin',
     component: SadashboardComponent,
     children: [
@@ -240,6 +250,13 @@ const routes: Routes = [
         path: 'superadminprofile',
         component: SuperadminprofileComponent,
         canActivate: [superguardGuard],
+        children:[
+          {
+            path: 'updatesuperadmin/:cid',
+            component: UpdatesuperadminComponent,
+            canActivate: [superguardGuard],
+          },
+        ]
       },
       {
         path: 'admincreation',
@@ -257,14 +274,26 @@ const routes: Routes = [
         canActivate: [superguardGuard],
       },
       {
-        path: 'nonauthorized',
-        component: NonauthorizeduserComponent,
-        canActivate: [superguardGuard],
-      },
-      {
         path: 'authorizeduserlist',
         component: AuthorizeduserlistComponent,
         canActivate: [superguardGuard],
+        children:[
+          {
+            path:'',
+            redirectTo:'adminuserlist',
+            pathMatch:'full'
+          },
+          {
+            path: 'generaluserlist',
+            component: NonauthorizeduserComponent,
+            canActivate: [superguardGuard],
+          },
+          {
+            path: 'adminuserlist',
+            component: AdminshowComponent,
+            canActivate: [superguardGuard],
+          },
+        ]
       },
     ]
   },
@@ -312,7 +341,7 @@ const routes: Routes = [
         path: 'profile',
         component: ProfileComponent,
         canActivate: [adminguardGuard],
-        children:[
+        children: [
           {
             path: 'updatepass/:cid',
             component: UpdatePasswordComponent,
@@ -336,10 +365,10 @@ const routes: Routes = [
         canActivate: [adminguardGuard],
       },
       {
-    path: 'analysis',
-    component: AnalysisDataComponent,
-    canActivate: [adminguardGuard],
-  },
+        path: 'analysis',
+        component: AnalysisDataComponent,
+        canActivate: [adminguardGuard],
+      },
     ]
   },
   {

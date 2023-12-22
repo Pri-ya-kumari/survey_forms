@@ -1,4 +1,4 @@
-<div class="box">
+<!--<div class="box">
     <span class="t1">Authorized User List</span>
     <div class="b1">
         <div *ngFor="let c of test"  class="list">
@@ -16,4 +16,11 @@
             <span class="desc">Role:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Admin</span>
         </div>
     </div>
+</div>-->
+<div class="block1">
+    <span class="wd-1">Users</span>
+    <span class="wd-2" [routerLink]="'/superadmin/authorizeduserlist/adminuserlist'">Admin</span>
+    <span class="wd-3" [routerLink]="'/superadmin/authorizeduserlist/generaluserlist'">General Users</span>
+
 </div>
+<router-outlet></router-outlet>

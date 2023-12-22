@@ -1,59 +1,81 @@
-
-.example-spacer {
-    flex: 1 1 auto;
-}
-.shade1 {
-    background-color: #404040;
-    color: white;
-    height: 70px;
-}
-.wd-1 {
-    margin-left: 12px;
-    font-weight: 100px;
-    font-size: 22px;
-}
-.wd-2 {
-    margin-left: 1009px;
-    font-weight: lighter;
-    font-size: 19px;
-    margin-top: 2px;
-    cursor: pointer;
-    font-family: 'Nunito Sans', sans-serif;
-}
-.wd-3 {
-    margin-left: -120px;
-    font-weight: lighter;
-    font-size: 19px;
-    margin-top: 2px;
-    cursor: pointer;
-    font-family: 'Nunito Sans', sans-serif;
-}
 .container1{
     position: absolute;
     border: 1px solid #EDEBF2;
-    width: 800px;
-    height: 390px;
+    width: 600px;
+    height: 350px;
     align-items: center;
-    margin-top: 75px;
-    margin-left: 300px;
+    margin-top: -349px;
+    margin-left: 380px;
     background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.bg{
+    border: 1px solid #EDEBF2;
+    height:80%;
+    width: 77%;
+    border-radius: 30px;
+    margin-left: 270px;
+    margin-top: -530px;
+    background-color: white;
+    position: absolute;
+} 
+.circle{
+    border: 1px solid #EDEBF2;
+    width: 27%;
+    height: 40%;
+    margin-top: 66px;
+    margin-left: 90px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.img-2{
+    height: 290px;
+    width: 253px;
+    margin-top: 51px;
+}
+.circle1{
+    border: 1px solid #EDEBF2;
+    width: 35px;
+    padding-top: 3px;
+    padding-left: -1px;
+    height: 35px;
+    margin-top: 19px;
+    margin-left: 20px;
+    border-radius: 120px;
+    position: absolute;
+    background-color: white;
+    cursor: pointer;
+}
+
+.wd-1 {
+    margin-left: 62px;
+    font-weight: 100px;
+    font-size: 29px;
+    margin-top: 23px;
+    position: absolute;
+    font-family: 'Public Sans', sans-serif;
+} 
 .lab{
+    text-decoration: underline;
     position: absolute;
-    margin-top: 29px;
-    font-size: 40px;
-    margin-left: 260px;
+    margin-top: 10px;
+    font-size: 23px;
+    margin-left: 20px;
 }
-.lab1{
+.lab2{
     position: absolute;
-    margin-top: 85px;
+    margin-top: 75px;
     font-size: 25px;
-    margin-left: 31px;
+    margin-left: 32px;
 }
-.t1{
+.lab12{
     position: absolute;
-    margin-top: 105px;
+    margin-top: 130px;
+    font-size: 25px;
+    margin-left: 32px;
+}
+.t12{
+    position: absolute;
+    margin-top: 150px;
     margin-left: 32px;
     width: 320px;
     height: 36px;
@@ -62,15 +84,13 @@
     outline: 0;
     background-color: white;
 }
-.lab2{
-    position: absolute;
-    margin-top: 145px;
-    font-size: 25px;
-    margin-left: 32px;
+.t12:focus{
+    background-color: white;
+    font-size: 22px;
 }
 .t2{
     position: absolute;
-    margin-top: 177px;
+    margin-top: 95px;
     margin-left: 32px;
     width: 320px;
     height: 36px;
@@ -85,14 +105,14 @@
 }
 .lab3{
     position: absolute;
-    margin-top: 42px;
+    margin-top: 190px;
     font-size: 25px;
-    margin-left: 452px;
+    margin-left: 32px;
 }
 .t3{
     position: absolute;
-    margin-top: 64px;
-    margin-left: 452px;
+    margin-top: 210px;
+    margin-left: 32px;
     width: 320px;
     height: 36px;
     border: 0;
@@ -106,14 +126,15 @@
 }
 .btn-2{
     border: 1px solid red;
-    width: 140px;
-    height: 40px;
-    margin-top: 260px;
-    margin-left: 255px;
+    width: 100px;
+    height: 35px;
+    margin-top: 240px;
+    margin-left: 495px;
     background-color: red;
     color: #EDEBF2;
-    font-size: 28px;
+    font-size: 20px;
     border-radius: 120px;
+    cursor: pointer;
 }
 .btn-2:hover{
     opacity: 0.8;
@@ -131,4 +152,10 @@
 }
 .btn-1:hover{
     opacity: 0.8;
+}
+.img2{
+    margin-left: 320px;
+    margin-top: 215px;
+    width: 25px;
+    position: absolute;
 }

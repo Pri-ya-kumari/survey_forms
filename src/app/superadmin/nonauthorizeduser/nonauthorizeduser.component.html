@@ -1,13 +1,41 @@
-<div class="box">
-    <span class="t1">Admin List</span>
+<!--<div class="box">
+    <span class="t1">General User</span>
+    <div class="listhead"></div>
     <div class="b1">
         <div *ngFor="let c of test"  class="list">
             <div class="circle">
-                <img src="assets/images/admin.png" class="img-2">
+                <!--<img src="assets/images/admin.png" class="img-2">
             </div>
             <span class="tit1">Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{c.name}}</span>
             <span class="tit2">Email Id:&nbsp;&nbsp;{{c.email}}</span>
             <span class="desc">Role:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;General Users</span>
         </div>
     </div>
+</div>-->
+<div class="bg">
+    <div>
+        <span class="wd-1">General Users</span>
+    </div>
+    <div class="boxes">
+        <mat-list class="list">
+            <span class="t2">Id</span>
+            <span class="t3">Name</span>
+            <span class="t4">Email Id</span>
+            <span class="t5">Password</span>
+            <span class="t6">Role</span>
+        </mat-list>    
+    </div>
+    <div class="block">
+        <div>
+            <mat-list class="list1" *ngFor="let c of test">
+                <span class="t2">{{c.id}}</span>
+                <span class="t3">{{c.name}}</span>
+                <span class="t4">{{c.email}}</span>
+                <span class="t5">{{c.password}}</span>
+                <span class="t6">General User</span>
+            </mat-list>
+        </div>
+    </div>
 </div>
+
+<router-outlet></router-outlet>

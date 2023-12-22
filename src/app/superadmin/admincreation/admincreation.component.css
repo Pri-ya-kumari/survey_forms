@@ -1,95 +1,150 @@
-.box{
-    border: 1px solid white;
-    width: 980px;
-    height: 520px;
-    margin-left: 370px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.title{
+.bg{
     position: absolute;
-    margin-top: 22px;
-    width: 290px;
-    margin-left: 310px;
-    color: green;
+    width: 82%;
+    height:510px;
+    border-radius: 30px;
+    margin-top: -540px;
+    margin-left: 230px;
+    overflow-y: hidden;
+}
+ 
+.circle1{
+    border: 1px solid #EDEBF2;
+    width: 35px;
+    padding-top: 3px;
+    padding-left: -1px;
+    height: 35px;
+    margin-top: 15px;
+    margin-left: 20px;
+    border-radius: 120px;
+    position: absolute;
+    background-color: white;
+    cursor: pointer;
+}
+.b2{
+    border: 1px solid #EDEBF2;
+    position: absolute;
+    width: 530px;
+    border-radius: 30px;
+    margin-left: 460px;
+    margin-top: 80px;
+    height: 400px;
+}
+.container{
+    position: absolute;
+    border: 1px solid #EDEBF2;
+    width: 945px;
+    height: 430px;
+    align-items: center;
+    margin-top: 60px;
+    margin-left: 80px;
+    background-color: white;
+}
+.wd-1 {
+    margin-left: 60px;
+    font-weight: 100px;
     font-size: 29px;
+    margin-top: 23px;
+    position: absolute;
+    font-family: 'Public Sans', sans-serif;
+} 
+.inp1{
+    background-color: #FAF9F6;
+    border: 1px solid #EDEBF2;
+    width: 85%;
+    height: 10%;
+    margin-top: 55px;
+    margin-left: 23px;
+} 
+.inp2{
+    background-color: #FAF9F6;
+    border: 1px solid #EDEBF2;
+    width: 85%;
+    height: 10%;
+    margin-top: 45px;
+    margin-left: 23px;
+} 
+.inp3{
+    background-color: #FAF9F6;
+    border: 1px solid #EDEBF2;
+    width: 85%;
+    height: 10%;
+    margin-top: 45px;
+    margin-left: 23px;
+} 
+.inp4{
+    background-color: #FAF9F6;
+    border: 1px solid #EDEBF2;
+    width: 85%;
+    height: 10%;
+    margin-top: 36px;
+    margin-left: 23px;
+}
+.image{
+    position: absolute;
+    width: 340px;
+    height: 250px;
+    margin-left: 30px;
+    margin-top: 80px;
+}
+.image1{
+    background-color: white;
+    margin-left: 93px;
+    position: absolute;
+    margin-top: 119px;
+    width: 30px;
+}
+.ta{
+    background-color: #FAF9F6;
+    border: 1px solid #EDEBF2;
+    width: 85%;
+    height: 25%;
+    margin-top: 40px;
+    margin-left: 19px;
 }
 .t1{
-    position: absolute;
-    margin-top: 70px;
-    margin-left: 62px;
-    font-size: 17px;
-}
-.inp1{
-    border: 1px solid black;
-    margin-top: 90px;
-    margin-left: 62px;
-    width: 700px;
-    height: 30px;
+    margin-left: 24px;
+    font-size: 20px;
+    margin-top: 20px;
     position: absolute;
 }
 .t2{
     position: absolute;
-    margin-top: 140px;
-    margin-left: 62px;
-    font-size: 17px;
-}
-.inp2{
-    border: 1px solid black;
-    margin-top: 160px;
-    margin-left: 62px;
-    width: 700px;
-    height: 30px;
-    position: absolute;
-}
-.t3{
-    position: absolute;
-    margin-top: 210px;
-    margin-left: 62px;
-    font-size: 17px;
-}
-.inp3{
-    border: 1px solid black;
-    margin-top: 230px;
-    margin-left: 62px;
-    width: 700px;
-    height: 30px;
-    position: absolute;
-}
-.t4{
-    position: absolute;
-    margin-top: 340px;
-    margin-left: 62px;
-    font-size: 17px;
-    font-weight: bold
-}
-.inp4{
-    border: 1px solid black;
-    margin-top: 300px;
-    margin-left: 62px;
-    width: 700px;
-    height: 30px;
-    position: absolute;
+    margin-top: 109px;
+    margin-left: -456px;
+    font-size: 20px;
 }
 .t5{
     position: absolute;
-    margin-top: 280px;
-    margin-left: 62px;
-    font-size: 17px;
+    margin-top: 95px;
+    margin-left: -456px;
+    font-size: 20px;
+}
+
+.tt1{
+    position: absolute;
+    margin-top: 33px;
+    margin-left: 19px;
+    font-size: 26px;
+}
+.t3{
+    position: absolute;
+    margin-top: 97px;
+    margin-left: -457px;
+    font-size: 20px;
 }
 .btn1{
-    border: 1px solid white;
-    position: absolute;
-    width: 90px;
-    height: 40px;
-    margin-left: 750px;
-    margin-top: 400px;
-    font-size: 22px;
+    border: 1px solid #EDEBF2;
+    width: 80px;
     background-color: green;
-    color: white; 
+    color: white;
+    font-size: 15px;
+    height: 35px;
+    position: absolute;
+    margin-top: 445px;
+    margin-left: 660px;
     cursor: pointer;
 }
-.list{
-    position: absolute;
-    margin-top: 360px;
-    margin-left: 62px;
+.btn1:hover{
+    opacity: 0.6;
 }

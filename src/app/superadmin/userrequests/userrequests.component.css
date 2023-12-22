@@ -1,62 +1,61 @@
 .box{
     border: 1px solid white;
-    width: 980px;
-    height: 520px;
-    margin-left: 360px;
+    width: 1040px;
+    border-radius: 12px;
+    height: 490px;
+    background-color: white;
+    position: absolute;
+    margin-left: 270px;
+    margin-top: -530px;
 }
 .b1{
     position: absolute;
-    height: 450px;
-    width: 980px;
+    height: 430px;
+    width: 1030px;
     border: 1px solid white;
-    margin-top: 52px;
-    margin-left: -5px;
+    margin-top: 50px;
+    margin-left: 5px;
     overflow-y: scroll;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .t1{
     margin-top: 11px;
-    margin-left: 300px;
+    margin-left: 16px;
     font-size: 30px;
     position: absolute;
+    font-family: 'Public Sans', sans-serif;
 }
 .list{
     border: 1px solid white;
-    width: 700px;
-    height: 170px;
+    width: 900px;
+    height: 100px;
     border-radius: 18px;
     margin-top: 30px;
-    margin-left: 50px;
+    margin-left: 20px;
     display: block;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .tit1{
     position: absolute;
     border: 1px solid white;
-    margin-top: 40px;
+    margin-top: 10px;
     margin-left: 22px;
-    font-weight: bold;
 }
 .tit2{
     position: absolute;
     border: 1px solid white;
-    margin-top: 70px;
+    margin-top: 30px;
     margin-left: 22px;
-    font-weight: bold;
 
 }
 .tit3{
     position: absolute;
     border: 1px solid white;
-    margin-top: 120px;
+    margin-top: 50px;
     margin-left: 22px;
-    font-weight: bold;
-
 }
 .desc{
     position: absolute;
     background:1px solid white;
-    margin-top: 98px;
+    margin-top: 70px;
     margin-left: 22px;
-    font-weight: bold;
 }

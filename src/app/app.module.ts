@@ -70,7 +70,6 @@ import { UpdateauthouserDetailsComponent } from './superadmin/updateauthouser-de
 import { SuperadminprofileComponent } from './superadmin/superadminprofile/superadminprofile.component';
 import { UpdatesuperadminComponent } from './superadmin/updatesuperadmin/updatesuperadmin.component';
 import {MatCardModule} from '@angular/material/card';
-
 import { ChatboxComponent } from './chatbotoption/chatbox/chatbox.component';
 import { SavedformsComponent } from './scratch/savedforms/savedforms.component';
 import { ListsavedformsComponent } from './scratch/listsavedforms/listsavedforms.component';
@@ -83,7 +82,10 @@ import { AddingtitleComponent } from './scratch/addingtitle/addingtitle.componen
 import { AddformshomepageComponent } from './scratch/addformshomepage/addformshomepage.component';
 import { CreateaddquestionComponent } from './scratch/createaddquestion/createaddquestion.component';
 import { AddquestionformnowComponent } from './scratch/addquestionformnow/addquestionformnow.component';
-import { ResponsesComponent } from './scratch/responses/responses.component';
+import { previewfileComponent } from './scratch/previewfile/previewfile.component';
+import { ResponseComponent } from './scratch/response/response.component';
+import { QuestionshowcompComponent } from './scratch/questionshowcomp/questionshowcomp.component';
+import { AdminshowComponent } from './superadmin/adminshow/adminshow.component';
 
 @NgModule({
   declarations: [
@@ -143,7 +145,10 @@ import { ResponsesComponent } from './scratch/responses/responses.component';
     AddformshomepageComponent,
     CreateaddquestionComponent,
     AddquestionformnowComponent,
-    ResponsesComponent,
+    previewfileComponent,
+    ResponseComponent,
+    QuestionshowcompComponent,
+    AdminshowComponent,
     
   ],
   imports: [

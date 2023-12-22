@@ -1,0 +1,28 @@
+
+<div class="bg">
+    <div>
+        <span class="wd-1">Admin </span>
+    </div>
+    <div class="boxes">
+        <mat-list class="list">
+            <span class="t2">Id</span>
+            <span class="t3">Name</span>
+            <span class="t4">Email Id</span>
+            <span class="t5">Password</span>
+            <span class="t6">Role</span>
+        </mat-list>    
+    </div>
+    <div class="block">
+        <div>
+            <mat-list class="list1" *ngFor="let c of test">
+                <span class="t2">{{c.id}}</span>
+                <span class="t3">{{c.name}}</span>
+                <span class="t4">{{c.email}}</span>
+                <span class="t5">{{c.password}}</span>
+                <span class="t6">Admin</span>
+                <button class="circle1" routerLink="/updateadmindetails/{{c.id}}"><mat-icon class="icon2">create</mat-icon></button>
+                <button class="circle2" (click)="deleteadmin(c.id)"><mat-icon class="icon2">delete</mat-icon></button>
+            </mat-list>
+        </div>
+    </div>
+</div>
