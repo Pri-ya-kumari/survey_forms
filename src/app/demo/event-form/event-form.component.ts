@@ -3,6 +3,7 @@ import { animate, query, stagger, state, style, transition, trigger } from '@ang
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
+import { EventdialogboxComponent } from '../eventdialogbox/eventdialogbox.component';
 
 @Component({
   selector: 'app-event-form',
@@ -36,6 +37,9 @@ export class EventFormComponent {
     this.form();
    }
    openDialog() {
+    this.dialog.open(EventdialogboxComponent,{
+      width:'400px',height:'200px'
+    });
     this.router.navigate(['/previewevent'])
   }
    form() {

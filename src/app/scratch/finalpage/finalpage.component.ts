@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SendquestionService } from 'src/app/service/sendquestion.service';
 
 @Component({
-  selector: 'app-responses',
-  templateUrl: './previewfile.component.html',
-  styleUrls: ['./previewfile.component.css']
+  selector: 'app-finalpage',
+  templateUrl: './finalpage.component.html',
+  styleUrls: ['./finalpage.component.css']
 })
-export class previewfileComponent {
+export class FinalpageComponent {
 
   qId: any;
   title: any;
@@ -37,11 +36,5 @@ export class previewfileComponent {
     );
     
   }
-  Submit(){
-    console.log(this.question);
-    this.sendq.sendquestion(this.qId,this.question).subscribe((res)=>{
-      console.log(res);
-    })
-  }
+  
 }
-

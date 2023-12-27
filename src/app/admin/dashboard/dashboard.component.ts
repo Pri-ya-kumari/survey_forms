@@ -65,4 +65,7 @@ export class DashboardComponent {
   cuser(){
     this.route.navigate(['/admindashboard', 'users']);
   }
+  requests(){
+    this.route.navigate(['/admindashboard', 'userresquest']);
+  }
 }

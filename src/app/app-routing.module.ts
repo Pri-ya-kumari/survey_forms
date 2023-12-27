@@ -30,7 +30,6 @@ import { UserrequestComponent } from './userrequest/userrequest.component';
 import { redirectUnauthorizedTo, redirectLoggedInTo, canActivate } from '@angular/fire/compat/auth-guard';
 import { SadashboardComponent } from './superadmin/sadashboard/sadashboard.component';
 import { AdmincreationComponent } from './superadmin/admincreation/admincreation.component';
-import { ListadminComponent } from './superadmin/listadmin/listadmin.component';
 import { EditformdialogComponent } from './superadmin/editformdialog/editformdialog.component';
 import { UserrequestsComponent } from './superadmin/userrequests/userrequests.component';
 import { NonauthorizeduserComponent } from './superadmin/nonauthorizeduser/nonauthorizeduser.component';
@@ -61,6 +60,10 @@ import { previewfileComponent } from './scratch/previewfile/previewfile.componen
 import { QuestionshowcompComponent } from './scratch/questionshowcomp/questionshowcomp.component';
 import { ResponseComponent } from './scratch/response/response.component';
 import { AdminshowComponent } from './superadmin/adminshow/adminshow.component';
+import { RequestshowComponent } from './admin/dashboard/requestshow/requestshow.component';
+import { DemoRegisterComponent } from './demo/demo-register/demo-register.component';
+import { EventRegComponent } from './demo/event-reg/event-reg.component';
+import { FinalpageComponent } from './scratch/finalpage/finalpage.component';
 const redirectToLoginIn = () => redirectUnauthorizedTo(['/login'])
 const redirectToHome = () => redirectLoggedInTo(['/mainpage'])
 //const redirectTosuperadmin = () => redirectUnauthorizedTo(['/superadmin'])
@@ -78,6 +81,14 @@ const routes: Routes = [
     path: 'homepage',
     component: HomepageComponent,
     canActivate: [authGuard]
+  },
+  {
+    path:'demoregister',
+    component:DemoRegisterComponent
+  },
+  {
+    path:'eventregister',
+    component:EventRegComponent
   },
   {
     path: 'addfromshome',
@@ -144,7 +155,7 @@ const routes: Routes = [
           {
             path: 'response/:fid/:title',
             component: ResponseComponent,
-            canActivate: [authGuard]
+            canActivate: [authGuard],
           },
         ]
       },
@@ -158,6 +169,11 @@ const routes: Routes = [
   {
     path: 'response/:fid/:title',
     component: previewfileComponent,
+    canActivate: [authGuard]
+  },
+  {
+    path: 'finalpage/:fid/:title',
+    component: FinalpageComponent,
     canActivate: [authGuard]
   },
   {
@@ -228,11 +244,6 @@ const routes: Routes = [
     canActivate: [authGuard]
   },
   {
-    path: 'updateadmindetails/:id',
-    component: UpdateadminDetailsComponent,
-    canActivate: [superguardGuard],
-  },
-  {
     path: 'updateuserdetails/:id',
     component: UpdateauthouserDetailsComponent,
     canActivate: [superguardGuard],
@@ -264,11 +275,6 @@ const routes: Routes = [
         canActivate: [superguardGuard],
       },
       {
-        path: 'alladminlist',
-        component: ListadminComponent,
-        canActivate: [superguardGuard],
-      },
-      {
         path: 'userresquest',
         component: UserrequestsComponent,
         canActivate: [superguardGuard],
@@ -293,6 +299,11 @@ const routes: Routes = [
             component: AdminshowComponent,
             canActivate: [superguardGuard],
           },
+          {
+            path: 'updateadmindetails/:id',
+            component: UpdateadminDetailsComponent,
+            canActivate: [superguardGuard],
+          },
         ]
       },
     ]
@@ -315,6 +326,11 @@ const routes: Routes = [
       {
         path: 'atest',
         component: AAddTestComponent,
+        canActivate: [adminguardGuard],
+      },
+      {
+        path: 'userresquest',
+        component: RequestshowComponent,
         canActivate: [adminguardGuard],
       },
       {

@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import {MatDialog} from '@angular/material/dialog';
 import { MainpageComponent } from 'src/app/mainpage/mainpage.component';
 import { animate, query, stagger, state, style, transition, trigger } from '@angular/animations';
+import { DialogBoxComponent } from '../dialog-box/dialog-box.component';
 @Component({
   selector: 'app-conact-form',
   templateUrl: './conact-form.component.html',
@@ -37,9 +38,9 @@ export class ConactFormComponent {
     this.form();
    }
    openDialog() {
-    /*this.dialog.open(DialogBoxComponent,{
+     this.dialog.open(DialogBoxComponent,{
       width:'400px',height:'200px'
-    });*/
+    });
     this.router.navigate(['/previewcontact'])
 
   }

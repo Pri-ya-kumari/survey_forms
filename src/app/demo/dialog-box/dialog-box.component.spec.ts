@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListadminComponent } from './listadmin.component';
+import { DialogBoxComponent } from './dialog-box.component';
 
-describe('ListadminComponent', () => {
-  let component: ListadminComponent;
-  let fixture: ComponentFixture<ListadminComponent>;
+describe('DialogBoxComponent', () => {
+  let component: DialogBoxComponent;
+  let fixture: ComponentFixture<DialogBoxComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ListadminComponent]
+      declarations: [DialogBoxComponent]
     });
-    fixture = TestBed.createComponent(ListadminComponent);
+    fixture = TestBed.createComponent(DialogBoxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

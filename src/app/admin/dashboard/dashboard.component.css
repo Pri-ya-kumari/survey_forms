@@ -137,6 +137,22 @@
     height: 30px;
 
 }
+.box4{
+    border: 1px solid white;
+    width: 240px;
+    position: absolute;
+    height: 30px;
+    margin-top: 130px;
+    margin-left: 32px;
+    border-radius: 120px;
+    cursor: pointer;
+}
+.box4:hover{
+    background-color: #d1ccde;
+    width: 190px;
+    height: 30px;
+
+}
 .test1{
     position: absolute;
     color: black;
@@ -172,4 +188,10 @@
     margin-top: 23px;
     margin-left: 1000px;
     color: black;
+}
+.req{
+    position: absolute;
+    width: 25px;
+    margin-top: px;
+    margin-left: 27px;
 }

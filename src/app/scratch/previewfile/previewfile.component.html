@@ -31,6 +31,6 @@
             </div>
         </div>
     </div>
-    <button (click)="Submit()" class="sbtn">Submit</button>
+    <button (click)="Submit()" class="sbtn" [routerLink]="'/finalpage/'+qId+'/'+title">Submit</button>
 </div>
 <router-outlet></router-outlet>

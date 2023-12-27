@@ -33,7 +33,9 @@ export class UpdateadminDetailsComponent {
     password: new FormControl(''),
   })
 
-
+  perivous(){
+    this.router.navigate(['/superadmin','authorizeduserlist'])
+  }
   setupForm() {
     this.froms = this.fb.group({
       name: ['', [Validators.required, Validators.pattern("^[a-zA-Z]*")]],

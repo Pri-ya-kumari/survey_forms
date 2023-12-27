@@ -1,51 +1,46 @@
-<div>
-    <p>
-        <mat-toolbar class="shade1">
-            <mat-icon>insert_drive_file</mat-icon>
-            <span class="wd-1">SurveyForms</span>
-            <!--wd-1 = word1 it is the titile of the forms-->
-            <span class="wd-2">Admin</span>
-            <!--wd-1 = word1 its is the link page tothe first page home page -->
-            <span class="wd-3" routerLink="/admindashboard/adminhome">Back</span>
-            <span class="example-spacer"></span>
-        </mat-toolbar>
-    </p>
-</div>
-<div>
-        <!--signup-->
-        <div class="container">
-            <form [formGroup]="froms" novalidate (ngSubmit)="homepage(froms.value)">
-                <span class="update">Update Data</span>
-                <label class="lab1">Name</label>
-                <input type="text" class="t1" formControlName="name"><br>
-                <div *ngIf="f['name'].invalid && f['name'].touched " class="alert">
-                    <div *ngIf="f['name'].errors && f['name'].errors['required']" class="alerts">
-                        <span>*First Name is required</span>
-                    </div>
-                    <div *ngIf="f['name'].errors && f['name'].errors['pattern']" class="alert1">
-                        <span>*only alphabet pattern </span>
-                    </div>
-                </div>
-                <label class="lab2">Email Id</label>
-                <input type="text" class="t2" formControlName="email"><br>
-                <div *ngIf="f['email'].invalid && f['email'].touched" class="alert2">
-                    <div *ngIf="f['email'].errors && f['email'].errors['required']" class="alerts2">
-                        <span>*email is required</span>
-                    </div>
-                    <div *ngIf="f['email'].errors && f['email'].errors['pattern']" class="alerts4">
-                        <span>*enter the valid formate ex:-abc@gmail.com</span>
-                    </div>
-                </div>
-                <label class="lab3">Password</label>
-                <input type="password" class="t3" formControlName="password"> <br>
-                <div *ngIf="f['password'].invalid && f['password'].touched" class="alert3">
-                    <div *ngIf="f['password'].errors && f['password'].errors['required']" class="alerts3">
-                        <span>*password is required</span>
-                    </div>
-                </div>
-                <button class="btn-2" routerLink="/superadmin/alladminlist">Cancel</button>
-                <button class="btn-1">Save</button>
-            </form>
-            
+<div class="bg">
+    <div>
+        <span class="wd-1">User Details</span>
+    </div>
+    <button class="circle1" (click)="perivous()"><mat-icon>arrow_back</mat-icon></button>
+    <div>
+        <div class="circle">
+            <img src="assets/images/adminpro.png" class="img-2">
         </div>
+    </div>
+    <div class="container" >
+        <span class="edit">Edit User Detail</span>
+        <form [formGroup]="froms" novalidate (ngSubmit)="homepage(froms.value)">
+            <label class="lab1">Name</label>
+            <input type="text" class="t1" formControlName="name"><br>
+            <div *ngIf="f['name'].invalid && f['name'].touched " class="alert">
+                <div *ngIf="f['name'].errors && f['name'].errors['required']" class="alerts">
+                    <span>*First Name is required</span>
+                </div>
+                <div *ngIf="f['name'].errors && f['name'].errors['pattern']" class="alert1">
+                    <span>*only alphabet pattern </span>
+                </div>
+            </div>
+            <label class="lab2">Email Id</label>
+            <input type="text" class="t2" formControlName="email"><br>
+            <div *ngIf="f['email'].invalid && f['email'].touched" class="alert2">
+                <div *ngIf="f['email'].errors && f['email'].errors['required']" class="alerts2">
+                    <span>*email is required</span>
+                </div>
+                <div *ngIf="f['email'].errors && f['email'].errors['pattern']" class="alerts4">
+                    <span>*enter the valid formate ex:-abc@gmail.com</span>
+                </div>
+            </div>
+            <label class="lab3">Password</label>
+            <input type="password" class="t3" formControlName="password"> <br>
+            <div *ngIf="f['password'].invalid && f['password'].touched" class="alert3">
+                <div *ngIf="f['password'].errors && f['password'].errors['required']" class="alerts3">
+                    <span>*password is required</span>
+                </div>
+            </div>
+            <button class="btn-2" routerLink="/superadmin/authorizeduserlist">Cancel</button>
+            <button class="btn-1">Save</button>
+        </form>
+    </div>
 </div>
+<router-outlet></router-outlet>

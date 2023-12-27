@@ -43,15 +43,9 @@ export class ResponseComponent implements OnInit{
         }
       }
     );
-  }  
-  printedQuestions: Set<string> = new Set<string>();
-
-  // your existing component properties and methods
-
-  // Method to check if a question is already printed
-  isQuestionPrinted(question: string): boolean {
-    return this.printedQuestions.has(question);
   }
-
+  getResponseCount(): number {
+    return this.answer.length;
+  }
 
 }

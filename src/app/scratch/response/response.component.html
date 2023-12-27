@@ -1,16 +1,32 @@
 <div class="block1">
-    <span>Response</span>
+    <span class="re">{{ getResponseCount() }} Response</span>
 </div>
 <div class="block2">
-<div *ngFor="let a of answer">
-    <div *ngFor="let answer of a">
-        <div>
-            <span>{{answer.ques}}</span>
-        </div>
-        <div *ngIf="answer.questype === 'comment'">
-            <span>{{answer.canswer}}</span>
+    <div *ngFor="let a of answer" class="blok2">
+        <div *ngFor="let ans of a; let i=index" class="b">
+            <span class="no">Q{{i+1}}.</span>
+            <span class="q1">{{ans.ques}}</span>
+            <div *ngIf="ans.questype === 'singleText'">
+                <span class="ans1">Answer: {{ans.answer}}</span>
+            </div>
+            <div *ngIf="ans.questype === 'comment'">
+                <span class="ans2">Answer: {{ans.canswer}}</span>
+            </div>
+            <div *ngIf="ans.questype === 'multipleChoice'">
+                <div *ngFor="let option of ans.options">
+                    <ng-container *ngIf="option.isSelected">
+                        <span>Answer: {{ option.optionques }}</span>
+                    </ng-container>
+                </div>
+            </div>
+            <div *ngIf="ans.questype === 'checkBox'">
+                <div *ngFor="let option of ans.options">
+                    <ng-container *ngIf="option.isSelected">
+                        <span class="ans4">Answer: {{ option.optionques }}</span>
+                    </ng-container>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
 <router-outlet></router-outlet>

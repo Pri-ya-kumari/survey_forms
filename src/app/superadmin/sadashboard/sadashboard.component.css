@@ -152,6 +152,11 @@
     margin-left:25px;
     color: black;
 }
+.req{
+    position: absolute;
+    width: 25px;
+    margin-left: 25px;
+}
 .icon2{
     position: absolute;
     width: 25px;

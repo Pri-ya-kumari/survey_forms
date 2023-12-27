@@ -55,7 +55,6 @@ import { UseraccesdelogComponent } from './useraccesdelog/useraccesdelog.compone
 import { UserrequestComponent } from './userrequest/userrequest.component';
 import { SadashboardComponent } from './superadmin/sadashboard/sadashboard.component';
 import { AdmincreationComponent } from './superadmin/admincreation/admincreation.component';
-import { ListadminComponent } from './superadmin/listadmin/listadmin.component';
 import { EditformdialogComponent } from './superadmin/editformdialog/editformdialog.component';
 import { UserrequestsComponent } from './superadmin/userrequests/userrequests.component';
 import { NonauthorizeduserComponent } from './superadmin/nonauthorizeduser/nonauthorizeduser.component';
@@ -86,6 +85,12 @@ import { previewfileComponent } from './scratch/previewfile/previewfile.componen
 import { ResponseComponent } from './scratch/response/response.component';
 import { QuestionshowcompComponent } from './scratch/questionshowcomp/questionshowcomp.component';
 import { AdminshowComponent } from './superadmin/adminshow/adminshow.component';
+import { RequestshowComponent } from './admin/dashboard/requestshow/requestshow.component';
+import { DemoRegisterComponent } from './demo/demo-register/demo-register.component';
+import { DialogBoxComponent } from './demo/dialog-box/dialog-box.component';
+import { EventdialogboxComponent } from './demo/eventdialogbox/eventdialogbox.component';
+import { EventRegComponent } from './demo/event-reg/event-reg.component';
+import { FinalpageComponent } from './scratch/finalpage/finalpage.component';
 
 @NgModule({
   declarations: [
@@ -101,6 +106,10 @@ import { AdminshowComponent } from './superadmin/adminshow/adminshow.component';
     PreviewContactComponent,
     EventFormComponent,
     EventpreviewComponent,
+    DemoRegisterComponent,
+    DialogBoxComponent,
+    EventdialogboxComponent,
+    EventRegComponent,
     DashboardComponent,
     AhomepageComponent,
     AAddquestionComponent,
@@ -121,7 +130,6 @@ import { AdminshowComponent } from './superadmin/adminshow/adminshow.component';
     UserrequestComponent,
     SadashboardComponent,
     AdmincreationComponent,
-    ListadminComponent,
     EditformdialogComponent,
     UserrequestsComponent,
     NonauthorizeduserComponent,
@@ -149,6 +157,8 @@ import { AdminshowComponent } from './superadmin/adminshow/adminshow.component';
     ResponseComponent,
     QuestionshowcompComponent,
     AdminshowComponent,
+    RequestshowComponent,
+    FinalpageComponent,
     
   ],
   imports: [
