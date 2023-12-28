@@ -39,7 +39,7 @@ export class previewfileComponent {
   }
   Submit(){
     console.log(this.question);
-    this.sendq.sendquestion(this.qId,this.question).subscribe((res)=>{
+    this.sendq.sendqu(this.qId,this.question).subscribe((res)=>{
       console.log(res);
     })
   }

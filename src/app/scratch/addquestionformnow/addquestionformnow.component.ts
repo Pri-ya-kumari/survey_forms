@@ -64,7 +64,6 @@ export class AddquestionformnowComponent implements OnInit{
     this.sendq.sendquestion(this.qId,this.question).subscribe((res)=>{
       Swal.fire('success','all deta send successfully','success');
       console.log(res);
-      this.questions.reset();
     })
   }
 }

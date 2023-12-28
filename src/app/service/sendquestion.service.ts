@@ -11,6 +11,11 @@ export class SendquestionService {
   Url = 'https://survey-forms-3ecc3-default-rtdb.firebaseio.com';
 
   sendquestion(fid:any,sendquestionto:any){
+    const url = `${this.Url}/surveyformquestion/${fid}.json`; 
+    return this.http.post(url, sendquestionto);
+  }
+
+  sendqu(fid:any,sendquestionto:any){
     const url = `${this.Url}/surveyformanswer/${fid}.json`; 
     return this.http.post(url, sendquestionto);
   }

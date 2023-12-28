@@ -153,7 +153,7 @@ const routes: Routes = [
             canActivate: [authGuard]
           },
           {
-            path: 'response/:fid/:title',
+            path: 'responses/:fid/:title',
             component: ResponseComponent,
             canActivate: [authGuard],
           },
