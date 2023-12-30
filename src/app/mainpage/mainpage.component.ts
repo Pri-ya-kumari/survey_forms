@@ -41,4 +41,8 @@ export class MainpageComponent implements OnInit {
   see(){
     this.router.navigate(['/signuppage'])
   }
+  
+  userlogin(){
+    this.router.navigate(['/loginpage'])
+  }
 }
