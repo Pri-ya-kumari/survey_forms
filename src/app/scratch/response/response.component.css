@@ -96,3 +96,42 @@
     font-size: 29px;
     font-family: 'Public Sans', sans-serif;
 }
+@media screen and (max-width:600px) {
+    .block1 {
+        border: 1px solid white;
+        position: absolute;
+        width: 540px;
+        margin-top: -200px;
+        margin-left: 58px;
+        height: 50px;
+        border-radius: 12px;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+    .block2{
+        border: 1px solid #fff;
+        width: 540px;
+        border-radius: 12px;
+        height: 280px;
+        background-color: white;
+        position: absolute;
+        margin-top: -145px;
+        margin-left: 58px;
+        overflow-x: hidden;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+    .re{
+        position: absolute;
+        margin-top: 15px;
+        margin-left: 20px;
+        font-size: 17px;
+        font-family: 'Public Sans', sans-serif;
+    }
+    .blok2{
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        width: 540px;
+        height: 370px;
+        margin-top: 10px;
+        margin-left: 33px;
+    }
+}

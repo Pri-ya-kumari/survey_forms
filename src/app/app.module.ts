@@ -91,6 +91,7 @@ import { DialogBoxComponent } from './demo/dialog-box/dialog-box.component';
 import { EventdialogboxComponent } from './demo/eventdialogbox/eventdialogbox.component';
 import { EventRegComponent } from './demo/event-reg/event-reg.component';
 import { FinalpageComponent } from './scratch/finalpage/finalpage.component';
+import { QuestionviewbuildComponent } from './scratch/questionviewbuild/questionviewbuild.component';
 
 @NgModule({
   declarations: [
@@ -159,6 +160,7 @@ import { FinalpageComponent } from './scratch/finalpage/finalpage.component';
     AdminshowComponent,
     RequestshowComponent,
     FinalpageComponent,
+    QuestionviewbuildComponent,
     
   ],
   imports: [

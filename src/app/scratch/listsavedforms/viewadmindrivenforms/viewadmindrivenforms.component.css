@@ -132,3 +132,123 @@
     color: white;
     font-family: 'Hedvig Letters Sans', sans-serif;
 }
+@media screen and (max-width:600px) {
+    .bg{
+        position: absolute;
+        margin-top: -245px;
+        margin-left: 70px;
+        font-size: 25px;
+        text-decoration: underline;
+    }
+    .btn{
+        cursor: pointer;
+        border: 1px solid #EDEBF2;
+        width: 60px;
+        height: 328x;
+        font-size: 15px;
+        position: absolute;
+        margin-top: -44px;
+        margin-left: 430px;
+        background-color: #54B069;
+        color: white;
+        font-family: 'Hedvig Letters Sans', sans-serif;
+    }
+    .block1{
+        border: 1px solid #EDEBF2;
+        width: 500px;
+        height: 350px;
+        position: absolute;
+        margin-top: -200px;
+        margin-left: 70px;
+        overflow-x: hidden;
+    }
+    .b1{
+        position: relative;
+        background-color:white;
+        position: relative;
+        border: 1px solid #EDEBF2;
+        width: 94%;
+        font-size: 20px;
+        height: 30%;
+        margin-left: 20px;
+        display: block;
+        margin-top: 12px;
+        box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    }
+    .op1{
+        position: absolute;
+        margin-top: 17px;
+        display: block;
+        height: 15px;
+        width: 15px;
+        background-color: lightgray;
+        border-radius: 10%;
+        margin-left: 49px;
+    }
+    .op2{
+        position: absolute;
+        margin-top: 17px;
+        display: block;
+        margin-left: 262px;
+        height: 15px;
+        width: 15px;
+        background-color: lightgray;
+        border-radius: 10%;
+    }
+    .op3{
+        position: absolute;
+        margin-top: 40px;
+        display: block;
+        margin-left: 49px;
+        height: 15px;
+        width: 15px;
+        background-color: lightgray;
+        border-radius: 10%;
+        
+    }
+    .op4{
+        position: absolute;
+        margin-top: 45px;
+        display: block;
+        margin-left: 262px;
+        height: 15px;
+        width: 15px;
+        background-color: lightgray;
+        border-radius: 10%;
+        
+    }
+    .opp1{
+        font-size: 15px;
+        position: absolute;
+        margin-top: 34px;
+        margin-left: 27px;
+        width: 200px;
+    }
+    .opp2{
+        font-size:15px;
+        position: absolute;
+        margin-top: 34px;
+        margin-left: 240px;
+        width: 200px;
+    }
+    .opp3{
+        font-size: 15px;
+        position: absolute;
+        margin-top: 57px;
+        margin-left: 26px;
+        width: 200px;
+    }
+    .opp4{
+        font-size: 15px;
+        position: absolute;
+        margin-top: 62px;
+        margin-left: 240px;
+        width: 200px;
+    }
+    .q1{
+        position: absolute;
+        width: 470px;
+        font-size: 15px;
+        overflow: hidden;
+    }
+}

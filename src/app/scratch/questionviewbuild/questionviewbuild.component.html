@@ -1,0 +1,37 @@
+<div class="bg">
+    <h1 class="title1">{{ title }} </h1>
+    <button [routerLink]="'/response/'+qId+'/'+title" class="b"><mat-icon class="show" >visibility</mat-icon></button>
+</div>
+<div class="block1">
+    <button class="btn1" [routerLink]="'/addfromshome/addingquestionnow/'+qId+'/'+title"><mat-icon class="a">add_circle_outline</mat-icon></button>
+    <div class="b1" *ngFor="let q of question; let i=index">
+        <div>
+            <p class="no">&nbsp;Q{{i+1}}.&nbsp;&nbsp;
+                <span class="q1">{{q.ques}}</span>
+            </p>
+            <div *ngIf="q.questype === 'singleText'">
+                <input type="text" [(ngModel)]="q.answer" placeholder="Type your answer..." class="single"
+                    maxlength="300">
+            </div>
+            <div *ngIf="q.questype === 'checkBox'">
+                <div *ngFor="let option of q.options; let j=index" class="check">
+                    <input type="checkbox" [(ngModel)]="option.isSelected" [value]="option.optionText" class="che">{{
+                    option.optionques }}
+                </div>
+            </div>
+            <!-- Assuming you have a variable selectedOption in your component -->
+            <div *ngIf="q.questype === 'multipleChoice'">
+                <div *ngFor="let optionmul of q.options; let k=index" class="check">
+                    <input type="radio" [name]="'group' + q.id"
+                        [value]="optionmul.optionText" class="che">
+                    {{ optionmul.optionques }}
+                </div>
+            </div>
+            <div *ngIf="q.questype === 'comment'">
+                <textarea [(ngModel)]="q.answer" placeholder="Enter Your Review" class="textare"
+                    maxlength="400"></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

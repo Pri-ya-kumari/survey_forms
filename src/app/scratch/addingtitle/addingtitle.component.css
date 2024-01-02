@@ -1,27 +1,29 @@
 .fm-b2 {
     border: 1px solid #EDEBF2;
     width: 1027px;
-    height: 372px ;
+    height: 372px;
     margin-left: 297px;
-    margin-top:79px;
+    margin-top: 79px;
     border-radius: 30px;
     background-color: #EDEBF2;
     padding-top: 29px;
     position: absolute;
     opacity: 0.8;
 }
+
 .head {
     border: 1px solid #EDEBF2;
     width: 1027px;
-    height: 50px ;
+    height: 50px;
     margin-left: 297px;
-    margin-top:9px;
+    margin-top: 9px;
     border-radius: 30px 30px 0px 0px;
     background-color: #EDEBF2;
     padding-top: 29px;
     position: absolute;
 }
-.titl2{
+
+.titl2 {
     color: #000;
     font-size: 30px;
     position: absolute;
@@ -30,7 +32,8 @@
     font-family: 'Public Sans', sans-serif;
 
 }
-.titl1{
+
+.titl1 {
     color: #54B069;
     font-size: 25px;
     position: absolute;
@@ -40,7 +43,8 @@
     font-family: 'Public Sans', sans-serif;
 
 }
-.borders1{
+
+.borders1 {
     border: 1px solid #000;
     width: 200px;
     margin-left: 20px;
@@ -48,14 +52,16 @@
     margin-top: 29px;
     position: absolute;
 }
-.input3{
+
+.input3 {
     position: absolute;
-    border: 1px solid  #E3DAC9;
+    border: 1px solid #E3DAC9;
     width: 440px;
     height: 40px;
     margin-top: 20px;
     margin-left: 47px;
 }
+
 .ti-1 {
     border: 1px solid #EDEBF2;
     width: 900px;
@@ -64,7 +70,7 @@
     margin-top: 22px;
     background-color: #fff;
     padding-top: 29px;
-    border-radius: 20px;  
+    border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
@@ -76,9 +82,11 @@
     margin-left: 29px;
     font-family: 'Nunito', sans-serif;
 }
+
 .input2:focus {
     border: 4px solid green;
 }
+
 .wd-3 {
     font-size: 22px;
     margin-top: 30px;
@@ -86,11 +94,12 @@
     color: #54B069;
     font-family: 'Nunito', sans-serif;
 }
-.alerts2{
+
+.alerts2 {
     width: 190px;
     position: absolute;
     color: red;
-    margin-top:1px;
+    margin-top: 1px;
     margin-left: 32px;
     font-size: 15px;
 }
@@ -106,6 +115,7 @@
     font-size: 17px;
     cursor: pointer;
 }
+
 .btn2 {
     border: 1px solid #EDEBF2;
     float: left;
@@ -118,7 +128,8 @@
     color: white;
     cursor: pointer;
 }
-.circle{
+
+.circle {
     border: 1px solid white;
     width: 35px;
     padding-top: 3px;
@@ -130,4 +141,113 @@
     position: absolute;
     background-color: white;
     cursor: pointer;
+}
+
+@media screen and (max-width:600px) {
+
+    .head {
+        border: 1px solid #EDEBF2;
+        width: 515px;
+        height: 50px;
+        margin-left:12px;
+        margin-top: 105px;
+        border-radius: 30px 30px 0px 0px;
+        background-color: #EDEBF2;
+        padding-top: 29px;
+        position: absolute;
+    }
+    .fm-b2 {
+        border: 1px solid #EDEBF2;
+        width: 515px;
+        height: 252px;
+        margin-left: 12px;
+        margin-top: 140px;
+        border-radius: 30px;
+        background-color: #EDEBF2;
+        padding-top: 29px;
+        position: absolute;
+        opacity: 0.8;
+    }
+    .titl1 {
+        color: #54B069;
+        font-size: 20px;
+        position: absolute;
+        margin-left: 20px;
+        margin-top: -20px;
+        text-decoration: underline;
+        font-family: 'Public Sans', sans-serif;
+    
+    }
+    .ti-1 {
+        border: 1px solid #EDEBF2;
+        width: 490px;
+        height: 180px;
+        margin-left: 20px;
+        margin-top: 22px;
+        background-color: #fff;
+        padding-top: 29px;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+    .wd-3 {
+        font-size: 20px;
+        margin-top: -10px;
+        position: absolute;
+        margin-left: 29px;
+        color: #54B069;
+        font-family: 'Nunito', sans-serif;
+    }
+    .input2 {
+        border: 1px solid lightgray;
+        width: 370px;
+        height: 40px;
+        margin-top: 5px;
+        margin-left: 29px;
+        font-family: 'Nunito', sans-serif;
+    }
+    .btn1 {
+        border: 1px solid lightgray;
+        background-color: white;
+        color: black;
+        margin-top: 40px;
+        margin-left: 345px;
+        width: 60px;
+        height: 30px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    .btn2 {       
+        border: 1px solid #EDEBF2;
+        float: left;
+        background-color: #64CE7A;
+        margin-top: -30px;
+        margin-left: 290px;
+        width: 50px;
+        height: 30px;
+        font-size: 15px;
+        color: white;
+        cursor: pointer;
+    }
+    .circle {
+        border: 1px solid white;
+        width: 35px;
+        padding-top: 3px;
+        padding-left: -1px;
+        height: 35px;
+        margin-top: -59px;
+        margin-left: 460px;
+        border-radius: 120px;
+        position: absolute;
+        background-color: white;
+        cursor: pointer;
+    }
+    .titl2 {
+        color: #000;
+        font-size: 25px;
+        position: absolute;
+        margin-left: 20px;
+        margin-top: -19px;
+        font-family: 'Public Sans', sans-serif;
+    
+    }
 }

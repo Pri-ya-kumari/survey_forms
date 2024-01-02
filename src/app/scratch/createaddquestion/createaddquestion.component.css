@@ -1,22 +1,24 @@
-.bg{
+.bg {
     position: absolute;
     margin-top: -540px;
     margin-left: 620px;
     font-size: 25px;
     text-decoration: underline;
 }
+
 .head {
     border: 1px solid #EDEBF2;
     width: 1027px;
-    height: 50px ;
+    height: 50px;
     margin-left: 297px;
-    margin-top:9px;
+    margin-top: 9px;
     border-radius: 30px 30px 0px 0px;
     background-color: #EDEBF2;
     padding-top: 29px;
     position: absolute;
 }
-.titl2{
+
+.titl2 {
     color: #000;
     font-size: 30px;
     position: absolute;
@@ -25,14 +27,16 @@
     font-family: 'Public Sans', sans-serif;
 
 }
-.wd-1{
+
+.wd-1 {
     position: absolute;
     font-size: 29px;
     font-family: 'Hedvig Letters Sans', sans-serif;
     margin-top: -35px;
     margin-left: 260px;
 }
-.block1{
+
+.block1 {
     border: 1px solid white;
     margin-top: 50px;
     margin-left: 300px;
@@ -40,33 +44,37 @@
     height: 450px;
     overflow-x: hidden;
 }
-.wd-2{
+
+.wd-2 {
     position: absolute;
     font-size: 20px;
     margin-left: 23px;
     margin-top: 10px;
     font-family: 'Overpass', sans-serif;
 }
-.insideblock{
+
+.insideblock {
     border: 1px solid #EDEBF2;
-    width: 1038px;
+    width: 1018px;
     min-height: 260px;
-    overflow:hidden;
+    overflow: hidden;
     position: relative;
-    margin-top: 0px;
-    margin-left:0px;
+    margin-top: 40px;
+    margin-left: 0px;
     border-radius: 10px;
 }
-.gaps{
+
+.gaps {
     margin-top: 40px;
 
 }
-.list{
+
+.list {
     border: 1px solid white;
     max-width: 200px auto;
     width: 180px;
     height: 120px;
-    overflow:hidden;
+    overflow: hidden;
     border-radius: 20px;
     position: relative;
     float: left;
@@ -77,17 +85,81 @@
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
-.img-11{
+
+.img-11 {
     margin-top: 12px;
     margin-left: 69px;
     width: 33px;
 }
-.wd-3{
+
+.wd-3 {
     position: absolute;
     font-size: 17px;
     margin-top: 48px;
-    margin-left:-80px;
+    margin-left: -80px;
     text-align: left;
     font-family: 'Hedvig Letters Sans', sans-serif;
     font-weight: lighter;
+}
+
+@media screen and (max-width:600px) {
+
+    .head {
+        border: 1px solid #EDEBF2;
+        width: 509px;
+        height: 25px;
+        margin-left: 15px;
+        margin-top: 105px;
+        border-radius: 30px 30px 0px 0px;
+        background-color: #EDEBF2;
+        padding-top: 29px;
+        position: absolute;
+    }
+    .titl2 {
+        color: #000;
+        font-size: 25px;
+        position: absolute;
+        margin-left: 20px;
+        margin-top: -15px;
+        font-family: 'Public Sans', sans-serif;
+    
+    } 
+    .block1 {
+        border: 1px solid white;
+        margin-top: 160px;
+        margin-left: 20px;
+        width: 500px;
+        height: 235px;
+        overflow-x: hidden;
+    }
+    .list {
+        border: 1px solid white;
+        max-width: 200px auto;
+        width: 470px;
+        height: 40px;
+        display: block;
+        border-radius: 20px;
+        position: relative;
+        margin-top: 10px;
+        bottom: 30px;
+        margin-left: 15px;
+        background-color: #fff;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    }
+    .img-11 {
+        margin-top: 12px;
+        margin-left: 19px;
+        width: 24px;
+    }
+    .wd-3 {
+        position: absolute;
+        font-size: 17px;
+        margin-top: 14px;
+        margin-left: 20px;
+        text-align: left;
+        font-family: 'Hedvig Letters Sans', sans-serif;
+        font-weight: lighter;
+    }
 }

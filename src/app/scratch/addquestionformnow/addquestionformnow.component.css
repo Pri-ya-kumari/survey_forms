@@ -1,18 +1,24 @@
 .bg{
     position: absolute;
     margin-top: 20px;
-    margin-left: 680px;
+    margin-left: 280px;
     font-size: 25px;
+    width: 1045px;
+    height: 50px;
     text-decoration: underline;
 }
-
+.title1{
+    text-decoration: underline;
+    margin-left: 380px;
+    position: absolute;
+}
 .block1{
     border: 1px solid #f4f4f4;
-    margin-top: 60px;
+    margin-top: 80px;
     width: 1045px;
     height: 448px;
     border-radius: 30px 30px 0px 0px;
-    margin-left: 300px;
+    margin-left: 280px;
     position: absolute;
     overflow-x: hidden;
 }
@@ -178,8 +184,8 @@
     padding-top: 3px;
     padding-left: -1px;
     height: 35px;
-    margin-top: -49px;
-    margin-left: 600px;
+    margin-top: -1px;
+    margin-left: 920px;
     border-radius: 120px;
     position: absolute;
     background-color: white;

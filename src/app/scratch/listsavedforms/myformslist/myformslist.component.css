@@ -64,3 +64,64 @@
     font-family: 'Hedvig Letters Sans', sans-serif;
     font-weight: lighter;
 }
+@media screen and (max-width:600px) {
+    .wd-1{
+        position: absolute;
+        font-size: 25px;
+        font-family: 'Hedvig Letters Sans', sans-serif;
+        margin-top: -35px;
+        margin-left: 70px;
+    }
+    .block1{
+        border: 1px solid #F8F7FA;
+        margin-top: -210px;
+        margin-left: 66px;
+        width: 510px;
+        height: 350px;
+        overflow-x: hidden;
+    }
+    .insideblock{
+        border: 1px solid #F8F7FA;
+        width: 520px;
+        min-height: 260px;
+        overflow:hidden;
+        position: relative;
+        margin-top: 0px;
+        margin-left:0px;
+        border-radius: 10px;
+    }
+    .list{
+        border: 1px solid white;
+        max-width: 200px auto;
+        width: 480px;
+        height: 50px;
+        overflow:hidden;
+        border-radius: 20px;
+        position: relative;
+        float: left;
+        display: block;
+        margin-top: 10px;
+        margin-left: 15px;
+        background-color: #fff;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    }
+    .img-11{
+        margin-top: 12px;
+        margin-left: 20px;
+        width: 25px;
+    }
+    .wd-3{
+        position: absolute;
+        font-size: 17px;
+        margin-top: 18px;
+        margin-left:25px;
+        text-align: left;
+        font-family: 'Hedvig Letters Sans', sans-serif;
+        font-weight: lighter;
+    }
+    .gaps{
+        margin-top: 15px;
+    }
+}

@@ -27,3 +27,21 @@
 .resp:hover{
     color: green;
 }
+@media screen and (max-width:600px) {
+    .head{
+        border: 1px solid white;
+        position: absolute;
+        margin-top: -260px;
+        margin-left: 55px;
+        width: 540px;
+        height: 50px;
+        background-color: white;
+    }
+    .ques{
+        position: absolute;
+        font-size: 15px;
+        margin-top: 25px;
+        cursor: pointer;
+        margin-left: 175px;
+    }
+}

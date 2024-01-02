@@ -1,18 +1,19 @@
 .bg{
     border: 1px solid #F8F7FA;
-    width: 1060px;
+    width: 1020px;
     height: 40px;
     position: absolute;
-    margin-top: -490px;
-    margin-left: 260px;
+    margin-top: 10px;
+    margin-left: 265px;
     font-size: 25px;
+    padding-left: 20px;
 }
 .block1{
     border: 1px solid #F8F7FA;
     width: 1035px;
     height: 420px;
     position: absolute;
-    margin-top: -450px;
+    margin-top: 50px;
     margin-left: 270px;
     overflow-x: hidden;
 }
@@ -93,8 +94,8 @@
 .show{
     cursor: pointer;
     position: relative;
-    top: -84px;
-    margin-left: 380px;
+    top: -57px;
+    margin-left: 900px;
 }
 .b{
     border: 1px solid black;

@@ -25,15 +25,15 @@
     <button class="btn" (click)="createform()"><img src="assets/images/add.png" class="logo">New</button>
     <div class="inside-sidenav">
         <div class="box1">
-        <mat-icon class="icon1">dashboard</mat-icon>
+        <mat-icon class="icon1" (click)="homepage()">dashboard</mat-icon>
         <span class="test1" (click)="homepage()">Home</span>
         </div>
         <div class="box2">
-            <mat-icon class="icon1">list</mat-icon>
+            <mat-icon class="icon1" (click)="myforms()">list</mat-icon>
             <span class="test1" (click)="myforms()">My Forms</span>
         </div>
         <div class="box3">
-            <img src="assets/images/template.png" class="icon2">
+            <img src="assets/images/template.png" (click)="templatefroms()" class="icon2">
             <span class="test1" (click)="templatefroms()">Template Forms</span>
         </div>
     </div>

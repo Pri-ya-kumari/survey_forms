@@ -64,6 +64,7 @@ import { RequestshowComponent } from './admin/dashboard/requestshow/requestshow.
 import { DemoRegisterComponent } from './demo/demo-register/demo-register.component';
 import { EventRegComponent } from './demo/event-reg/event-reg.component';
 import { FinalpageComponent } from './scratch/finalpage/finalpage.component';
+import { QuestionviewbuildComponent } from './scratch/questionviewbuild/questionviewbuild.component';
 const redirectToLoginIn = () => redirectUnauthorizedTo(['/login'])
 const redirectToHome = () => redirectLoggedInTo(['/mainpage'])
 //const redirectTosuperadmin = () => redirectUnauthorizedTo(['/superadmin'])
@@ -83,12 +84,12 @@ const routes: Routes = [
     canActivate: [authGuard]
   },
   {
-    path:'demoregister',
-    component:DemoRegisterComponent
+    path: 'demoregister',
+    component: DemoRegisterComponent
   },
   {
-    path:'eventregister',
-    component:EventRegComponent
+    path: 'eventregister',
+    component: EventRegComponent
   },
   {
     path: 'addfromshome',
@@ -113,6 +114,11 @@ const routes: Routes = [
       {
         path: 'addingquestionnow/:fid/:title',
         component: AddquestionformnowComponent,
+        canActivate: [authGuard]
+      },
+      {
+        path: 'questionview/:fid/:title',
+        component: QuestionviewbuildComponent,
         canActivate: [authGuard]
       },
     ]
@@ -261,7 +267,7 @@ const routes: Routes = [
         path: 'superadminprofile',
         component: SuperadminprofileComponent,
         canActivate: [superguardGuard],
-        children:[
+        children: [
           {
             path: 'updatesuperadmin/:cid',
             component: UpdatesuperadminComponent,
@@ -283,11 +289,11 @@ const routes: Routes = [
         path: 'authorizeduserlist',
         component: AuthorizeduserlistComponent,
         canActivate: [superguardGuard],
-        children:[
+        children: [
           {
-            path:'',
-            redirectTo:'adminuserlist',
-            pathMatch:'full'
+            path: '',
+            redirectTo: 'adminuserlist',
+            pathMatch: 'full'
           },
           {
             path: 'generaluserlist',
