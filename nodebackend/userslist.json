@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Brandie",
+        "email": "bwulfinger0@reddit.com",
+        "password": "zV7(0U2L~,ELhBXn"
+    },
+    {
+        "id": 2,
+        "name": "Coriss",
+        "email": "ckienle1@skype.com",
+        "password": "gE1<sp<mpkRe*KQ"
+    },
+    {
+        "id": 3,
+        "name": "Felipa",
+        "email": "fsheering2@prweb.com",
+        "password": "dT7%vx,|v}2dm9/G"
+    },
+    {
+        "id": 4,
+        "name": "Sigismundo",
+        "email": "smuncaster3@facebook.com",
+        "password": "uG4'F%.IA1nW1y%&"
+    },
+    {
+        "id": 5,
+        "name": "Nathan",
+        "email": "nspurden4@unesco.org",
+        "password": "lN9?$`W1"
+    },
+    {
+        "name": "Priya",
+        "email": "Priya@gmail.com",
+        "password": "12345",
+        "id": 6
+    },
+    {
+        "name": "Priya",
+        "email": "Priya@gmail.com",
+        "password": "12345",
+        "id": 7
+    },
+    {
+        "name": "Priya",
+        "email": "Priya@gmail.com",
+        "password": "12345",
+        "id": 8
+    }
+]

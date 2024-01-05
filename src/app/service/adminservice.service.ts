@@ -16,14 +16,11 @@ export class AdminserviceService {
   
   urls= 'https://survey-forms-3ecc3-default-rtdb.firebaseio.com/users.json';
 
+  public nodeurl = 'http://localhost:8000/admin';
 
-  /*authentication logic here
-  postuser(name:any,loginemail:any,loginpassword:any){
-    return from(this.auth.createUserWithEmailAndPassword(loginemail, loginpassword))
+  loginuser(email:any){
+    return this.http.get(this.nodeurl,email);
   }
-  getuser(loginemail:any,loginpassword:any){
-    return from(this.auth.signInWithEmailAndPassword(loginemail,loginpassword));
-  }*/
 
   logout(){
     return from(this.auth.signOut())
@@ -45,9 +42,6 @@ export class AdminserviceService {
     return this.http.post(this.signup,res);
   }
 
-  loginuser(id:any){
-    return this.http.get(this.signup,id);
-  }
   loginuses(){
     return this.http.get(this.signup);
   }
