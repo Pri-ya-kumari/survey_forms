@@ -1,14 +1,14 @@
-const mongoss = require("mongoose")
+const mongossmi = require("mongoose")
+//mongossgu = mi = mis users
 
-
-mongoss.connect('mongodb://127.0.0.1:27017/survectionuserlogindetails')
+mongossmi.connect('mongodb://127.0.0.1:27017/survectionuserlogindetails')
 .then(()=>{
-    console.log("mongodb is now connected for system admin")})
-.catch(error=>{console.log("db not connected for system admin",error)})
+    console.log("mongodb is now connected for mis users")})
+.catch(error=>{console.log("db not connected for mis users",error)})
 
 
 //creating schema
-const userscheme = new mongoss.Schema({
+const userscheme = new mongossmi.Schema({
     name: {
         type:String,
         require:true,
@@ -30,7 +30,7 @@ const userscheme = new mongoss.Schema({
 {timestamps:true}
 )
 //creating model of schema
-const admin = mongoss.model("admin",userscheme)
+const misusers = mongossmi.model("misuser",userscheme)
 
-module.exports = admin;
+module.exports = misusers;
 //app.use(express.urlencoded({extended:false}));

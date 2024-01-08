@@ -5,7 +5,6 @@ import { Router } from '@angular/router';
 import { SignuserService } from '../service/signuser.service';
 import Swal from 'sweetalert2';
 import { AdminserviceService } from '../service/adminservice.service';
-import { SuperadmingetingService } from '../superadmin/superservice/superadmingeting.service';
 
 @Component({
   selector: 'app-loginpage',
@@ -16,7 +15,7 @@ export class LoginpageComponent implements OnInit{
 
 
   constructor(private route: Router, private fb: FormBuilder, private sign: SignuserService,
-    private admin: AdminserviceService,private superadmin: SuperadmingetingService,
+    private admin: AdminserviceService,
 
     public dialog: MatDialog) {
 
@@ -61,21 +60,6 @@ export class LoginpageComponent implements OnInit{
           this.Login.reset()
           this.route.navigate(['/admindashboard'])
           localStorage.setItem("isadminin", "true");
-        }
-      })
-      this.superadmin.loginuser(data).subscribe((chec: any) => {
-        const user = chec.find((c: any) => {
-          return c.email == this.Login.value.loginemail && c.password == this.Login.value.loginpassword;
-        });
-        if (user) {
-          Swal.fire({
-            icon: 'success',
-            title: 'Successfully',
-            text: 'SuperAdmin Loggin successfully'
-          });
-          localStorage.setItem("issuperadminin", "true");
-          this.Login.reset();
-          this.route.navigate(['/superadmin']);
         }
       })
       this.sign.loginuser(data).subscribe((res: any) => {
