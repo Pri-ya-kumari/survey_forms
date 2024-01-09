@@ -26,6 +26,7 @@ export class CreateuserComponent {
     name: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required]),
+    role: new FormControl('', [Validators.required]),
   })
 
   setupForm() {
@@ -34,7 +35,8 @@ export class CreateuserComponent {
       email: ['', [Validators.required,
       Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
       password: ['', [Validators.required/*,
-      Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$")*/]]
+      Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$")*/]],
+      role: ['', [Validators.required]],
     });
   }
 

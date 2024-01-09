@@ -65,6 +65,9 @@ import { DemoRegisterComponent } from './demo/demo-register/demo-register.compon
 import { EventRegComponent } from './demo/event-reg/event-reg.component';
 import { FinalpageComponent } from './scratch/finalpage/finalpage.component';
 import { QuestionviewbuildComponent } from './scratch/questionviewbuild/questionviewbuild.component';
+import { MisComponent } from './admin/dashboard/users-details/mis/mis.component';
+import { SurveyusersComponent } from './admin/dashboard/users-details/surveyusers/surveyusers.component';
+import { SurveycreatosComponent } from './admin/dashboard/users-details/surveycreatos/surveycreatos.component';
 const redirectToLoginIn = () => redirectUnauthorizedTo(['/login'])
 const redirectToHome = () => redirectLoggedInTo(['/mainpage'])
 //const redirectTosuperadmin = () => redirectUnauthorizedTo(['/superadmin'])
@@ -310,6 +313,28 @@ const routes: Routes = [
         path: 'users',
         component: UsersDetailsComponent,
         canActivate: [adminguardGuard],
+        children: [
+          {
+            path: '',
+            redirectTo: 'survyeuser',
+            pathMatch: 'full'
+          },
+          {
+            path: 'misteam',
+            component: MisComponent,
+            canActivate: [adminguardGuard],
+          },
+          {
+            path: 'survyeuser',
+            component: SurveyusersComponent,
+            canActivate: [adminguardGuard],
+          },
+          {
+            path: 'surveycreator',
+            component: SurveycreatosComponent,
+            canActivate: [adminguardGuard],
+          }
+        ]
       },
       {
         path: 'update/:id',

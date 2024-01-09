@@ -66,6 +66,6 @@ export class DashboardComponent {
     this.route.navigate(['/admindashboard', 'users']);
   }
   requests(){
-    this.route.navigate(['/admindashboard', 'userresquest']);
+    this.route.navigate(['/admindashboard', 'cusers']);
   }
 }

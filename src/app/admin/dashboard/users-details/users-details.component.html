@@ -1,28 +1,9 @@
 <div class="bg">
-    <div>
+    <div class="block1">
         <span class="wd-1">User Details</span>
+        <button class="wd-2" [routerLink]="'/admindashboard/users/survyeuser'" >Survey Users</button>
+        <button class="wd-3" [routerLink]="'/admindashboard/users/surveycreator'">Survey Creators</button>
+        <button class="wd-4" [routerLink]="'/admindashboard/users/misteam'">MIS</button>
     </div>
-    <button class="circle1" (click)="previouspage()"><mat-icon>arrow_back</mat-icon></button>
-    <button class="btn4" (click)="adduser()">Add User</button>
-    <div class="boxes">
-        <mat-list class="list">
-            <span class="t2">Id</span>
-            <span class="t3">Name</span>
-            <span class="t4">Email Id</span>
-            <span class="t5">Password</span>
-        </mat-list>    
-    </div>
-    <div class="block">
-        <div>
-            <mat-list class="list1" *ngFor="let c of test">
-                <span class="t2">{{c.id}}</span>
-                <span class="t3">{{c.name}}</span>
-                <span class="t4">{{c.email}}</span>
-                <span class="t5">{{c.password}}</span>
-                <button class="btn3" routerLink="/admindashboard/update/{{c.id}}"><img src="assets/images/Screenshot_2023-12-15_152358-removebg-preview.png" class="img-2">
-                </button>
-                <button class="btn2"(click)="deleted(c.id)"><mat-icon>delete</mat-icon></button>
-            </mat-list>
-        </div>
-    </div>
+    <router-outlet></router-outlet>
 </div>

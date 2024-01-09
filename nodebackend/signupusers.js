@@ -3,8 +3,8 @@ const mongossmi = require("mongoose")
 
 mongossmi.connect('mongodb://127.0.0.1:27017/survectionuserlogindetails')
 .then(()=>{
-    console.log("mongodb is now connected for mis users")})
-.catch(error=>{console.log("db not connected for mis users",error)})
+    console.log("mongodb is now connected for signup users")})
+.catch(error=>{console.log("db not connected for signup users",error)})
 
 
 //creating schema
@@ -27,7 +27,7 @@ const userscheme = new mongossmi.Schema({
         require:true
     },
     roles:{
-        type:string,
+        type:String,
         require:true
     },
 },

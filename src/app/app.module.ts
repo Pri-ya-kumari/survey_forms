@@ -92,6 +92,9 @@ import { EventdialogboxComponent } from './demo/eventdialogbox/eventdialogbox.co
 import { EventRegComponent } from './demo/event-reg/event-reg.component';
 import { FinalpageComponent } from './scratch/finalpage/finalpage.component';
 import { QuestionviewbuildComponent } from './scratch/questionviewbuild/questionviewbuild.component';
+import { SurveycreatosComponent } from './admin/dashboard/users-details/surveycreatos/surveycreatos.component';
+import { SurveyusersComponent } from './admin/dashboard/users-details/surveyusers/surveyusers.component';
+import { MisComponent } from './admin/dashboard/users-details/mis/mis.component';
 
 @NgModule({
   declarations: [
@@ -161,6 +164,9 @@ import { QuestionviewbuildComponent } from './scratch/questionviewbuild/question
     RequestshowComponent,
     FinalpageComponent,
     QuestionviewbuildComponent,
+    SurveycreatosComponent,
+    SurveyusersComponent,
+    MisComponent,
     
   ],
   imports: [

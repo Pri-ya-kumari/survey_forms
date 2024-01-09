@@ -1,0 +1,25 @@
+
+<div class="boxes">
+    <div>
+        <span class="wd">Survey Creators </span>
+    </div>
+        <mat-list class="list">
+            <span class="t2">Id</span>
+            <span class="t3">Name</span>
+            <span class="t4">Email Id</span>
+            <span class="t5">Password</span>
+        </mat-list>    
+    </div>
+    <div class="block">
+        <div>
+            <mat-list class="list1" *ngFor="let c of test">
+                <span class="t2">{{c.id}}</span>
+                <span class="t3">{{c.name}}</span>
+                <span class="t4">{{c.email}}</span>
+                <span class="t5">{{c.password}}</span>
+                <button class="btn3" routerLink="/admindashboard/update/{{c.id}}"><img src="assets/images/Screenshot_2023-12-15_152358-removebg-preview.png" class="img-2">
+                </button>
+                <button class="btn2"(click)="deleted(c.id)"><mat-icon>delete</mat-icon></button>
+            </mat-list>
+        </div>
+</div>

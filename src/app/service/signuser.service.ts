@@ -12,25 +12,46 @@ export class SignuserService {
 
   currentUsser$ = this.auth.authState; // Use this.auth.authState
 
-  public signup='http://localhost:3000/signup';
+  public scrators='http://localhost:8000/surveycreators';
   
   Createuser(res:any){
-    return this.http.post(this.signup,res);
+    return this.http.post(this.scrators,res);
   }
   loginuser(id:any){
-    return this.http.get(this.signup,id);
+    return this.http.get(this.scrators,id);
   }
   login(){
-    return this.http.get(this.signup);
+    return this.http.get(this.scrators);
   }
   getdata(id:any){
-    return this.http.get(`${this.signup}/${id}`);
+    return this.http.get(`${this.scrators}/${id}`);
   }
   deletedata(id:any){
-    return this.http.delete(`${this.signup}/${id}`);
+    return this.http.delete(`${this.scrators}/${id}`);
   }
   updateItem(id: number, updatedData: any) {
-    const urls = `${this.signup}/${id}`;
+    const urls = `${this.scrators}/${id}`;
     return this.http.put(urls, updatedData);
   }
+
+  // mis url here
+  misurl='http://localhost:8000/misusers'
+
+  
+  getmis(id:any){
+    return this.http.get(this.misurl,id);
+  }
+  postmis(res:any){
+    return this.http.post(this.misurl,res);
+  }
+
+  surveyusers='http://localhost:8000/surveyusers'
+
+  getsurvuser(id:any){
+    return this.http.get(this.surveyusers,id);
+  }
+  postsurvuser(res:any){
+    return this.http.post(this.surveyusers,res);
+  }
+
 }

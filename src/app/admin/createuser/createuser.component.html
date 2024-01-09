@@ -40,8 +40,13 @@
                         {{showPassword?'visibility_off':'visibility'}}
                     </mat-icon>
             <button class="btn-1" [disabled]="!froms.valid">Create</button>
+            <!--creating a selection option with useers role-->
+            <label class="lab4">User Role</label>
+            <select class="t4" formControlName="role">
+                <option value="surveyUser" class="v1">Survey User</option>
+                <option value="surveyCreator" class="v1">Survey Creator</option>
+                <option value="misUser" class="v1">MIS User</option>
+            </select><br>
         </form>
-        <!--<span (click)="Signup()" class="signup">Create account click here</span>-->
-
     </div>
 </div>
